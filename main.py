@@ -38,9 +38,9 @@ if selected=='Class Meeting 2024':
 
 if selected=='Lomba Class Meeting':
     st.title('Lomba Pada Kegiatan Class Meeting 2024')
-    st.header("What's new? *Keep scrolling* 🙌")
+    st.header("What's new? *Keep scrolling*")
     st.write('---')
-    st.subheader('A. Estafet 🧩')
+    st.subheader('A. Estafet')
     st.write('Lomba estafet adalah')
     st.subheader('**Cara Bermain:**')
     st.write(
@@ -51,7 +51,7 @@ if selected=='Lomba Class Meeting':
         """)
 
     st.write('---')
-    st.subheader('B. Futsal ⚽')
+    st.subheader('B. Futsal')
     st.write('Lomba futsal adalah')
     st.subheader('**Cara Bermain:**')
     st.write(
@@ -62,7 +62,7 @@ if selected=='Lomba Class Meeting':
         """)
 
     st.write('---')
-    st.subheader('C. Basket 🏀')
+    st.subheader('C. Basket')
     st.write('Lomba basket adalah')
     st.subheader('**Cara Bermain:**')
     st.write(
@@ -73,7 +73,7 @@ if selected=='Lomba Class Meeting':
         """)
     
     st.write('---')
-    st.subheader('D. Blind Bottle 😎')
+    st.subheader('D. Blind Bottle')
     st.write('Lomba blind bottle adalah')
     st.subheader('**Cara Bermain:**')
     st.write(
@@ -84,7 +84,7 @@ if selected=='Lomba Class Meeting':
         """)
     
     st.write('---')
-    st.subheader('E. Volly Sarung 🏐')
+    st.subheader('E. Volly Sarung')
     st.write('Lomba blind bottle adalah')
     st.subheader('**Cara Bermain:**')
     st.write(
@@ -95,7 +95,7 @@ if selected=='Lomba Class Meeting':
         """)
 
     st.write('---')
-    st.subheader('F. Bola Beracun 🏉')
+    st.subheader('F. Bola Beracun')
     st.write('Lomba bola beracun adalah')
     st.subheader('**Cara Bermain:**')
     st.write(
@@ -106,7 +106,7 @@ if selected=='Lomba Class Meeting':
         """)
 
     st.write('---')
-    st.subheader('G. Chopstick Ball 🥢')
+    st.subheader('G. Chopstick Ball')
     st.write('Lomba chopstick ball adalah')
     st.subheader('**Cara Bermain:**')
     st.write(
