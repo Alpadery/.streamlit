@@ -2,6 +2,8 @@ import streamlit as st
 from PIL import Image
 from streamlit_option_menu import option_menu
 
+st.set_page_config(page_title='Class Meeting', layout='wide')
+
 with st.sidebar:
     selected=option_menu(
         menu_title='Class Meeting Abu Dzar',
