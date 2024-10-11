@@ -163,17 +163,17 @@ if selected=='Klasemen Ikhwan':
     st.subheader('Klasemen Lomba Estafet Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Estafet Fase A"):
         st.header('Estafet Fase A')
-        image=Image.open('estafet_a.png')
+        image=Image.open('ikhwan/estafet_a.png')
         st.image(image,
                  use_column_width=True)
     with st.popover("Klasemen Estafet Fase B"):
         st.header('Estafet Fase B')
-        image=Image.open('estafet_b.png')
+        image=Image.open('ikhwan/estafet_b.png')
         st.image(image,
                  use_column_width=True)
     with st.popover("Klasemen Estafet Fase C"):
         st.header('Estafet Fase C')
-        image=Image.open('estafet_c.png')
+        image=Image.open('ikhwan/estafet_c.png')
         st.image(image,
                  use_column_width=True)
     
@@ -183,17 +183,17 @@ if selected=='Klasemen Ikhwan':
     st.subheader('Klasemen Lomba Futsal Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Futsal Fase A"):
         st.header('Futsal Fase A')
-        image=Image.open('futsal_a.png')
+        image=Image.open('ikhwan/futsal_a.png')
         st.image(image,
                  use_column_width=True)
     with st.popover("Klasemen Futsal Fase B"):
         st.header('Futsal Fase B')
-        image=Image.open('futsal_b.png')
+        image=Image.open('ikhwan/futsal_b.png')
         st.image(image,
                   use_column_width=True)
     with st.popover("Klasemen Futsal Fase C"):
         st.header('Futsal Fase C')
-        image=Image.open('futsal_c.png')
+        image=Image.open('ikhwan/futsal_c.png')
         st.image(image,
                  use_column_width=True)
 
@@ -204,12 +204,12 @@ if selected=='Klasemen Ikhwan':
     st.subheader('Klasemen Lomba Basket Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Basket Fase B"):
         st.header('Basket Fase B')
-        image=Image.open('basket_b.png')
+        image=Image.open('ikhwan/basket_b.png')
         st.image(image,
                   use_column_width=True) 
     with st.popover("Klasemen Basket Fase C"):
         st.header('Basket Fase C')
-        image=Image.open('basket_c.png')
+        image=Image.open('ikhwan/basket_c.png')
         st.image(image,
                   use_column_width=True) 
 
@@ -219,17 +219,17 @@ if selected=='Klasemen Ikhwan':
     st.subheader('Klasemen Lomba Blind Bottle Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Blind Bottle Fase A"):
         st.header('Blind Bottle Fase A')
-        image=Image.open('blind_a.png')
+        image=Image.open('ikhwan/blind_a.png')
         st.image(image,
                  use_column_width=True)
     with st.popover("Klasemen Blind Bottle Fase B"):
         st.header('Blind Bottle Fase B')
-        image=Image.open('blind_b.png')
+        image=Image.open('ikhwan/blind_b.png')
         st.image(image,
                   use_column_width=True)
     with st.popover("Klasemen Blind Bottle Fase C"):
         st.header('Blind Bottle Fase C')
-        image=Image.open('blind_c.png')
+        image=Image.open('ikhwan/blind_c.png')
         st.image(image,
                   use_column_width=True)
 
@@ -239,17 +239,17 @@ if selected=='Klasemen Ikhwan':
     st.subheader('Klasemen Lomba Volly Sarung Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Volly Sarung Fase A"):
         st.header('Volly Sarung Fase A')
-        image=Image.open('volly_a.png')
+        image=Image.open('ikhwan/volly_a.png')
         st.image(image,
                   use_column_width=True)
     with st.popover("Klasemen Volly Sarung Fase B"):
         st.header('Volly Sarung Fase B')
-        image=Image.open('volly_b.png')
+        image=Image.open('ikhwan/volly_b.png')
         st.image(image,
                   use_column_width=True)
     with st.popover("Klasemen Volly Sarung Fase C"):
         st.header('Volly Sarung Fase C')
-        image=Image.open('volly_c.png')
+        image=Image.open('ikhwan/volly_c.png')
         st.image(image,
                   use_column_width=True)
 
@@ -259,17 +259,17 @@ if selected=='Klasemen Ikhwan':
     st.subheader('Klasemen Lomba Bola Beracun Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Bola Beracun Fase A"):
         st.header('Bola Beracun Fase A')
-        image=Image.open('bola_a.png')
+        image=Image.open('ikhwan/bola_a.png')
         st.image(image,
                   use_column_width=True)
     with st.popover("Klasemen Bola Beracun Fase B"):
         st.header('Bola Beracun Fase B')
-        image=Image.open('bola_b.png')
+        image=Image.open('ikhwan/bola_b.png')
         st.image(image,
                   use_column_width=True)
     with st.popover("Klasemen Bola Beracun Fase C"):
         st.header('Bola Beracun Fase C')
-        image=Image.open('bola_c.png')
+        image=Image.open('ikhwan/bola_c.png')
         st.image(image,
                   use_column_width=True)
     
@@ -279,7 +279,7 @@ if selected=='Klasemen Ikhwan':
     st.subheader('Klasemen Lomba Chopstick Ball Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Chopstick Ball Fase A"):
         st.header('Bola Chopstick Ball A')
-        image=Image.open('chop_a.png')
+        image=Image.open('ikhwan/chop_a.png')
         st.image(image,
                   use_column_width=True)
 
@@ -292,17 +292,17 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Estafet Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Estafet Fase A"):
         st.header('Estafet Fase A')
-        image=Image.open('estafet_a.png')
+        image=Image.open('ikhwan/estafet_a.png')
         st.image(image,
                  use_column_width=True)
     with st.popover("Klasemen Estafet Fase B"):
         st.header('Estafet Fase B')
-        image=Image.open('estafet_b.png')
+        image=Image.open('ikhwan/estafet_b.png')
         st.image(image,
                  use_column_width=True)
     with st.popover("Klasemen Estafet Fase C"):
         st.header('Estafet Fase C')
-        image=Image.open('estafet_c.png')
+        image=Image.open('ikhwan/estafet_c.png')
         st.image(image,
                  use_column_width=True)
     
@@ -312,17 +312,17 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Futsal Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Futsal Fase A"):
         st.header('Futsal Fase A')
-        image=Image.open('futsal_a.png')
+        image=Image.open('ikhwan/futsal_a.png')
         st.image(image,
                  use_column_width=True)
     with st.popover("Klasemen Futsal Fase B"):
         st.header('Futsal Fase B')
-        image=Image.open('futsal_b.png')
+        image=Image.open('ikhwan/futsal_b.png')
         st.image(image,
                   use_column_width=True)
     with st.popover("Klasemen Futsal Fase C"):
         st.header('Futsal Fase C')
-        image=Image.open('futsal_c.png')
+        image=Image.open('ikhwan/futsal_c.png')
         st.image(image,
                  use_column_width=True)
 
@@ -333,12 +333,12 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Basket Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Basket Fase B"):
         st.header('Basket Fase B')
-        image=Image.open('basket_b.png')
+        image=Image.open('ikhwan/basket_b.png')
         st.image(image,
                   use_column_width=True) 
     with st.popover("Klasemen Basket Fase C"):
         st.header('Basket Fase C')
-        image=Image.open('basket_c.png')
+        image=Image.open('ikhwan/basket_c.png')
         st.image(image,
                   use_column_width=True) 
 
@@ -348,17 +348,17 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Blind Bottle Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Blind Bottle Fase A"):
         st.header('Blind Bottle Fase A')
-        image=Image.open('blind_a.png')
+        image=Image.open('ikhwan/blind_a.png')
         st.image(image,
                  use_column_width=True)
     with st.popover("Klasemen Blind Bottle Fase B"):
         st.header('Blind Bottle Fase B')
-        image=Image.open('blind_b.png')
+        image=Image.open('ikhwan/blind_b.png')
         st.image(image,
                   use_column_width=True)
     with st.popover("Klasemen Blind Bottle Fase C"):
         st.header('Blind Bottle Fase C')
-        image=Image.open('blind_c.png')
+        image=Image.open('ikhwan/blind_c.png')
         st.image(image,
                   use_column_width=True)
 
@@ -368,17 +368,17 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Volly Sarung Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Volly Sarung Fase A"):
         st.header('Volly Sarung Fase A')
-        image=Image.open('volly_a.png')
+        image=Image.open('ikhwan/volly_a.png')
         st.image(image,
                   use_column_width=True)
     with st.popover("Klasemen Volly Sarung Fase B"):
         st.header('Volly Sarung Fase B')
-        image=Image.open('volly_b.png')
+        image=Image.open('ikhwan/volly_b.png')
         st.image(image,
                   use_column_width=True)
     with st.popover("Klasemen Volly Sarung Fase C"):
         st.header('Volly Sarung Fase C')
-        image=Image.open('volly_c.png')
+        image=Image.open('ikhwan/volly_c.png')
         st.image(image,
                   use_column_width=True)
 
@@ -388,17 +388,17 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Bola Beracun Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Bola Beracun Fase A"):
         st.header('Bola Beracun Fase A')
-        image=Image.open('bola_a.png')
+        image=Image.open('ikhwan/bola_a.png')
         st.image(image,
                   use_column_width=True)
     with st.popover("Klasemen Bola Beracun Fase B"):
         st.header('Bola Beracun Fase B')
-        image=Image.open('bola_b.png')
+        image=Image.open('ikhwan/bola_b.png')
         st.image(image,
                   use_column_width=True)
     with st.popover("Klasemen Bola Beracun Fase C"):
         st.header('Bola Beracun Fase C')
-        image=Image.open('bola_c.png')
+        image=Image.open('ikhwan/bola_c.png')
         st.image(image,
                   use_column_width=True)
     
@@ -408,6 +408,6 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Chopstick Ball Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Chopstick Ball Fase A"):
         st.header('Bola Chopstick Ball A')
-        image=Image.open('chop_a.png')
+        image=Image.open('ikhwan/chop_a.png')
         st.image(image,
                   use_column_width=True)
