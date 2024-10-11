@@ -32,8 +32,6 @@ if selected=='Class Meeting 2024':
     st.write('Berikut hasil dokumentasi kegiatan Class Meeting 2023')
     st.write('[Watch Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
 
-    image = Image.open("images.jpg")
-
 if selected=='Leaderboard':
     st.title('Klasemen Sementara Class Meeting 2024')
 if selected=='Lomba Class Meeting':
