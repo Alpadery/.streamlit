@@ -270,3 +270,4 @@ if selected=='Klasemen Ikhwan':
         image=Image.open('chop_a.png')
         st.image(image,
                   use_column_width=True)
+
