@@ -16,10 +16,8 @@ if selected=='home':
         Class Meeting merupakan kegiatan yang berlangsung setelah kegiatan Sumatif Akhir Semester dilaksanakan. Kegiatan ini merupakan sebuah refreshment untuk peserta didik setelah mengikuti SAS.""")
     
     st.write('---')
-    left_column, right_column=st.column(2)
-    with left_column:
-        st.header('Tujuan kegiatan Class Meeting diantara lain:')
-        st.write(
+    st.header('Tujuan kegiatan Class Meeting diantara lain:')
+    st.write(
         """
         - A
         - B
@@ -27,10 +25,8 @@ if selected=='home':
         """)
 
     st.write('---')
-    left_column, right_column=st.column(2)
-    with left_column:
-        st.header('Manfaat kegiatan Class Meeting diantara lain:')
-        st.write("""
+    st.header('Manfaat kegiatan Class Meeting diantara lain:')
+    st.write("""
         - A
         - B
         - C
