@@ -12,7 +12,7 @@ if selected=='Class Meeting 2024':
     st.header('Tentang Class Meeting Abu Dzar')
     st.write(
         """
-        Class Meeting merupakan kegiatan yang berlangsung setelah kegiatan Sumatif Akhir Semester dilaksanakan. Kegiatan ini merupakan sebuah refreshment untuk peserta didik setelah mengikuti SAS.""")
+        Class Meeting merupakan kegiatan yang berlangsung setelah kegiatan Sumatif Akhir Semester dilaksanakan. Kegiatan ini merupakan sebuah *refreshment* untuk peserta didik setelah mengikuti SAS.""")
     
     st.write('---')
     st.header('Tujuan kegiatan Class Meeting diantara lain:')
