@@ -220,15 +220,15 @@ if selected=='Klasemen Ikhwan':
     st.title('Klasemen Bola Beracun')
     st.subheader('Klasemen Lomba Bola Beracun Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Bola Beracun (Fase A - Fase C)"):
-        st.header('Bola Beracun A')
+        st.header('Bola Beracun Fase A')
         image=Image.open('bola_a.png')
         st.image(image,
                   use_column_width=True)
-        st.header('Bola Beracun B')
+        st.header('Bola Beracun Fase B')
         image=Image.open('bola_b.png')
         st.image(image,
                   use_column_width=True)
-        st.header('Bola Beracun C')
+        st.header('Bola Beracun Fase C')
         image=Image.open('bola_c.png')
         st.image(image,
                   use_column_width=True)
@@ -238,6 +238,7 @@ if selected=='Klasemen Ikhwan':
     st.title('Klasemen Chopstick Ball')
     st.subheader('Klasemen Lomba Chopstick Ball Class Meeting Abu Dzar 2024/2025')
     with st.popover("Klasemen Chopstick Ball (Fase A)"):
+        st.header('Bola Chopstick Ball A')
         image=Image.open('chop_a.png')
         st.image(image,
                   use_column_width=True)
