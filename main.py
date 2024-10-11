@@ -1,20 +1,17 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 
-#page setup
-about_page = st.page(
-    page = "views/about_CM.py",
-    title = 'Class Meeting Abu Dzar 2024',
-    default = True,
-)
 
-project_1_page = st.page(
-    page = "views/Lomba_Estafet.py",
-    title = "Lomba Estafet",
-    icon = '👌',
-)
+with st.sidebar:
+    selected=option_menu(
+        menu_title='main menu',
+        options=['home','projects','contact']
+    )
 
-#NAVIGATION SETUP
-pg = st.navigation(pages = [about_page, project_1_page])
-
-#RUN NAVIGATION
-pg.run()
+if selected=='home':
+    st.title('Selamat Datang')
+    st.header('class meeting')
+if selected=='projects':
+    st.title(f'you have selected {selected}')
+if selected=='contact':
+    st.title(f'you have selected {selected}')
