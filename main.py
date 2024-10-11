@@ -178,15 +178,17 @@ if selected=='Klasemen Ikhwan':
     st.write('---')
     st.title('2. Klasemen Futsal')
     st.subheader('Klasemen Lomba Futsal Class Meeting Abu Dzar 2024/2025')
-    with st.popover("Klasemen Futsal (Fase A - Fase C)"):
+    with st.popover("Klasemen Futsal Fase A"):
         st.header('Futsal Fase A')
         image=Image.open('futsal_a.png')
         st.image(image,
                  use_column_width=True)
+    with st.popover("Klasemen Futsal Fase B"):
         st.header('Futsal Fase B')
         image=Image.open('futsal_b.png')
         st.image(image,
                   use_column_width=True)
+    with st.popover("Klasemen Futsal Fase C"):
         st.header('Futsal Fase C')
         image=Image.open('futsal_c.png')
         st.image(image,
@@ -197,11 +199,12 @@ if selected=='Klasemen Ikhwan':
     st.write('---')
     st.title('3. Klasemen Basket')
     st.subheader('Klasemen Lomba Basket Class Meeting Abu Dzar 2024/2025')
-    with st.popover("Klasemen Basket (Fase B - Fase C)"):
+    with st.popover("Klasemen Basket Fase B"):
         st.header('Basket Fase B')
         image=Image.open('basket_b.png')
         st.image(image,
                   use_column_width=True) 
+    with st.popover("Klasemen Basket Fase C"):
         st.header('Basket Fase C')
         image=Image.open('basket_c.png')
         st.image(image,
@@ -211,15 +214,17 @@ if selected=='Klasemen Ikhwan':
     st.write('---')
     st.title('4. Klasemen Blind Bottle')
     st.subheader('Klasemen Lomba Blind Bottle Class Meeting Abu Dzar 2024/2025')
-    with st.popover("Klasemen Blind Bottle (Fase A - Fase C)"):
+    with st.popover("Klasemen Blind Bottle Fase A"):
         st.header('Blind Bottle Fase A')
         image=Image.open('blind_a.png')
         st.image(image,
                  use_column_width=True)
+    with st.popover("Klasemen Blind Bottle Fase B"):
         st.header('Blind Bottle Fase B')
         image=Image.open('blind_b.png')
         st.image(image,
                   use_column_width=True)
+    with st.popover("Klasemen Blind Bottle Fase C"):
         st.header('Blind Bottle Fase C')
         image=Image.open('blind_c.png')
         st.image(image,
@@ -229,15 +234,17 @@ if selected=='Klasemen Ikhwan':
     st.write('---')
     st.title('Klasemen Volly Sarung')
     st.subheader('Klasemen Lomba Volly Sarung Class Meeting Abu Dzar 2024/2025')
-    with st.popover("Klasemen Volly Sarung (Fase A - Fase C)"):
+    with st.popover("Klasemen Volly Sarung Fase A"):
         st.header('Volly Sarung Fase A')
         image=Image.open('volly_a.png')
         st.image(image,
                   use_column_width=True)
+    with st.popover("Klasemen Volly Sarung Fase B"):
         st.header('Volly Sarung Fase B')
         image=Image.open('volly_b.png')
         st.image(image,
                   use_column_width=True)
+    with st.popover("Klasemen Volly Sarung Fase C"):
         st.header('Volly Sarung Fase C')
         image=Image.open('volly_c.png')
         st.image(image,
@@ -247,15 +254,17 @@ if selected=='Klasemen Ikhwan':
     st.write('---')
     st.title('Klasemen Bola Beracun')
     st.subheader('Klasemen Lomba Bola Beracun Class Meeting Abu Dzar 2024/2025')
-    with st.popover("Klasemen Bola Beracun (Fase A - Fase C)"):
+    with st.popover("Klasemen Bola Beracun Fase A"):
         st.header('Bola Beracun Fase A')
         image=Image.open('bola_a.png')
         st.image(image,
                   use_column_width=True)
+    with st.popover("Klasemen Bola Beracun Fase B"):
         st.header('Bola Beracun Fase B')
         image=Image.open('bola_b.png')
         st.image(image,
                   use_column_width=True)
+    with st.popover("Klasemen Bola Beracun Fase C"):
         st.header('Bola Beracun Fase C')
         image=Image.open('bola_c.png')
         st.image(image,
@@ -265,7 +274,7 @@ if selected=='Klasemen Ikhwan':
     st.write('---')
     st.title('Klasemen Chopstick Ball')
     st.subheader('Klasemen Lomba Chopstick Ball Class Meeting Abu Dzar 2024/2025')
-    with st.popover("Klasemen Chopstick Ball (Fase A)"):
+    with st.popover("Klasemen Chopstick Ball Fase A"):
         st.header('Bola Chopstick Ball A')
         image=Image.open('chop_a.png')
         st.image(image,
