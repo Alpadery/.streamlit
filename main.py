@@ -35,7 +35,7 @@ if selected=='Class Meeting 2024':
     st.header('Jadwal Kegiatan Class Meeting 2024')
     image=Image.open('jadwal.png')
     st.image(image,
-             use_column_width=50)
+             width=600)
 
 
 if selected=='Lomba Class Meeting':
