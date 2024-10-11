@@ -1,6 +1,4 @@
 import streamlit as st
-import pandas as st
-import plotly.express as px
 from PIL import Image
 from streamlit_option_menu import option_menu
 
