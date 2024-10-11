@@ -51,7 +51,8 @@ if selected=='Lomba Class Meeting':
     Lomba estafet adalah Apa pengertian lari estafet? Lari estafet juga sering disebut dengan lari sambung.
     Pasalnya, lari estafet dilakukan dengan*Peraturan sambung menyambung.
     Oleh karena itu, lari estafet adalah lari yang dilakukan s*Peraturan berkelompok. Umumnya bisa berjumlah 2 sampai 4 orang di dalam kelompok.
-    Setiap orang di dalam kelompok akan mendapat giliran berakhir.""")
+    Setiap orang di dalam kelompok akan mendapat giliran berakhir.
+    """)
     st.subheader('**Peraturan Permainan:**')
     st.write(
         """
@@ -62,7 +63,8 @@ if selected=='Lomba Class Meeting':
 
     st.write('---')
     st.subheader('**B. Futsal**')
-    st.write("""Futsal ialah sebuah permainan bola yang dimainkan oleh dua tim, yang masing-masing timnya memiliki jumlah anggota yakni lima orang.
+    st.write("""
+    Futsal ialah sebuah permainan bola yang dimainkan oleh dua tim, yang masing-masing timnya memiliki jumlah anggota yakni lima orang.
     Tujuan dari permainan adalah untuk memasukkan bola ke gawang lawan sebanyak, dengan memanipulasi bola dengan kaki. 
     Dalam permainannya, futsal menggunakan media bola sebagai alat permainannya.
     Adapun pertandingan futsal bisa dilakukan di di luar ruangan (outdoor) ataupun di dalam ruangan (indoor).
@@ -81,25 +83,40 @@ if selected=='Lomba Class Meeting':
 
     st.write('---')
     st.subheader('C. Basket')
-    st.write('Lomba basket adalah')
+    st.write("""
+    Bola basket merupakan salah satu contoh olahraga bola besar.
+    Permainan ini berlangsung dengan cara mempertandingkan dua tim basket dan berebut bola untuk dimasukkan ke dalam ring lawan.
+    Skor yang didapatkan sangat tergantung dari cara masuknya bola, skor berkisar satu sampai tiga poin.
+    """)
     st.subheader('**Peraturan Permainan:**')
     st.write(
         """
-        1. A
-        2. B
-        3. C
+        1. Setiap tim dalam permainan bola basket terdiri dari lima orang pemain ditambah beberapa pemain cadangan.
+        2. Bola dapat dilempar ke kedua arah dengan satu atau kedua tangan, tetapi tidak boleh ditinju. Bola harus dipegang di dalam atau di antara telapak tangan.
+        3. Permainan dimulai dengan *jump ball* di tengah lapangan. Tim yang mencetak poin terbanyak pada akhir pertandingan dinyatakan sebagai pemenang.
+        4. Membawa bola dengan berlari atau berjalan akan dianggap sebagai bentuk pelanggaran. Bola hanya boleh dibawa dengan cara di-dribble.
+        5. *Double dribble* tidak diperkenankan. Maksudnya, jika seorang pemain melakukan dribble kemudian berhenti dan memegang bola dengan kedua tangannya, maka pemain tidak diperbolehkan untuk melakukan dribble lagi.
+        6. Lama waktu bermain adalah 2 x 5 menit.
         """)
     
     st.write('---')
     st.subheader('D. Blind Bottle')
-    st.write('Lomba blind bottle adalah')
+    st.write('Lomba *blind bottle* atau lomba memasukkan pensil ke dalam botol merupakan permainan tim, satu tim terdiri dari 5 orang dengan 1 orang sebagai ketua tim yang bertugas memimpin dan mengarahkan agar paku bisa masuk ke dalam botol.')
+    image=Image.open('blindbottle.png')
+    st.image(image,
+        use_column_width=True)
     st.subheader('**Peraturan Permainan:**')
     st.write(
         """
-        1. A
-        2. B
-        3. C
+        1. Lama waktu bermain adalah 10 menit.
+        2. Pemain terdiri dari 6 orang dengan 1 orang sebagai kapten.
+        3. 5 pemain akan diikat tali pada pinggangnya, kemudian masing-masing tali pada pemain dihubungkan dengan mengikat pensil di tengahnya.
+        4. Selama permainan, pemain akan ditutup matanya dan berpindah tempat sesuai perintah kapten tim tersebut.
+        5. Kapten mengarahkan timnya agar dapat memasukkan pensil ke dalam botol.
+        6. Tim yang berhasil memasukkan pensil tercepat adalah pemenangya.
         """)
+    
+    
     
     st.write('---')
     st.subheader('E. Volly Sarung')
