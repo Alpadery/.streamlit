@@ -31,7 +31,7 @@ if selected=='Class Meeting 2024':
     st.write('[Click Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
 
     st.header('Jadwal Kegiatan Class Meeting 2024')
-    image=Image.open('media/jadwal.png')
+    image=Image.open('jadwal.png')
     st.image(image,
              use_column_width=True)
 
