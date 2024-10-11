@@ -5,7 +5,7 @@ from streamlit_option_menu import option_menu
 with st.sidebar:
     selected=option_menu(
         menu_title='Class Meeting Abu Dzar',
-        options=['home','Leaderboard','Lomba Class Meeting']
+        options=['Class Meeting 2024','Leaderboard','Lomba Class Meeting']
     )
 
 if selected=='home':
