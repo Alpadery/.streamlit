@@ -9,8 +9,22 @@ with st.sidebar:
     )
 
 if selected=='home':
-    st.title('Selamat Datang')
-    st.header('class meeting')
+    st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
+    st.header('Tentang Class Meeting Abu Dzar')
+    st.write(
+        """
+        Class Meeting merupakan kegiatan yang berlangsung setelah kegiatan Sumatif Akhir Semester dilaksanakan. Kegiatan ini merupakan sebuah refreshment untuk peserta didik setelah mengikuti SAS.
+        Tujuan kegiatan Class Meeting diantara lain:
+        - A
+        - B
+        - C
+
+        Manfaat kegiatan Class Meeting diantara lain:
+        - A
+        - B
+        - C
+        """
+    )
 if selected=='Leaderboard':
     st.title('Klasemen Sementara Class Meeting 2024')
 if selected=='Lomba Class Meeting':
