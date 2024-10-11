@@ -128,7 +128,7 @@ if selected=='Klasemen Ikhwan':
     st.header('Estafet Fase A')
     image=Image.open('estafet_a.png')
     st.image(image,
-             width=600)
+             width=800)
 
     st.write('---')
     st.title('Klasemen Futsal')
