@@ -11,7 +11,7 @@ with st.sidebar:
 if selected=='home':
     st.title('Selamat Datang')
     st.header('class meeting')
-if selected=='projects':
-    st.title(f'you have selected {selected}')
-if selected=='contact':
+if selected=='Leaderboard':
+    st.title('Klasemen Sementara Class Meeting 2024')
+if selected=='Lomba Class Meeting':
     st.title(f'you have selected {selected}')
