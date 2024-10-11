@@ -36,7 +36,7 @@ if selected=='Class Meeting 2024':
     st.header('Jadwal Kegiatan Class Meeting 2024')
     image=Image.open('jadwal.png')
     st.image(image,
-             width=600)
+             use_column_width=True)
 
 
 if selected=='Lomba Class Meeting':
@@ -120,18 +120,38 @@ if selected=='Lomba Class Meeting':
         """)
     
 if selected=='Leaderboard':
-    st.title('Klasemen Sementara Class Meeting 2024')
+    st.title('Leaderboard Class Meeting 2024')
+    st.write('---')
+    image=Image.open('leaderboard.png')
+    st.image(image,
+             use_column_width=True)
+
 
 if selected=='Klasemen Ikhwan':
-    st.write('---')
     st.title('Klasemen Estafet')
+    st.write('---')
     st.header('Estafet Fase A')
     image=Image.open('estafet_a.png')
     st.image(image,
-             width=800)
+             use_column_width=True)
 
+    st.header('Estafet Fase B')
+    image=Image.open('estafet_b.png')
+    st.image(image,
+             use_column_width=True)
+    
+    st.header('Estafet Fase C')
+    image=Image.open('estafet_c.png')
+    st.image(image,
+             use_column_width=True)
+    
     st.write('---')
     st.title('Klasemen Futsal')
+    st.write('---')
+    st.header('Futsal Fase A')
+    image=Image.open('futsal_a.png')
+    st.image(image,
+             use_column_width=True)
 
 
     st.write('---')
