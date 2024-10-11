@@ -3,4 +3,3 @@ streamlit_extras==0.3.6
 streamlit_lottie==0.0.5
 streamlit_option_menu
 streamlit
-pillow
