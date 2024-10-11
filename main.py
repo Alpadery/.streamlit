@@ -50,7 +50,7 @@ if selected=='Lomba Class Meeting':
         3. C
         """)
 
-st.write('---')
+    st.write('---')
     st.subheader('B. Futsal ⚽')
     st.write('Lomba futsal adalah')
     st.subheader('**Cara Bermain:**')
