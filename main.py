@@ -1,4 +1,3 @@
-import pandas as pd
 import streamlit as st
 import plotly.express as px
 from PIL import Image
@@ -130,16 +129,6 @@ if selected=='Klasemen Ikhwan':
     image=Image.open('estafet_a.png')
     st.image(image,
              width=800)
-
-    sheet_name='Bagan Estafet'
-    excel_file='Jadwal Ikhwan CM 24.xlsx'
-
-    df=pd.read_excel(excel_file,
-                     sheet_name=sheet_name,
-                     usecols='B:M',
-                     header=1)
-    
-    st.dataframe(df)
 
     st.write('---')
     st.title('Klasemen Futsal')
