@@ -1,7 +1,5 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from PIL import Image
-
 
 with st.sidebar:
     selected=option_menu(
@@ -35,7 +33,7 @@ if selected=='Class Meeting 2024':
     
     st.write('---')
     st.header('Keseruan Kegiatan Class Meeting 2023')
-    st.image('/media/images.jpg')
+    st.image('images.jpg')
 
 if selected=='Leaderboard':
     st.title('Klasemen Sementara Class Meeting 2024')
