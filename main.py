@@ -31,7 +31,7 @@ if selected=='Class Meeting 2024':
         6. Memberikan kesempatan berekspresi.
         """)
     
-    st.subheader('Berikut hasil dokumentasi kegiatan Class Meeting 2023')
+    st.write('**Berikut hasil dokumentasi kegiatan Class Meeting 2023**')
     st.write('[Click Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
 
     st.write('---')
@@ -46,9 +46,13 @@ if selected=='Lomba Class Meeting':
     st.title('Lomba Pada Kegiatan Class Meeting 2024')
     st.write('---')
     st.header("*What's new? Keep scrolling!* 🙌")
-    st.subheader('A. Estafet 🧩')
-    st.write('Lomba estafet adalah')
-    st.subheader('**Cara Bermain:**')
+    st.subheader('A. Estafet')
+    st.write("""
+    Lomba estafet adalah Apa pengertian lari estafet? Lari estafet juga sering disebut dengan lari sambung.
+    Pasalnya, lari estafet dilakukan dengan*Peraturan sambung menyambung.
+    Oleh karena itu, lari estafet adalah lari yang dilakukan s*Peraturan berkelompok. Umumnya bisa berjumlah 2 sampai 4 orang di dalam kelompok.
+    Setiap orang di dalam kelompok akan mendapat giliran berakhir.""")
+    st.subheader('**Peraturan Permainan:**')
     st.write(
         """
         1. A
@@ -57,20 +61,28 @@ if selected=='Lomba Class Meeting':
         """)
 
     st.write('---')
-    st.subheader('B. Futsal ⚽')
-    st.write('Lomba futsal adalah')
-    st.subheader('**Cara Bermain:**')
+    st.subheader('**B. Futsal**')
+    st.write("""Futsal ialah sebuah permainan bola yang dimainkan oleh dua tim, yang masing-masing timnya memiliki jumlah anggota yakni lima orang.
+    Tujuan dari permainan adalah untuk memasukkan bola ke gawang lawan sebanyak, dengan memanipulasi bola dengan kaki. 
+    Dalam permainannya, futsal menggunakan media bola sebagai alat permainannya.
+    Adapun pertandingan futsal bisa dilakukan di di luar ruangan (outdoor) ataupun di dalam ruangan (indoor).
+    """)
+    st.subheader('**Peraturan Permainan:**')
     st.write(
         """
-        1. A
-        2. B
-        3. C
+        1. Bola yang digunakan dalam permainan futsal harus terbuat dari kulit atau bahan sejenisnya (tidak berbahaya).
+        2. Jumlah pemain futsal dalam satu tim adalah 5 orang pemain di lapangan dan memiliki 2 pemain cadangan.
+        3. Lama waktu bermain adalah 2 x 5 menit.
+        4. Pemain diperbolehkan melakukan shooting langsung ke gawang saat kick-off berlangsung.
+        5. Dalam olahraga futsal seorang penjaga gawang atau kiper tidak boleh terlalu lama melakukan penguasaan bola.
+        6. Jika tendangan sudut tidak dilakukan dalam waktu 4 detik, restart menjadi izin gawang untuk tim lawan.
+        7. Tendangan Bebas bisa dilakukan secara langsung atau tidak langsung.
         """)
 
     st.write('---')
-    st.subheader('C. Basket 🏀')
+    st.subheader('C. Basket')
     st.write('Lomba basket adalah')
-    st.subheader('**Cara Bermain:**')
+    st.subheader('**Peraturan Permainan:**')
     st.write(
         """
         1. A
@@ -79,9 +91,9 @@ if selected=='Lomba Class Meeting':
         """)
     
     st.write('---')
-    st.subheader('D. Blind Bottle 😎')
+    st.subheader('D. Blind Bottle')
     st.write('Lomba blind bottle adalah')
-    st.subheader('**Cara Bermain:**')
+    st.subheader('**Peraturan Permainan:**')
     st.write(
         """
         1. A
@@ -90,9 +102,9 @@ if selected=='Lomba Class Meeting':
         """)
     
     st.write('---')
-    st.subheader('E. Volly Sarung 🏐')
+    st.subheader('E. Volly Sarung')
     st.write('Lomba blind bottle adalah')
-    st.subheader('**Cara Bermain:**')
+    st.subheader('**Peraturan Permainan:**')
     st.write(
         """
         1. A
@@ -101,9 +113,9 @@ if selected=='Lomba Class Meeting':
         """)
 
     st.write('---')
-    st.subheader('F. Bola Beracun 🏉')
+    st.subheader('F. Bola Beracun')
     st.write('Lomba bola beracun adalah')
-    st.subheader('**Cara Bermain:**')
+    st.subheader('**Peraturan Permainan:**')
     st.write(
         """
         1. A
@@ -112,9 +124,9 @@ if selected=='Lomba Class Meeting':
         """)
 
     st.write('---')
-    st.subheader('G. Chopstick Ball 🥢')
+    st.subheader('G. Chopstick Ball')
     st.write('Lomba chopstick ball adalah')
-    st.subheader('**Cara Bermain:**')
+    st.subheader('**Peraturan Permainan:**')
     st.write(
         """
         1. A
