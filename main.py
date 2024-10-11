@@ -1,4 +1,7 @@
 import streamlit as st
+import pandas as st
+import plotly.express as px
+from PIL import Image
 from streamlit_option_menu import option_menu
 
 with st.sidebar:
@@ -15,21 +18,16 @@ if selected=='Class Meeting 2024':
         Class Meeting merupakan kegiatan yang berlangsung setelah kegiatan Sumatif Akhir Semester dilaksanakan. Kegiatan ini merupakan sebuah *refreshment* untuk peserta didik setelah mengikuti SAS.""")
     
     st.write('---')
-    st.header('Tujuan kegiatan Class Meeting diantara lain:')
+    st.header('Tujuan dan Manfaat kegiatan Class Meeting diantara lain:')
     st.write(
         """
-        - A
-        - B
-        - C
+        1. Ajang hiburan dan relaksasi pasca ujian.
+        2. Mengembangkan bakat dan minat.
+        3. Mempererat hubungan antar siswa.
+        4. Mencari bibit prestasi ekstrakulikuler.
+        5. Melatih mental dan daya saing.
+        6. Memberikan kesempatan berekspresi.
         """)
-
-    st.write('---')
-    st.header('Manfaat kegiatan Class Meeting diantara lain:')
-    st.write("""
-        - A
-        - B
-        - C
-          """)
     
     st.write('Berikut hasil dokumentasi kegiatan Class Meeting 2023')
     st.write('[Watch Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
