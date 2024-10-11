@@ -4,3 +4,4 @@ streamlit_lottie==0.0.5
 streamlit_option_menu
 streamlit
 Pillow
+pandas==1.2.0
