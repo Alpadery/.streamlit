@@ -13,17 +13,28 @@ if selected=='home':
     st.header('Tentang Class Meeting Abu Dzar')
     st.write(
         """
-        Class Meeting merupakan kegiatan yang berlangsung setelah kegiatan Sumatif Akhir Semester dilaksanakan. Kegiatan ini merupakan sebuah refreshment untuk peserta didik setelah mengikuti SAS.
-        Tujuan kegiatan Class Meeting diantara lain:
-        - A
-        - B
-        - C
-
-        Manfaat kegiatan Class Meeting diantara lain:
-        - A
-        - B
-        - C
+        Class Meeting merupakan kegiatan yang berlangsung setelah kegiatan Sumatif Akhir Semester dilaksanakan. Kegiatan ini merupakan sebuah refreshment untuk peserta didik setelah mengikuti SAS.""")
+    
+    st.write('---')
+    left_column, right_column=st.column(2)
+    with left_column:
+        st.header('Tujuan kegiatan Class Meeting diantara lain:')
+        st.write(
         """
+        - A
+        - B
+        - C
+        """)
+
+    st.write('---')
+    left_column, right_column=st.column(2)
+    with left_column:
+        st.header('Manfaat kegiatan Class Meeting diantara lain:')
+        st.write("""
+        - A
+        - B
+        - C
+          """
     )
 if selected=='Leaderboard':
     st.title('Klasemen Sementara Class Meeting 2024')
