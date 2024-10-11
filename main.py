@@ -44,7 +44,7 @@ if selected=='Lomba Class Meeting':
     st.header('A. Estafet')
     st.subheader('Pengertian Lomba Estafet')
     st.write('Lomba estafet adalah')
-    st.subheader('**Cara Bermain:**')
+    st.subheader('Cara Bermain:')
     st.write(
         """
         1. A
