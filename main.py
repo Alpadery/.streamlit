@@ -1,5 +1,4 @@
 import streamlit as st
-import plotly.express as px
 from PIL import Image
 from streamlit_option_menu import option_menu
 
@@ -10,6 +9,7 @@ with st.sidebar:
         menu_title='Class Meeting Abu Dzar',
         options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard','Klasemen Ikhwan']
     )
+
 
 if selected=='Class Meeting 2024':
     st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
@@ -37,7 +37,7 @@ if selected=='Class Meeting 2024':
     image=Image.open('jadwal.png')
     st.image(image,
              width=600)
-    
+
 
 if selected=='Lomba Class Meeting':
     st.title('Lomba Pada Kegiatan Class Meeting 2024')
@@ -123,12 +123,12 @@ if selected=='Leaderboard':
     st.title('Klasemen Sementara Class Meeting 2024')
 
 if selected=='Klasemen Ikhwan':
-    st.title('Klasemen Estafet')
     st.write('---')
-    st.subheader('Estafet Fase A')
+    st.title('Klasemen Estafet')
+    st.header('Estafet Fase A')
     image=Image.open('estafet_a.png')
     st.image(image,
-             width=800)
+             width=600)
 
     st.write('---')
     st.title('Klasemen Futsal')
