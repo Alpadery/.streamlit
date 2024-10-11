@@ -123,20 +123,32 @@ if selected=='Leaderboard':
     st.title('Leaderboard Class Meeting 2024')
     st.write('---')
     st.subheader('Finalis Class Meeting Abu Dzar 2024/2025')
-    with st.popover("Finalis"):
-        image=Image.open('finalis.png')
+    with st.popover("Finalis Ikhwan"):
+        image=Image.open('finalis_i.png')
+        st.image(image,
+                  use_column_width=True)
+    with st.popover("Finalis Akhwat"):
+        image=Image.open('finalis_a.png')
         st.image(image,
                   use_column_width=True)
     st.write('---')
     st.subheader('Juara Fase Class Meeting Abu Dzar 2024/2025')
-    with st.popover("Juara Fase"):
-        image=Image.open('juarafase.png')
+    with st.popover("Juara Fase Ikhwan"):
+        image=Image.open('juarafase_i.png')
+        st.image(image,
+                  use_column_width=True)
+    with st.popover("Juara Fase Akhwat"):
+        image=Image.open('juarafase_a.png')
         st.image(image,
                   use_column_width=True)
     st.write('---')
     st.subheader('Perolehan Medali Class Meeting Abu Dzar 2024/2025')
-    with st.popover("Perolehan Medali"):
-        image=Image.open('medali.png')
+    with st.popover("Perolehan Medali Ikhwan"):
+        image=Image.open('medali_i.png')
+        st.image(image,
+                  use_column_width=True)
+    with st.popover("Perolehan Medali Akhwat"):
+        image=Image.open('medali_a.png')
         st.image(image,
                   use_column_width=True)
 
@@ -146,15 +158,17 @@ if selected=='Klasemen Ikhwan':
     st.write('---')
     st.title('1. Klasemen Estafet')
     st.subheader('Klasemen Lomba Estafet Class Meeting Abu Dzar 2024/2025')
-    with st.popover("Klasemen Estafet (Fase A - Fase C)"):
+    with st.popover("Klasemen Estafet Fase A"):
         st.header('Estafet Fase A')
         image=Image.open('estafet_a.png')
         st.image(image,
                  use_column_width=True)
+    with st.popover("Klasemen Estafet Fase B"):
         st.header('Estafet Fase B')
         image=Image.open('estafet_b.png')
         st.image(image,
                  use_column_width=True)
+    with st.popover("Klasemen Estafet Fase C"):
         st.header('Estafet Fase C')
         image=Image.open('estafet_c.png')
         st.image(image,
