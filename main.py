@@ -8,7 +8,7 @@ with st.sidebar:
         options=['Class Meeting 2024','Leaderboard','Lomba Class Meeting']
     )
 
-if selected=='home':
+if selected=='Class Meeting 2024':
     st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
     st.header('Tentang Class Meeting Abu Dzar')
     st.write(
