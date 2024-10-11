@@ -122,9 +122,23 @@ if selected=='Lomba Class Meeting':
 if selected=='Leaderboard':
     st.title('Leaderboard Class Meeting 2024')
     st.write('---')
-    image=Image.open('leaderboard.png')
-    st.image(image,
-             use_column_width=True)
+    st.subheader('Finalis Class Meeting Abu Dzar 2024/2025')
+    with st.popover("Finalis"):
+        image=Image.open('finalis.png')
+        st.image(image,
+                  use_column_width=True)
+    st.write('---')
+    st.subheader('Juara Fase Class Meeting Abu Dzar 2024/2025')
+    with st.popover("Juara Fase"):
+        image=Image.open('juarafase.png')
+        st.image(image,
+                  use_column_width=True)
+    st.write('---')
+    st.subheader('Perolehan Medali Class Meeting Abu Dzar 2024/2025')
+    with st.popover("Perolehan Medali"):
+        image=Image.open('medali.png')
+        st.image(image,
+                  use_column_width=True)
 
 
 if selected=='Klasemen Ikhwan':
