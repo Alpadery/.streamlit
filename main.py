@@ -128,23 +128,24 @@ if selected=='Leaderboard':
 
 
 if selected=='Klasemen Ikhwan':
+#ESTAFET
     st.title('Klasemen Estafet')
     st.write('---')
     st.header('Estafet Fase A')
-    image=Image.open('estafet_a.png')
-    st.image(image,
-             use_column_width=True)
-
-    st.header('Estafet Fase B')
-    image=Image.open('estafet_b.png')
-    st.image(image,
-             use_column_width=True)
+    with st.popover("Klasemen Estafet"):
+        image=Image.open('estafet_a.png')
+        st.image(image,
+                 use_column_width=True)
+        st.header('Estafet Fase B')
+        image=Image.open('estafet_b.png')
+        st.image(image,
+                 use_column_width=True)
+        st.header('Estafet Fase C')
+        image=Image.open('estafet_c.png')
+        st.image(image,
+                 use_column_width=True)
     
-    st.header('Estafet Fase C')
-    image=Image.open('estafet_c.png')
-    st.image(image,
-             use_column_width=True)
-    
+#FUTSAL
     st.write('---')
     st.title('Klasemen Futsal')
     st.write('---')
@@ -152,23 +153,93 @@ if selected=='Klasemen Ikhwan':
     image=Image.open('futsal_a.png')
     st.image(image,
              use_column_width=True)
+    
+    st.header('Futsal Fase B')
+    image=Image.open('futsal_b.png')
+    st.image(image,
+             use_column_width=True)
+    
+    st.header('Futsal Fase C')
+    image=Image.open('futsal_c.png')
+    st.image(image,
+             use_column_width=True)
 
 
+#BASKET
     st.write('---')
     st.title('Klasemen Basket')
+    st.write('---')
+    st.header('Basket Fase A')
+    image=Image.open('basket_a.png')
+    st.image(image,
+             use_column_width=True) 
+    
+    st.header('Basket Fase B')
+    image=Image.open('basket_b.png')
+    st.image(image,
+             use_column_width=True) 
 
-
+#BLIND BOTTLE
     st.write('---')
     st.title('Klasemen Blind Bottle')
+    st.write('---')
+    st.header('Blind Bottle Fase A')
+    image=Image.open('blind_bottle_a.png')
+    st.image(image,
+             use_column_width=True)
+    
+    st.header('Blind Bottle Fase B')
+    image=Image.open('blind_bottle_b.png')
+    st.image(image,
+             use_column_width=True)
+    
+    st.header('Blind Bottle Fase C')
+    image=Image.open('blind_bottle_c.png')
+    st.image(image,
+             use_column_width=True)
 
-
+#VOLLY SARUNG
     st.write('---')
     st.title('Klasemen Volly Sarung')
+    st.write('---')
+    st.header('Volly Sarung Fase A')
+    image=Image.open('volly_sarung_a.png')
+    st.image(image,
+             use_column_width=True)
+    
+    st.header('Volly Sarung Fase B')
+    image=Image.open('volly_sarung_b.png')
+    st.image(image,
+             use_column_width=True)
+    
+    st.header('Volly Sarung Fase C')
+    image=Image.open('volly_sarung_c.png')
+    st.image(image,
+             use_column_width=True)
 
-
+#BOLA BERACUN
     st.write('---')
     st.title('Klasemen Bola Beracun')
-
+    st.write('---')
+    st.header('Bola Beracun A')
+    image=Image.open('futsal_a.png')
+    st.image(image,
+             use_column_width=True)
+    
+    st.header('Bola Beracun B')
+    image=Image.open('futsal_a.png')
+    st.image(image,
+             use_column_width=True)
+    
+    st.header('Bola Beracun C')
+    image=Image.open('futsal_a.png')
+    st.image(image,
+             use_column_width=True)
 
     st.write('---')
     st.title('Klasemen Chopstick Ball')
+    st.write('---')
+    st.header('Futsal Fase A')
+    image=Image.open('futsal_a.png')
+    st.image(image,
+             use_column_width=True)
