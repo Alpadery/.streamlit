@@ -40,7 +40,7 @@ if selected=='Class Meeting 2024':
 
 if selected=='Lomba Class Meeting':
     st.title('Lomba Pada Kegiatan Class Meeting 2024')
-    st.header("What's new? *Keep scrolling*")
+    st.header("What's new? *Keep scrolling* 🙌")
     st.write('---')
     st.subheader('A. Estafet 🧩')
     st.write('Lomba estafet adalah')
@@ -117,6 +117,6 @@ if selected=='Lomba Class Meeting':
         2. B
         3. C
         """)
-   
+    
 if selected=='Leaderboard':
     st.title('Klasemen Sementara Class Meeting 2024')
