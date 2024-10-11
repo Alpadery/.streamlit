@@ -3,5 +3,6 @@ streamlit_extras==0.3.6
 streamlit_lottie==0.0.5
 streamlit_option_menu
 streamlit
-Pillow
-plotly
+Pillow==8.1.0
+plotly==4.14.3
+pandas==1.2.0
