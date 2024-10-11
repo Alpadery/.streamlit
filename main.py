@@ -34,7 +34,7 @@ if selected=='Class Meeting 2024':
     
     st.write('---')
     st.header('Keseruan Kegiatan Class Meeting 2023')
-    st.image('./media/images.jpg')
+    st.image('/media/images.jpg')
 
 if selected=='Leaderboard':
     st.title('Klasemen Sementara Class Meeting 2024')
