@@ -49,6 +49,72 @@ if selected=='Lomba Class Meeting':
         2. B
         3. C
         """)
+
+st.write('---')
+    st.subheader('B. Futsal ⚽')
+    st.write('Lomba futsal adalah')
+    st.subheader('**Cara Bermain:**')
+    st.write(
+        """
+        1. A
+        2. B
+        3. C
+        """)
+
+    st.write('---')
+    st.subheader('C. Basket 🏀')
+    st.write('Lomba basket adalah')
+    st.subheader('**Cara Bermain:**')
+    st.write(
+        """
+        1. A
+        2. B
+        3. C
+        """)
+    
+    st.write('---')
+    st.subheader('D. Blind Bottle 😎')
+    st.write('Lomba blind bottle adalah')
+    st.subheader('**Cara Bermain:**')
+    st.write(
+        """
+        1. A
+        2. B
+        3. C
+        """)
+    
+    st.write('---')
+    st.subheader('E. Volly Sarung 🏐')
+    st.write('Lomba blind bottle adalah')
+    st.subheader('**Cara Bermain:**')
+    st.write(
+        """
+        1. A
+        2. B
+        3. C
+        """)
+
+    st.write('---')
+    st.subheader('F. Bola Beracun 🏉')
+    st.write('Lomba bola beracun adalah')
+    st.subheader('**Cara Bermain:**')
+    st.write(
+        """
+        1. A
+        2. B
+        3. C
+        """)
+
+    st.write('---')
+    st.subheader('G. Chopstick Ball 🥢')
+    st.write('Lomba chopstick ball adalah')
+    st.subheader('**Cara Bermain:**')
+    st.write(
+        """
+        1. A
+        2. B
+        3. C
+        """)
    
 if selected=='Leaderboard':
     st.title('Klasemen Sementara Class Meeting 2024')
