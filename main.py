@@ -7,8 +7,9 @@ st.set_page_config(page_title='Class Meeting', layout='wide')
 with st.sidebar:
     selected=option_menu(
         menu_title='Class Meeting Abu Dzar',
-        options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard']
+        options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard','Klasemen Ikhwan']
     )
+
 
 if selected=='Class Meeting 2024':
     st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
@@ -120,3 +121,34 @@ if selected=='Lomba Class Meeting':
     
 if selected=='Leaderboard':
     st.title('Klasemen Sementara Class Meeting 2024')
+
+if selected=='Klasemen Ikhwan':
+    st.write('---')
+    st.title('Klasemen Estafet')
+    st.header('Estafet Fase A')
+    image=Image.open('estafet_a.png')
+    st.image(image,
+             width=800)
+
+    st.write('---')
+    st.title('Klasemen Futsal')
+
+
+    st.write('---')
+    st.title('Klasemen Basket')
+
+
+    st.write('---')
+    st.title('Klasemen Blind Bottle')
+
+
+    st.write('---')
+    st.title('Klasemen Volly Sarung')
+
+
+    st.write('---')
+    st.title('Klasemen Bola Beracun')
+
+
+    st.write('---')
+    st.title('Klasemen Chopstick Ball')
