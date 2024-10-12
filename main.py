@@ -291,7 +291,7 @@ if selected=='Klasemen Ikhwan':
         image=Image.open('ikhwan/blind_c.png')
         st.image(image,
                   use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/4a90c00d8c3a63b6c7ac0b928b05a9fa5e76bdf40b2436fa14e04bd6.png)')
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/376c8a225e26feac13970bf1ac97b4782c779a0adc344830e09a3502.png)')
 
 #VOLLY SARUNG
     st.write('---')
