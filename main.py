@@ -72,7 +72,6 @@ if selected=='Lomba Class Meeting':
     st.image(image,
         use_column_width=True)
     st.subheader('**Peraturan Permainan:**')
-    st.subheader('**Peraturan Permainan:**')
     st.write(
         """
         1. Bola yang digunakan dalam permainan futsal harus terbuat dari kulit atau bahan sejenisnya (tidak berbahaya).
