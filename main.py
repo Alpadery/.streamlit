@@ -148,18 +148,27 @@ if selected=='Lomba Class Meeting':
 
     st.write('---')
     st.subheader('F. Bola Beracun')
-    st.write('Lomba bola beracun adalah')
+    st.write("""
+    Permainan bola beracun ini dimainkan dalam bentuk kelompok dan mengharuskan setiap pemain berlari untuk menghindari bola yang dilempar oleh pemain lain.
+    Jika pemain terkena atau tersentuh oleh bola, maka pemain dianggap "teracuni" dan harus keluar dari permainan.
+    """)
     st.subheader('**Peraturan Permainan:**')
     st.write(
         """
-        1. A
-        2. B
-        3. C
+        1. Terdapat 2 tim dalam permainan yaitu tim penyerang dan tim mangsa.
+        2. Tim penyerang membentuk lingkaran sedangkan tim mangsa berada di tengah-tengah lingkaran.
+        3. Tim penyerang melempar bola ke arah tim mangsa dan jika salah satu pemain dari tim mangsa terkena bola, maka harus keluar lingkaran.
+        4. Tim penyerang memiliki waktu 10 menit untuk mengeluarkan semua tim mangsa dari dalam lingkaran.
+        5. Kemudian kedua tim bertukar posisi
+        6. Pemenang ditentukan jika tim berhasil mengeluarkan pemain tim mangsa terbanyak.
         """)
+    image=Image.open('bolaberacun.png')
+    st.image(image,
+        use_column_width=True)
 
     st.write('---')
     st.subheader('G. Chopstick Ball')
-    st.write('Lomba chopstick ball adalah')
+    st.write('Lomba chopstick ball adalah permainan yang dimainkan')
     st.subheader('**Peraturan Permainan:**')
     st.write(
         """
