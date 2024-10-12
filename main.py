@@ -69,6 +69,10 @@ if selected=='Lomba Class Meeting':
     Dalam permainannya, futsal menggunakan media bola sebagai alat permainannya.
     Adapun pertandingan futsal bisa dilakukan di di luar ruangan (outdoor) ataupun di dalam ruangan (indoor).
     """)
+    image=Image.open('futsal.png')
+    st.image(image,
+        use_column_width=True)
+    st.subheader('**Peraturan Permainan:**')
     st.subheader('**Peraturan Permainan:**')
     st.write(
         """
@@ -88,6 +92,9 @@ if selected=='Lomba Class Meeting':
     Permainan ini berlangsung dengan cara mempertandingkan dua tim basket dan berebut bola untuk dimasukkan ke dalam ring lawan.
     Skor yang didapatkan sangat tergantung dari cara masuknya bola, skor berkisar satu sampai tiga poin.
     """)
+    image=Image.open('basket.png')
+    st.image(image,
+        use_column_width=True)
     st.subheader('**Peraturan Permainan:**')
     st.write(
         """
@@ -101,7 +108,10 @@ if selected=='Lomba Class Meeting':
     
     st.write('---')
     st.subheader('D. Blind Bottle')
-    st.write('Lomba *blind bottle* atau lomba memasukkan pensil ke dalam botol merupakan permainan tim, satu tim terdiri dari 5 orang dengan 1 orang sebagai ketua tim yang bertugas memimpin dan mengarahkan agar paku bisa masuk ke dalam botol.')
+    st.write("""
+    Lomba *blind bottle* atau lomba memasukkan pensil ke dalam botol dalam keadaan mata tertutup.
+    Lomba ini merupakan permainan tim, satu tim terdiri dari 5 orang dengan 1 orang sebagai ketua tim yang bertugas memimpin dan mengarahkan agar pensil bisa masuk ke dalam botol.
+    """)
     image=Image.open('blindbottle.png')
     st.image(image,
         use_column_width=True)
@@ -119,14 +129,22 @@ if selected=='Lomba Class Meeting':
     
     
     st.write('---')
-    st.subheader('E. Volly Sarung')
-    st.write('Lomba blind bottle adalah')
+    st.subheader('E. Voli Sarung')
+    st.write("""
+    Lomba Voli Sarung adalah permainan yang dimainkan oleh dua tim dengan masing-masing tim berjumlah 4 orang dengan menggunakan sarung dan balon air sebagai alat permainannya.
+    """)
+    image=Image.open('voli.png')
+    st.image(image,
+        use_column_width=True)
     st.subheader('**Peraturan Permainan:**')
     st.write(
         """
-        1. A
-        2. B
-        3. C
+        1. Lama waktu bermain adalah 10 menit.
+        2. Permainan terdiri dari 2 tim dengan setiap tim terdiri dari 4 orang.
+        3. Setiap tim diberikan 1 sarung dan ke-4 pemain memegang tiap sudut sarung yang diberikan.
+        4. Balon yang berisi air diletakkan disarung dan dilempar ke arah lawan.
+        5. Lawan harus berusaha untuk menangkap balon dengan sarung dan dilemparkan kembali ke arah lawan, begitu seterusnya.
+        6. Tim mendapatkan poin jika lawan tidak bisa menangkap balon.
         """)
 
     st.write('---')
@@ -267,20 +285,20 @@ if selected=='Klasemen Ikhwan':
 
 #VOLLY SARUNG
     st.write('---')
-    st.header('5. Klasemen Volly Sarung')
-    st.subheader('Klasemen Lomba Volly Sarung Class Meeting Abu Dzar 2024')
-    with st.popover("Klasemen Volly Sarung Fase A"):
-        st.subheader('Volly Sarung Fase A')
+    st.header('5. Klasemen Voli Sarung')
+    st.subheader('Klasemen Lomba Voli Sarung Class Meeting Abu Dzar 2024')
+    with st.popover("Klasemen Voli Sarung Fase A"):
+        st.subheader('Voli Sarung Fase A')
         image=Image.open('ikhwan/volly_a.png')
         st.image(image,
                   use_column_width=True)
-    with st.popover("Klasemen Volly Sarung Fase B"):
-        st.subheader('Volly Sarung Fase B')
+    with st.popover("Klasemen Voli Sarung Fase B"):
+        st.subheader('Voli Sarung Fase B')
         image=Image.open('ikhwan/volly_b.png')
         st.image(image,
                   use_column_width=True)
-    with st.popover("Klasemen Volly Sarung Fase C"):
-        st.subheader('Volly Sarung Fase C')
+    with st.popover("Klasemen Voli Sarung Fase C"):
+        st.subheader('Voli Sarung Fase C')
         image=Image.open('ikhwan/volly_c.png')
         st.image(image,
                   use_column_width=True)
@@ -397,20 +415,20 @@ if selected=='Klasemen Akhwat':
 
 #VOLLY SARUNG
     st.write('---')
-    st.header('5. Klasemen Volly Sarung')
-    st.subheader('Klasemen Lomba Volly Sarung Class Meeting Abu Dzar 2024')
-    with st.popover("Klasemen Volly Sarung Fase A"):
-        st.subheader('Volly Sarung Fase A')
+    st.header('5. Klasemen Voli Sarung')
+    st.subheader('Klasemen Lomba Voli Sarung Class Meeting Abu Dzar 2024')
+    with st.popover("Klasemen Voli Sarung Fase A"):
+        st.subheader('Voli Sarung Fase A')
         image=Image.open('ikhwan/volly_a.png')
         st.image(image,
                   use_column_width=True)
-    with st.popover("Klasemen Volly Sarung Fase B"):
-        st.subheader('Volly Sarung Fase B')
+    with st.popover("Klasemen Voli Sarung Fase B"):
+        st.subheader('Voli Sarung Fase B')
         image=Image.open('ikhwan/volly_b.png')
         st.image(image,
                   use_column_width=True)
-    with st.popover("Klasemen Volly Sarung Fase C"):
-        st.subheader('Volly Sarung Fase C')
+    with st.popover("Klasemen Voli Sarung Fase C"):
+        st.subheader('Voli Sarung Fase C')
         image=Image.open('ikhwan/volly_c.png')
         st.image(image,
                   use_column_width=True)
