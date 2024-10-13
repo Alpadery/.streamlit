@@ -167,7 +167,7 @@ if selected=='Lomba Class Meeting':
 
     st.write('---')
     st.subheader('G. Chopstick Ball')
-    st.write('Lomba chopstick ball adalah permainan yang dimainkan')
+    st.write('Lomba chopstick ball adalah permainan yang dimainkan ')
     st.subheader('**Peraturan Permainan:**')
     st.write(
         """
