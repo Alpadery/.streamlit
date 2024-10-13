@@ -368,19 +368,19 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Estafet Class Meeting Abu Dzar 2024')
     with st.popover("Klasemen Estafet Fase A"):
         st.subheader('Estafet Fase A')
-        image=Image.open('ikhwan/estafet_a.png')
+        image=Image.open('akhwat/estafet_aa.png')
         st.image(image,
                  use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
     with st.popover("Klasemen Estafet Fase B"):
         st.subheader('Estafet Fase B')
-        image=Image.open('ikhwan/estafet_b.png')
+        image=Image.open('akhwat/estafet_ba.png')
         st.image(image,
                  use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
     with st.popover("Klasemen Estafet Fase C"):
         st.subheader('Estafet Fase C')
-        image=Image.open('ikhwan/estafet_c.png')
+        image=Image.open('akhwat/estafet_ca.png')
         st.image(image,
                  use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
@@ -415,13 +415,13 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Basket Class Meeting Abu Dzar 2024')
     with st.popover("Klasemen Basket Fase B"):
         st.subheader('Basket Fase B')
-        image=Image.open('ikhwan/basket_b.png')
+        image=Image.open('akhwat/basket_ba.png')
         st.image(image,
                   use_column_width=True) 
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
     with st.popover("Klasemen Basket Fase C"):
         st.subheader('Basket Fase C')
-        image=Image.open('ikhwan/basket_c.png')
+        image=Image.open('akhwat/basket_ca.png')
         st.image(image,
                   use_column_width=True) 
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
@@ -432,19 +432,19 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Blind Bottle Class Meeting Abu Dzar 2024')
     with st.popover("Klasemen Blind Bottle Fase A"):
         st.subheader('Blind Bottle Fase A')
-        image=Image.open('ikhwan/blind_a.png')
+        image=Image.open('akhwat/blind_aa.png')
         st.image(image,
                  use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
     with st.popover("Klasemen Blind Bottle Fase B"):
         st.subheader('Blind Bottle Fase B')
-        image=Image.open('ikhwan/blind_b.png')
+        image=Image.open('akhwat/blind_ba.png')
         st.image(image,
                   use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
     with st.popover("Klasemen Blind Bottle Fase C"):
         st.subheader('Blind Bottle Fase C')
-        image=Image.open('ikhwan/blind_c.png')
+        image=Image.open('akhwat/blind_ca.png')
         st.image(image,
                   use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
@@ -455,19 +455,19 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Volly Sarung Class Meeting Abu Dzar 2024')
     with st.popover("Klasemen Volly Sarung Fase A"):
         st.subheader('Volly Sarung Fase A')
-        image=Image.open('ikhwan/volly_a.png')
+        image=Image.open('akhwat/volly_aa.png')
         st.image(image,
                   use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
     with st.popover("Klasemen Volly Sarung Fase B"):
         st.subheader('Volly Sarung Fase B')
-        image=Image.open('ikhwan/volly_b.png')
+        image=Image.open('akhwat/volly_ba.png')
         st.image(image,
                   use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
     with st.popover("Klasemen Volly Sarung Fase C"):
         st.subheader('Volly Sarung Fase C')
-        image=Image.open('ikhwan/volly_c.png')
+        image=Image.open('akhwat/volly_ca.png')
         st.image(image,
                   use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
@@ -478,19 +478,19 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Bola Beracun Class Meeting Abu Dzar 2024')
     with st.popover("Klasemen Bola Beracun Fase A"):
         st.subheader('Bola Beracun Fase A')
-        image=Image.open('ikhwan/bola_a.png')
+        image=Image.open('akhwat/bola_aa.png')
         st.image(image,
                   use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
     with st.popover("Klasemen Bola Beracun Fase B"):
         st.subheader('Bola Beracun Fase B')
-        image=Image.open('ikhwan/bola_b.png')
+        image=Image.open('akhwat/bola_ba.png')
         st.image(image,
                   use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
     with st.popover("Klasemen Bola Beracun Fase C"):
         st.subheader('Bola Beracun Fase C')
-        image=Image.open('ikhwan/bola_c.png')
+        image=Image.open('akhwat/bola_ca.png')
         st.image(image,
                   use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
@@ -501,7 +501,7 @@ if selected=='Klasemen Akhwat':
     st.subheader('Klasemen Lomba Chopstick Ball Class Meeting Abu Dzar 2024')
     with st.popover("Klasemen Chopstick Ball Fase A"):
         st.subheader('Bola Chopstick Ball A')
-        image=Image.open('ikhwan/chop_a.png')
+        image=Image.open('akhwat/chop_aa.png')
         st.image(image,
                   use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/805bd8e79afe12773ae80034ed4f1a133036de44b2b75ead2f69ec90.png)')
