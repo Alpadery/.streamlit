@@ -125,7 +125,6 @@ if selected=='Lomba Class Meeting':
         """)
     
     
-    
     st.write('---')
     st.subheader('E. Volly Sarung')
     st.write("""
@@ -182,9 +181,7 @@ if selected=='Leaderboard':
     st.write('---')
     st.subheader('Finalis Class Meeting Abu Dzar 2024')
     with st.popover("Finalis Ikhwan"):
-        image=Image.open('finalis_i.png')
-        st.image(image,
-                  use_column_width=True)
+        st.write('Stay Tuned!.')
     with st.popover("Finalis Akhwat"):
         image=Image.open('finalis_a.png')
         st.image(image,
