@@ -293,7 +293,7 @@ if selected=='Klasemen Ikhwan':
         image=Image.open('ikhwan/blind_b.png')
         st.image(image,
                   use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/c02081d7e7dea0fd299a8003bd5323ee62e30dd4a5f8e94b9d3d6ae0.png)')
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/d498d94818ad9ee4f796ebe48e745b2bc69f4feaef2c04de474c6416.png)')
     with st.popover("Klasemen Blind Bottle Fase C"):
         st.subheader('Blind Bottle Fase C')
         image=Image.open('ikhwan/blind_c.png')
