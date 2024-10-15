@@ -4,7 +4,10 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title='Class Meeting', layout='wide')
 
-st.image("Logo SD - Ok.png", width=200)
+sidebar_logo=('Logo SD - Ok.png')
+main_body_logo=('Icon Logo Yayasan-01 (1).png')
+
+st.logo(sidebar_logo, icon_image=main_body_logo, size='large')
 
 with st.sidebar:
     selected=option_menu(
