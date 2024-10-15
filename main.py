@@ -4,13 +4,6 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title='Class Meeting', layout='wide')
 
-hide_st_style = """
-            <style>
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
-
 with st.sidebar:
     selected=option_menu(
         menu_title='Class Meeting Abu Dzar 2024',
