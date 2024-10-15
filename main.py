@@ -16,9 +16,7 @@ with st.sidebar:
 sidebar_logo=('Logo SD - Ok.png')
 main_body_logo=('Icon Logo Yayasan-01 (1).png')
 
-st.logo(sidebar_logo,
-icon_image=main_body_logo,
-size='large')
+st.logo(sidebar_logo, size='large')
 
 if selected=='Class Meeting 2024':
     st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
