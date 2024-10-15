@@ -4,6 +4,8 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title='Class Meeting', layout='wide')
 
+st.image("Logo SD - Ok.png", width=400)
+
 with st.sidebar:
     selected=option_menu(
         menu_title='Class Meeting Abu Dzar 2024',
