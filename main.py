@@ -4,12 +4,21 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title='Class Meeting', layout='wide')
 
+hide_st_style = """
+            <style>
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 with st.sidebar:
     selected=option_menu(
-        menu_title='Class Meeting Abu Dzar',
-        options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard','Klasemen Ikhwan','Klasemen Akhwat']
+        menu_title='Class Meeting Abu Dzar 2024',
+        options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard','Klasemen Ikhwan','Klasemen Akhwat'],
+        icons=['info-square','journal-bookmark-fill','graph-up','rocket-takeoff','rocket-takeoff-fill'], 
+        menu_icon='cast',
+        default_index=0,
     )
-
 
 if selected=='Class Meeting 2024':
     st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
@@ -181,11 +190,14 @@ if selected=='Leaderboard':
     st.write('---')
     st.subheader('Finalis Class Meeting Abu Dzar 2024')
     with st.popover("Finalis Ikhwan"):
-        st.write('Stay Tuned!.')
+        image=Image.open('finalis_a.png')
+        st.image(image,
+                  use_column_width=True)
     with st.popover("Finalis Akhwat"):
         image=Image.open('finalis_a.png')
         st.image(image,
                   use_column_width=True)
+
     st.write('---')
     st.subheader('Juara Fase Class Meeting Abu Dzar 2024')
     with st.popover("Juara Fase Ikhwan"):
@@ -196,6 +208,7 @@ if selected=='Leaderboard':
         image=Image.open('juarafase_a.png')
         st.image(image,
                   use_column_width=True)
+                  
     st.write('---')
     st.subheader('Perolehan Medali Class Meeting Abu Dzar 2024')
     with st.popover("Perolehan Medali Ikhwan"):
