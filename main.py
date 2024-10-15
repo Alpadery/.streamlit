@@ -4,11 +4,6 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title='Class Meeting', layout='wide')
 
-sidebar_logo=('Logo SD - Ok.png')
-main_body_logo=('Icon Logo Yayasan-01 (1).png')
-
-st.logo(sidebar_logo, icon_image=main_body_logo, size='large')
-
 with st.sidebar:
     selected=option_menu(
         menu_title='Class Meeting Abu Dzar 2024',
@@ -17,6 +12,13 @@ with st.sidebar:
         menu_icon='cast',
         default_index=0,
     )
+
+sidebar_logo=('Logo SD - Ok.png')
+main_body_logo=('Icon Logo Yayasan-01 (1).png')
+
+st.logo(sidebar_logo,
+icon_image=main_body_logo,
+size='large')
 
 if selected=='Class Meeting 2024':
     st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
