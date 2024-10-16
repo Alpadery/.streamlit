@@ -101,7 +101,7 @@ if selected=='Lomba Class Meeting':
         with col2:
             image=Image.open('futsal.png')
             st.image(image,
-            use_column_width=True,)
+            width=300,)
 
         st.write('---')
         st.subheader('C. Basket')
