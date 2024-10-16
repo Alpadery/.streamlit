@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 from streamlit_option_menu import option_menu
+from streamlit_image_coordinates import streamlit_image_coordinates
 
 st.set_page_config(page_title='Class Meeting', layout='wide')
 
@@ -21,9 +22,7 @@ st.logo(sidebar_logo,
         size='large')
 
 if selected=='Class Meeting 2024':
-
     col1, col2 = st.columns(2)
-
     with col1:
         st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
         st.write('---')
@@ -53,44 +52,42 @@ if selected=='Class Meeting 2024':
         st.image(image,
                 use_column_width=True)
 
-
 #TTG LOMBA CM
 if selected=='Lomba Class Meeting':
-   
-    col1, col2 = st.columns(2)
+   with st.container():
+        col1, col2 = st.columns(2)
 
-    with col1:
-
-        st.title('Lomba Pada Kegiatan Class Meeting 2024')
-        st.write('---')
-        st.header("*What's new? Keep scrolling!* 🙌")
-        st.subheader('A. Estafet')
-        st.write("""
-        Lomba estafet adalah Apa pengertian lari estafet? Lari estafet juga sering disebut dengan lari sambung.
-        Oleh karena itu, lari estafet adalah lari yang dilakukan berkelompok. Umumnya bisa berjumlah 2 sampai 4 orang di dalam kelompok.
-        Setiap orang di dalam kelompok akan mendapat giliran berakhir.
-        """)
-        st.subheader('**Peraturan Permainan:**')
-        st.write(
-            """
-            1. A
-            2. B
-            3. C
+        with col1:
+            st.title('Lomba Pada Kegiatan Class Meeting 2024')
+            st.write('---')
+            st.header("*What's new? Keep scrolling!* 🙌")
+            st.subheader('A. Estafet')
+            st.write("""
+            Lomba estafet adalah Apa pengertian lari estafet? Lari estafet juga sering disebut dengan lari sambung.
+            Oleh karena itu, lari estafet adalah lari yang dilakukan berkelompok. Umumnya bisa berjumlah 2 sampai 4 orang di dalam kelompok.
+            Setiap orang di dalam kelompok akan mendapat giliran berakhir.
             """)
+            st.subheader('**Peraturan Permainan:**')
+            st.write(
+                """
+                1. A
+                2. B
+                3. C
+                """)
 
         st.write('---')
-        st.subheader('B. Futsal')
-        st.write("""
-        Futsal ialah sebuah permainan bola yang dimainkan oleh dua tim, yang masing-masing timnya memiliki jumlah anggota yakni lima orang.
-        Tujuan dari permainan adalah untuk memasukkan bola ke gawang lawan sebanyak, dengan memanipulasi bola dengan kaki. 
-        Dalam permainannya, futsal menggunakan media bola sebagai alat permainannya.
-        Adapun pertandingan futsal bisa dilakukan di di luar ruangan (outdoor) ataupun di dalam ruangan (indoor).
-        """)
-        image=Image.open('futsal.png')
-        st.image(image,
-            use_column_width=True)
-        st.subheader('**Peraturan Permainan:**')
-        st.write(
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.subheader('B. Futsal')
+            st.write("""
+            Futsal ialah sebuah permainan bola yang dimainkan oleh dua tim, yang masing-masing timnya memiliki jumlah anggota yakni lima orang.
+            Tujuan dari permainan adalah untuk memasukkan bola ke gawang lawan sebanyak, dengan memanipulasi bola dengan kaki. 
+            Dalam permainannya, futsal menggunakan media bola sebagai alat permainannya.
+            Adapun pertandingan futsal bisa dilakukan di di luar ruangan (outdoor) ataupun di dalam ruangan (indoor).
+                """)
+            st.subheader('**Peraturan Permainan:**')
+            st.write(
             """
             1. Bola yang digunakan dalam permainan futsal harus terbuat dari kulit atau bahan sejenisnya (tidak berbahaya).
             2. Jumlah pemain futsal dalam satu tim adalah 5 orang pemain di lapangan dan memiliki 2 pemain cadangan.
@@ -100,14 +97,19 @@ if selected=='Lomba Class Meeting':
             6. Jika tendangan sudut tidak dilakukan dalam waktu 4 detik, restart menjadi izin gawang untuk tim lawan.
             7. Tendangan Bebas bisa dilakukan secara langsung atau tidak langsung.
             """)
+        
+        with col2:
+            image=Image.open('futsal.png')
+            st.image(image,
+            use_column_width=True,)
 
         st.write('---')
         st.subheader('C. Basket')
         st.write("""
-        Bola basket merupakan salah satu contoh olahraga bola besar.
-        Permainan ini berlangsung dengan cara mempertandingkan dua tim basket dan berebut bola untuk dimasukkan ke dalam ring lawan.
-        Skor yang didapatkan sangat tergantung dari cara masuknya bola, skor berkisar satu sampai tiga poin.
-        """)
+            Bola basket merupakan salah satu contoh olahraga bola besar.
+            Permainan ini berlangsung dengan cara mempertandingkan dua tim basket dan berebut bola untuk dimasukkan ke dalam ring lawan.
+            Skor yang didapatkan sangat tergantung dari cara masuknya bola, skor berkisar satu sampai tiga poin.
+            """)
         image=Image.open('basket.png')
         st.image(image,
             use_column_width=True)
