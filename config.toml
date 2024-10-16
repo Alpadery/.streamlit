@@ -1,0 +1,14 @@
+[theme]
+#(warna sidebar)
+primaryColor="#065a7a"
+
+#(warna bg)
+backgroundColor="#f2fbff"
+
+#(warna bg side bar)
+secondaryBackgroundColor="#89b6c8"
+
+#(warna font)
+textColor="#000000"
+
+font="serif"
