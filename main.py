@@ -103,9 +103,6 @@ if selected=='Lomba Class Meeting':
             """)
         
         with col2:
-            st.write('##')
-            st.write('##')
-            st.write('#')
             image=Image.open('futsal.png')
             st.image(image,
             use_column_width=True)
@@ -132,9 +129,6 @@ if selected=='Lomba Class Meeting':
                 """)
 
         with col2:
-            st.write('##')
-            st.write('##')
-            st.write('#')
             image=Image.open('basket.png')
             st.image(image,
             use_column_width=True)
@@ -161,7 +155,6 @@ if selected=='Lomba Class Meeting':
                 """)
         
         with col2:
-            st.write('##')  
             image=Image.open('blindbottle.png')
             st.image(image,
                 use_column_width=True)
@@ -187,7 +180,6 @@ if selected=='Lomba Class Meeting':
                 """)
 
         with col2:
-            st.write('#')  
             image=Image.open('voli.png')
             st.image(image,
                 use_column_width=True)
@@ -213,8 +205,6 @@ if selected=='Lomba Class Meeting':
                 """)
 
         with col2:
-            st.write('##')
-            st.write('#')
             image=Image.open('bolaberacun.png')
             st.image(image,
                 use_column_width=True)
