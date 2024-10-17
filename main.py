@@ -23,6 +23,7 @@ st.logo(sidebar_logo,
         size='large')
 
 if selected=='Class Meeting 2024':
+    st.video("SERU ‼️ PERMAINAN MENGELUARKAN BOLA TELUR DARI DALAM KERANJANG #shorts #outbound #permainan.mp4")
     st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
     st.write('---')
     col1, col2 = st.columns((2,1))
@@ -180,10 +181,13 @@ if selected=='Lomba Class Meeting':
                 6. Tim mendapatkan poin jika lawan tidak bisa menangkap balon.
                 """)
 
+            st.write('[**Klik untuk melihat contoh permainan volly sarung**](https://www.instagram.com/reel/C71Oh-CNZFy/)')
+
         with col2:
             image=Image.open('voli.png')
             st.image(image,
                 use_column_width=True)
+            
 
         st.write('---')
         col1, col2 = st.columns((1.2,1))
@@ -211,15 +215,18 @@ if selected=='Lomba Class Meeting':
                 use_column_width=True)
 
         st.write('---')
-        st.subheader('G. Chopstick Ball')
-        st.write('Lomba chopstick ball adalah permainan yang dimainkan ')
-        st.subheader('**Peraturan Permainan:**')
-        st.write(
-            """
-            1. A
-            2. B
-            3. C
-            """)
+        col1, col2 = st.columns((1.2,1))
+
+        with col1:
+            st.subheader('G. Chopstick Ball')
+            st.write('Lomba chopstick ball adalah permainan yang dimainkan ')
+            st.subheader('**Peraturan Permainan:**')
+            st.write(
+                """
+                1. A
+                2. B
+                3. C
+                """)
     
 #LEADERBOARD
 if selected=='Leaderboard':
