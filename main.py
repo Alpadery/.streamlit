@@ -227,7 +227,7 @@ if selected=='Lomba Class Meeting':
                 3. C
                 """)
             
-            st.write('[**Klik untuk melihat contoh permainan chopstick balsl**](https://class-meeting.streamlit.app/~/+/media/d9f1a9e85df0ff07b8fe0ddefb1b869516f4f3395d2e014e239ceeeb.mp4)')
+            st.write('[**Klik untuk melihat contoh permainan chopstick ball**](https://www.youtube.com/shorts/1QJVuAhYOec?feature=share)')
     
 #LEADERBOARD
 if selected=='Leaderboard':
