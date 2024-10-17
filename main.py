@@ -1,12 +1,10 @@
+
 import streamlit as st
 from PIL import Image
 from streamlit_option_menu import option_menu
 from streamlit_image_coordinates import streamlit_image_coordinates
 
 st.set_page_config(page_title='Class Meeting', layout='wide')
-
-st.sidebar.image('Logo Sekolah Islam Abu Dzar-01.png',
-                 use_column_width=True)
 
 with st.sidebar:
     selected=option_menu(
@@ -17,6 +15,12 @@ with st.sidebar:
         default_index=0,
     )
 
+sidebar_logo=('Logo Sekolah Islam Abu Dzar-01.png')
+main_body_logo=('Icon Logo Yayasan-01 (1).png')
+
+st.logo(sidebar_logo,
+        icon_image='Icon Logo Yayasan-01 (1).png',
+        size='large')
 
 if selected=='Class Meeting 2024':
     st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
