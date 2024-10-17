@@ -23,7 +23,6 @@ st.logo(sidebar_logo,
         size='large')
 
 if selected=='Class Meeting 2024':
-    st.video("SERU ‼️ PERMAINAN MENGELUARKAN BOLA TELUR DARI DALAM KERANJANG #shorts #outbound #permainan.mp4")
     st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
     st.write('---')
     col1, col2 = st.columns((2,1))
@@ -227,6 +226,8 @@ if selected=='Lomba Class Meeting':
                 2. B
                 3. C
                 """)
+            
+            st.write('[**Klik untuk melihat contoh permainan chopstick balsl**](https://class-meeting.streamlit.app/~/+/media/d9f1a9e85df0ff07b8fe0ddefb1b869516f4f3395d2e014e239ceeeb.mp4)')
     
 #LEADERBOARD
 if selected=='Leaderboard':
