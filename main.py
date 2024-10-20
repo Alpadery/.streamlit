@@ -281,6 +281,7 @@ if selected=='Klasemen Ikhwan (1)':
         "Basket": ["basket_b.png","basket_c.png"],
         "Volly Sarung": ["volly_a.png","volly_b.png","volly_c.png"],
         "Blind Bottle": ["blind_a.png","blind_b.png","blind_c.png"],
+        "Bola Beracun": ["bola_a","bola_b","bola_c"],
         "Chopstick Ball": ["chop_a.png"]
     }
 
@@ -290,7 +291,7 @@ if selected=='Klasemen Ikhwan (1)':
     if selected_image:
         st.write(f"Klasemen {selected_image.capitalize()}:")
     for image in image_dict[selected_image]:
-        st.image(image,use_column_width=True)
+        st.image(image, caption=image , use_column_width=True)
 
 #KLASEMEN IKHWAN
 if selected=='Klasemen Ikhwan':
