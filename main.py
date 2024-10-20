@@ -317,6 +317,7 @@ if selected=='Klasemen Ikhwan':
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/2dc0e7eb09a9e411ea2a907e0afbbf007c7ce41a5050ffa369abc968.png)')
+        st.write('#')
         image=Image.open('ikhwan/basket_c.png')
         st.image(image,
                     use_column_width=True)
@@ -333,6 +334,7 @@ if selected=='Klasemen Ikhwan':
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/46c15a396effd459e2d71975541fe45c256015ad0ef6587c75b1887c.png)')
+        st.write('#')
         image=Image.open('ikhwan/bola_c.png')
         st.image(image,
                     use_column_width=True)
@@ -349,6 +351,7 @@ if selected=='Klasemen Ikhwan':
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/2d388a001972c17ba7dca906f8f926d8a9b2ccf81ca2acde3d7d78e9.png)')
+        st.write('#')
         image=Image.open('ikhwan/volly_c.png')
         st.image(image,
                     use_column_width=True)
@@ -365,6 +368,7 @@ if selected=='Klasemen Ikhwan':
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/d498d94818ad9ee4f796ebe48e745b2bc69f4feaef2c04de474c6416.png)')
+        st.write('#')
         image=Image.open('ikhwan/blind_c.png')
         st.image(image,
                     use_column_width=True)
