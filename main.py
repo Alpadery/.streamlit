@@ -276,22 +276,30 @@ if selected=='Klasemen Ikhwan (1)':
 
     # Dictionary to hold image file paths and titles
     image_dict = {
-        "Estafet": ["estafet_a.png","estafet_b.png","estafet_c.png"],
+        "Estafet": {
+            "images": ["ikhwan/estafet_a.png", "ikhwan/estafet_b.png", "ikhwan/estafet_c.png"],
+            "link": ["https://class-meeting.streamlit.app/~/+/media/3df0b4a1fe6a62518a64045cbe6e400560f236aba9774a5086084243.png",
+                     "https://class-meeting.streamlit.app/~/+/media/750e4c6e5ba0f825090a4cfc3f3b4b5ebec02aac318c802119a4b3d5.png",
+                     "https://class-meeting.streamlit.app/~/+/media/fa290bfa124e491b55e87cb39b91874888d4f139bfa0642c7168f8cf.png"],
         "Futsal": ["futsal_a.png","futsal_b.png","futsal_c.png"],
         "Basket": ["basket_b.png","basket_c.png"],
         "Volly Sarung": ["volly_a.png","volly_b.png","volly_c.png"],
         "Blind Bottle": ["blind_a.png","blind_b.png","blind_c.png"],
         "Bola Beracun": ["bola_a.png","bola_b.png","bola_c.png"],
-        "Chopstick Ball": ["chop_a.png"]
-    }
+        "Chopstick Ball": ["chop_a.png"]}
+        }
 
     # Create a select box for the user to choose an image
     selected_image = st.selectbox("Pilih Jenis Lomba:", list(image_dict.keys()))
 
     if selected_image:
         st.write(f"Klasemen {selected_image.capitalize()}:")
-    for image in image_dict[selected_image]:
-        st.image(image, caption=image , use_column_width=True)
+        for image in image_dict[selected_image]["images"]:
+            st.image(image, use_column_width=True)
+
+        link = image_dict[selected_image]["link"]
+        st.markdown(f"[More about {selected_image}]({link})", unsafe_allow_html=True)
+
 
 #KLASEMEN IKHWAN
 if selected=='Klasemen Ikhwan':
