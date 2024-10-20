@@ -393,17 +393,17 @@ if selected=='Klasemen Akhwat':
 
 #LOMBA ESTAFET
     if selected_lomba == "Estafet":
-        image=Image.open('ikhwan/estafet_aa.png')
+        image=Image.open('akhwat/estafet_aa.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/3df0b4a1fe6a62518a64045cbe6e400560f236aba9774a5086084243.png)')
         st.write('#')
-        image=Image.open('ikhwan/estafet_ba.png')
+        image=Image.open('akhwat/estafet_ba.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/750e4c6e5ba0f825090a4cfc3f3b4b5ebec02aac318c802119a4b3d5.png)')
         st.write('#')
-        image=Image.open('ikhwan/estafet_ca.png')
+        image=Image.open('akhwat/estafet_ca.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/fa290bfa124e491b55e87cb39b91874888d4f139bfa0642c7168f8cf.png)')
@@ -428,70 +428,70 @@ if selected=='Klasemen Akhwat':
 
 #LOMBA BASKET  
     if selected_lomba == "Basket":
-        image=Image.open('ikhwan/basket_ba.png')
+        image=Image.open('akhwat/basket_ba.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/2dc0e7eb09a9e411ea2a907e0afbbf007c7ce41a5050ffa369abc968.png)')
         st.write('#')
-        image=Image.open('ikhwan/basket_ca.png')
+        image=Image.open('akhwat/basket_ca.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/4687f9c909f15add1f1fe53b311307ceb1b608b69b4ad8443dd99b21.png)')
 
 #LOMBA BOLA BERACUN
     if selected_lomba == "Bola Beracun":
-        image=Image.open('ikhwan/bola_aa.png')
+        image=Image.open('akhwat/bola_aa.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/7d5c3a42a764bd2d9b3f074b97523281393119f2880b7f0eb86ea4ff.png)')
         st.write('#')
-        image=Image.open('ikhwan/bola_ba.png')
+        image=Image.open('akhwat/bola_ba.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/46c15a396effd459e2d71975541fe45c256015ad0ef6587c75b1887c.png)')
         st.write('#')
-        image=Image.open('ikhwan/bola_ca.png')
+        image=Image.open('akhwat/bola_ca.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/336c269bd9f71dece24a4b3c7924416d80a7faf1700d4e9c14bc88e2.png)')
     
 #LOMBA VOLLY SARUNG  
     if selected_lomba == "Volly Sarung":
-        image=Image.open('ikhwan/volly_aa.png')
+        image=Image.open('akhwat/volly_aa.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/16532e7d195d54937a49617e2c87908ecfad58ba41f4b50c5d0046a4.png)')
         st.write('#')
-        image=Image.open('ikhwan/volly_ba.png')
+        image=Image.open('akhwat/volly_ba.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/2d388a001972c17ba7dca906f8f926d8a9b2ccf81ca2acde3d7d78e9.png)')
         st.write('#')
-        image=Image.open('ikhwan/volly_ca.png')
+        image=Image.open('akhwat/volly_ca.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/7c0844c0531f645da57c1af6c127cb30d67b724b4e82873682b6c6cc.png)')
 
 #LOMBA BLIND BOTTLE
     if selected_lomba == "Blind Bottle":
-        image=Image.open('ikhwan/blind_aa.png')
+        image=Image.open('akhwat/blind_aa.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/c02081d7e7dea0fd299a8003bd5323ee62e30dd4a5f8e94b9d3d6ae0.png)')
         st.write('#')
-        image=Image.open('ikhwan/blind_ba.png')
+        image=Image.open('akhwat/blind_ba.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/d498d94818ad9ee4f796ebe48e745b2bc69f4feaef2c04de474c6416.png)')
         st.write('#')
-        image=Image.open('ikhwan/blind_ca.png')
+        image=Image.open('akhwat/blind_ca.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/5aa89703c314324afcc03f4a4ca7860b37454b017a1a9f4adf7857b3.png)')
 
 #LOMBA CHOPSTICK BALL
     if selected_lomba == "Chopstick Ball":
-        image=Image.open('ikhwan/chop_aa.png')
+        image=Image.open('akhwat/chop_aa.png')
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/67cd8b1e2398b770ecb863e8c4917a319cdd0b383b7445b363f99a36.png)')
