@@ -9,7 +9,7 @@ st.set_page_config(page_title='Class Meeting', layout='wide')
 with st.sidebar:
     selected=option_menu(
         menu_title='Class Meeting Abu Dzar 2024',
-        options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard','Klasemen Ikhwan','Klasemen Akhwat'],
+        options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard','Klasemen Ikhwan (1)','Klasemen Ikhwan','Klasemen Akhwat'],
         icons=['info-square','journal-bookmark-fill','graph-up','rocket-takeoff','rocket-takeoff-fill'], 
         menu_icon='cast',
         default_index=0,
@@ -269,6 +269,28 @@ if selected=='Leaderboard':
             st.image(image,
                     use_column_width=True)
 
+
+if selected=='Klasemen Ikhwan (1)':
+   
+    st.title('Klasemen Ikhwan Class Meeting Abu Dzar 2024')
+
+    # Dictionary to hold image file paths and titles
+    image_dict = {
+        "Estafet": ["estafet_a.png","estafet_b.png","estafet_c.png"],
+        "Futsal": ["futsal_a.png","futsal_b.png","futsal_c.png"],
+        "Basket": ["basket_b.png","basket_c.png"],
+        "Volly Sarung": ["volly_a.png","volly_b.png","volly_c.png"],
+        "Blind Bottle": ["blind_a.png","blind_b.png","blind_c.png"],
+        "Chopstick Ball": ["chop_a.png"]
+    }
+
+    # Create a select box for the user to choose an image
+    selected_image = st.selectbox("Pilih Jenis Lomba:", list(image_dict.keys()))
+
+    if selected_image:
+        st.write(f"Klasemen {selected_image.capitalize()}:")
+    for image in image_dict[selected_image]:
+        st.image(image,use_column_width=True)
 
 #KLASEMEN IKHWAN
 if selected=='Klasemen Ikhwan':
