@@ -281,7 +281,7 @@ if selected=='Klasemen Ikhwan (1)':
         "Basket": ["basket_b.png","basket_c.png"],
         "Volly Sarung": ["volly_a.png","volly_b.png","volly_c.png"],
         "Blind Bottle": ["blind_a.png","blind_b.png","blind_c.png"],
-        "Bola Beracun": ["bola_a","bola_b","bola_c"],
+        "Bola Beracun": ["ikhwan/bola_a","ikhwan/bola_b","ikhwan/bola_c"],
         "Chopstick Ball": ["chop_a.png"]
     }
 
