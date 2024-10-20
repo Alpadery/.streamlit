@@ -26,15 +26,15 @@ if selected=='Class Meeting 2024':
     st.write('---')
     col1, col2 = st.columns((2,1))
     with col1:
-        st.header('Tentang Class Meeting Abu Dzar')
+        st.subheader('A.  Tentang Class Meeting Abu Dzar')
         st.write(
             """
             Class Meeting merupakan kegiatan yang berlangsung setelah kegiatan Sumatif Akhir Semester dilaksanakan. Kegiatan ini merupakan sebuah *refreshment* untuk peserta didik setelah mengikuti SAS.""")
         
-    st.write('---')
+    
     col1, col2 = st.columns((2.5,1))
     with col1:
-        st.header('Tujuan dan Manfaat kegiatan Class Meeting diantara lain:')
+        st.subheader('B.  Tujuan dan Manfaat Class Meeting')
         st.write(
             """
             1. Ajang hiburan dan relaksasi pasca ujian.
@@ -48,10 +48,10 @@ if selected=='Class Meeting 2024':
         st.write('**Berikut hasil dokumentasi kegiatan Class Meeting 2023**')
         st.write('[Click Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
 
-    st.write('---')
+    
     col1, col2 = st.columns((2.1,1))
     with col1:
-        st.header('Jadwal Kegiatan Class Meeting 2024')
+        st.subheader('C.  Jadwal Kegiatan Class Meeting 2024')
         image=Image.open('jadwal.png')
         st.image(image,
                 use_column_width=True)
@@ -61,10 +61,10 @@ if selected=='Lomba Class Meeting':
    with st.container():
         st.title('Lomba Pada Kegiatan Class Meeting 2024')
         st.write('---')
+        st.header("*What's new? Keep scrolling!* 🙌")
         col1, col2 = st.columns(2)
 
         with col1:
-            st.header("*What's new? Keep scrolling!* 🙌")
             st.subheader('A. Estafet')
             st.write("""
             Lomba estafet adalah Apa pengertian lari estafet? Lari estafet juga sering disebut dengan lari sambung.
@@ -91,7 +91,7 @@ if selected=='Lomba Class Meeting':
             Adapun pertandingan futsal bisa dilakukan di di luar ruangan (outdoor) ataupun di dalam ruangan (indoor).
                 """)
             st.subheader('**Peraturan Permainan:**')
-            st.write(
+            st.markdown(
             """
             1. Bola yang digunakan dalam permainan futsal harus terbuat dari kulit atau bahan sejenisnya (tidak berbahaya).
             2. Jumlah pemain futsal dalam satu tim adalah 5 orang pemain di lapangan dan memiliki 2 pemain cadangan.
