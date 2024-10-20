@@ -236,9 +236,9 @@ if selected=='Leaderboard':
 
     #LEADERBOARD IKHWAN
     data = {
-        'Kelas': ['Bukhori','Muslim','Uhud',],
-        'Gold Medals': [3,4,1],
-        'Silver Medals': [1,2,3]
+        'Kelas': [],
+        'Gold Medals': [],
+        'Silver Medals': []
     }
 
     leaderboard_df = pd.DataFrame(data)
@@ -300,6 +300,12 @@ if selected=='Leaderboard':
     image=Image.open('juarafase_i.png')
     st.image(image, use_column_width=True)
 
+    st.title('Finalis Class Meeting 2024')
+
+    image=Image.open('finalis_i.png')
+    st.image(image, use_column_width=True)
+    
+    
 if selected=='Klasemen Ikhwan':
    
     st.title('Klasemen Ikhwan Class Meeting Abu Dzar 2024')
