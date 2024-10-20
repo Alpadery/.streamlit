@@ -385,6 +385,7 @@ if selected=='Klasemen Ikhwan':
 if selected=='Klasemen Akhwat':
    
     st.title('Klasemen Ikhwan Class Meeting Abu Dzar 2024')
+    st.write('---')
 
     selected_lomba = st.selectbox(
     "**Pilih Jenis Lomba**",
