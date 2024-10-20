@@ -8,7 +8,7 @@ st.set_page_config(page_title='Class Meeting', layout='wide')
 with st.sidebar:
     selected=option_menu(
         menu_title='Class Meeting Abu Dzar 2024',
-        options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard','Klasemen Ikhwan','Klasemen Akhwat'],
+        options=['Class Meeting 2024','Leaderboard','Klasemen Ikhwan','Klasemen Akhwat'],
         icons=['info-square','journal-bookmark-fill','graph-up','rocket-takeoff','rocket-takeoff-fill'], 
         menu_icon='cast',
         default_index=0,
@@ -57,8 +57,7 @@ if selected=='Class Meeting 2024':
                 use_column_width=True)
 
 #TTG LOMBA CM
-if selected=='Lomba Class Meeting':
-   with st.container():
+    with st.container():
         st.title('Lomba Pada Kegiatan Class Meeting 2024')
         st.write('---')
         col1, col2 = st.columns(2)
