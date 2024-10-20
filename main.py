@@ -1,4 +1,3 @@
-
 import streamlit as st
 from PIL import Image
 from streamlit_option_menu import option_menu
@@ -270,12 +269,13 @@ if selected=='Leaderboard':
                     use_column_width=True)
 
 
+
 if selected=='Klasemen Ikhwan':
    
     st.title('Klasemen Ikhwan Class Meeting Abu Dzar 2024')
 
     selected_lomba = st.selectbox(
-    "Pilih Lomba",
+    "**Pilih Jenis Lomba**",
     ("Estafet","Futsal","Basket","Bola Beracun","Volly Sarung","Blind Bottle","Chopstick Ball"),
 )
 
