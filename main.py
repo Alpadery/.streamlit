@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from PIL import Image
 from streamlit_option_menu import option_menu
 from streamlit_image_coordinates import streamlit_image_coordinates
@@ -232,41 +233,67 @@ if selected=='Lomba Class Meeting':
 if selected=='Leaderboard':
    
     st.title('Leaderboard Class Meeting 2024')
-    col1, col2 = st.columns(2)
 
-    with col1:
-        st.write('---')
-        st.subheader('Finalis Class Meeting Abu Dzar 2024')
-        with st.popover("Finalis Ikhwan"):
-            image=Image.open('finalis_i.png')
-            st.image(image,
-                    use_column_width=True)
-        with st.popover("Finalis Akhwat"):
-            image=Image.open('finalis_a.png')
-            st.image(image,
-                    use_column_width=True)
+#LEADERBOARD IKHWAN
+data = {
+    'Kelas': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],
+    'Gold Medals': [3, 1, 4, 0, 1],
+    'Silver Medals': [2, 2, 2, 1, 3]
+}
 
-        st.write('---')
-        st.subheader('Juara Fase Class Meeting Abu Dzar 2024')
-        with st.popover("Juara Fase Ikhwan"):
-            image=Image.open('juarafase_i.png')
-            st.image(image,
-                    use_column_width=True)
-        with st.popover("Juara Fase Akhwat"):
-            image=Image.open('juarafase_a.png')
-            st.image(image,
-                    use_column_width=True)
-                    
-        st.write('---')
-        st.subheader('Perolehan Medali Class Meeting Abu Dzar 2024')
-        with st.popover("Perolehan Medali Ikhwan"):
-            image=Image.open('medali_i.png')
-            st.image(image,
-                    use_column_width=True)
-        with st.popover("Perolehan Medali Akhwat"):
-            image=Image.open('medali_a.png')
-            st.image(image,
-                    use_column_width=True)
+leaderboard_df = pd.DataFrame(data)
+
+leaderboard_df.sort_values(by=['Gold Medals', 'Silver Medals'], ascending=False, inplace=True)
+
+def highlight_max_gold(s):
+    is_max = s == s.max()
+    return ['background-color: gold' if v else '' for v in is_max]
+
+def highlight_max_silver(s):
+    is_max = s == s.max()
+    return ['background-color: silver' if v else '' for v in is_max]
+
+# Display the leaderboard
+st.subheader("Leaderboard Ikhwan")
+if not leaderboard_df.empty:
+    styled_table = leaderboard_df.style \
+        .apply(highlight_max_gold, subset=['Gold Medals']) \
+        .apply(highlight_max_silver, subset=['Silver Medals'])
+    
+    st.table(styled_table)
+else:
+    st.write("No medal data available.")
+
+# LEADERBOARD AKHWAT
+data = {
+    'Kelas': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],
+    'Gold Medals': [3, 1, 4, 0, 1],
+    'Silver Medals': [2, 2, 2, 1, 3]
+}
+
+# Dataframe
+leaderboard_df = pd.DataFrame(data)
+
+leaderboard_df.sort_values(by=['Gold Medals', 'Silver Medals'], ascending=False, inplace=True)
+
+def highlight_max_gold(s):
+    is_max = s == s.max()
+    return ['background-color: gold' if v else '' for v in is_max]
+
+def highlight_max_silver(s):
+    is_max = s == s.max()
+    return ['background-color: silver' if v else '' for v in is_max]
+
+# Display the leaderboard
+st.subheader("Leaderboard Akhwat")
+if not leaderboard_df.empty:
+    styled_table = leaderboard_df.style \
+        .apply(highlight_max_gold, subset=['Gold Medals']) \
+        .apply(highlight_max_silver, subset=['Silver Medals'])
+    
+    st.table(styled_table)
+else:
+    st.write("No medal data available.")
 
 if selected=='Klasemen Ikhwan':
    
