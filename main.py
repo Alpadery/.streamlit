@@ -233,6 +233,7 @@ if selected=='Lomba Class Meeting':
 if selected=='Leaderboard':
    
     st.title('Leaderboard Class Meeting 2024')
+    st.write("---")
 
     #LEADERBOARD IKHWAN
     data = {
@@ -254,7 +255,7 @@ if selected=='Leaderboard':
         return ['background-color: silver' if v else '' for v in is_max]
 
     # Display the leaderboard
-    st.subheader("Leaderboard Ikhwan")
+    st.header("Perolehan Medali Ikhwan")
     if not leaderboard_df.empty:
         styled_table = leaderboard_df.style \
             .apply(highlight_max_gold, subset=['Gold Medals']) \
@@ -285,7 +286,7 @@ if selected=='Leaderboard':
         return ['background-color: silver' if v else '' for v in is_max]
 
     # Display the leaderboard
-    st.subheader("Leaderboard Akhwat")
+    st.header("Perolehan Medali Akhwat")
     if not leaderboard_df.empty:
         styled_table = leaderboard_df.style \
             .apply(highlight_max_gold, subset=['Gold Medals']) \
@@ -294,13 +295,16 @@ if selected=='Leaderboard':
         st.table(styled_table)
     else:
         st.write(f"🏆 The winner will be announced soon 🏆, Stay Tuned!")
+    st.write("#")
 
-    st.title('Juara Fase Class Meeting 2024')
+    st.header('Juara Fase Class Meeting 2024', divider='grey')
 
     image=Image.open('juarafase_i.png')
     st.image(image, use_column_width=True)
 
-    st.title('Finalis Class Meeting 2024')
+    st.write('#')
+
+    st.header('Finalis Class Meeting 2024', divider='grey')
 
     image=Image.open('finalis_i.png')
     st.image(image, use_column_width=True)
