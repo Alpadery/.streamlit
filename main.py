@@ -238,7 +238,7 @@ if selected=='Leaderboard':
         st.write('---')
         st.subheader('Finalis Class Meeting Abu Dzar 2024')
         with st.popover("Finalis Ikhwan"):
-            image=Image.open('finalis_a.png')
+            image=Image.open('finalis_i.png')
             st.image(image,
                     use_column_width=True)
         with st.popover("Finalis Akhwat"):
