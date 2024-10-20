@@ -234,66 +234,71 @@ if selected=='Leaderboard':
    
     st.title('Leaderboard Class Meeting 2024')
 
-#LEADERBOARD IKHWAN
-data = {
-    'Kelas': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],
-    'Gold Medals': [3, 1, 4, 0, 1],
-    'Silver Medals': [2, 2, 2, 1, 3]
-}
+    #LEADERBOARD IKHWAN
+    data = {
+        'Kelas': ['Bukhori','Muslim','Uhud',],
+        'Gold Medals': [3,4,1],
+        'Silver Medals': [1,2,3]
+    }
 
-leaderboard_df = pd.DataFrame(data)
+    leaderboard_df = pd.DataFrame(data)
 
-leaderboard_df.sort_values(by=['Gold Medals', 'Silver Medals'], ascending=False, inplace=True)
+    leaderboard_df.sort_values(by=['Gold Medals', 'Silver Medals'], ascending=False, inplace=True)
 
-def highlight_max_gold(s):
-    is_max = s == s.max()
-    return ['background-color: gold' if v else '' for v in is_max]
+    def highlight_max_gold(s):
+        is_max = s == s.max()
+        return ['background-color: gold' if v else '' for v in is_max]
 
-def highlight_max_silver(s):
-    is_max = s == s.max()
-    return ['background-color: silver' if v else '' for v in is_max]
+    def highlight_max_silver(s):
+        is_max = s == s.max()
+        return ['background-color: silver' if v else '' for v in is_max]
 
-# Display the leaderboard
-st.subheader("Leaderboard Ikhwan")
-if not leaderboard_df.empty:
-    styled_table = leaderboard_df.style \
-        .apply(highlight_max_gold, subset=['Gold Medals']) \
-        .apply(highlight_max_silver, subset=['Silver Medals'])
-    
-    st.table(styled_table)
-else:
-    st.write("No medal data available.")
+    # Display the leaderboard
+    st.subheader("Leaderboard Ikhwan")
+    if not leaderboard_df.empty:
+        styled_table = leaderboard_df.style \
+            .apply(highlight_max_gold, subset=['Gold Medals']) \
+            .apply(highlight_max_silver, subset=['Silver Medals'])
+        
+        st.table(styled_table)
+    else:
+        st.write(f"🏆 The winner will be announced soon 🏆, Stay Tuned!")
 
-# LEADERBOARD AKHWAT
-data = {
-    'Kelas': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],
-    'Gold Medals': [3, 1, 4, 0, 1],
-    'Silver Medals': [2, 2, 2, 1, 3]
-}
+    # LEADERBOARD AKHWAT
+    data = {
+        'Kelas': [],
+        'Gold Medals': [],
+        'Silver Medals': []
+    }
 
-# Dataframe
-leaderboard_df = pd.DataFrame(data)
+    # Dataframe
+    leaderboard_df = pd.DataFrame(data)
 
-leaderboard_df.sort_values(by=['Gold Medals', 'Silver Medals'], ascending=False, inplace=True)
+    leaderboard_df.sort_values(by=['Gold Medals', 'Silver Medals'], ascending=False, inplace=True)
 
-def highlight_max_gold(s):
-    is_max = s == s.max()
-    return ['background-color: gold' if v else '' for v in is_max]
+    def highlight_max_gold(s):
+        is_max = s == s.max()
+        return ['background-color: gold' if v else '' for v in is_max]
 
-def highlight_max_silver(s):
-    is_max = s == s.max()
-    return ['background-color: silver' if v else '' for v in is_max]
+    def highlight_max_silver(s):
+        is_max = s == s.max()
+        return ['background-color: silver' if v else '' for v in is_max]
 
-# Display the leaderboard
-st.subheader("Leaderboard Akhwat")
-if not leaderboard_df.empty:
-    styled_table = leaderboard_df.style \
-        .apply(highlight_max_gold, subset=['Gold Medals']) \
-        .apply(highlight_max_silver, subset=['Silver Medals'])
-    
-    st.table(styled_table)
-else:
-    st.write("No medal data available.")
+    # Display the leaderboard
+    st.subheader("Leaderboard Akhwat")
+    if not leaderboard_df.empty:
+        styled_table = leaderboard_df.style \
+            .apply(highlight_max_gold, subset=['Gold Medals']) \
+            .apply(highlight_max_silver, subset=['Silver Medals'])
+        
+        st.table(styled_table)
+    else:
+        st.write(f"🏆 The winner will be announced soon 🏆, Stay Tuned!")
+
+    st.title('Juara Fase Class Meeting 2024')
+
+    image=Image.open('juarafase_i.png')
+    st.image(image, use_column_width=True)
 
 if selected=='Klasemen Ikhwan':
    
