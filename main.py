@@ -52,15 +52,15 @@ if selected=='Class Meeting 2024':
         
         col1, col2 = st.columns((2.1,1))
         with col1:
-            st.subheader('C.  Jadwal Kegiatan Class Meeting 2024')
+            st.header('C.  Jadwal Kegiatan Class Meeting 2024')
             image=Image.open('jadwal.png')
             st.image(image,
                     use_column_width=True)
         
+            st.header('D. Lokasi Lomba')
         st.write('---')
         col1, col2 = st.columns((1,1))
         with col1:
-            st.header('D. Lokasi Lomba')
             st.subheader('**Lapangan Atas**')
             st.write(
                 """
