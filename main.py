@@ -27,15 +27,14 @@ if selected=='Class Meeting 2024':
     st.write('---')
     col1, col2 = st.columns((2,1))
     with col1:
-        st.subheader('A.  Tentang Class Meeting Abu Dzar')
+        st.header('A.  Tentang Class Meeting Abu Dzar')
         st.write(
             """
             Class Meeting merupakan kegiatan yang berlangsung setelah kegiatan Sumatif Akhir Semester dilaksanakan. Kegiatan ini merupakan sebuah *refreshment* untuk peserta didik setelah mengikuti SAS.""")
-        
     
     col1, col2 = st.columns((2.5,1))
     with col1:
-        st.subheader('B.  Tujuan dan Manfaat Class Meeting')
+        st.header('B.  Tujuan dan Manfaat Class Meeting')
         st.write(
             """
             1. Ajang hiburan dan relaksasi pasca ujian.
@@ -56,6 +55,34 @@ if selected=='Class Meeting 2024':
         image=Image.open('jadwal.png')
         st.image(image,
                 use_column_width=True)
+    
+    st.header('D. Lokasi Lomba')
+    st.subheader('**Lapangan Atas**')
+    st.write(
+        """
+        Lapangan atas ini nantinya akan digunakan untuk 3 jenislomba dengan jadwal yang berbeda.
+        Jadwal pertama digunakan untuk lomba basket, kemudian setelahnya digunakan untuk lomba Blind Bottle dan Chopstick Ball dalam waktu bersamaan.
+        """)
+    image=Image.open('lapangan_atas.png')
+    st.image(image, use_column_width=True)
+
+    st.subheader('**Lapangan Bawah**')
+    st.write(
+        """
+        Lapangan bawah ini digunakan untuk 2 jenis lomba yaitu lomba futsal untuk kelas Ikhwan dan lomba (?) untuk kelas Akhwat.
+        Lomba futsal dilaksanakan pada Selasa, 11 Desember 2024 dan Lomba (?) dilaksanakan pada Rabu, 13 Desember 2024.
+        """)
+    image=Image.open('lapangan_bawah.png')
+    st.image(image, use_column_width=True)
+
+    st.subheader('**Lapangan Depan Perpustakaan**')
+    st.write(
+        """
+        Lapangan ini adalah tempat untuk lomba Volly Sarung. Lomba ini menggunakan media air sehingga pelaksanaannya perlu berada di daerah yang tidak licin,
+        atau lapangan yang terbuat dari *paving block*.
+        """)
+    image=Image.open('depan_perpus.png')
+    st.image(image, use_column_width=True)
 
 #TTG LOMBA CM
 if selected=='Lomba Class Meeting':
