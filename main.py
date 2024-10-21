@@ -102,12 +102,11 @@ if selected=='Class Meeting 2024':
 if selected=='Lomba Class Meeting':
    with st.container():
         st.title('Lomba Pada Kegiatan Class Meeting 2024')
-        st.write('---')
-        st.header("*What's new? Keep scrolling!* 🙌")
+        
+        st.header('A. Estafet',divider='grey')
         col1, col2 = st.columns(2)
 
-        with col1:
-            st.subheader('A. Estafet')
+        with col2:
             st.write("""
             Lomba estafet adalah Apa pengertian lari estafet? Lari estafet juga sering disebut dengan lari sambung.
             Oleh karena itu, lari estafet adalah lari yang dilakukan berkelompok. Umumnya bisa berjumlah 2 sampai 4 orang di dalam kelompok.
@@ -121,11 +120,12 @@ if selected=='Lomba Class Meeting':
                 3. C
                 """)
 
-        st.write('---')
-        st.subheader('B. Futsal')
+        
+        st.header('B. Futsal',divider='grey')
         col1, col2 = st.columns((1.2,1))
 
         with col2:
+            st.subheader('**Pengertian Olahraga Futsal**')
             st.write("""
             Futsal ialah sebuah permainan bola yang dimainkan oleh dua tim, yang masing-masing timnya memiliki jumlah anggota yakni lima orang.
             Tujuan dari permainan adalah untuk memasukkan bola ke gawang lawan sebanyak, dengan memanipulasi bola dengan kaki. 
@@ -149,18 +149,18 @@ if selected=='Lomba Class Meeting':
             st.image(image,
             use_column_width=True)
 
-        st.write('---')
+        st.subheader('C. Basket',divider='grey')
         col1, col2 = st.columns((1.2,1))
        
-        with col1:
-            st.subheader('C. Basket')
+        with col2:
+            st.subheader('**Pengertian Olahraga Basket**')
             st.write("""
                 Bola basket merupakan salah satu contoh olahraga bola besar.
                 Permainan ini berlangsung dengan cara mempertandingkan dua tim basket dan berebut bola untuk dimasukkan ke dalam ring lawan.
                 Skor yang didapatkan sangat tergantung dari cara masuknya bola, skor berkisar satu sampai tiga poin.
                 """)
-            st.subheader('**Peraturan Permainan:**')
-            st.write(
+        st.subheader('**Peraturan Permainan:**')
+        st.write(
                 """
                 1. Setiap tim dalam permainan bola basket terdiri dari lima orang pemain ditambah beberapa pemain cadangan.
                 2. Bola dapat dilempar ke kedua arah dengan satu atau kedua tangan, tetapi tidak boleh ditinju. Bola harus dipegang di dalam atau di antara telapak tangan.
@@ -170,23 +170,23 @@ if selected=='Lomba Class Meeting':
                 6. Lama waktu bermain adalah 2 x 5 menit.
                 """)
 
-        with col2:
+        with col1:
             image=Image.open('basket.png')
             st.image(image,
             use_column_width=True)
 
-        st.write('---')
+        st.subheader('D. Blind Bottle',divider='grey')
         col1, col2 = st.columns((1.2,1))
 
-        with col1:
-            st.subheader('D. Blind Bottle')
+        with col2:
+            st.subheader('**Pengertian Lomba Blind Bottle')
             st.write("""
             Lomba *blind bottle* atau lomba memasukkan pensil ke dalam botol dalam keadaan mata tertutup.
             Lomba ini merupakan permainan tim, satu tim terdiri dari 5 orang dengan 1 orang sebagai ketua tim yang bertugas memimpin dan mengarahkan agar pensil bisa masuk ke dalam botol.
             """)
         
-            st.subheader('**Peraturan Permainan:**')
-            st.write(
+        st.subheader('**Peraturan Permainan:**')
+        st.write(
                 """
                 1. Lama waktu bermain adalah 10 menit.
                 2. Pemain terdiri dari 6 orang dengan 1 orang sebagai kapten.
@@ -196,22 +196,22 @@ if selected=='Lomba Class Meeting':
                 6. Tim yang berhasil memasukkan pensil tercepat adalah pemenangya.
                 """)
         
-        with col2:
+        with col1:
             image=Image.open('blindbottle.png')
             st.image(image,
                 use_column_width=True)
         
-        st.write('---')
+        st.header('E. Volly Sarung',divider='grey')
         col1, col2 = st.columns((1.2,1))
         
-        with col1:
-            st.subheader('E. Volly Sarung')
+        with col2:
+            st.subheader("**Pengertian Lomba Volly Sarung**")
             st.write("""
             Lomba Volly Sarung adalah permainan yang dimainkan oleh dua tim dengan masing-masing tim berjumlah 4 orang dengan menggunakan sarung dan balon air sebagai alat permainannya.
             """)
 
-            st.subheader('**Peraturan Permainan:**')
-            st.write(
+        st.subheader('**Peraturan Permainan:**')
+        st.write(
                 """
                 1. Lama waktu bermain adalah 10 menit.
                 2. Permainan terdiri dari 2 tim dengan setiap tim terdiri dari 4 orang.
@@ -221,25 +221,24 @@ if selected=='Lomba Class Meeting':
                 6. Tim mendapatkan poin jika lawan tidak bisa menangkap balon.
                 """)
 
-            st.write('[**Klik untuk melihat contoh permainan volly sarung**](https://www.instagram.com/reel/C71Oh-CNZFy/)')
+        st.write('[**Klik untuk melihat contoh permainan volly sarung**](https://www.instagram.com/reel/C71Oh-CNZFy/)')
 
-        with col2:
+        with col1:
             image=Image.open('voli.png')
             st.image(image,
                 use_column_width=True)
             
-
-        st.write('---')
+        st.header('F. Bola Beracun',divider='grey')
         col1, col2 = st.columns((1.2,1))
 
-        with col1:
-            st.subheader('F. Bola Beracun')
+        with col2:
+            st.subheader('**Pengertian Lomba Bola Beracun**')
             st.write("""
             Permainan bola beracun ini dimainkan dalam bentuk kelompok dan mengharuskan setiap pemain berlari untuk menghindari bola yang dilempar oleh pemain lain.
             Jika pemain terkena atau tersentuh oleh bola, maka pemain dianggap "teracuni" dan harus keluar dari permainan.
             """)
-            st.subheader('**Peraturan Permainan:**')
-            st.write(
+        st.subheader('**Peraturan Permainan:**')
+        st.write(
                 """
                 1. Terdapat 2 tim dalam permainan yaitu tim penyerang dan tim mangsa.
                 2. Tim penyerang membentuk lingkaran sedangkan tim mangsa berada di tengah-tengah lingkaran.
@@ -249,26 +248,27 @@ if selected=='Lomba Class Meeting':
                 6. Pemenang ditentukan jika tim berhasil mengeluarkan pemain tim mangsa terbanyak.
                 """)
 
-        with col2:
+        with col1:
             image=Image.open('bolaberacun.png')
             st.image(image,
                 use_column_width=True)
 
-        st.write('---')
+      
+        st.header('G. Chopstick Ball',divider='grey')
         col1, col2 = st.columns((1.2,1))
 
-        with col1:
-            st.subheader('G. Chopstick Ball')
+        with col2:
+            st.subheader('**Pengertian Lomba Chopstick Ball**')
             st.write('Lomba chopstick ball adalah permainan yang dimainkan ')
-            st.subheader('**Peraturan Permainan:**')
-            st.write(
+        st.subheader('**Peraturan Permainan:**')
+        st.write(
                 """
                 1. A
                 2. B
                 3. C
                 """)
             
-            st.write('[**Klik untuk melihat contoh permainan chopstick ball**](https://www.youtube.com/shorts/1QJVuAhYOec?feature=share)')
+        st.write('[**Klik untuk melihat contoh permainan chopstick ball**](https://www.youtube.com/shorts/1QJVuAhYOec?feature=share)')
     
 #LEADERBOARD
 if selected=='Leaderboard':
