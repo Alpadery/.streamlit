@@ -179,7 +179,7 @@ if selected=='Lomba Class Meeting':
         col1, col2 = st.columns((1.2,1))
 
         with col2:
-            st.subheader('**Pengertian Lomba Blind Bottle')
+            st.subheader('**Pengertian Lomba Blind Bottle**')
             st.write("""
             Lomba *blind bottle* atau lomba memasukkan pensil ke dalam botol dalam keadaan mata tertutup.
             Lomba ini merupakan permainan tim, satu tim terdiri dari 5 orang dengan 1 orang sebagai ketua tim yang bertugas memimpin dan mengarahkan agar pensil bisa masuk ke dalam botol.
