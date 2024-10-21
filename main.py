@@ -25,17 +25,17 @@ st.logo(sidebar_logo,
 if selected=='Class Meeting 2024':
     with st.container():
         st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
+        
         col1, col2 = st.columns((2,1))
         with col1:
-            st.header('A.  Tentang Class Meeting Abu Dzar')
+            st.header('A.  Tentang Class Meeting Abu Dzar', divider='grey')
             st.write(
                 """
                 Class Meeting merupakan kegiatan yang berlangsung setelah kegiatan Sumatif Akhir Semester dilaksanakan. Kegiatan ini merupakan sebuah *refreshment* untuk peserta didik setelah mengikuti SAS.""")
         
-        st.write('---')
         col1, col2 = st.columns((2.5,1))
         with col1:
-            st.header('B.  Tujuan dan Manfaat Class Meeting')
+            st.header('B.  Tujuan dan Manfaat Class Meeting', divider='grey')
             st.write(
                 """
                 1. Ajang hiburan dan relaksasi pasca ujian.
@@ -52,13 +52,13 @@ if selected=='Class Meeting 2024':
         
         col1, col2 = st.columns((2.1,1))
         with col1:
-            st.header('C.  Jadwal Kegiatan Class Meeting 2024')
+            st.header('C.  Jadwal Kegiatan Class Meeting 2024', divider='grey')
             image=Image.open('jadwal.png')
             st.image(image,
                     use_column_width=True)
         
-            st.header('D. Lokasi Lomba')
-        st.write('---')
+            st.header('D. Lokasi Lomba', divider='grey')
+        
         col1, col2 = st.columns((1,1))
         with col1:
             st.subheader('**Lapangan Atas**')
@@ -122,18 +122,18 @@ if selected=='Lomba Class Meeting':
                 """)
 
         st.write('---')
+        st.subheader('B. Futsal')
         col1, col2 = st.columns((1.2,1))
 
-        with col1:
-            st.subheader('B. Futsal')
+        with col2:
             st.write("""
             Futsal ialah sebuah permainan bola yang dimainkan oleh dua tim, yang masing-masing timnya memiliki jumlah anggota yakni lima orang.
             Tujuan dari permainan adalah untuk memasukkan bola ke gawang lawan sebanyak, dengan memanipulasi bola dengan kaki. 
             Dalam permainannya, futsal menggunakan media bola sebagai alat permainannya.
             Adapun pertandingan futsal bisa dilakukan di di luar ruangan (outdoor) ataupun di dalam ruangan (indoor).
                 """)
-            st.subheader('**Peraturan Permainan:**')
-            st.markdown(
+        st.subheader('**Peraturan Permainan:**')
+        st.markdown(
             """
             1. Bola yang digunakan dalam permainan futsal harus terbuat dari kulit atau bahan sejenisnya (tidak berbahaya).
             2. Jumlah pemain futsal dalam satu tim adalah 5 orang pemain di lapangan dan memiliki 2 pemain cadangan.
@@ -144,7 +144,7 @@ if selected=='Lomba Class Meeting':
             7. Tendangan Bebas bisa dilakukan secara langsung atau tidak langsung.
             """)
         
-        with col2:
+        with col1:
             image=Image.open('futsal.png')
             st.image(image,
             use_column_width=True)
