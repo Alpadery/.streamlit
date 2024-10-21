@@ -49,7 +49,6 @@ if selected=='Class Meeting 2024':
             st.write('**Berikut hasil dokumentasi kegiatan Class Meeting 2023**')
             st.write('[Click Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
 
-        
         col1, col2 = st.columns((2.1,1))
         with col1:
             st.subheader('C.  Jadwal Kegiatan Class Meeting 2024')
