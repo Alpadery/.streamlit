@@ -356,7 +356,6 @@ if selected=='Leaderboard':
     image=Image.open('finalis_i.png')
     st.image(image, use_column_width=True)
     
-    
 if selected=='Klasemen Ikhwan':
    
     st.title('Klasemen Ikhwan Class Meeting Abu Dzar 2024')
