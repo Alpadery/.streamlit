@@ -57,8 +57,8 @@ if selected=='Class Meeting 2024':
             st.image(image,
                     use_column_width=True)
         
-            st.header('D. Lokasi Lomba', divider='grey')
         
+        st.header('D. Lokasi Lomba', divider='grey')
         col1, col2 = st.columns((1,1))
         with col1:
             st.subheader('**Lapangan Atas**')
