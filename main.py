@@ -227,7 +227,7 @@ if selected=='Lomba Class Meeting':
                 6. **Pemenang:** Tim dengan poin terbanyak di akhir permainan dinyatakan sebagai pemenang.
                 """)
 
-        st.write('[**Klik untuk melihat contoh permainan volly sarung**](https://www.instagram.com/reel/C71Oh-CNZFy/)')
+        st.write('[**Contoh Video Permainan Volly Sarung**](https://www.instagram.com/reel/C71Oh-CNZFy/)')
 
         with col1:
             image=Image.open('voli.png')
@@ -240,18 +240,23 @@ if selected=='Lomba Class Meeting':
         with col2:
             st.subheader('**Pengertian Lomba Bola Beracun**')
             st.write("""
-            Permainan bola beracun ini dimainkan dalam bentuk kelompok dan mengharuskan setiap pemain berlari untuk menghindari bola yang dilempar oleh pemain lain.
-            Jika pemain terkena atau tersentuh oleh bola, maka pemain dianggap "teracuni" dan harus keluar dari permainan.
+            **Bola beracun** merupakan permainan yang melibatkan dua tim, yaitu tim pelempar dan tim mangsa.
+            Tim mangsa berada di dalam lingkaran, sementara tim pelempar berada di luar lingkaran. Tujuan tim pelempar adalah melempar bola ke anggota tim mangsa untuk mengeluarkan mereka dari permainan.
+            Sebaliknya, tim mangsa berusaha menghindari lemparan bola dan menjaga agar semua anggota tim tetap berada di dalam lingkaran.
             """)
         st.subheader('**Peraturan Permainan:**')
         st.write(
                 """
-                1. Terdapat 2 tim dalam permainan yaitu tim penyerang dan tim mangsa.
-                2. Tim penyerang membentuk lingkaran sedangkan tim mangsa berada di tengah-tengah lingkaran.
-                3. Tim penyerang melempar bola ke arah tim mangsa dan jika salah satu pemain dari tim mangsa terkena bola, maka harus keluar lingkaran.
-                4. Tim penyerang memiliki waktu 10 menit untuk mengeluarkan semua tim mangsa dari dalam lingkaran.
-                5. Kemudian kedua tim bertukar posisi
-                6. Pemenang ditentukan jika tim berhasil mengeluarkan pemain tim mangsa terbanyak.
+                1. **Jumlah Pemain dan Waktu:** Setiap tim terdiri dari 7 orang dan permainan berlangsung selama 10 menit.
+                2. **Formasi:** Tim mangsa membentuk lingkaran yang rapat, sedangkan tim pelempar berada di luar lingkaran.
+                3. **Cara Bermain:**
+                    - Tim pelempar secara bergantian melempar bola ke arah anggota tim mangsa.
+                    - Anggota tim mangsa harus berusaha menghindari lemparan bola.
+                    - Jika seorang anggota tim mangsa terkena lemparan bola, ia harus keluar dari permainan.
+                    - Permainan akan berhenti jika waktu 10 menit habis atau semua anggota satu tim telah keluar dari permainan.
+                4. **Pemenang:**
+                    - Jika waktu habis: Tim dengan jumlah anggota terbanyak yang masih berada di dalam lingkaran dinyatakan sebagai pemenang.
+                    - Jika semua anggota satu tim keluar: Tim yang berhasil melumpuhkan semua lawan terlebih dahulu dinyatakan sebagai pemenang.
                 """)
 
         with col1:
@@ -265,16 +270,20 @@ if selected=='Lomba Class Meeting':
 
         with col2:
             st.subheader('**Pengertian Lomba Chopstick Ball**')
-            st.write('Lomba chopstick ball adalah permainan yang dimainkan ')
+            st.write("""
+                    **Lomba *chopstick ball*** adalah Permainan yang menguji ketangkasan dan kecepatan peserta dalam mengeluarkan bola dari suatu wadah atau area menggunakan sumpit.
+                    Setiap tim terdiri dari 5 orang, dan setiap peserta dibekali 2 sumpit. Dalam waktu 10 menit, tim harus bekerja sama untuk mengeluarkan sebanyak mungkin bola.
+                    """)
         st.subheader('**Peraturan Permainan:**')
         st.write(
                 """
-                1. A
-                2. B
-                3. C
+                1. **Jumlah Peserta dan Waktu:** Setiap tim terdiri dari 5 orang dan permainan berlangsung selama 10 menit.
+                2. **Peralatan:** Setiap peserta diberikan 2 sumpit dan tersedia wadah berlubang yang berisi bola.
+                3. **Cara Bermain:** Setiap anggota tim bersama-sama mengeluarkan bola dari wadah menggunakan sumpit.
+                4. **Pemenang:** Tim dengan jumlah bola terbanyak yang berhasil dikeluarkan dalam waktu 10 menit dinyatakan sebagai pemenang.
                 """)
             
-        st.write('[**Klik untuk melihat contoh permainan chopstick ball**](https://www.youtube.com/shorts/1QJVuAhYOec?feature=share)')
+        st.write('[**Contoh Video Permainan Chopstick Ball**](https://www.youtube.com/shorts/1QJVuAhYOec?feature=share)')
     
 #LEADERBOARD
 if selected=='Leaderboard':
