@@ -162,12 +162,15 @@ if selected=='Lomba Class Meeting':
         st.subheader('**Peraturan Permainan:**')
         st.markdown(
                 """
-                1. Setiap tim dalam permainan bola basket terdiri dari lima orang pemain ditambah beberapa pemain cadangan.
-                2. Bola dapat dilempar ke kedua arah dengan satu atau kedua tangan, tetapi tidak boleh ditinju. Bola harus dipegang di dalam atau di antara telapak tangan.
-                3. Permainan dimulai dengan *jump ball* di tengah lapangan. Tim yang mencetak poin terbanyak pada akhir pertandingan dinyatakan sebagai pemenang.
-                4. Membawa bola dengan berlari atau berjalan akan dianggap sebagai bentuk pelanggaran. Bola hanya boleh dibawa dengan cara di-dribble.
-                5. *Double dribble* tidak diperkenankan. Maksudnya, jika seorang pemain melakukan dribble kemudian berhenti dan memegang bola dengan kedua tangannya, maka pemain tidak diperbolehkan untuk melakukan dribble lagi.
-                6. Lama waktu bermain adalah 2 x 5 menit.
+                1. **Lapangan:** Pertandingan basket dimainkan di lapangan berbentuk persegi panjang dengan papan ring di kedua ujungnya.
+                2. **Bola:** Bola basket terbuat dari bahan karet atau kulit sintetis dan memiliki ukuran dan berat standar.
+                3. **Waktu Pertandingan:** Satu pertandingan biasanya terdiri dari 4 kuarter dengan durasi waktu tertentu (biasanya 10 menit per kuarter).
+                4. **Cara Mencetak Poin:** Poin diperoleh ketika bola berhasil dimasukkan ke dalam ring. Nilai poin berbeda tergantung dari jarak lemparan.
+                5. **Pelanggaran:** Beberapa pelanggaran umum dalam basket antara lain:
+                    - *Foul:* Kontak fisik yang berlebihan terhadap pemain lawan.
+                    - *Traveling:* Mengambil langkah lebih dari dua langkah saat menggiring bola.
+                    - *Double dribble:* Menggiring bola dua kali berturut-turut.
+                    - *Backcourt violation:* Membawa bola melewati garis tengah lapangan ke arah belakang tanpa mengoper bola.
                 """)
 
         with col1:
@@ -181,19 +184,22 @@ if selected=='Lomba Class Meeting':
         with col2:
             st.subheader('**Pengertian Lomba Blind Bottle**')
             st.write("""
-            Lomba *blind bottle* atau lomba memasukkan pensil ke dalam botol dalam keadaan mata tertutup.
-            Lomba ini merupakan permainan tim, satu tim terdiri dari 5 orang dengan 1 orang sebagai ketua tim yang bertugas memimpin dan mengarahkan agar pensil bisa masuk ke dalam botol.
-            """)
+                    Lomba *Blind Bottle* adalah permainan yang menguji kerja sama tim, komunikasi, dan kepercayaan antar anggota tim.
+                    setiap anggota tim diikat dengan tali yang terhubung satu sama lain. Hal ini membuat gerakan setiap anggota tim menjadi saling mempengaruhi dan membutuhkan koordinasi yang lebih tinggi.
+                    Satu orang anggota tim ditunjuk sebagai kapten yang akan memberikan instruksi kepada anggota lainnya.
+                    """)
         
         st.subheader('**Peraturan Permainan:**')
         st.write(
                 """
-                1. Lama waktu bermain adalah 10 menit.
-                2. Pemain terdiri dari 6 orang dengan 1 orang sebagai kapten.
-                3. 5 pemain akan diikat tali pada pinggangnya, kemudian masing-masing tali pada pemain dihubungkan dengan mengikat pensil di tengahnya.
-                4. Selama permainan, pemain akan ditutup matanya dan berpindah tempat sesuai perintah kapten tim tersebut.
-                5. Kapten mengarahkan timnya agar dapat memasukkan pensil ke dalam botol.
-                6. Tim yang berhasil memasukkan pensil tercepat adalah pemenangya.
+                1. **Pembentukan Tim:** Peserta dibagi menjadi beberapa kelompok, masing-masing terdiri dari 6 orang.
+                2. **Penunjukan Kapten:** Setiap kelompok memilih satu orang sebagai kapten.
+                3. **Persiapan:** Siapkan botol, pensil, dan tali yang cukup panjang untuk mengikat semua anggota tim dalam satu kelompok.
+                4. **Pengikatan Tali:** Semua anggota tim diikat dengan tali, membentuk satu kesatuan kecuali kapten.
+                5. **Posisi Pemain:** Semua anggota tim kecuali kapten menutup mata.
+                6. **Instruksi Kapten:** Kapten memberikan instruksi yang sangat detail kepada anggota timnya, seperti arah, jarak, dan teknik yang harus digunakan.
+                7. **Waktu:** Berikan waktu 10 menit untuk setiap kelompok menyelesaikan tantangan.
+                8. **Pemenang:** Kelompok yang berhasil memasukkan pensil ke dalam botol dalam waktu tercepat dinyatakan sebagai pemenang.
                 """)
         
         with col1:
