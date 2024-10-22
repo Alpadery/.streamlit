@@ -374,11 +374,12 @@ if selected=='Leaderboard':
     st.write('---')
     st.header(' Finalis Ikhwan Class Meeting 2024')
 
-    st.write("")
-    st.write("")
 
     image=Image.open('finalis_i.png')
     st.image(image, use_column_width=True)
+    
+    st.write("")
+    st.write("")
     
     st.header('Finalis Akhwat Class Meeting 2024')
 
