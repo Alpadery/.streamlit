@@ -356,10 +356,9 @@ if selected=='Leaderboard':
         st.table(styled_table)
     else:
         st.write(f"🏆 The winner will be announced soon 🏆, Stay Tuned!")
-    st.write("")
-    st.write("")
 
-    st.header('Juara Fase Class Meeting 2024', divider='grey')
+    st.write('---')
+    st.header('Juara Fase Ikhwan Class Meeting 2024')
 
     image=Image.open('juarafase_i.png')
     st.image(image, use_column_width=True)
@@ -367,11 +366,24 @@ if selected=='Leaderboard':
     st.write("")
     st.write("")
 
-    st.header('Finalis Class Meeting 2024', divider='grey')
+    st.header('Juara Fase Akhwat Class Meeting 2024')
+
+    image=Image.open('juarafase_i.png')
+    st.image(image, use_column_width=True)
+
+    st.write('---')
+    st.header('Finalis Ikhwan Class Meeting 2024')
+
+    st.write("")
+    st.write("")
 
     image=Image.open('finalis_i.png')
     st.image(image, use_column_width=True)
     
+    st.header('Finalis Akhwat Class Meeting 2024')
+
+    image=Image.open('finalis_i.png')
+    st.image(image, use_column_width=True)
     
 if selected=='Klasemen Ikhwan':
    
