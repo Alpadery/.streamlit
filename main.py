@@ -337,9 +337,9 @@ if selected=='Leaderboard':
     image=Image.open('finalis_i.png')
     st.image(image, use_column_width=True)
     
-if selected=='Klasemen Ikhwan':
+if selected=='Bagan Kelas Ikhwan':
    
-    st.title('Klasemen Ikhwan Class Meeting Abu Dzar 2024')
+    st.title('Bagan Ikhwan Class Meeting Abu Dzar 2024')
     st.write("---")
 
     selected_lomba = st.selectbox(
@@ -462,9 +462,9 @@ if selected=='Klasemen Ikhwan':
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/67cd8b1e2398b770ecb863e8c4917a319cdd0b383b7445b363f99a36.png)')
 
-if selected=='Klasemen Akhwat':
+if selected=='Bagan Kelas Akhwat':
    
-    st.title('Klasemen Akhwat Class Meeting Abu Dzar 2024')
+    st.title('Bagan Akhwat Class Meeting Abu Dzar 2024')
     st.write('---')
 
     selected_lomba = st.selectbox(
