@@ -125,23 +125,23 @@ if selected=='Lomba Class Meeting':
         col1, col2 = st.columns((1.2,1))
 
         with col2:
+    
             st.subheader('**Pengertian Olahraga Futsal**')
             st.write("""
-            Futsal ialah sebuah permainan bola yang dimainkan oleh dua tim, yang masing-masing timnya memiliki jumlah anggota yakni lima orang.
-            Tujuan dari permainan adalah untuk memasukkan bola ke gawang lawan sebanyak, dengan memanipulasi bola dengan kaki. 
-            Dalam permainannya, futsal menggunakan media bola sebagai alat permainannya.
-            Adapun pertandingan futsal bisa dilakukan di di luar ruangan (outdoor) ataupun di dalam ruangan (indoor).
-                """)
+                    **Futsal** adalah olahraga tim yang merupakan variasi dari sepak bola, dimainkan di lapangan kecil dan biasanya di dalam ruangan.
+                    Setiap tim terdiri dari lima pemain, termasuk penjaga gawang. Futsal fokus pada keterampilan teknis, kontrol bola, dan kecepatan.
+                    """)
         st.subheader('**Peraturan Permainan:**')
         st.markdown(
             """
-            1. Bola yang digunakan dalam permainan futsal harus terbuat dari kulit atau bahan sejenisnya (tidak berbahaya).
-            2. Jumlah pemain futsal dalam satu tim adalah 5 orang pemain di lapangan dan memiliki 2 pemain cadangan.
-            3. Lama waktu bermain adalah 2 x 5 menit.
-            4. Pemain diperbolehkan melakukan shooting langsung ke gawang saat kick-off berlangsung.
-            5. Dalam olahraga futsal seorang penjaga gawang atau kiper tidak boleh terlalu lama melakukan penguasaan bola.
-            6. Jika tendangan sudut tidak dilakukan dalam waktu 4 detik, restart menjadi izin gawang untuk tim lawan.
-            7. Tendangan Bebas bisa dilakukan secara langsung atau tidak langsung.
+            1. **Pemain:** Setiap tim terdiri dari 5 pemain di lapangan, termasuk kiper.
+            2. **Waktu:** Pertandingan biasanya berlangsung 2 babak, masing-masing 5 menit.
+            3. **Lapangan:** Lebih kecil dari lapangan sepak bola, dengan permukaan keras.
+            4. **Bola:** Lebih kecil dan lebih berat dari bola sepak.
+            5. **Pelanggaran:** Mirip dengan sepak bola, seperti handball, melanggar, dan sebagainya.
+            6. **Tendangan Bebas:** Dilakukan jika terjadi pelanggaran di luar kotak penalti.
+            7. **Tendangan Penalti:** Dilakukan jika terjadi pelanggaran di dalam kotak penalti.
+            8. **Pergantian Pemain:** Dapat dilakukan kapan saja.
             """)
         
         with col1:
@@ -155,12 +155,12 @@ if selected=='Lomba Class Meeting':
         with col2:
             st.subheader('**Pengertian Olahraga Basket**')
             st.write("""
-                Bola basket merupakan salah satu contoh olahraga bola besar.
-                Permainan ini berlangsung dengan cara mempertandingkan dua tim basket dan berebut bola untuk dimasukkan ke dalam ring lawan.
-                Skor yang didapatkan sangat tergantung dari cara masuknya bola, skor berkisar satu sampai tiga poin.
-                """)
+                    **Basket** adalah olahraga tim yang melibatkan dua tim dengan lima pemain di lapangan masing-masing.
+                    Tujuan utama dalam permainan basket adalah memasukkan bola ke dalam ring lawan sebanyak-banyaknya.
+                    Bola dapat dilempar, digiring, atau dioperkan untuk mencapai tujuan tersebut.
+                    """)
         st.subheader('**Peraturan Permainan:**')
-        st.write(
+        st.markdown(
                 """
                 1. Setiap tim dalam permainan bola basket terdiri dari lima orang pemain ditambah beberapa pemain cadangan.
                 2. Bola dapat dilempar ke kedua arah dengan satu atau kedua tangan, tetapi tidak boleh ditinju. Bola harus dipegang di dalam atau di antara telapak tangan.
