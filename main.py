@@ -53,7 +53,7 @@ if selected=='Class Meeting 2024':
         col1, col2 = st.columns((2.1,1))
         with col1:
             st.header('C.  Jadwal Kegiatan Class Meeting 2024', divider='grey')
-            image=Image.open('jadwalCM.png')
+            image=Image.open('JadwalCM.png')
             st.image(image,
                     use_column_width=True)
         
@@ -355,6 +355,7 @@ if selected=='Leaderboard':
 
     image=Image.open('finalis_i.png')
     st.image(image, use_column_width=True)
+    
     
 if selected=='Klasemen Ikhwan':
    
