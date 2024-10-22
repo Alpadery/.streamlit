@@ -53,7 +53,7 @@ if selected=='Class Meeting 2024':
         col1, col2 = st.columns((2.1,1))
         with col1:
             st.header('C.  Jadwal Kegiatan Class Meeting 2024', divider='grey')
-            image=Image.open('jadwal.png')
+            image=Image.open('jadwalCM.png')
             st.image(image,
                     use_column_width=True)
         
@@ -107,6 +107,7 @@ if selected=='Lomba Class Meeting':
         col1, col2 = st.columns(2)
 
         with col2:
+            st.subheader('**Pengertian Lomba Estafet**')
             st.write("""
             Lomba estafet adalah Apa pengertian lari estafet? Lari estafet juga sering disebut dengan lari sambung.
             Oleh karena itu, lari estafet adalah lari yang dilakukan berkelompok. Umumnya bisa berjumlah 2 sampai 4 orang di dalam kelompok.
@@ -119,13 +120,11 @@ if selected=='Lomba Class Meeting':
                 2. B
                 3. C
                 """)
-
         
         st.header('B. Futsal',divider='grey')
         col1, col2 = st.columns((1.2,1))
 
         with col2:
-    
             st.subheader('**Pengertian Olahraga Futsal**')
             st.write("""
                     **Futsal** adalah olahraga tim yang merupakan variasi dari sepak bola, dimainkan di lapangan kecil dan biasanya di dalam ruangan.
@@ -184,7 +183,7 @@ if selected=='Lomba Class Meeting':
         with col2:
             st.subheader('**Pengertian Lomba Blind Bottle**')
             st.write("""
-                    Lomba *Blind Bottle* adalah permainan yang menguji kerja sama tim, komunikasi, dan kepercayaan antar anggota tim.
+                    **Lomba *Blind Bottle*** adalah permainan yang menguji kerja sama tim, komunikasi, dan kepercayaan antar anggota tim.
                     setiap anggota tim diikat dengan tali yang terhubung satu sama lain. Hal ini membuat gerakan setiap anggota tim menjadi saling mempengaruhi dan membutuhkan koordinasi yang lebih tinggi.
                     Satu orang anggota tim ditunjuk sebagai kapten yang akan memberikan instruksi kepada anggota lainnya.
                     """)
@@ -213,18 +212,19 @@ if selected=='Lomba Class Meeting':
         with col2:
             st.subheader("**Pengertian Lomba Volly Sarung**")
             st.write("""
-            Lomba Volly Sarung adalah permainan yang dimainkan oleh dua tim dengan masing-masing tim berjumlah 4 orang dengan menggunakan sarung dan balon air sebagai alat permainannya.
-            """)
+                    **Lomba Volly Sarung** adalah yang mirip dengan voli biasa, namun menggunakan sarung sebagai alat untuk melempar balon air yang berisi air.
+                    Setiap tim terdiri dari 4 orang yang bertugas memegang sudut sarung dan secara bersama-sama melempar balon air ke area lawan.
+                    """)
 
         st.subheader('**Peraturan Permainan:**')
         st.write(
                 """
-                1. Lama waktu bermain adalah 10 menit.
-                2. Permainan terdiri dari 2 tim dengan setiap tim terdiri dari 4 orang.
-                3. Setiap tim diberikan 1 sarung dan ke-4 pemain memegang tiap sudut sarung yang diberikan.
-                4. Balon yang berisi air diletakkan disarung dan dilempar ke arah lawan.
-                5. Lawan harus berusaha untuk menangkap balon dengan sarung dan dilemparkan kembali ke arah lawan, begitu seterusnya.
-                6. Tim mendapatkan poin jika lawan tidak bisa menangkap balon.
+                1. **Peralatan:** Sarung, balon air, dan lapangan.
+                2. **Jumlah pemain:** Setiap tim terdiri dari 4 orang.
+                3. **Waktu:** Waktu permainan berlangsung selama 10 menit.
+                4. **Cara bermain:** Melempar balon air menggunakan sarung.
+                5. **Poin:** Dapatkan poin jika balon air jatuh di lapangan lawan.
+                6. **Pemenang:** Tim dengan poin terbanyak di akhir permainan dinyatakan sebagai pemenang.
                 """)
 
         st.write('[**Klik untuk melihat contoh permainan volly sarung**](https://www.instagram.com/reel/C71Oh-CNZFy/)')
