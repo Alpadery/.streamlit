@@ -282,6 +282,11 @@ if selected=='Lomba Class Meeting':
                 3. **Cara Bermain:** Setiap anggota tim bersama-sama mengeluarkan bola dari wadah menggunakan sumpit.
                 4. **Pemenang:** Tim dengan jumlah bola terbanyak yang berhasil dikeluarkan dalam waktu 10 menit dinyatakan sebagai pemenang.
                 """)
+
+        with col1:
+            image=Image.open('chopstickball.png')
+            st.image(image,
+                use_column_width=True)
             
         st.write('[**Contoh Video Permainan Chopstick Ball**](https://www.youtube.com/shorts/1QJVuAhYOec?feature=share)')
     
