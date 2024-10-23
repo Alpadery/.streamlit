@@ -111,7 +111,7 @@ if selected=='Lomba Class Meeting':
 
     #LOMBA ESTAFET
     if selected_lomba == "Estafet":
-        st.header('Estafet')
+        st.header('1. Estafet')
         image=Image.open('estafet.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Estafet**')
@@ -129,7 +129,7 @@ if selected=='Lomba Class Meeting':
                 """)
 
     if selected_lomba == "Futsal":
-        st.header('Futsal')
+        st.header('2. Futsal')
         image=Image.open('futsal.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Olahraga Futsal**')
@@ -151,7 +151,7 @@ if selected=='Lomba Class Meeting':
                 """)
 
     if selected_lomba == "Basket":
-        st.header('Basket')
+        st.header('3. Basket')
         image=Image.open('basket.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Olahraga Basket**')
@@ -175,7 +175,7 @@ if selected=='Lomba Class Meeting':
                 """)
         
     if selected_lomba == "Bola Beracun":
-        st.header('Bola Beracun')
+        st.header('4. Bola Beracun')
         image=Image.open('bolaberacun.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Olahraga Basket**')
@@ -200,7 +200,7 @@ if selected=='Lomba Class Meeting':
                 """)
         
     if selected_lomba == "Volly Sarung":
-        st.header('Volly Sarung')
+        st.header('5. Volly Sarung')
         image=Image.open('voli.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Volly Sarung**')
@@ -222,7 +222,7 @@ if selected=='Lomba Class Meeting':
         st.write('[**Contoh Video Permainan Volly Sarung**](https://www.instagram.com/reel/C71Oh-CNZFy/)')
 
     if selected_lomba == "Blind Bottle":
-        st.header('Blind Bottle')
+        st.header('6. Blind Bottle')
         image=Image.open('blindbottle.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Blind Bottle**')
@@ -245,7 +245,7 @@ if selected=='Lomba Class Meeting':
                 """)
         
     if selected_lomba == "Chopstick Ball":
-        st.header('Chopstick Ball')
+        st.header('7. Chopstick Ball')
         image=Image.open('chopstickball.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Chopstick Ball**')
