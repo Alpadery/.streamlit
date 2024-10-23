@@ -602,6 +602,8 @@ if selected=='Bagan Kelas Akhwat':
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/5aa89703c314324afcc03f4a4ca7860b37454b017a1a9f4adf7857b3.png)')
 
+
+    
 #LOMBA CHOPSTICK BALL
     if selected_lomba == "Chopstick Ball":
         image=Image.open('akhwat/chop_aa.png')
