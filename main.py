@@ -46,7 +46,7 @@ if selected=='Class Meeting 2024':
                 6. Memberikan kesempatan berekspresi.
                 """)
             
-            st.write('**Berikut hasil dokumentasi kegiatan Class Meeting 2023**')
+            st.write('**Berikut video dokumentasi kegiatan Class Meeting 2023**')
             st.write('[Click Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
 
         
@@ -332,16 +332,35 @@ if selected=='Leaderboard':
     st.write('---')
     st.header('🏆 Juara Fase Ikhwan Class Meeting 2024')
 
-    image=Image.open('juarafase_i.png')
-    st.image(image, use_column_width=True)
+    juara = {
+        'juara fase': [],
+    }
 
+    juarafase_df = pd.DataFrame(juara)
+    juarafase_df.sort_values(by=['juara fase'],ascending=False, inplace=True)
+    if not juarafase_df.empty:
+        image=Image.open('juarafase_i.png')
+        st.image(image, use_column_width=True)
+    else:
+        st.write('*"Competition is not about winning or losing, but about learning and growth"*  **-Brian Herbert**')
+        
     st.write("")
     st.write("")
 
     st.header('🏆 Juara Fase Akhwat Class Meeting 2024')
 
-    image=Image.open('juarafase_i.png')
-    st.image(image, use_column_width=True)
+    juara = {
+        'juara fase': [],
+    }
+
+    juarafase_df = pd.DataFrame(juara)
+    juarafase_df.sort_values(by=['juara fase'],ascending=False, inplace=True)
+    if not juarafase_df.empty:
+        image=Image.open('juarafase_i.png')
+        st.image(image, use_column_width=True)
+    else:
+        st.write('*"The lessons of competition are lessons for life"*  **-Robert Kennedy**')
+
 
     st.write('---')
     st.header(' Finalis Ikhwan Class Meeting 2024')
