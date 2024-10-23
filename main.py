@@ -298,6 +298,8 @@ if selected=='Leaderboard':
     else:
         st.write(f"The winner will be announced soon, stay tuned!")
 
+    st.write('')
+
     # LEADERBOARD AKHWAT
     data = {
         'Kelas': [],
@@ -345,7 +347,6 @@ if selected=='Leaderboard':
         st.write('*"Competition is not about winning or losing, but about learning and growth"*  **-Brian Herbert**')
         
     st.write("")
-    st.write("")
 
     st.header('🏆 Juara Fase Akhwat Class Meeting 2024')
 
@@ -369,7 +370,6 @@ if selected=='Leaderboard':
     image=Image.open('finalis_i.png')
     st.image(image, use_column_width=True)
     
-    st.write("")
     st.write("")
     
     st.header('Finalis Akhwat Class Meeting 2024')
