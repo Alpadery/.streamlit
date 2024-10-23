@@ -102,144 +102,165 @@ if selected=='Class Meeting 2024':
 if selected=='Lomba Class Meeting':
 
     st.title("Lomba Pada Class Meeting Abu Dzar 2024")
+    st.write("---")
 
-    # List of competitions, their images, and explanations
-    competitions = {
-        "Estafet": {
-            "url": "https://via.placeholder.com/150",
-            "description": """
-            Lomba estafet adalah Apa pengertian lari estafet? Lari estafet juga sering disebut dengan lari sambung.
-            Oleh karena itu, lari estafet adalah lari yang dilakukan berkelompok. Umumnya bisa berjumlah 2 sampai 4 orang di dalam kelompok.
-            Setiap orang di dalam kelompok akan mendapat giliran berakhir.
+    selected_lomba = st.selectbox(
+    "**Pilih Jenis Lomba**",
+    ("Estafet","Futsal","Basket","Bola Beracun","Volly Sarung","Blind Bottle","Chopstick Ball"),
+)
 
-            **Peraturan Permainan:**
-            1. A
-            2. B
-            3. C
-            """,
-            "link":""
-        },
-        "Futsal": {
-            "url": "futsal.png",
-            "description": """
-            **Futsal** adalah olahraga tim yang merupakan variasi dari sepak bola, dimainkan di lapangan kecil dan biasanya di dalam ruangan.
-            Setiap tim terdiri dari lima pemain, termasuk penjaga gawang. Futsal fokus pada keterampilan teknis, kontrol bola, dan kecepatan.
-            
-            **Peraturan Permainan:**
-            1. **Pemain:** Setiap tim terdiri dari 5 pemain di lapangan, termasuk kiper.
-            2. **Waktu:** Pertandingan biasanya berlangsung 2 babak, masing-masing 5 menit.
-            3. **Lapangan:** Lebih kecil dari lapangan sepak bola, dengan permukaan keras.
-            4. **Bola:** Lebih kecil dan lebih berat dari bola sepak.
-            5. **Pelanggaran:** Mirip dengan sepak bola, seperti handball, melanggar, dan sebagainya.
-            6. **Tendangan Bebas:** Dilakukan jika terjadi pelanggaran di luar kotak penalti.
-            7. **Tendangan Penalti:** Dilakukan jika terjadi pelanggaran di dalam kotak penalti.
-            8. **Pergantian Pemain:** Dapat dilakukan kapan saja.
-            """,
-            "link":""
-        },
-        "Basket": {
-            "url": "basket.png",
-            "description": """
-            **Basket** adalah olahraga tim yang melibatkan dua tim dengan lima pemain di lapangan masing-masing.
-            Tujuan utama dalam permainan basket adalah memasukkan bola ke dalam ring lawan sebanyak-banyaknya.
-            Bola dapat dilempar, digiring, atau dioperkan untuk mencapai tujuan tersebut.
+    #LOMBA ESTAFET
+    if selected_lomba == "Estafet":
+        st.header('Estafet')
+        image=Image.open('estafet.png')
+        st.image(image, use_column_width=True)
+        st.subheader('**Pengertian Permainan Estafet**')
+        st.write("""
+                Lomba estafet adalah Apa pengertian lari estafet? Lari estafet juga sering disebut dengan lari sambung.
+                Oleh karena itu, lari estafet adalah lari yang dilakukan berkelompok. Umumnya bisa berjumlah 2 sampai 4 orang di dalam kelompok.
+                Setiap orang di dalam kelompok akan mendapat giliran berakhir.
+                """)
+        st.subheader('**Peraturan Permainan:**')
+        st.markdown(
+                """
+                1. A
+                2. B
+                3. C
+                """)
 
-            **Peraturan Permainan:**
-            1. **Lapangan:** Pertandingan basket dimainkan di lapangan berbentuk persegi panjang dengan papan ring di kedua ujungnya.
-            2. **Bola:** Bola basket terbuat dari bahan karet atau kulit sintetis dan memiliki ukuran dan berat standar.
-            3. **Waktu Pertandingan:** Satu pertandingan biasanya terdiri dari 4 kuarter dengan durasi waktu tertentu (biasanya 10 menit per kuarter).
-            4. **Cara Mencetak Poin:** Poin diperoleh ketika bola berhasil dimasukkan ke dalam ring. Nilai poin berbeda tergantung dari jarak lemparan.
-            5. **Pelanggaran:** Beberapa pelanggaran umum dalam basket antara lain:
-                - *Foul:* Kontak fisik yang berlebihan terhadap pemain lawan.
-                - *Traveling:* Mengambil langkah lebih dari dua langkah saat menggiring bola.
-                - *Double dribble:* Menggiring bola dua kali berturut-turut.
-                - *Backcourt violation:* Membawa bola melewati garis tengah lapangan ke arah belakang tanpa mengoper bola.
-            """,
-            "link":""
-        },
-        "Blind Bottle": {
-            "url": "blindbottle.png",
-            "description": """
-            **Lomba *Blind Bottle*** adalah permainan yang menguji kerja sama tim, komunikasi, dan kepercayaan antar anggota tim.
-            setiap anggota tim diikat dengan tali yang terhubung satu sama lain. Hal ini membuat gerakan setiap anggota tim menjadi saling mempengaruhi dan membutuhkan koordinasi yang lebih tinggi.
-            Satu orang anggota tim ditunjuk sebagai kapten yang akan memberikan instruksi kepada anggota lainnya.
+    if selected_lomba == "Futsal":
+        st.header('Futsal')
+        image=Image.open('futsal.png')
+        st.image(image, use_column_width=True)
+        st.subheader('**Pengertian Olahraga Futsal**')
+        st.write("""
+                **Futsal** adalah olahraga tim yang merupakan variasi dari sepak bola, dimainkan di lapangan kecil dan biasanya di dalam ruangan.
+                Setiap tim terdiri dari lima pemain, termasuk penjaga gawang. Futsal fokus pada keterampilan teknis, kontrol bola, dan kecepatan.
+                """)
+        st.subheader('**Peraturan Permainan:**')
+        st.markdown(
+                """
+                1. **Pemain:** Setiap tim terdiri dari 5 pemain di lapangan, termasuk kiper.
+                2. **Waktu:** Pertandingan biasanya berlangsung 2 babak, masing-masing 5 menit.
+                3. **Lapangan:** Lebih kecil dari lapangan sepak bola, dengan permukaan keras.
+                4. **Bola:** Lebih kecil dan lebih berat dari bola sepak.
+                5. **Pelanggaran:** Mirip dengan sepak bola, seperti handball, melanggar, dan sebagainya.
+                6. **Tendangan Bebas:** Dilakukan jika terjadi pelanggaran di luar kotak penalti.
+                7. **Tendangan Penalti:** Dilakukan jika terjadi pelanggaran di dalam kotak penalti.
+                8. **Pergantian Pemain:** Dapat dilakukan kapan saja.
+                """)
 
-            **Peraturan Permainan:**
-            1. **Pembentukan Tim:** Peserta dibagi menjadi beberapa kelompok, masing-masing terdiri dari 6 orang.
-            2. **Penunjukan Kapten:** Setiap kelompok memilih satu orang sebagai kapten.
-            3. **Persiapan:** Siapkan botol, pensil, dan tali yang cukup panjang untuk mengikat semua anggota tim dalam satu kelompok.
-            4. **Pengikatan Tali:** Semua anggota tim diikat dengan tali, membentuk satu kesatuan kecuali kapten.
-            5. **Posisi Pemain:** Semua anggota tim kecuali kapten menutup mata.
-            6. **Instruksi Kapten:** Kapten memberikan instruksi yang sangat detail kepada anggota timnya, seperti arah, jarak, dan teknik yang harus digunakan.
-            7. **Waktu:** Berikan waktu 10 menit untuk setiap kelompok menyelesaikan tantangan.
-            8. **Pemenang:** Kelompok yang berhasil memasukkan pensil ke dalam botol dalam waktu tercepat dinyatakan sebagai pemenang.
-            """,
-            "link":""
-        },
-        "Volly Sarung": {
-            "url": "voli.png",
-            "description": """
-            **Lomba Volly Sarung** adalah yang mirip dengan voli biasa, namun menggunakan sarung sebagai alat untuk melempar balon air yang berisi air.
-            Setiap tim terdiri dari 4 orang yang bertugas memegang sudut sarung dan secara bersama-sama melempar balon air ke area lawan.
+    if selected_lomba == "Basket":
+        st.header('Basket')
+        image=Image.open('basket.png')
+        st.image(image, use_column_width=True)
+        st.subheader('**Pengertian Olahraga Basket**')
+        st.write("""
+                **Basket** adalah olahraga tim yang melibatkan dua tim dengan lima pemain di lapangan masing-masing.
+                Tujuan utama dalam permainan basket adalah memasukkan bola ke dalam ring lawan sebanyak-banyaknya.
+                Bola dapat dilempar, digiring, atau dioperkan untuk mencapai tujuan tersebut.
+                """)
+        st.subheader('**Peraturan Permainan:**')
+        st.markdown(
+                """
+                1. **Lapangan:** Pertandingan basket dimainkan di lapangan berbentuk persegi panjang dengan papan ring di kedua ujungnya.
+                2. **Bola:** Bola basket terbuat dari bahan karet atau kulit sintetis dan memiliki ukuran dan berat standar.
+                3. **Waktu Pertandingan:** Satu pertandingan biasanya terdiri dari 4 kuarter dengan durasi waktu tertentu (biasanya 10 menit per kuarter).
+                4. **Cara Mencetak Poin:** Poin diperoleh ketika bola berhasil dimasukkan ke dalam ring. Nilai poin berbeda tergantung dari jarak lemparan.
+                5. **Pelanggaran:** Beberapa pelanggaran umum dalam basket antara lain:
+                    - *Foul:* Kontak fisik yang berlebihan terhadap pemain lawan.
+                    - *Traveling:* Mengambil langkah lebih dari dua langkah saat menggiring bola.
+                    - *Double dribble:* Menggiring bola dua kali berturut-turut.
+                    - *Backcourt violation:* Membawa bola melewati garis tengah lapangan ke arah belakang tanpa mengoper bola.
+                """)
+        
+    if selected_lomba == "Bola Beracun":
+        st.header('Bola Beracun')
+        image=Image.open('bolaberacun.png')
+        st.image(image, use_column_width=True)
+        st.subheader('**Pengertian Olahraga Basket**')
+        st.write("""
+                **Bola beracun** merupakan permainan yang melibatkan dua tim, yaitu tim pelempar dan tim mangsa.
+                Tim mangsa berada di dalam lingkaran, sementara tim pelempar berada di luar lingkaran. Tujuan tim pelempar adalah melempar bola ke anggota tim mangsa untuk mengeluarkan mereka dari permainan.
+                Sebaliknya, tim mangsa berusaha menghindari lemparan bola dan menjaga agar semua anggota tim tetap berada di dalam lingkaran.
+                """)
+        st.subheader('**Peraturan Permainan:**')
+        st.markdown(
+                """
+                1. **Jumlah Pemain dan Waktu:** Setiap tim terdiri dari 7 orang dan permainan berlangsung selama 10 menit.
+                2. **Formasi:** Tim mangsa membentuk lingkaran yang rapat, sedangkan tim pelempar berada di luar lingkaran.
+                3. **Cara Bermain:**
+                    - Tim pelempar secara bergantian melempar bola ke arah anggota tim mangsa.
+                    - Anggota tim mangsa harus berusaha menghindari lemparan bola.
+                    - Jika seorang anggota tim mangsa terkena lemparan bola, ia harus keluar dari permainan.
+                    - Permainan akan berhenti jika waktu 10 menit habis atau semua anggota satu tim telah keluar dari permainan.
+                4. **Pemenang:**
+                    - Jika waktu habis: Tim dengan jumlah anggota terbanyak yang masih berada di dalam lingkaran dinyatakan sebagai pemenang.
+                    - Jika semua anggota satu tim keluar: Tim yang berhasil melumpuhkan semua lawan terlebih dahulu dinyatakan sebagai pemenang.
+                """)
+        
+    if selected_lomba == "Volly Sarung":
+        st.header('Volly Sarung')
+        image=Image.open('voli.png')
+        st.image(image, use_column_width=True)
+        st.subheader('**Pengertian Permainan Volly Sarung**')
+        st.write("""
+                **Lomba Volly Sarung** adalah yang mirip dengan voli biasa, namun menggunakan sarung sebagai alat untuk melempar balon air yang berisi air.
+                Setiap tim terdiri dari 4 orang yang bertugas memegang sudut sarung dan secara bersama-sama melempar balon air ke area lawan.
+                """)
+        st.subheader('**Peraturan Permainan:**')
+        st.markdown(
+                """
+                1. **Peralatan:** Sarung, balon air, net dan lapangan yang sudah diberikan garis batas.
+                2. **Jumlah pemain:** Setiap tim terdiri dari 4 orang.
+                3. **Waktu:** Waktu permainan berlangsung selama 10 menit.
+                4. **Cara bermain:** Melempar balon air menggunakan sarung.
+                5. **Poin:** Dapatkan poin jika balon air jatuh di lapangan lawan.
+                6. **Pemenang:** Tim dengan poin terbanyak di akhir permainan dinyatakan sebagai pemenang.
+                """)
+        
+        st.write('[**Contoh Video Permainan Volly Sarung**](https://www.instagram.com/reel/C71Oh-CNZFy/)')
 
-            **Peraturan Permainan:**
-            1. **Peralatan:** Sarung, balon air, dan lapangan.
-            2. **Jumlah pemain:** Setiap tim terdiri dari 4 orang.
-            3. **Waktu:** Waktu permainan berlangsung selama 10 menit.
-            4. **Cara bermain:** Melempar balon air menggunakan sarung.
-            5. **Poin:** Dapatkan poin jika balon air jatuh di lapangan lawan.
-            6. **Pemenang:** Tim dengan poin terbanyak di akhir permainan dinyatakan sebagai pemenang.
-
-            """,
-            "link":"https://www.instagram.com/reel/C71Oh-CNZFy/"
-        },
-        "Bola Beracun": {
-            "url": "bolaberacun.png",
-            "description": """
-            **Bola beracun** merupakan permainan yang melibatkan dua tim, yaitu tim pelempar dan tim mangsa.
-            Tim mangsa berada di dalam lingkaran, sementara tim pelempar berada di luar lingkaran. Tujuan tim pelempar adalah melempar bola ke anggota tim mangsa untuk mengeluarkan mereka dari permainan.
-            Sebaliknya, tim mangsa berusaha menghindari lemparan bola dan menjaga agar semua anggota tim tetap berada di dalam lingkaran.
-
-            **Peraturan Permainan:**
-            1. **Jumlah Pemain dan Waktu:** Setiap tim terdiri dari 7 orang dan permainan berlangsung selama 10 menit.
-            2. **Formasi:** Tim mangsa membentuk lingkaran yang rapat, sedangkan tim pelempar berada di luar lingkaran.
-            3. **Cara Bermain:**
-                - Tim pelempar secara bergantian melempar bola ke arah anggota tim mangsa.
-                - Anggota tim mangsa harus berusaha menghindari lemparan bola.
-                - Jika seorang anggota tim mangsa terkena lemparan bola, ia harus keluar dari permainan.
-                - Permainan akan berhenti jika waktu 10 menit habis atau semua anggota satu tim telah keluar dari permainan.
-            4. **Pemenang:**
-                - Jika waktu habis: Tim dengan jumlah anggota terbanyak yang masih berada di dalam lingkaran dinyatakan sebagai pemenang.
-                - Jika semua anggota satu tim keluar: Tim yang berhasil melumpuhkan semua lawan terlebih dahulu dinyatakan sebagai pemenang.
-            """,
-            "link":""
-        },
-        "Chopstick Ball": {
-            "url": "chopstickball.png",
-            "description": """
-            **Lomba *chopstick ball*** adalah Permainan yang menguji ketangkasan dan kecepatan peserta dalam mengeluarkan bola dari suatu wadah atau area menggunakan sumpit.
-            Setiap tim terdiri dari 5 orang, dan setiap peserta dibekali 2 sumpit. Dalam waktu 10 menit, tim harus bekerja sama untuk mengeluarkan sebanyak mungkin bola.
-
-            **Peraturan Permainan:**
-            1. **Jumlah Peserta dan Waktu:** Setiap tim terdiri dari 5 orang dan permainan berlangsung selama 10 menit.
-            2. **Peralatan:** Setiap peserta diberikan 2 sumpit dan tersedia wadah berlubang yang berisi bola.
-            3. **Cara Bermain:** Setiap anggota tim bersama-sama mengeluarkan bola dari wadah menggunakan sumpit.
-            4. **Pemenang:** Tim dengan jumlah bola terbanyak yang berhasil dikeluarkan dalam waktu 10 menit dinyatakan sebagai pemenang.
-
-            """,
-            "link":"https://www.youtube.com/shorts/1QJVuAhYOec?feature=share"
-        }
-    }
-
-    # Select box for choosing a competition
-    selected_competition = st.selectbox("Pilih Jenis Lomba:", list(competitions.keys()))
-
-    # Display the selected competition's image and explanation
-    if selected_competition:
-        st.header(selected_competition)
-        st.image(competitions[selected_competition]["url"], use_column_width=True)
-        st.write(competitions[selected_competition]["description"])
-        st.markdown(f"[Contoh Video Permainan]({competitions[selected_competition]['link']})")
+    if selected_lomba == "Blind Bottle":
+        st.header('Blind Bottle')
+        image=Image.open('blindbottle.png')
+        st.image(image, use_column_width=True)
+        st.subheader('**Pengertian Permainan Blind Bottle**')
+        st.write("""
+                **Lomba *Blind Bottle*** adalah permainan yang menguji kerja sama tim, komunikasi, dan kepercayaan antar anggota tim.
+                setiap anggota tim diikat dengan tali yang terhubung satu sama lain. Hal ini membuat gerakan setiap anggota tim menjadi saling mempengaruhi dan membutuhkan koordinasi yang lebih tinggi.
+                Satu orang anggota tim ditunjuk sebagai kapten yang akan memberikan instruksi kepada anggota lainnya.
+                """)
+        st.subheader('**Peraturan Permainan:**')
+        st.markdown(
+                """
+                1. **Pembentukan Tim:** Peserta dibagi menjadi beberapa kelompok, masing-masing terdiri dari 6 orang.
+                2. **Penunjukan Kapten:** Setiap kelompok memilih satu orang sebagai kapten.
+                3. **Persiapan:** Siapkan botol, pensil, dan tali yang cukup panjang untuk mengikat semua anggota tim dalam satu kelompok.
+                4. **Pengikatan Tali:** Semua anggota tim diikat dengan tali, membentuk satu kesatuan kecuali kapten.
+                5. **Posisi Pemain:** Semua anggota tim kecuali kapten menutup mata.
+                6. **Instruksi Kapten:** Kapten memberikan instruksi yang sangat detail kepada anggota timnya, seperti arah, jarak, dan teknik yang harus digunakan.
+                7. **Waktu:** Berikan waktu 10 menit untuk setiap kelompok menyelesaikan tantangan.
+                8. **Pemenang:** Kelompok yang berhasil memasukkan pensil ke dalam botol dalam waktu tercepat dinyatakan sebagai pemenang.
+                """)
+        
+    if selected_lomba == "Chopstick Ball":
+        st.header('Chopstick Ball')
+        image=Image.open('chopstickball.png')
+        st.image(image, use_column_width=True)
+        st.subheader('**Pengertian Permainan Chopstick Ball**')
+        st.write("""
+                **Lomba *chopstick ball*** adalah Permainan yang menguji ketangkasan dan kecepatan peserta dalam mengeluarkan bola dari suatu wadah atau area menggunakan sumpit.
+                Setiap tim terdiri dari 5 orang, dan setiap peserta dibekali 2 sumpit. Dalam waktu 10 menit, tim harus bekerja sama untuk mengeluarkan sebanyak mungkin bola.
+                """)
+        st.subheader('**Peraturan Permainan:**')
+        st.markdown(
+                """
+                1. **Jumlah Peserta dan Waktu:** Setiap tim terdiri dari 5 orang dan permainan berlangsung selama 10 menit.
+                2. **Peralatan:** Setiap peserta diberikan 2 sumpit dan tersedia wadah berlubang yang berisi bola.
+                3. **Cara Bermain:** Setiap anggota tim bersama-sama mengeluarkan bola dari wadah menggunakan sumpit.
+                4. **Pemenang:** Tim dengan jumlah bola terbanyak yang berhasil dikeluarkan dalam waktu 10 menit dinyatakan sebagai pemenang.
+                """)
     
 #LEADERBOARD
 if selected=='Leaderboard':
