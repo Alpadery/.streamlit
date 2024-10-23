@@ -49,14 +49,12 @@ if selected=='Class Meeting 2024':
             st.write('**Berikut video dokumentasi kegiatan Class Meeting 2023**')
             st.write('[Click Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
 
-        
         col1, col2 = st.columns((2.1,1))
         with col1:
             st.header('C.  Jadwal Kegiatan Class Meeting 2024', divider='grey')
             image=Image.open('JadwalCM.png')
             st.image(image,
                     use_column_width=True)
-        
         
         st.header('D. Lokasi Lomba', divider='grey')
         col1, col2 = st.columns((1,1))
