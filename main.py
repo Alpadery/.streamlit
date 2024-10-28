@@ -28,7 +28,7 @@ if selected=='Class Meeting 2024':
         
         col1, col2 = st.columns((2,1))
         with col1:
-            st.header('A.  Tentang Class Meeting Abu Dzar', divider='grey')
+            st.header('A.  Class Meeting Abu Dzar', divider='grey')
             st.write(
                 """
                 Class Meeting merupakan kegiatan yang berlangsung setelah kegiatan Sumatif Akhir Semester dilaksanakan. Kegiatan ini merupakan sebuah *refreshment* untuk peserta didik setelah mengikuti SAS.""")
@@ -49,12 +49,14 @@ if selected=='Class Meeting 2024':
             st.write('**Berikut video dokumentasi kegiatan Class Meeting 2023**')
             st.write('[Click Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
 
+        
         col1, col2 = st.columns((2.1,1))
         with col1:
             st.header('C.  Jadwal Kegiatan Class Meeting 2024', divider='grey')
             image=Image.open('JadwalCM.png')
             st.image(image,
                     use_column_width=True)
+        
         
         st.header('D. Lokasi Lomba', divider='grey')
         col1, col2 = st.columns((1,1))
@@ -260,49 +262,54 @@ if selected=='Lomba Class Meeting':
                 4. **Pemenang:** Tim dengan jumlah bola terbanyak yang berhasil dikeluarkan dalam waktu 10 menit dinyatakan sebagai pemenang.
                 """)
     
+
 #LEADERBOARD
 if selected=='Leaderboard':
    
     st.title('Leaderboard Class Meeting 2024')
     st.write("---")
 
-    #LEADERBOARD IKHWAN
-    data = {
-        'Kelas': [],
-        'Gold Medals': [],
-        'Silver Medals': []
-    }
 
+#LEADERBOARD IKHWAN
+    data = {
+    'Kelas': ['a','b','c','d'],
+    'Gold Medals': [1,2,3,4],
+    'Silver Medals': [4,3,2,1]
+    }
     leaderboard_df = pd.DataFrame(data)
 
     leaderboard_df.sort_values(by=['Gold Medals', 'Silver Medals'], ascending=False, inplace=True)
 
-    def highlight_max_gold(s):
-        is_max = s == s.max()
-        return ['background-color: gold' if v else '' for v in is_max]
+    # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
+    def color_medals(df):
+        styles = pd.DataFrame('', index=df.index, columns=df.columns)  # Create an empty DataFrame for styles
+        styles['Gold Medals'] = 'background-color: rgba(255, 215, 0, 0.5)'  # Gold with 50% transparency
+        styles['Silver Medals'] = 'background-color: rgba(192, 192, 192, 0.5)'  # Silver with 50% transparency
+        return styles
 
-    def highlight_max_silver(s):
-        is_max = s == s.max()
-        return ['background-color: silver' if v else '' for v in is_max]
-
-    # Display the leaderboard
-    st.header("🎖️ Perolehan Medali Ikhwan")
+    # Check if the DataFrame is not empty
+    st.title('🎖️ Perolehan Medali Ikhwan')
     if not leaderboard_df.empty:
-        styled_table = leaderboard_df.style \
-            .apply(highlight_max_gold, subset=['Gold Medals']) \
-            .apply(highlight_max_silver, subset=['Silver Medals'])
-        
-        st.table(styled_table)
+        # Apply the styling to the DataFrame
+        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
+
+        # Highlight the maximum values in the 'Gold Medal' and 'Silver Medal' columns
+        styled_df = styled_df.highlight_max(color='darkorange', axis=0, subset=['Gold Medals'], props='font-weight: bold; background-color: rgba(255, 140, 0, 0.7);')
+        styled_df = styled_df.highlight_max(color='gray', axis=0, subset=['Silver Medals'], props='font-weight: bold; background-color: rgba(169, 169, 169, 0.7);')
+
+        # Display the styled DataFrame in Streamlit
+        st.table(styled_df)
     else:
         st.write(f"The winner will be announced soon, stay tuned!")
 
     st.write('')
 
-    # LEADERBOARD AKHWAT
+
+# LEADERBOARD AKHWAT
     data = {
-        'Kelas': [],
-        'Gold Medals': [],
-        'Silver Medals': []
+    'Kelas': ['a','b','c','d'],
+    'Gold Medals': [1,2,3,4],
+    'Silver Medals': [4,3,2,1]
     }
 
     # Dataframe
@@ -310,66 +317,71 @@ if selected=='Leaderboard':
 
     leaderboard_df.sort_values(by=['Gold Medals', 'Silver Medals'], ascending=False, inplace=True)
 
-    def highlight_max_gold(s):
-        is_max = s == s.max()
-        return ['background-color: gold' if v else '' for v in is_max]
+    # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
+    def color_medals(df):
+        styles = pd.DataFrame('', index=df.index, columns=df.columns)  # Create an empty DataFrame for styles
+        styles['Gold Medals'] = 'background-color: rgba(255, 215, 0, 0.5)'  # Gold with 50% transparency
+        styles['Silver Medals'] = 'background-color: rgba(192, 192, 192, 0.5)'  # Silver with 50% transparency
+        return styles
 
-    def highlight_max_silver(s):
-        is_max = s == s.max()
-        return ['background-color: silver' if v else '' for v in is_max]
-
-    # Display the leaderboard
-    st.header("🎖️ Perolehan Medali Akhwat")
+    # Check if the DataFrame is not empty
+    st.title('🎖️ Perolehan Medali Akhwat')
     if not leaderboard_df.empty:
-        styled_table = leaderboard_df.style \
-            .apply(highlight_max_gold, subset=['Gold Medals']) \
-            .apply(highlight_max_silver, subset=['Silver Medals'])
-        
-        st.table(styled_table)
+        # Apply the styling to the DataFrame
+        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
+
+        # Highlight the maximum values in the 'Gold Medal' and 'Silver Medal' columns
+        styled_df = styled_df.highlight_max(color='darkorange', axis=0, subset=['Gold Medals'], props='font-weight: bold; background-color: rgba(255, 140, 0, 0.7);')
+        styled_df = styled_df.highlight_max(color='gray', axis=0, subset=['Silver Medals'], props='font-weight: bold; background-color: rgba(169, 169, 169, 0.7);')
+
+        # Display the styled DataFrame in Streamlit
+        st.dataframe(styled_df)
     else:
         st.write(f"The winner will be announced soon, stay tuned!")
 
+
+# JUARA FASE IKHWAN
     st.write('---')
     st.header('🏆 Juara Fase Ikhwan Class Meeting 2024')
 
     juara = {
-        'juara fase': [],
-    }
+            'juara fase': [],
+            }
 
     juarafase_df = pd.DataFrame(juara)
     juarafase_df.sort_values(by=['juara fase'],ascending=False, inplace=True)
     if not juarafase_df.empty:
-        image=Image.open('juarafase_i.png')
-        st.image(image, use_column_width=True)
+            image=Image.open('juarafase_i.png')
+            st.image(image, use_column_width=True)
     else:
-        st.write('*"Competition is not about winning or losing, but about learning and growth"*  **-Brian Herbert**')
-        
+            st.write('*"Competition is not about winning or losing, but about learning and growth"*  **-Brian Herbert**')
+            
     st.write("")
 
+
+# JUARA FASE AKHWAT
     st.header('🏆 Juara Fase Akhwat Class Meeting 2024')
 
     juara = {
-        'juara fase': [],
-    }
+            'juara fase': [],
+            }
 
     juarafase_df = pd.DataFrame(juara)
     juarafase_df.sort_values(by=['juara fase'],ascending=False, inplace=True)
     if not juarafase_df.empty:
-        image=Image.open('juarafase_i.png')
-        st.image(image, use_column_width=True)
+            image=Image.open('juarafase_i.png')
+            st.image(image, use_column_width=True)
     else:
-        st.write('*"The lessons of competition are lessons for life"*  **-Robert Kennedy**')
-
+            st.write('*"The lessons of competition are lessons for life"*  **-Robert Kennedy**')
 
     st.write('---')
     st.header(' Finalis Ikhwan Class Meeting 2024')
 
-
     image=Image.open('finalis_i.png')
     st.image(image, use_column_width=True)
-    
+        
     st.write("")
-    
+        
     st.header('Finalis Akhwat Class Meeting 2024')
 
     image=Image.open('finalis_i.png')
@@ -383,7 +395,7 @@ if selected=='Bagan Kelas Ikhwan':
     selected_lomba = st.selectbox(
     "**Pilih Jenis Lomba**",
     ("Estafet","Futsal","Basket","Bola Beracun","Volly Sarung","Blind Bottle","Chopstick Ball"),
-)
+    )
 
 #LOMBA ESTAFET
     if selected_lomba == "Estafet":
