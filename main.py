@@ -298,7 +298,7 @@ if selected=='Leaderboard':
         styled_df = styled_df.highlight_max(color='gray', axis=0, subset=['Silver Medals'], props='font-weight: bold; background-color: rgba(169, 169, 169, 0.7);')
 
         # Display the styled DataFrame in Streamlit
-        st.table(styled_df)
+        st.dataframe(styled_df)
     else:
         st.write(f"The winner will be announced soon, stay tuned!")
 
