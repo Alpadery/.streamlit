@@ -288,7 +288,7 @@ if selected=='Leaderboard':
         return styles
 
     # Check if the DataFrame is not empty
-    st.title('🎖️ Perolehan Medali Ikhwan')
+    st.header('🎖️ Perolehan Medali Ikhwan')
     if not leaderboard_df.empty:
         # Apply the styling to the DataFrame
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
@@ -307,9 +307,9 @@ if selected=='Leaderboard':
 
 # LEADERBOARD AKHWAT
     data = {
-    'Kelas': ['a','b','c','d'],
-    'Gold Medals': [1,2,3,4],
-    'Silver Medals': [4,3,2,1]
+    'Kelas': [],
+    'Gold Medals': [],
+    'Silver Medals': []
     }
 
     # Dataframe
@@ -325,7 +325,7 @@ if selected=='Leaderboard':
         return styles
 
     # Check if the DataFrame is not empty
-    st.title('🎖️ Perolehan Medali Akhwat')
+    st.header('🎖️ Perolehan Medali Akhwat')
     if not leaderboard_df.empty:
         # Apply the styling to the DataFrame
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
