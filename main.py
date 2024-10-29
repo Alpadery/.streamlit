@@ -305,6 +305,7 @@ if selected=='Leaderboard':
 
     st.write('')
 
+
 # LEADERBOARD AKHWAT
     data = {
     'Kelas': [],
@@ -338,6 +339,7 @@ if selected=='Leaderboard':
         st.dataframe(styled_df)
     else:
         st.write(f"The winner will be announced soon, stay tuned!")
+
 
 # JUARA FASE IKHWAN
     st.write('---')
