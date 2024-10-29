@@ -7,7 +7,6 @@ from openpyxl import load_workbook
 
 st.set_page_config(page_title='Class Meeting', layout='wide')
 
-
 with st.sidebar:
     selected=option_menu(
         menu_title='Class Meeting Abu Dzar 2024',
@@ -395,7 +394,7 @@ if selected=='Bagan Kelas Ikhwan':
     st.write("---")
 
     # Specify the path to your Excel file
-file_path = "Jadwal Ikhwan CM 24.xlsx"  # Change this to your actual file path
+file_path = "Jadwal Ikhwan CM 24(1).xlsx"  # Change this to your actual file path
 
 # Load the workbook
 workbook = load_workbook(filename=file_path, data_only=True)
@@ -535,7 +534,6 @@ if selected=='Bagan Kelas Akhwat':
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/649558a18837335a51e3895f357bc6f5f0470aa395a8ea0410fd56fd.png)')
 
-    
 #LOMBA BASKET  
     if selected_lomba == "Basket":
         image=Image.open('akhwat/basket_ba.png')
@@ -549,7 +547,6 @@ if selected=='Bagan Kelas Akhwat':
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/4687f9c909f15add1f1fe53b311307ceb1b608b69b4ad8443dd99b21.png)')
 
-    
 #LOMBA BOLA BERACUN
     if selected_lomba == "Bola Beracun":
         image=Image.open('akhwat/bola_aa.png')
@@ -568,7 +565,6 @@ if selected=='Bagan Kelas Akhwat':
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/336c269bd9f71dece24a4b3c7924416d80a7faf1700d4e9c14bc88e2.png)')
-
     
 #LOMBA VOLLY SARUNG  
     if selected_lomba == "Volly Sarung":
@@ -589,7 +585,6 @@ if selected=='Bagan Kelas Akhwat':
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/7c0844c0531f645da57c1af6c127cb30d67b724b4e82873682b6c6cc.png)')
 
-    
 #LOMBA BLIND BOTTLE
     if selected_lomba == "Blind Bottle":
         image=Image.open('akhwat/blind_aa.png')
@@ -608,8 +603,6 @@ if selected=='Bagan Kelas Akhwat':
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/5aa89703c314324afcc03f4a4ca7860b37454b017a1a9f4adf7857b3.png)')
-
-
 
 #LOMBA CHOPSTICK BALL
     if selected_lomba == "Chopstick Ball":
