@@ -16,8 +16,6 @@ with st.sidebar:
         default_index=0,
     )
 
-
-
 sidebar_logo=('Logo Sekolah Islam Abu Dzar-01.png')
 main_body_logo=('Icon Logo Yayasan-01 (1).png')
 
@@ -396,7 +394,7 @@ if selected=='Bagan Kelas Ikhwan':
     st.write("---")
 
     # Specify the path to your Excel file
-file_path = "sample1.xlsx"  # Change this to your actual file path
+file_path = "Jadwal Ikhwan CM 24.xlsx"  # Change this to your actual file path
 
 # Load the workbook
 workbook = load_workbook(filename=file_path, data_only=True)
@@ -408,7 +406,7 @@ item_to_sheets = {
         'link': 'https://example.com/item-a'  # Change to the desired link
     },
     'Futsal': {
-        'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+        'sheets': ['Kualifikasi Futsal A', 'Kualifikasi Futsal B', 'Kualifikasi Futsal C'],
         'link': 'https://example.com/item-b'  # Change to the desired link
     },
     'Basket': {
@@ -434,7 +432,7 @@ item_to_sheets = {
 }
 
 # Create a select box for the user to choose an item
-selected_item = st.selectbox("Select an item to display its related data", list(item_to_sheets.keys()))
+selected_item = st.selectbox("Pilih Jenis lomba", list(item_to_sheets.keys()))
 
 # Function to read the sheet and replace None with blank cells
 def read_sheet(sheet_name):
@@ -465,7 +463,6 @@ if selected_item:
     df3 = read_sheet(related_sheets[2])  # Data from the third related sheet
 
     # Create a full width container for the DataFrames
-    st.subheader(f"Data from {selected_item}")
     
     # Display the DataFrames side by side
     cols = st.columns(3)
