@@ -49,6 +49,7 @@ if selected=='Class Meeting 2024':
             
             st.write('**Berikut video dokumentasi kegiatan Class Meeting 2023**')
             st.write('[Click Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
+
         
         col1, col2 = st.columns((2.1,1))
         with col1:
@@ -56,7 +57,7 @@ if selected=='Class Meeting 2024':
             image=Image.open('JadwalCM.png')
             st.image(image,
                     use_column_width=True)
-
+        
         
         st.header('D. Lokasi Lomba', divider='grey')
         col1, col2 = st.columns((1,1))
@@ -262,11 +263,13 @@ if selected=='Lomba Class Meeting':
                 4. **Pemenang:** Tim dengan jumlah bola terbanyak yang berhasil dikeluarkan dalam waktu 10 menit dinyatakan sebagai pemenang.
                 """)
     
+
 #LEADERBOARD
 if selected=='Leaderboard':
    
     st.title('Leaderboard Class Meeting 2024')
     st.write("---")
+
 
 #LEADERBOARD IKHWAN
     data = {
@@ -302,6 +305,7 @@ if selected=='Leaderboard':
 
     st.write('')
 
+
 # LEADERBOARD AKHWAT
     data = {
     'Kelas': [],
@@ -336,6 +340,7 @@ if selected=='Leaderboard':
     else:
         st.write(f"The winner will be announced soon, stay tuned!")
 
+
 # JUARA FASE IKHWAN
     st.write('---')
     st.header('🏆 Juara Fase Ikhwan Class Meeting 2024')
@@ -353,6 +358,7 @@ if selected=='Leaderboard':
             st.write('*"Competition is not about winning or losing, but about learning and growth"*  **-Brian Herbert**')
             
     st.write("")
+
 
 # JUARA FASE AKHWAT
     st.header('🏆 Juara Fase Akhwat Class Meeting 2024')
@@ -604,3 +610,5 @@ if selected=='Bagan Kelas Akhwat':
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/67cd8b1e2398b770ecb863e8c4917a319cdd0b383b7445b363f99a36.png)')
+
+
