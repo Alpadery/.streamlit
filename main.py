@@ -273,7 +273,7 @@ if selected=='Leaderboard':
 
 #LEADERBOARD IKHWAN
     data = {
-    'Kelas': ['a','b','c','d'],
+    'Kelas': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
     'Gold Medals': [1,2,3,4],
     'Silver Medals': [4,3,2,1]
     }
@@ -396,94 +396,85 @@ if selected=='Bagan Kelas Ikhwan':
     # Specify the path to your Excel file
     file_path = "Jadwal Ikhwan CM 24(1).xlsx"  # Change this to your actual file path
 
-    # Load the workbook
+        # Load the workbook
     workbook = load_workbook(filename=file_path, data_only=True)
 
-    # Create a mapping of items to the corresponding sheets and links
+        # Create a mapping of items to the corresponding sheets and links
     item_to_sheets = {
-        'Estafet': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-            'link': 'https://example.com/item-a'  # Change to the desired link
-        },
-        'Futsal': {
-            'sheets': ['Kualifikasi Futsal A', 'Kualifikasi Futsal B', 'Kualifikasi Futsal C'],
-            'link': 'https://example.com/item-b'  # Change to the desired link
-        },
-        'Basket': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-            'link': 'https://example.com/item-c'  # Change to the desired link
-        },
-        'Volly Sarung': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-            'link': 'https://example.com/item-a'  # Change to the desired link
-        },
-        'Bola Beracun': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-            'link': 'https://example.com/item-b'  # Change to the desired link
-        },
-        'Blind Bottle': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-            'link': 'https://example.com/item-c'  # Change to the desired link
-        },
-        'Chopstick Ball': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-            'link': 'https://example.com/item-c'  # Change to the desired link
+            'Estafet': {
+                'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+                'link': 'https://example.com/item-a'  # Change to the desired link
+            },
+            'Futsal': {
+                'sheets': ['Fase A', 'Fase B', 'Fase C'],
+                'link': 'https://example.com/item-b'  # Change to the desired link
+            },
+            'Basket': {
+                'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+                'link': 'https://example.com/item-c'  # Change to the desired link
+            },
+            'Volly Sarung': {
+                'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+                'link': 'https://example.com/item-a'  # Change to the desired link
+            },
+            'Bola Beracun': {
+                'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+                'link': 'https://example.com/item-b'  # Change to the desired link
+            },
+            'Blind Bottle': {
+                'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+                'link': 'https://example.com/item-c'  # Change to the desired link
+            },
+            'Chopstick Ball': {
+                'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+                'link': 'https://example.com/item-c'  # Change to the desired link
+            }
         }
-    }
 
-    # Create a select box for the user to choose an item
+        # Create a select box for the user to choose an item
     selected_item = st.selectbox("Pilih Jenis lomba", list(item_to_sheets.keys()))
 
-    # Function to read the sheet and replace None with blank cells
+        # Function to read the sheet and replace None with blank cells
     def read_sheet(sheet_name):
-        sheet = workbook[sheet_name]
-        data = []
+            sheet = workbook[sheet_name]
+            data = []
 
-        for row in sheet.iter_rows(values_only=True):
-            # Clean the row by replacing None with blank cells
-            cleaned_row = [cell if cell is not None else "" for cell in row]
-            # Only append rows that have non-empty values
-            if any(cleaned_row):
-                data.append(cleaned_row)
+            for row in sheet.iter_rows(values_only=True):
+                # Clean the row by replacing None with blank cells
+                cleaned_row = [cell if cell is not None else "" for cell in row]
+                # Only append rows that have non-empty values
+                if any(cleaned_row):
+                    data.append(cleaned_row)
 
-        # Convert to DataFrame
-        df = pd.DataFrame(data)
+            # Convert to DataFrame
+            df = pd.DataFrame(data)
 
-        return df
+            return df
 
-    # Display the chosen item's related sheets
+        # Display the chosen item's related sheets
     if selected_item:
-        # Get the related sheets and link based on the selected item
+            # Get the related sheets and link based on the selected item
         related_info = item_to_sheets[selected_item]
         related_sheets = related_info['sheets']
-        
+            
         # Read the DataFrames
-        df1 = read_sheet(related_sheets[0])  # Data from the first related sheet
-        df2 = read_sheet(related_sheets[1])  # Data from the second related sheet
-        df3 = read_sheet(related_sheets[2])  # Data from the third related sheet
+        df1 = read_sheet(related_sheets[0])
+        df2 = read_sheet(related_sheets[1])
+        df3 = read_sheet(related_sheets[2])
 
         # Create a full width container for the DataFrames
-        
-        # Display the DataFrames side by side
-        cols = st.columns(3)
+        st.write(f"### {related_sheets[0]}")
+        st.dataframe(df1, use_container_width=True)
 
-        with cols[0]:
-            st.write(f"### {related_sheets[0]}")
-            st.dataframe(df1, use_container_width=True)
-
-        with cols[1]:
-            st.write(f"### {related_sheets[1]}")
-            st.dataframe(df2, use_container_width=True)
-
-        with cols[2]:
-            st.write(f"### {related_sheets[2]}")
-            st.dataframe(df3, use_container_width=True)
+        st.write(f"### {related_sheets[1]}")
+        st.dataframe(df2, use_container_width=True)
+            
+        st.write(f"### {related_sheets[2]}")
+        st.dataframe(df3, use_container_width=True)
 
         # Add link for the selected item
         st.markdown(f"[More about {selected_item}]({related_info['link']})")
 
-        # Adjust the layout to minimize scrolling by ensuring DataFrames fit the screen
-        st.write("<style>div.stDataFrame {max-height: none;}</style>", unsafe_allow_html=True)
 
 if selected=='Bagan Kelas Akhwat':
    
