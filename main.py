@@ -394,7 +394,7 @@ if selected=='Bagan Kelas Ikhwan':
     st.write("---")
 
     # Specify the path to your Excel file
-    file_path = "Jadwal Ikhwan CM 24(1).xlsx"  # Change this to your actual file path
+    file_path = "Jadwal Ikhwan CM 24.xlsx"  # Change this to your actual file path
 
         # Load the workbook
     workbook = load_workbook(filename=file_path, data_only=True)
