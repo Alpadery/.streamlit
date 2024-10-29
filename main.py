@@ -16,7 +16,6 @@ with st.sidebar:
         default_index=0,
     )
 
-
 sidebar_logo=('Logo Sekolah Islam Abu Dzar-01.png')
 main_body_logo=('Icon Logo Yayasan-01 (1).png')
 
