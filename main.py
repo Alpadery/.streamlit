@@ -262,7 +262,6 @@ if selected=='Lomba Class Meeting':
                 3. **Cara Bermain:** Setiap anggota tim bersama-sama mengeluarkan bola dari wadah menggunakan sumpit.
                 4. **Pemenang:** Tim dengan jumlah bola terbanyak yang berhasil dikeluarkan dalam waktu 10 menit dinyatakan sebagai pemenang.
                 """)
-    
 
 #LEADERBOARD
 if selected=='Leaderboard':
