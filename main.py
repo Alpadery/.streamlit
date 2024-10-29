@@ -3,7 +3,6 @@ import pandas as pd
 from PIL import Image
 from streamlit_option_menu import option_menu
 from streamlit_image_coordinates import streamlit_image_coordinates
-from openpyxl import load_workbook
 
 st.set_page_config(page_title='Class Meeting', layout='wide')
 
@@ -393,97 +392,125 @@ if selected=='Bagan Kelas Ikhwan':
     st.title('Bagan Ikhwan Class Meeting Abu Dzar 2024')
     st.write("---")
 
-    # Specify the path to your Excel file
-    file_path = "Jadwal Ikhwan CM 24(1).xlsx"  # Change this to your actual file path
+    selected_lomba = st.selectbox(
+    "**Pilih Jenis Lomba**",
+    ("Estafet","Futsal","Basket","Bola Beracun","Volly Sarung","Blind Bottle","Chopstick Ball"),
+    )
 
-    # Load the workbook
-    workbook = load_workbook(filename=file_path, data_only=True)
+#LOMBA ESTAFET
+    if selected_lomba == "Estafet":
+        image=Image.open('ikhwan/estafet_a.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/3df0b4a1fe6a62518a64045cbe6e400560f236aba9774a5086084243.png)')
+        st.write('')
+        st.write('')
+        image=Image.open('ikhwan/estafet_b.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/750e4c6e5ba0f825090a4cfc3f3b4b5ebec02aac318c802119a4b3d5.png)')
+        st.write('')
+        st.write('')
+        image=Image.open('ikhwan/estafet_c.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/fa290bfa124e491b55e87cb39b91874888d4f139bfa0642c7168f8cf.png)')
 
-    # Create a mapping of items to the corresponding sheets and links
-    item_to_sheets = {
-        'Estafet': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-            'link': 'https://example.com/item-a'  # Change to the desired link
-        },
-        'Futsal': {
-            'sheets': ['Kualifikasi Futsal A', 'Kualifikasi Futsal B', 'Kualifikasi Futsal C'],
-            'link': 'https://example.com/item-b'  # Change to the desired link
-        },
-        'Basket': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-            'link': 'https://example.com/item-c'  # Change to the desired link
-        },
-        'Volly Sarung': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-            'link': 'https://example.com/item-a'  # Change to the desired link
-        },
-        'Bola Beracun': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-            'link': 'https://example.com/item-b'  # Change to the desired link
-        },
-        'Blind Bottle': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-            'link': 'https://example.com/item-c'  # Change to the desired link
-        },
-        'Chopstick Ball': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-            'link': 'https://example.com/item-c'  # Change to the desired link
-        }
-    }
+#LOMBA FUTSAL
+    if selected_lomba == "Futsal":
+        image=Image.open('ikhwan/futsal_a.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/5192ea6f01aab750854566851556e61dca13e65870b219d690c00f3f.png)')
+        st.write('')
+        st.write('')
+        image=Image.open('ikhwan/futsal_b.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/61902a2eef52ec2a77411f4f891b7f17fd237c0d2744eab5afd290b1.png)')
+        st.write('')
+        st.write('')
+        image=Image.open('ikhwan/futsal_c.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/649558a18837335a51e3895f357bc6f5f0470aa395a8ea0410fd56fd.png)')
 
-    # Create a select box for the user to choose an item
-    selected_item = st.selectbox("Pilih Jenis lomba", list(item_to_sheets.keys()))
+#LOMBA BASKET  
+    if selected_lomba == "Basket":
+        image=Image.open('ikhwan/basket_b.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/2dc0e7eb09a9e411ea2a907e0afbbf007c7ce41a5050ffa369abc968.png)')
+        st.write('')
+        st.write('')
+        image=Image.open('ikhwan/basket_c.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/4687f9c909f15add1f1fe53b311307ceb1b608b69b4ad8443dd99b21.png)')
 
-    # Function to read the sheet and replace None with blank cells
-    def read_sheet(sheet_name):
-        sheet = workbook[sheet_name]
-        data = []
+#LOMBA BOLA BERACUN
+    if selected_lomba == "Bola Beracun":
+        image=Image.open('ikhwan/bola_a.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/7d5c3a42a764bd2d9b3f074b97523281393119f2880b7f0eb86ea4ff.png)')
+        st.write('')
+        st.write('')
+        image=Image.open('ikhwan/bola_b.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/46c15a396effd459e2d71975541fe45c256015ad0ef6587c75b1887c.png)')
+        st.write('')
+        st.write('')
+        image=Image.open('ikhwan/bola_c.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/336c269bd9f71dece24a4b3c7924416d80a7faf1700d4e9c14bc88e2.png)')
+    
+#LOMBA VOLLY SARUNG  
+    if selected_lomba == "Volly Sarung":
+        image=Image.open('ikhwan/volly_a.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/16532e7d195d54937a49617e2c87908ecfad58ba41f4b50c5d0046a4.png)')
+        st.write('')
+        st.write('')
+        image=Image.open('ikhwan/volly_b.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/2d388a001972c17ba7dca906f8f926d8a9b2ccf81ca2acde3d7d78e9.png)')
+        st.write('')
+        st.write('')
+        image=Image.open('ikhwan/volly_c.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/7c0844c0531f645da57c1af6c127cb30d67b724b4e82873682b6c6cc.png)')
 
-        for row in sheet.iter_rows(values_only=True):
-            # Clean the row by replacing None with blank cells
-            cleaned_row = [cell if cell is not None else "" for cell in row]
-            # Only append rows that have non-empty values
-            if any(cleaned_row):
-                data.append(cleaned_row)
+#LOMBA BLIND BOTTLE
+    if selected_lomba == "Blind Bottle":
+        image=Image.open('ikhwan/blind_a.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/c02081d7e7dea0fd299a8003bd5323ee62e30dd4a5f8e94b9d3d6ae0.png)')
+        st.write('')
+        st.write('')
+        image=Image.open('ikhwan/blind_b.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/d498d94818ad9ee4f796ebe48e745b2bc69f4feaef2c04de474c6416.png)')
+        st.write('')
+        st.write('')
+        image=Image.open('ikhwan/blind_c.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/5aa89703c314324afcc03f4a4ca7860b37454b017a1a9f4adf7857b3.png)')
 
-        # Convert to DataFrame
-        df = pd.DataFrame(data)
-
-        return df
-
-    # Display the chosen item's related sheets
-    if selected_item:
-        # Get the related sheets and link based on the selected item
-        related_info = item_to_sheets[selected_item]
-        related_sheets = related_info['sheets']
-        
-        # Read the DataFrames
-        df1 = read_sheet(related_sheets[0])  # Data from the first related sheet
-        df2 = read_sheet(related_sheets[1])  # Data from the second related sheet
-        df3 = read_sheet(related_sheets[2])  # Data from the third related sheet
-
-        # Create a full width container for the DataFrames
-        
-        # Display the DataFrames side by side
-        cols = st.columns(3)
-
-        with cols[0]:
-            st.write(f"### {related_sheets[0]}")
-            st.dataframe(df1, use_container_width=True)
-
-        with cols[1]:
-            st.write(f"### {related_sheets[1]}")
-            st.dataframe(df2, use_container_width=True)
-
-        with cols[2]:
-            st.write(f"### {related_sheets[2]}")
-            st.dataframe(df3, use_container_width=True)
-
-        # Add link for the selected item
-        st.markdown(f"[More about {selected_item}]({related_info['link']})")
-
-        # Adjust the layout to minimize scrolling by ensuring DataFrames fit the screen
-        st.write("<style>div.stDataFrame {max-height: none;}</style>", unsafe_allow_html=True)
+#LOMBA CHOPSTICK BALL
+    if selected_lomba == "Chopstick Ball":
+        image=Image.open('ikhwan/chop_a.png')
+        st.image(image,
+                    use_column_width=True)
+        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/67cd8b1e2398b770ecb863e8c4917a319cdd0b383b7445b363f99a36.png)')
 
 if selected=='Bagan Kelas Akhwat':
    
@@ -603,7 +630,6 @@ if selected=='Bagan Kelas Akhwat':
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/5aa89703c314324afcc03f4a4ca7860b37454b017a1a9f4adf7857b3.png)')
-
 
 #LOMBA CHOPSTICK BALL
     if selected_lomba == "Chopstick Ball":
