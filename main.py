@@ -464,13 +464,13 @@ if selected=='Bagan Kelas Ikhwan':
 
         # Create a full width container for the DataFrames
         st.write(f"### {related_sheets[0]}")
-        st.dataframe(df1, use_container_width=True)
+        st.dataframe(df1, width=800)
 
         st.write(f"### {related_sheets[1]}")
-        st.dataframe(df2, use_container_width=True)
+        st.dataframe(df2, width=1000)
             
         st.write(f"### {related_sheets[2]}")
-        st.dataframe(df3, use_container_width=True)
+        st.dataframe(df3, width=1000)
 
         # Add link for the selected item
         st.markdown(f"[More about {selected_item}]({related_info['link']})")
@@ -595,7 +595,6 @@ if selected=='Bagan Kelas Akhwat':
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/5aa89703c314324afcc03f4a4ca7860b37454b017a1a9f4adf7857b3.png)')
 
-    
 #LOMBA CHOPSTICK BALL
     if selected_lomba == "Chopstick Ball":
         image=Image.open('akhwat/chop_aa.png')
