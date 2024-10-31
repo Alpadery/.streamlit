@@ -461,21 +461,26 @@ if selected=='Bagan Kelas Ikhwan':
         # Read the DataFrames
         df1 = read_sheet(related_sheets[0])
         df2 = read_sheet(related_sheets[1])
-        df3 = read_sheet(related_sheets[2])
+        df3 = read_sheet(related_sheets[2])     
+
+        col1, col2, col3 = st.columns(3)
+
+        html1 = df1.to_html(index=False, header=False)
+
+        html2 = df2.to_html(index=False, header=False)
+
+        html3 = df3.to_html(index=False, header=False)
 
         # Create a full width container for the DataFrames
-        st.write(f"### {related_sheets[0]}")
-        st.dataframe(df1.style.set_properties(**{'overflow': 'hidden', 'text-overflow': 'ellipsis', 'white-space': 'normal'}), use_container_width=True, hide_index=True)
-
-        st.write(f"### {related_sheets[1]}")
-        st.dataframe(df2.style.set_properties(**{'overflow': 'hidden', 'text-overflow': 'ellipsis', 'white-space': 'normal'}), use_container_width=True, hide_index=True)
-            
-        st.write(f"### {related_sheets[2]}")
-        st.dataframe(df3.style.set_properties(**{'overflow': 'hidden', 'text-overflow': 'ellipsis', 'white-space': 'normal'}), use_container_width=True, hide_index=True)
+        with col1:
+            st.markdown(html1, unsafe_allow_html=True)
+        with col2:
+            st.markdown(html2, unsafe_allow_html=True)
+        with col3:
+            st.markdown(html3, unsafe_allow_html=True)
 
         # Add link for the selected item
         st.markdown(f"[More about {selected_item}]({related_info['link']})")
-
 
 if selected=='Bagan Kelas Akhwat':
    
