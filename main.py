@@ -407,19 +407,19 @@ if selected=='Bagan Kelas Ikhwan':
             'link': 'https://example.com/item-a'
         },
         'Futsal': {
-            'sheets': ['Kualifikasi Futsal A','Kualifikasi Futsal B', 'Kualifikasi Futsal C'],
+            'sheets': ['Kualifikasi Futsal A', 'Kualifikasi Futsal B', 'Kualifikasi Futsal C'],
             'link': 'https://example.com/item-b'
         },
         'Basket': {
-            'sheets': ['Kualifikasi Basket B','Kualifikasi Basket C'],
+            'sheets': ['Kualifikasi Basket B', 'Kualifikasi Basket C'],
             'link': 'https://example.com/item-c'
         },
         'Volly Sarung': {
-            'sheets': ['Kualifikasi Volly A','Kualifikasi Volly B','Kualifikasi Volly C'],
+            'sheets': ['Kualifikasi Volly A', 'Kualifikasi Volly B', 'Kualifikasi Volly C'],
             'link': 'https://example.com/item-d'
         },
         'Bola Beracun': {
-            'sheets': ['Kualifikasi Racun A','Kualifikasi Racun B','Kualifikasi Racun C'],
+            'sheets': ['Kualifikasi Racun A', 'Kualifikasi Racun B', 'Kualifikasi Racun C'],
             'link': 'https://example.com/item-e'
         },
         'Blind Bottle': {
@@ -427,7 +427,7 @@ if selected=='Bagan Kelas Ikhwan':
             'link': 'https://example.com/item-f'
         },
         'Chopstick Ball': {
-            'sheets': ['Kualifikasi Chopstick','Juara Chopstick'],
+            'sheets': ['Kualifikasi Chopstick', 'Juara Chopstick'],
             'link': 'https://example.com/item-g'
         }
     }
@@ -446,20 +446,17 @@ if selected=='Bagan Kelas Ikhwan':
         related_info = item_to_sheets[selected_item]
         related_sheets = related_info['sheets']
         
-        # Prepare columns for displaying DataFrames
-        cols = st.columns(len(related_sheets))
-
-        # Read and display DataFrames
-        for index, sheet in enumerate(related_sheets):
+        # Read and display DataFrames in a single column
+        for sheet in related_sheets:
             df = read_sheet(sheet)
             if not df.empty:  # Only display if DataFrame is not empty
                 html = df.to_html(index=False, header=False)
-                with cols[index]:
-                    st.write(f"### {(sheet)}")  # A, B, C...
-                    st.markdown(html, unsafe_allow_html=True)
+                st.write(f"### {sheet}")  # Display sheet name
+                st.markdown(html, unsafe_allow_html=True)
 
         # Link for more information
         st.markdown(f"[Klik untuk melihat bagan lomba {selected_item}]({related_info['link']})")
+
 
 if selected=='Bagan Kelas Akhwat':
    
