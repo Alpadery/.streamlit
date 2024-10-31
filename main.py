@@ -283,7 +283,7 @@ if selected=='Leaderboard':
 
     # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
     def color_medals(df):
-        styles = pd.DataFrame('', index=df.index, columns=df.columns)  # Create an empty DataFrame for styles
+        styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
         styles['Gold Medals'] = 'background-color: rgba(255, 215, 0, 0.5)'  # Gold with 50% transparency
         styles['Silver Medals'] = 'background-color: rgba(192, 192, 192, 0.5)'  # Silver with 50% transparency
         return styles
@@ -403,23 +403,23 @@ if selected=='Bagan Kelas Ikhwan':
     # Mapping of items to their corresponding sheets and links
     item_to_sheets = {
         'Estafet': {
-            'sheets': ['Fase A','Fase B', 'Fase C'],
+            'sheets': [],
             'link': 'https://example.com/item-a'
         },
         'Futsal': {
-            'sheets': ['Fase A','Fase B', 'Fase C'],
+            'sheets': ['Kualifikasi Futsal A','Kualifikasi Futsal B', 'Kualifikasi Futsal C'],
             'link': 'https://example.com/item-b'
         },
         'Basket': {
-            'sheets': ['Fase C'],
+            'sheets': ['Kualifikasi Basket B','Kualifikasi Basket C'],
             'link': 'https://example.com/item-c'
         },
         'Volly Sarung': {
-            'sheets': ['Fase A','Fase B'],
+            'sheets': ['Kualifikasi Volly A','Kualifikasi Volly B','Kualifikasi Volly C'],
             'link': 'https://example.com/item-d'
         },
         'Bola Beracun': {
-            'sheets': ['Sheet1'],
+            'sheets': ['Kualifikasi Racun A','Kualifikasi Racun B','Kualifikasi Racun C'],
             'link': 'https://example.com/item-e'
         },
         'Blind Bottle': {
@@ -427,7 +427,7 @@ if selected=='Bagan Kelas Ikhwan':
             'link': 'https://example.com/item-f'
         },
         'Chopstick Ball': {
-            'sheets': ['Sheet1'],
+            'sheets': ['Kualifikasi Chopstick','Juara Chopstick'],
             'link': 'https://example.com/item-g'
         }
     }
@@ -455,11 +455,11 @@ if selected=='Bagan Kelas Ikhwan':
             if not df.empty:  # Only display if DataFrame is not empty
                 html = df.to_html(index=False, header=False)
                 with cols[index]:
-                    st.write(f"### Kualifikasi Fase {chr(65 + index)}")  # A, B, C...
+                    st.write(f"### {(sheet)}")  # A, B, C...
                     st.markdown(html, unsafe_allow_html=True)
 
         # Link for more information
-        st.markdown(f"[More about {selected_item}]({related_info['link']})")
+        st.markdown(f"[Klik untuk melihat bagan lomba {selected_item}]({related_info['link']})")
 
 if selected=='Bagan Kelas Akhwat':
    
