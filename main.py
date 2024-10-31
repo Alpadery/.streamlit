@@ -435,7 +435,6 @@ if selected=='Bagan Kelas Ikhwan':
     selected_item = st.selectbox("Pilih Jenis lomba", list(item_to_sheets.keys()))
 
         # Function to read the sheet and replace None with blank cells
-   
 
     def read_sheet(sheet_name):
         sheet = workbook[sheet_name]
@@ -453,6 +452,11 @@ if selected=='Bagan Kelas Ikhwan':
 
         return df
 
+    # Function to customize table display
+    def set_table_style(df):
+        # Create a style to set the width of the columns
+        return df.style.set_table_attributes('style="overflow-x: auto;"').set_properties(**{'white-space': 'nowrap'})
+
     # Display the chosen item's related sheets
     if selected_item:
         # Get the related sheets and link based on the selected item
@@ -466,16 +470,17 @@ if selected=='Bagan Kelas Ikhwan':
 
         # Create a full width container for the DataFrames
         st.write(f"### {related_sheets[0]}")
-        st.dataframe(df1, use_container_width=True, hide_index=True)
+        st.dataframe(set_table_style(df1), use_container_width=True, hide_index=True)
 
         st.write(f"### {related_sheets[1]}")
-        st.dataframe(df2, use_container_width=True, hide_index=True)
+        st.dataframe(set_table_style(df2), use_container_width=True, hide_index=True)
             
         st.write(f"### {related_sheets[2]}")
-        st.dataframe(df3, use_container_width=True, hide_index=True)
+        st.dataframe(set_table_style(df3), use_container_width=True, hide_index=True)
 
         # Add link for the selected item
         st.markdown(f"[More about {selected_item}]({related_info['link']})")
+
 
 
 
