@@ -400,89 +400,65 @@ if selected=='Bagan Kelas Ikhwan':
     # Load the workbook
     workbook = load_workbook(filename=file_path, data_only=True)
 
-    # Create a mapping of items to the corresponding sheets and links
+    # Mapping of items to their corresponding sheets and links
     item_to_sheets = {
         'Estafet': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+            'sheets': ['Fase A','Fase B', 'Fase C'],
             'link': 'https://example.com/item-a'
         },
         'Futsal': {
-            'sheets': ['Fase A', 'Fase B', 'Fase C'],
+            'sheets': ['Fase A','Fase B', 'Fase C'],
             'link': 'https://example.com/item-b'
         },
         'Basket': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+            'sheets': ['Fase C'],
             'link': 'https://example.com/item-c'
         },
         'Volly Sarung': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+            'sheets': ['Fase A','Fase B'],
             'link': 'https://example.com/item-d'
         },
         'Bola Beracun': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+            'sheets': ['Sheet1'],
             'link': 'https://example.com/item-e'
         },
         'Blind Bottle': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+            'sheets': ['Sheet1'],
             'link': 'https://example.com/item-f'
         },
         'Chopstick Ball': {
-            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+            'sheets': ['Sheet1'],
             'link': 'https://example.com/item-g'
         }
     }
 
-    # Create a select box for the user to choose an item
+    # Select box for user to choose an item
     selected_item = st.selectbox("Pilih Jenis lomba", list(item_to_sheets.keys()))
 
-    # Function to read the sheet and replace None with blank cells
+    # Function to read sheets and return cleaned DataFrame
     def read_sheet(sheet_name):
         sheet = workbook[sheet_name]
-        data = []
+        data = [[cell if cell is not None else "" for cell in row] for row in sheet.iter_rows(values_only=True)]
+        return pd.DataFrame(data).dropna(how='all')  # Drop empty rows
 
-        for row in sheet.iter_rows(values_only=True):
-            # Clean the row by replacing None with blank cells
-            cleaned_row = [cell if cell is not None else "" for cell in row]
-            # Only append rows that have non-empty values
-            if any(cleaned_row):
-                data.append(cleaned_row)
-
-        # Convert to DataFrame
-        df = pd.DataFrame(data)
-
-        return df
-
-    # Display the chosen item's related sheets
+    # Display related sheets for selected item
     if selected_item:
-        # Get the related sheets and link based on the selected item
         related_info = item_to_sheets[selected_item]
         related_sheets = related_info['sheets']
-            
-        # Read the DataFrames
-        df1 = read_sheet(related_sheets[0])
-        df2 = read_sheet(related_sheets[1])
-        df3 = read_sheet(related_sheets[2])     
+        
+        # Prepare columns for displaying DataFrames
+        cols = st.columns(len(related_sheets))
 
-        col1, col2, col3 = st.columns(3)
+        # Read and display DataFrames
+        for index, sheet in enumerate(related_sheets):
+            df = read_sheet(sheet)
+            if not df.empty:  # Only display if DataFrame is not empty
+                html = df.to_html(index=False, header=False)
+                with cols[index]:
+                    st.write(f"### Kualifikasi Fase {chr(65 + index)}")  # A, B, C...
+                    st.markdown(html, unsafe_allow_html=True)
 
-        html1 = df1.to_html(index=False, header=False)
-
-        html2 = df2.to_html(index=False, header=False)
-
-        html3 = df3.to_html(index=False, header=False)
-
-        # Create a full width container for the DataFrames
-        with col1:
-            st.write(f"### {'Kualifikasi Fase A'}")
-            st.markdown(html1, unsafe_allow_html=True)
-        with col2:
-            st.write(f"### {'Kualifikasi Fase B'}")
-            st.markdown(html2, unsafe_allow_html=True)
-        with col3:
-            st.write(f"### {'Kualifikasi Fase C'}")
-            st.markdown(html3, unsafe_allow_html=True)
-
-        # Add link for the selected item
+        # Link for more information
         st.markdown(f"[More about {selected_item}]({related_info['link']})")
 
 if selected=='Bagan Kelas Akhwat':
