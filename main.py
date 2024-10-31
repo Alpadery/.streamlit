@@ -465,16 +465,17 @@ if selected=='Bagan Kelas Ikhwan':
 
         # Create a full width container for the DataFrames
         st.write(f"### {related_sheets[0]}")
-        st.dataframe(df1, use_container_width=True, hide_index=True)  # Hide index
+        st.dataframe(df1, use_container_width=True, height=300)  # Set height for scrolling
 
         st.write(f"### {related_sheets[1]}")
-        st.dataframe(df2, use_container_width=True, hide_index=True)  # Hide index
+        st.dataframe(df2, use_container_width=True, height=300)  # Set height for scrolling
             
         st.write(f"### {related_sheets[2]}")
-        st.dataframe(df3, use_container_width=True, hide_index=True)  # Hide index
+        st.dataframe(df3, use_container_width=True, height=300)  # Set height for scrolling
 
         # Add link for the selected item
         st.markdown(f"[More about {selected_item}]({related_info['link']})")
+
 
 if selected=='Bagan Kelas Akhwat':
    
@@ -556,8 +557,6 @@ if selected=='Bagan Kelas Akhwat':
         st.image(image,
                     use_column_width=True)
         st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/336c269bd9f71dece24a4b3c7924416d80a7faf1700d4e9c14bc88e2.png)')
-
-
     
 #LOMBA VOLLY SARUNG  
     if selected_lomba == "Volly Sarung":
