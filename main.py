@@ -394,48 +394,48 @@ if selected=='Bagan Kelas Ikhwan':
     st.write("---")
 
     # Specify the path to your Excel file
+
     file_path = "Jadwal Ikhwan CM 24.xlsx"  # Change this to your actual file path
 
-        # Load the workbook
+    # Load the workbook
     workbook = load_workbook(filename=file_path, data_only=True)
 
-        # Create a mapping of items to the corresponding sheets and links
+    # Create a mapping of items to the corresponding sheets and links
     item_to_sheets = {
-            'Estafet': {
-                'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-                'link': 'https://example.com/item-a'  # Change to the desired link
-            },
-            'Futsal': {
-                'sheets': ['Fase A', 'Fase B', 'Fase C'],
-                'link': 'https://docs.google.com/spreadsheets/d/1gSyLXzLUF_kPHY4jVfMhrQhvS2tluuLrEgK-iBJuw1k/edit?gid=764469285#gid=764469285'  # Change to the desired link
-            },
-            'Basket': {
-                'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-                'link': 'https://example.com/item-c'  # Change to the desired link
-            },
-            'Volly Sarung': {
-                'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-                'link': 'https://example.com/item-a'  # Change to the desired link
-            },
-            'Bola Beracun': {
-                'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-                'link': 'https://example.com/item-b'  # Change to the desired link
-            },
-            'Blind Bottle': {
-                'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-                'link': 'https://example.com/item-c'  # Change to the desired link
-            },
-            'Chopstick Ball': {
-                'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
-                'link': 'https://example.com/item-c'  # Change to the desired link
-            }
+        'Estafet': {
+            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+            'link': 'https://example.com/item-a'  # Change to the desired link
+        },
+        'Futsal': {
+            'sheets': ['Fase A', 'Fase B', 'Fase C'],
+            'link': 'https://docs.google.com/spreadsheets/d/1gSyLXzLUF_kPHY4jVfMhrQhvS2tluuLrEgK-iBJuw1k/edit?gid=764469285#gid=764469285'  # Change to the desired link
+        },
+        'Basket': {
+            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+            'link': 'https://example.com/item-c'  # Change to the desired link
+        },
+        'Volly Sarung': {
+            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+            'link': 'https://example.com/item-a'  # Change to the desired link
+        },
+        'Bola Beracun': {
+            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+            'link': 'https://example.com/item-b'  # Change to the desired link
+        },
+        'Blind Bottle': {
+            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+            'link': 'https://example.com/item-c'  # Change to the desired link
+        },
+        'Chopstick Ball': {
+            'sheets': ['Sheet1', 'Sheet1', 'Sheet1'],
+            'link': 'https://example.com/item-c'  # Change to the desired link
         }
+    }
 
-        # Create a select box for the user to choose an item
+# Create a select box for the user to choose an item
     selected_item = st.selectbox("Pilih Jenis lomba", list(item_to_sheets.keys()))
 
-        # Function to read the sheet and replace None with blank cells
-
+# Function to read the sheet and replace None with blank cells
     def read_sheet(sheet_name):
         sheet = workbook[sheet_name]
         data = []
@@ -465,13 +465,13 @@ if selected=='Bagan Kelas Ikhwan':
 
         # Create a full width container for the DataFrames
         st.write(f"### {related_sheets[0]}")
-        st.dataframe(df1, use_container_width=True, height=300)  # Set height for scrolling
+        st.dataframe(df1.style.set_properties(**{'white-space': 'nowrap'}), use_container_width=True, height=300, hide_index=True)  # Wrap text and set height
 
         st.write(f"### {related_sheets[1]}")
-        st.dataframe(df2, use_container_width=True, height=300)  # Set height for scrolling
+        st.dataframe(df2.style.set_properties(**{'white-space': 'nowrap'}), use_container_width=True, height=300, hide_index=True)  # Wrap text and set height
             
         st.write(f"### {related_sheets[2]}")
-        st.dataframe(df3, use_container_width=True, height=300)  # Set height for scrolling
+        st.dataframe(df3.style.set_properties(**{'white-space': 'nowrap'}), use_container_width=True, height=300, hide_index=True)  # Wrap text and set height
 
         # Add link for the selected item
         st.markdown(f"[More about {selected_item}]({related_info['link']})")
