@@ -435,6 +435,7 @@ if selected=='Bagan Kelas Ikhwan':
     selected_item = st.selectbox("Pilih Jenis lomba", list(item_to_sheets.keys()))
 
         # Function to read the sheet and replace None with blank cells
+
     def read_sheet(sheet_name):
         sheet = workbook[sheet_name]
         data = []
@@ -464,13 +465,13 @@ if selected=='Bagan Kelas Ikhwan':
 
         # Create a full width container for the DataFrames
         st.write(f"### {related_sheets[0]}")
-        st.dataframe(df1, use_container_width=True, hide_index=True)
+        st.table(df1.to_records(index=False))
 
         st.write(f"### {related_sheets[1]}")
-        st.dataframe(df2, use_container_width=True, hide_index=True)
+        st.table(df2.to_records(index=False))
             
         st.write(f"### {related_sheets[2]}")
-        st.dataframe(df3, use_container_width=True, hide_index=True)
+        st.table(df3.to_records(index=False))
 
         # Add link for the selected item
         st.markdown(f"[More about {selected_item}]({related_info['link']})")
