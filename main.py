@@ -473,10 +473,13 @@ if selected=='Bagan Kelas Ikhwan':
 
         # Create a full width container for the DataFrames
         with col1:
+            st.write(f"### {'Kualifikasi Fase A'}")
             st.markdown(html1, unsafe_allow_html=True)
         with col2:
+            st.write(f"### {'Kualifikasi Fase B'}")
             st.markdown(html2, unsafe_allow_html=True)
         with col3:
+            st.write(f"### {'Kualifikasi Fase C'}")
             st.markdown(html3, unsafe_allow_html=True)
 
         # Add link for the selected item
