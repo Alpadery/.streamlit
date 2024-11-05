@@ -235,7 +235,7 @@ if selected=='Lomba Class Meeting':
         st.subheader('**Peraturan Permainan:**')
         st.markdown(
                 """
-                1. **Pembentukan Tim:** Kelas dibagi menjadi beberapa kelompok, masing-masing terdiri dari 6 orang.
+                1. **Pembentukan Tim:** Peserta dibagi menjadi beberapa kelompok, masing-masing terdiri dari 6 orang.
                 2. **Penunjukan Kapten:** Setiap kelompok memilih satu orang sebagai kapten.
                 3. **Persiapan:** Siapkan botol, pensil, dan tali yang cukup panjang untuk mengikat semua anggota tim dalam satu kelompok.
                 4. **Pengikatan Tali:** Semua anggota tim diikat dengan tali, membentuk satu kesatuan kecuali kapten.
@@ -257,7 +257,7 @@ if selected=='Lomba Class Meeting':
         st.subheader('**Peraturan Permainan:**')
         st.markdown(
                 """
-                1. **Jumlah Kelas dan Waktu:** Setiap tim terdiri dari 5 orang dan permainan berlangsung selama 10 menit.
+                1. **Jumlah Peserta dan Waktu:** Setiap tim terdiri dari 5 orang dan permainan berlangsung selama 10 menit.
                 2. **Peralatan:** Setiap peserta diberikan 2 sumpit dan tersedia wadah berlubang yang berisi bola.
                 3. **Cara Bermain:** Setiap anggota tim bersama-sama mengeluarkan bola dari wadah menggunakan sumpit.
                 4. **Pemenang:** Tim dengan jumlah bola terbanyak yang berhasil dikeluarkan dalam waktu 10 menit dinyatakan sebagai pemenang.
@@ -393,796 +393,90 @@ if selected=='Bagan Kelas Ikhwan':
     st.title('Bagan Ikhwan Class Meeting Abu Dzar 2024')
     st.write("---")
 
-    selected_lomba = st.selectbox(
-    "**Pilih Jenis Lomba**",
-    ("Estafet","Futsal","Basket","Bola Beracun","Volly Sarung","Blind Bottle","Chopstick Ball"),
-)
+    # Specify the path to your Excel file
 
-#LOMBA ESTAFET
-    if selected_lomba == "Estafet":
+    file_path = "Jadwal Ikhwan CM 24.xlsx"  # Change this to your actual file path
 
-#ESTAFET FASE A
-#KUALIFIKASI ESTAFET FASE A
-        data = {
-            'Kelas 1': ['ABU BAKR','UTSMAN','UMAR','ALI BIN ABI THALIB'],
-            'Pemenang Kelas 1': ['-','-','-','-'],
-            'Kelas 2': ['MAKKAH','ISTANBUL','MADINAH','AL QUDS'],
-            'Pemenang Kelas 2': ['-','-','-','-'],
-            }
-        leaderboard_df = pd.DataFrame(data)
+    # Load the workbook
+    workbook = load_workbook(filename=file_path, data_only=True)
 
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Kelas 1'] = 'background-color: rgba()'  # Green with 50% transparency
-                styles['Pemenang Kelas 2'] = 'background-color: rgba()'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
+    # Mapping of items to their corresponding sheets and links
+    item_to_sheets = {
+        'Estafet': {
+            'sheets': [],
+            'link': 'https://docs.google.com/spreadsheets/d/14jFBB5hRJjN9F649mA-EMlpgRJJyY8bFndcDJ5h3Aq4/edit?usp=drive_link'
+        },
+        'Futsal': {
+            'sheets': ['Kualifikasi Futsal A', 'Kualifikasi Futsal B', 'Kualifikasi Futsal C'],
+            'link': 'https://docs.google.com/spreadsheets/d/14CGLvYdIMOIQy6SY4fMyUjppz7O8HHIin2X_CvHpV4I/edit?usp=drive_link'
+        },
+        'Basket': {
+            'sheets': ['Kualifikasi Basket B', 'Kualifikasi Basket C'],
+            'link': 'https://docs.google.com/spreadsheets/d/1L2s6VAZHFIvmWncYNPL-JYopPTiCZBmd3q__LkivXik/edit?usp=drive_link'
+        },
+        'Volly Sarung': {
+            'sheets': ['Kualifikasi Volly A', 'Kualifikasi Volly B', 'Kualifikasi Volly C'],
+            'link': 'https://docs.google.com/spreadsheets/d/1D75FPSGwDcW60wl9P4xo6iAPDqZiHjJxG01L3LqXYCI/edit?usp=drive_link'
+        },
+        'Bola Beracun': {
+            'sheets': ['Kualifikasi Racun A', 'Kualifikasi Racun B', 'Kualifikasi Racun C'],
+            'link': 'https://docs.google.com/spreadsheets/d/1OVx6YIqnKMKN0JNZrDcnZKF9DQoJN1rxplyZUNQ-pEM/edit?usp=drive_link'
+        },
+        'Blind Bottle': {
+            'sheets': ['Sheet1'],
+            'link': 'https://docs.google.com/spreadsheets/d/1EzQDdcBBEJ3NE38g1PlGU_Xy1PDchzLB3ZDeItnGFxM/edit?usp=drive_link'
+        },
+        'Chopstick Ball': {
+            'sheets': ['Kualifikasi Chopstick', 'Juara Chopstick'],
+            'link': 'https://docs.google.com/spreadsheets/d/1sKSKhvUaPEJXJlcJPkWS5YoNChtz_ebnUALWrJp9JA8/edit?usp=drive_link'
+        }
+    }
 
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Estafet Fase A')
-        st.dataframe(styled_df)
+    # Select box for user to choose an item
+    selected_item = st.selectbox("Pilih Jenis lomba", list(item_to_sheets.keys()))
 
-#SEMIFINAL ESTAFET FASE A
-        data = {
-            'Kelas 1': ['Pemenang Level 1'],
-            'Vs': ['vs'],
-            'Kelas 2': ['Pemenang Level 2'],
-            'Pemenang Fase A': ['-'],
-            }
-        leaderboard_df = pd.DataFrame(data)
+    # Function to read sheets and return cleaned DataFrame
+    def read_sheet(sheet_name):
+        sheet = workbook[sheet_name]
+        data = [[cell if cell is not None else "" for cell in row] for row in sheet.iter_rows(values_only=True)]
+        return pd.DataFrame(data).dropna(how='all')  # Drop empty rows
 
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Fase A'] = 'background-color: rgba()'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Estafet Fase A')
-        st.dataframe(styled_df)
-
-        st.write('---')
-#ESTAFET FASE B
-#KUALIFIKASI ESTAFET FASE B
-        data = {
-            'Kelas 3': ['BADR','UHUD','KHAIBAR','TABUK'],
-            'Pemenang Kelas 3': ['-','-','-','-'],
-            'Kelas 4': ['BUKHORI','MUSLIM','ABU DAWUD','AL BAIHAQI'],
-            'Pemenang Kelas 4': ['-','-','-','-'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 3'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 4'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Kelas 3'] = 'background-color: rgba()'  # Green with 50% transparency
-                styles['Pemenang Kelas 4'] = 'background-color: rgba()'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Estafet Fase B')
-        st.dataframe(styled_df)
-
-#SEMIFINAL ESTAFET FASE B
-        data = {
-            'Kelas 3': ['Pemenang Level 3'],
-            'Vs': ['vs'],
-            'Kelas 4': ['Pemenang Level 4'],
-            'Pemenang Fase B': ['-'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 3'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 4'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Fase B'] = 'background-color: rgba()'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Estafet Fase B')
-        st.dataframe(styled_df)
-
-        st.write('---')
-#ESTAFET FASE C
-#KUALIFIKASI ESTAFET FASE C
-        data = {
-            'Kelas 5': ['FIRDAUS',"NA'IM",'DARUSSALAM'],
-            'Pemenang Kelas 5': ['-','-','-'],
-            'Kelas 6': ['AHMAD BIN HAMBAL','ABU HANIFAH','SUFYAN ATS TSAURY'],
-            'Pemenang Kelas 6': ['-','-','-'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 5'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 6'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Kelas 5'] = 'background-color: rgba()'  # Green with 50% transparency
-                styles['Pemenang Kelas 6'] = 'background-color: rgba()'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Estafet Fase C')
-        st.dataframe(styled_df)
-
-#SEMIFINAL ESTAFET FASE C
-        data = {
-            'Kelas 5': ['Pemenang Level 5'],
-            'Vs': ['vs'],
-            'Kelas 6': ['Pemenang Level 6'],
-            'Pemenang Fase C': ['-'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 5'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 6'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Fase C'] = 'background-color: rgba()'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Estafet Fase C')
-        st.dataframe(styled_df)
+    # Display related sheets for selected item
+    if selected_item:
+        related_info = item_to_sheets[selected_item]
+        related_sheets = related_info['sheets']
+        
+        # Read and display DataFrames in a single column
+        for sheet in related_sheets:
+            df = read_sheet(sheet)
+            if not df.empty:  # Only display if DataFrame is not empty
+                html = df.to_html(index=False, header=False)
+                st.write(f"### {sheet}")  # Display sheet name
+                st.markdown(html, unsafe_allow_html=True)
 
         # Link for more information
-        st.subheader("Informasi Bagan Lomba Estafet Class Meeting 2024 ")
-        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/14jFBB5hRJjN9F649mA-EMlpgRJJyY8bFndcDJ5h3Aq4/edit?gid=480333465#gid=480333465)")
+        st.markdown(f"[Informasi Bagan Lomba {selected_item}]({related_info['link']})")
 
 
-#LOMBA FUTSAL
-    if selected_lomba == "Futsal":
-
-#FUTSAL FASE A
-#KUALIFIKASI FUTSAL FASE A
-        data = {
-            'Peserta 1': ['ABU BAKR','UMAR','MAKKAH','MADINAH'],
-            '.': [0,0,0,0],
-            'SKOR': ['vs','vs','vs','vs'],
-            ',': [0,0,0,0],
-            'Peserta 2': ['UTSMAN','ALI BIN ABI THALIB','ISTANBUL','AL QUDS'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Futsal Fase A')
-        st.dataframe(styled_df)
-
-#SEMIFINAL FUTSAL FASE A
-        data = {
-            'Peserta 1': ['Level 1','Level 2'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['Level 1','Level 2'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Futsal Fase A')
-        st.dataframe(styled_df)
-
-        st.write('---')
-#FUTSAL FASE B
-#KUALIFIKASI FUTSAL FASE B
-        data = {
-            'Peserta 1': ['BADR','UHUD','BUKHORI','MUSLIM'],
-            '.': [0,0,0,0],
-            'SKOR': ['vs','vs','vs','vs'],
-            ',': [0,0,0,0],
-            'Peserta 2': ['KHAIBAR','TABUK','ABU DAWUD','AL BAIHAQI'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Futsal Fase B')
-        st.dataframe(styled_df)
-
-#SEMIFINAL FUTSAL FASE B
-        data = {
-            'Peserta 1': ['Level 3','Level 4'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['Level 3','Level 4'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Futsal Fase B')
-        st.dataframe(styled_df)
-
-        st.write('---')
-#FUTSAL FASE C
-#KUALIFIKASI FUTSAL FASE C
-        data = {
-            'Peserta 1': ['FIRDAUS','ABU HANIFAH'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['DARUSSALAM','AHMAD BIN HAMBAL'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Futsal Fase C')
-        st.dataframe(styled_df)
-
-#SEMIFINAL FUTSAL FASE C
-        data = {
-            'Peserta 1': ['Level 5','Level 6'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ["NA'IM",'SUFYAN ATS TSAURY'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Futsal Fase C')
-        st.dataframe(styled_df)
-
-        # Link for more information
-        st.subheader("Informasi Bagan Lomba Futsal Class Meeting 2024 ")
-        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/14CGLvYdIMOIQy6SY4fMyUjppz7O8HHIin2X_CvHpV4I/edit?gid=462673749#gid=462673749)")
-
-
-#LOMBA BASKET
-    if selected_lomba == "Basket":
-
-#BASKET FASE B
-#KUALIFIKASI BASKET FASE B
-        data = {
-            'Peserta 1': ['BADR','BUKHORI','UHUD','ABU DAWUD'],
-            '.': [0,0,0,0],
-            'SKOR': ['vs','vs','vs','vs'],
-            ',': [0,0,0,0],
-            'Peserta 2': ['TABUK','MUSLIM','KHAIBAR','AL BAIHAQI'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Basket Fase B')
-        st.dataframe(styled_df)
-
-#SEMIFINAL BASKET FASE B
-        data = {
-            'Peserta 1': ['Level 3','Level 4'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['Level 3','Level 4'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Basket Fase B')
-        st.dataframe(styled_df)
-
-        st.write('---')
-#BASKET FASE C
-#KUALIFIKASI BASKET FASE C
-        data = {
-            'Peserta 1': ["NA'IM",'SUFYAN ATS TSAURY'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['FIRDAUS','AHMAD BIN HAMBAL'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Basket Fase C')
-        st.dataframe(styled_df)
-
-#SEMIFINAL BASKET FASE C
-        data = {
-            'Peserta 1': ['Level 5','Level 6'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['DARUSSALAM','ABU HANIFAH'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Basket Fase C')
-        st.dataframe(styled_df)
-
-        # Link for more information
-        st.subheader("Informasi Bagan Lomba Basket Class Meeting 2024 ")
-        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/1L2s6VAZHFIvmWncYNPL-JYopPTiCZBmd3q__LkivXik/edit?gid=1079463361#gid=1079463361)")
-
-
-#LOMBA BOLA BERACUN
-    if selected_lomba == "Bola Beracun":
-
-#BOLA BERACUN FASE A
-#KUALIFIKASI BOLA BERACUN FASE A
-        data = {
-            'Peserta 1': ['AL QUDS','UMAR','MAKKAH','ALI BIN ABI THALIB'],
-            '.': [0,0,0,0],
-            'SKOR': ['vs','vs','vs','vs'],
-            ',': [0,0,0,0],
-            'Peserta 2': ['ISTANBUL','UTSMAN','MADINAH','ABU BAKR'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Bola Beracun Fase A')
-        st.dataframe(styled_df)
-
-#SEMIFINAL BOLA BERACUN FASE A
-        data = {
-            'Peserta 1': ['Level 1','Level 2'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['Level 1','Level 2'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Bola Beracun Fase A')
-        st.dataframe(styled_df)
-
-        st.write('---')
-#BOLA BERACUN FASE B
-#KUALIFIKASI BOLA BERACUN FASE B
-        data = {
-            'Peserta 1': ['BUKHORI','UHUD','ABU DAWUD','TABUK'],
-            '.': [0,0,0,0],
-            'SKOR': ['vs','vs','vs','vs'],
-            ',': [0,0,0,0],
-            'Peserta 2': ['AL BAIHAQI','BADR','MUSLIM','KHAIBAR'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Bola Beracun Fase B')
-        st.dataframe(styled_df)
-
-#SEMIFINAL BOLA BERACUN FASE B
-        data = {
-            'Peserta 1': ['Level 3', 'Level 4'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['Level 3', 'Level 4'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Bola Beracun Fase B')
-        st.dataframe(styled_df)
-
-        st.write('---')
-#BOLA BERACUN FASE C
-#KUALIFIKASI BOLA BERACUN FASE C
-        data = {
-            'Peserta 1': ['SUFYAN ATS TSAURY','DARUSSALAM'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['ABU HANIFAH',"NA'IM"],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Bola Beracun Fase C')
-        st.dataframe(styled_df)
-
-#SEMIFINAL BOLA BERACUN FASE C
-        data = {
-            'Peserta 1': ['Level 6', 'Level 5'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['AHMAD BIN HAMBAL','FIRDAUS'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Bola Beracun Fase C')
-        st.dataframe(styled_df)
-
-        # Link for more information
-        st.subheader("Informasi Bagan Lomba Bola Beracun Class Meeting 2024 ")
-        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/1OVx6YIqnKMKN0JNZrDcnZKF9DQoJN1rxplyZUNQ-pEM/edit?gid=22040083#gid=22040083)")
-
-
-#LOMBA VOLLY SARUNG
-    if selected_lomba == "Volly Sarung":
-
-#VOLLY SARUNG FASE A
-#KUALIFIKASI VOLLY SARUNG FASE A
-        data = {
-            'Peserta 1': ['MADINAH','UMAR','MAKKAH','ABU BAKR'],
-            '.': [0,0,0,0],
-            'SKOR': ['vs','vs','vs','vs'],
-            ',': [0,0,0,0],
-            'Peserta 2': ['ISTANBUL','UTSMAN','AL QUDS','ALI BIN ABI THALIB'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Volly Sarung Fase A')
-        st.dataframe(styled_df)
-
-#SEMIFINAL VOLLY SARUNG FASE A
-        data = {
-            'Peserta 1': ['Level 1', 'Level 2'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['Level 1', 'Level 2'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Volly Sarung Fase A')
-        st.dataframe(styled_df)
-
-        st.write('---')
-#VOLLY SARUNG FASE B
-#KUALIFIKASI VOLLY SARUNG FASE B
-        data = {
-            'Peserta 1': ['MUSLIM','BADR','ABU DAWUD','UHUD'],
-            '.': [0,0,0,0],
-            'SKOR': ['vs','vs','vs','vs'],
-            ',': [0,0,0,0],
-            'Peserta 2': ['BUKHORI','TABUK','AL BAIHAQI','KHAIBAR'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Volly Sarung Fase B')
-        st.dataframe(styled_df)
-
-#SEMIFINAL VOLLY SARUNG FASE B
-        data = {
-            'Peserta 1': ['Level 3', 'Level 4'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['Level 3', 'Level 4'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Volly Sarung Fase B')
-        st.dataframe(styled_df)
-
-        st.write('---')
-#VOLLY SARUNG FASE C
-#KUALIFIKASI VOLLY SARUNG FASE C
-        data = {
-            'Peserta 1': ['ABU HANIFAH','FIRDAUS'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['AHMAD BIN HAMBAL','DARUSSALAM'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Green with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Volly Sarung Fase C')
-        st.dataframe(styled_df)
-
-#SEMIFINAL VOLLY SARUNG FASE C
-        data = {
-            'Peserta 1': ['Level 6','Level 5'],
-            '.': [0,0],
-            'SKOR': ['vs','vs'],
-            ',': [0,0],
-            'Peserta 2': ['SUFYAN ATS TSAURY',"NA'IM"],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Gold with 50% transparency
-                styles['.'] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                styles[','] = 'background-color: rgba(192, 192, 192, 0.2)'  # Silver with 50% transparency
-                return styles
-
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Volly Sarung Fase C')
-        st.dataframe(styled_df)
-
-        # Link for more information
-        st.subheader("Informasi Bagan Lomba Volly Sarung Class Meeting 2024 ")
-        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/1D75FPSGwDcW60wl9P4xo6iAPDqZiHjJxG01L3LqXYCI/edit?gid=179922245#gid=179922245)")    
-
-
-#LOMBA BLIND BOTTLE
+#LOMBA BLINDBOTTLE
     if selected_lomba == "Blind Bottle":
 
-#BLIND BOTTLE FASE A
-#KUALIFIKASI BLIND BOTTLE FASE A
+#BLINDBOTTLE FASE A
+#KUALIFIKASI BLINDBOTTLE FASE A
         data = {
-            'Kelas 1': ['ABU BAKR','UTSMAN','UMAR','ALI BIN ABI THALIB'],
-            'Pemenang Kelas 1': ['-','-','-','-'],
-            'Kelas 2': ['MAKKAH','ISTANBUL','MADINAH','AL QUDS'],
-            'Pemenang Kelas 2': ['-','-','-','-'],
+            'Kelas 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            'VS': ['vs','vs','vs','vs'],
+            'Kelas 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            'Pemenang': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
             }
         leaderboard_df = pd.DataFrame(data)
 
         # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
         def color_medals(df):
                 styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Kelas 1'] = 'background-color: rgba()'  # Green with 50% transparency
-                styles['Pemenang Kelas 2'] = 'background-color: rgba()'  # Green with 50% transparency
+                styles['Kelas 1'] = 'background-color: rgba(255, 0, 0, 0.2)'  # Red with 50% transparency
+                styles['Kelas 2'] = 'background-color: rgba(255, 0, 0, 0.2)'  # Red with 50% transparency
+                styles['Pemenang'] = 'background-color: rgba(0, 255, 0, 0.2)'  # Green with 50% transparency
                 return styles
         # Apply the styling to the DataFrame
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
@@ -1191,47 +485,23 @@ if selected=='Bagan Kelas Ikhwan':
         st.subheader('Kualifikasi Blind Bottle Fase A')
         st.dataframe(styled_df)
 
-#SEMIFINAL BLIND BOTTLE FASE A
-        data = {
-            'Kelas 1': ['Pemenang Level 1'],
-            'Vs': ['vs'],
-            'Kelas 2': ['Pemenang Level 2'],
-            'Pemenang Fase A': ['-'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Fase A'] = 'background-color: rgba()'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Blind Bottle Fase A')
-        st.dataframe(styled_df)
-
         st.write('---')
-#BLIND BOTTLE FASE B
-#KUALIFIKASI BLIND BOTTLE FASE B
+#BLINDBOTTLE FASE B
+#KUALIFIKASI BLINDBOTTLE FASE B
         data = {
-            'Kelas 3': ['BADR','UHUD','KHAIBAR','TABUK'],
-            'Pemenang Kelas 3': ['-','-','-','-'],
-            'Kelas 4': ['BUKHORI','MUSLIM','ABU DAWUD','AL BAIHAQI'],
-            'Pemenang Kelas 4': ['-','-','-','-'],
+            'Kelas 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            'VS': ['vs','vs','vs','vs'],
+            'Kelas 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            'Pemenang': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
             }
         leaderboard_df = pd.DataFrame(data)
 
         # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
         def color_medals(df):
                 styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 3'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 4'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Kelas 3'] = 'background-color: rgba()'  # Green with 50% transparency
-                styles['Pemenang Kelas 4'] = 'background-color: rgba()'  # Green with 50% transparency
+                styles['Kelas 1'] = 'background-color: rgba(255, 0, 0, 0.2)'  # Red with 50% transparency
+                styles['Kelas 2'] = 'background-color: rgba(255, 0, 0, 0.2)'  # Red with 50% transparency
+                styles['Pemenang'] = 'background-color: rgba(0, 255, 0, 0.2)'  # Green with 50% transparency
                 return styles
         # Apply the styling to the DataFrame
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
@@ -1240,47 +510,23 @@ if selected=='Bagan Kelas Ikhwan':
         st.subheader('Kualifikasi Blind Bottle Fase B')
         st.dataframe(styled_df)
 
-#SEMIFINAL BLIND BOTTLE FASE B
-        data = {
-            'Kelas 3': ['Pemenang Level 3'],
-            'Vs': ['vs'],
-            'Kelas 4': ['Pemenang Level 4'],
-            'Pemenang Fase B': ['-'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 3'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 4'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Fase B'] = 'background-color: rgba()'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Blind Bottle Fase B')
-        st.dataframe(styled_df)
-
         st.write('---')
-#BLIND BOTTLE FASE C
-#KUALIFIKASI BLIND BOTTLE FASE C
+#BLINDBOTTLE FASE C
+#KUALIFIKASI BLINDBOTTLE FASE C
         data = {
-            'Kelas 5': ['FIRDAUS',"NA'IM",'DARUSSALAM'],
-            'Pemenang Kelas 5': ['-','-','-'],
-            'Kelas 6': ['AHMAD BIN HAMBAL','ABU HANIFAH','SUFYAN ATS TSAURY'],
-            'Pemenang Kelas 6': ['-','-','-'],
+            'Kelas 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            'VS': ['vs','vs','vs','vs'],
+            'Kelas 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            'Pemenang': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
             }
         leaderboard_df = pd.DataFrame(data)
 
         # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
         def color_medals(df):
                 styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 5'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 6'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Kelas 5'] = 'background-color: rgba()'  # Green with 50% transparency
-                styles['Pemenang Kelas 6'] = 'background-color: rgba()'  # Green with 50% transparency
+                styles['Kelas 1'] = 'background-color: rgba(255, 0, 0, 0.2)'  # Red with 50% transparency
+                styles['Kelas 2'] = 'background-color: rgba(255, 0, 0, 0.2)'  # Red with 50% transparency
+                styles['Pemenang'] = 'background-color: rgba(0, 255, 0, 0.2)'  # Green with 50% transparency
                 return styles
         # Apply the styling to the DataFrame
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
@@ -1289,90 +535,8 @@ if selected=='Bagan Kelas Ikhwan':
         st.subheader('Kualifikasi Blind Bottle Fase C')
         st.dataframe(styled_df)
 
-#SEMIFINAL BLIND BOTTLE FASE C
-        data = {
-            'Kelas 5': ['Pemenang Level 5'],
-            'Vs': ['vs'],
-            'Kelas 6': ['Pemenang Level 6'],
-            'Pemenang Fase C': ['-'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 5'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 6'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Fase C'] = 'background-color: rgba()'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Blind Bottle Fase C')
-        st.dataframe(styled_df)
-
         # Link for more information
-        st.subheader("Informasi Bagan Lomba Blind Bottle Class Meeting 2024 ")
-        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/1EzQDdcBBEJ3NE38g1PlGU_Xy1PDchzLB3ZDeItnGFxM/edit?gid=2055359865#gid=2055359865)")
-
-
-#LOMBA CHOPSTICK BALL
-    if selected_lomba == "Chopstick Ball":
-
-#CHOPSTICK BALL FASE A
-#KUALIFIKASI CHOPSTICK BALL FASE A
-        data = {
-            'Kelas 1': ['ABU BAKR','UTSMAN','UMAR','ALI BIN ABI THALIB'],
-            'Pemenang Kelas 1': ['-','-','-','-'],
-            'Kelas 2': ['MAKKAH','ISTANBUL','MADINAH','AL QUDS'],
-            'Pemenang Kelas 2': ['-','-','-','-'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Kelas 1'] = 'background-color: rgba()'  # Green with 50% transparency
-                styles['Pemenang Kelas 2'] = 'background-color: rgba()'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Chopstick Ball Fase A')
-        st.dataframe(styled_df)
-
-#SEMIFINAL CHOPSTICK BALL FASE A
-        data = {
-            'Kelas 1': ['Pemenang Level 1'],
-            'Vs': ['vs'],
-            'Kelas 2': ['Pemenang Level 2'],
-            'Pemenang Fase A': ['-'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Kelas 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Fase A'] = 'background-color: rgba()'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Semifinal Chopstick Ball Fase A')
-        st.dataframe(styled_df)
-
-        # Link for more information
-        st.subheader("Informasi Bagan Lomba Chopstick Ball Class Meeting 2024 ")
-        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/1sKSKhvUaPEJXJlcJPkWS5YoNChtz_ebnUALWrJp9JA8/edit?gid=53591745#gid=53591745)")    
-
-
+        st.markdown(f"[Klik untuk melihat bagan lomba Blind Bottle]")
 
 if selected=='Bagan Kelas Akhwat':
    
