@@ -235,7 +235,7 @@ if selected=='Lomba Class Meeting':
         st.subheader('**Peraturan Permainan:**')
         st.markdown(
                 """
-                1. **Pembentukan Tim:** Peserta dibagi menjadi beberapa kelompok, masing-masing terdiri dari 6 orang.
+                1. **Pembentukan Tim:** Kelas dibagi menjadi beberapa kelompok, masing-masing terdiri dari 6 orang.
                 2. **Penunjukan Kapten:** Setiap kelompok memilih satu orang sebagai kapten.
                 3. **Persiapan:** Siapkan botol, pensil, dan tali yang cukup panjang untuk mengikat semua anggota tim dalam satu kelompok.
                 4. **Pengikatan Tali:** Semua anggota tim diikat dengan tali, membentuk satu kesatuan kecuali kapten.
@@ -257,7 +257,7 @@ if selected=='Lomba Class Meeting':
         st.subheader('**Peraturan Permainan:**')
         st.markdown(
                 """
-                1. **Jumlah Peserta dan Waktu:** Setiap tim terdiri dari 5 orang dan permainan berlangsung selama 10 menit.
+                1. **Jumlah Kelas dan Waktu:** Setiap tim terdiri dari 5 orang dan permainan berlangsung selama 10 menit.
                 2. **Peralatan:** Setiap peserta diberikan 2 sumpit dan tersedia wadah berlubang yang berisi bola.
                 3. **Cara Bermain:** Setiap anggota tim bersama-sama mengeluarkan bola dari wadah menggunakan sumpit.
                 4. **Pemenang:** Tim dengan jumlah bola terbanyak yang berhasil dikeluarkan dalam waktu 10 menit dinyatakan sebagai pemenang.
@@ -582,11 +582,11 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL FUTSAL FASE A
         data = {
-            'Peserta 1': ['Level 1','Level 1'],
+            'Peserta 1': ['Level 1','Level 2'],
             '.': [0,0],
             'SKOR': ['vs','vs'],
             ',': [0,0],
-            'Peserta 2': ['Level 2','Level 2'],
+            'Peserta 2': ['Level 1','Level 2'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -610,11 +610,11 @@ if selected=='Bagan Kelas Ikhwan':
 #FUTSAL FASE B
 #KUALIFIKASI FUTSAL FASE B
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            '.': [1,3,5,1],
+            'Peserta 1': ['BADR','UHUD','BUKHORI','MUSLIM'],
+            '.': [0,0,0,0],
             'SKOR': ['vs','vs','vs','vs'],
-            ',': [2,4,6,2],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            ',': [0,0,0,0],
+            'Peserta 2': ['KHAIBAR','TABUK','ABU DAWUD','AL BAIHAQI'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -635,11 +635,11 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL FUTSAL FASE B
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
-            '.': [1,3],
+            'Peserta 1': ['Level 3','Level 4'],
+            '.': [0,0],
             'SKOR': ['vs','vs'],
-            ',': [2,4],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
+            ',': [0,0],
+            'Peserta 2': ['Level 3','Level 4'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -663,11 +663,11 @@ if selected=='Bagan Kelas Ikhwan':
 #FUTSAL FASE C
 #KUALIFIKASI FUTSAL FASE C
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            '.': [1,3,5,1],
-            'SKOR': ['vs','vs','vs','vs'],
-            ',': [2,4,6,2],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            'Peserta 1': ['FIRDAUS','ABU HANIFAH'],
+            '.': [0,0],
+            'SKOR': ['vs','vs'],
+            ',': [0,0],
+            'Peserta 2': ['DARUSSALAM','AHMAD BIN HAMBAL'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -688,11 +688,11 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL FUTSAL FASE C
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
-            '.': [1,3],
+            'Peserta 1': ['Level 5','Level 6'],
+            '.': [0,0],
             'SKOR': ['vs','vs'],
-            ',': [2,4],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
+            ',': [0,0],
+            'Peserta 2': ["NA'IM",'SUFYAN ATS TSAURY'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -722,11 +722,11 @@ if selected=='Bagan Kelas Ikhwan':
 #BASKET FASE B
 #KUALIFIKASI BASKET FASE B
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            '.': [1,3,5,1],
+            'Peserta 1': ['BADR','BUKHORI','UHUD','ABU DAWUD'],
+            '.': [0,0,0,0],
             'SKOR': ['vs','vs','vs','vs'],
-            ',': [2,4,6,2],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            ',': [0,0,0,0],
+            'Peserta 2': ['TABUK','MUSLIM','KHAIBAR','AL BAIHAQI'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -747,11 +747,11 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL BASKET FASE B
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
-            '.': [1,3],
+            'Peserta 1': ['Level 3','Level 4'],
+            '.': [0,0],
             'SKOR': ['vs','vs'],
-            ',': [2,4],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
+            ',': [0,0],
+            'Peserta 2': ['Level 3','Level 4'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -775,11 +775,11 @@ if selected=='Bagan Kelas Ikhwan':
 #BASKET FASE C
 #KUALIFIKASI BASKET FASE C
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            '.': [1,3,5,1],
-            'SKOR': ['vs','vs','vs','vs'],
-            ',': [2,4,6,2],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            'Peserta 1': ["NA'IM",'SUFYAN ATS TSAURY'],
+            '.': [0,0],
+            'SKOR': ['vs','vs'],
+            ',': [0,0],
+            'Peserta 2': ['FIRDAUS','AHMAD BIN HAMBAL'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -800,11 +800,11 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL BASKET FASE C
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
-            '.': [1,3],
+            'Peserta 1': ['Level 5','Level 6'],
+            '.': [0,0],
             'SKOR': ['vs','vs'],
-            ',': [2,4],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
+            ',': [0,0],
+            'Peserta 2': ['DARUSSALAM','ABU HANIFAH'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -833,11 +833,11 @@ if selected=='Bagan Kelas Ikhwan':
 #BOLA BERACUN FASE A
 #KUALIFIKASI BOLA BERACUN FASE A
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            '.': [1,3,5,1],
+            'Peserta 1': ['AL QUDS','UMAR','MAKKAH','ALI BIN ABI THALIB'],
+            '.': [0,0,0,0],
             'SKOR': ['vs','vs','vs','vs'],
-            ',': [2,4,6,2],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            ',': [0,0,0,0],
+            'Peserta 2': ['ISTANBUL','UTSMAN','MADINAH','ABU BAKR'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -858,11 +858,11 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL BOLA BERACUN FASE A
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
-            '.': [1,3],
+            'Peserta 1': ['Level 1','Level 2'],
+            '.': [0,0],
             'SKOR': ['vs','vs'],
-            ',': [2,4],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
+            ',': [0,0],
+            'Peserta 2': ['Level 1','Level 2'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -886,11 +886,11 @@ if selected=='Bagan Kelas Ikhwan':
 #BOLA BERACUN FASE B
 #KUALIFIKASI BOLA BERACUN FASE B
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            '.': [1,3,5,1],
+            'Peserta 1': ['BUKHORI','UHUD','ABU DAWUD','TABUK'],
+            '.': [0,0,0,0],
             'SKOR': ['vs','vs','vs','vs'],
-            ',': [2,4,6,2],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            ',': [0,0,0,0],
+            'Peserta 2': ['AL BAIHAQI','BADR','MUSLIM','KHAIBAR'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -911,11 +911,11 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL BOLA BERACUN FASE B
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
-            '.': [1,3],
+            'Peserta 1': ['Level 3', 'Level 4'],
+            '.': [0,0],
             'SKOR': ['vs','vs'],
-            ',': [2,4],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
+            ',': [0,0],
+            'Peserta 2': ['Level 3', 'Level 4'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -939,11 +939,11 @@ if selected=='Bagan Kelas Ikhwan':
 #BOLA BERACUN FASE C
 #KUALIFIKASI BOLA BERACUN FASE C
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            '.': [1,3,5,1],
-            'SKOR': ['vs','vs','vs','vs'],
-            ',': [2,4,6,2],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            'Peserta 1': ['SUFYAN ATS TSAURY','DARUSSALAM'],
+            '.': [0,0],
+            'SKOR': ['vs','vs'],
+            ',': [0,0],
+            'Peserta 2': ['ABU HANIFAH',"NA'IM"],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -964,11 +964,11 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL BOLA BERACUN FASE C
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
-            '.': [1,3],
+            'Peserta 1': ['Level 6', 'Level 5'],
+            '.': [0,0],
             'SKOR': ['vs','vs'],
-            ',': [2,4],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
+            ',': [0,0],
+            'Peserta 2': ['AHMAD BIN HAMBAL','FIRDAUS'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -998,11 +998,11 @@ if selected=='Bagan Kelas Ikhwan':
 #VOLLY SARUNG FASE A
 #KUALIFIKASI VOLLY SARUNG FASE A
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            '.': [1,3,5,1],
+            'Peserta 1': ['MADINAH','UMAR','MAKKAH','ABU BAKR'],
+            '.': [0,0,0,0],
             'SKOR': ['vs','vs','vs','vs'],
-            ',': [2,4,6,2],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            ',': [0,0,0,0],
+            'Peserta 2': ['ISTANBUL','UTSMAN','AL QUDS','ALI BIN ABI THALIB'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -1023,11 +1023,11 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL VOLLY SARUNG FASE A
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
-            '.': [1,3],
+            'Peserta 1': ['Level 1', 'Level 2'],
+            '.': [0,0],
             'SKOR': ['vs','vs'],
-            ',': [2,4],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
+            ',': [0,0],
+            'Peserta 2': ['Level 1', 'Level 2'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -1051,11 +1051,11 @@ if selected=='Bagan Kelas Ikhwan':
 #VOLLY SARUNG FASE B
 #KUALIFIKASI VOLLY SARUNG FASE B
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            '.': [1,3,5,1],
+            'Peserta 1': ['MUSLIM','BADR','ABU DAWUD','UHUD'],
+            '.': [0,0,0,0],
             'SKOR': ['vs','vs','vs','vs'],
-            ',': [2,4,6,2],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            ',': [0,0,0,0],
+            'Peserta 2': ['BUKHORI','TABUK','AL BAIHAQI','KHAIBAR'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -1076,11 +1076,11 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL VOLLY SARUNG FASE B
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
-            '.': [1,3],
+            'Peserta 1': ['Level 3', 'Level 4'],
+            '.': [0,0],
             'SKOR': ['vs','vs'],
-            ',': [2,4],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
+            ',': [0,0],
+            'Peserta 2': ['Level 3', 'Level 4'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -1104,11 +1104,11 @@ if selected=='Bagan Kelas Ikhwan':
 #VOLLY SARUNG FASE C
 #KUALIFIKASI VOLLY SARUNG FASE C
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            '.': [1,3,5,1],
-            'SKOR': ['vs','vs','vs','vs'],
-            ',': [2,4,6,2],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
+            'Peserta 1': ['ABU HANIFAH','FIRDAUS'],
+            '.': [0,0],
+            'SKOR': ['vs','vs'],
+            ',': [0,0],
+            'Peserta 2': ['AHMAD BIN HAMBAL','DARUSSALAM'],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -1129,11 +1129,11 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL VOLLY SARUNG FASE C
         data = {
-            'Peserta 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
-            '.': [1,3],
+            'Peserta 1': ['Level 6','Level 5'],
+            '.': [0,0],
             'SKOR': ['vs','vs'],
-            ',': [2,4],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY'],
+            ',': [0,0],
+            'Peserta 2': ['SUFYAN ATS TSAURY',"NA'IM"],
             }
         leaderboard_df = pd.DataFrame(data)
 
@@ -1163,20 +1163,20 @@ if selected=='Bagan Kelas Ikhwan':
 #BLIND BOTTLE FASE A
 #KUALIFIKASI BLIND BOTTLE FASE A
         data = {
-            'Peserta 1': ['ABU BAKR','UTSMAN','UMAR','ALI BIN ABI THALIB'],
-            'Pemenang Peserta 1': ['-','-','-','-'],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            'Pemenang Peserta 2': ['-','-','-','-'],
+            'Kelas 1': ['ABU BAKR','UTSMAN','UMAR','ALI BIN ABI THALIB'],
+            'Pemenang Kelas 1': ['-','-','-','-'],
+            'Kelas 2': ['MAKKAH','ISTANBUL','MADINAH','AL QUDS'],
+            'Pemenang Kelas 2': ['-','-','-','-'],
             }
         leaderboard_df = pd.DataFrame(data)
 
         # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
         def color_medals(df):
                 styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Peserta 1'] = 'background-color: rgba()'  # Green with 50% transparency
-                styles['Pemenang Peserta 2'] = 'background-color: rgba()'  # Green with 50% transparency
+                styles['Kelas 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Kelas 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Pemenang Kelas 1'] = 'background-color: rgba()'  # Green with 50% transparency
+                styles['Pemenang Kelas 2'] = 'background-color: rgba()'  # Green with 50% transparency
                 return styles
         # Apply the styling to the DataFrame
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
@@ -1187,9 +1187,9 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL BLIND BOTTLE FASE A
         data = {
-            'Peserta 1': ['Pemenang Level 1'],
+            'Kelas 1': ['Pemenang Level 1'],
             'Vs': ['vs'],
-            'Peserta 2': ['Pemenang Level 2'],
+            'Kelas 2': ['Pemenang Level 2'],
             'Pemenang Fase A': ['-'],
             }
         leaderboard_df = pd.DataFrame(data)
@@ -1197,8 +1197,8 @@ if selected=='Bagan Kelas Ikhwan':
         # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
         def color_medals(df):
                 styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Kelas 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Kelas 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
                 styles['Pemenang Fase A'] = 'background-color: rgba()'  # Green with 50% transparency
                 return styles
         # Apply the styling to the DataFrame
@@ -1212,20 +1212,20 @@ if selected=='Bagan Kelas Ikhwan':
 #BLIND BOTTLE FASE B
 #KUALIFIKASI BLIND BOTTLE FASE B
         data = {
-            'Peserta 3': ['ABU BAKR','UTSMAN','UMAR','ALI BIN ABI THALIB'],
-            'Pemenang Peserta 3': ['-','-','-','-'],
-            'Peserta 4': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            'Pemenang Peserta 4': ['-','-','-','-'],
+            'Kelas 3': ['BADR','UHUD','KHAIBAR','TABUK'],
+            'Pemenang Kelas 3': ['-','-','-','-'],
+            'Kelas 4': ['BUKHORI','MUSLIM','ABU DAWUD','AL BAIHAQI'],
+            'Pemenang Kelas 4': ['-','-','-','-'],
             }
         leaderboard_df = pd.DataFrame(data)
 
         # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
         def color_medals(df):
                 styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 3'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Peserta 4'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Peserta 3'] = 'background-color: rgba()'  # Green with 50% transparency
-                styles['Pemenang Peserta 4'] = 'background-color: rgba()'  # Green with 50% transparency
+                styles['Kelas 3'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Kelas 4'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Pemenang Kelas 3'] = 'background-color: rgba()'  # Green with 50% transparency
+                styles['Pemenang Kelas 4'] = 'background-color: rgba()'  # Green with 50% transparency
                 return styles
         # Apply the styling to the DataFrame
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
@@ -1236,9 +1236,9 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL BLIND BOTTLE FASE B
         data = {
-            'Peserta 3': ['Pemenang Level 3'],
+            'Kelas 3': ['Pemenang Level 3'],
             'Vs': ['vs'],
-            'Peserta 4': ['Pemenang Level 4'],
+            'Kelas 4': ['Pemenang Level 4'],
             'Pemenang Fase B': ['-'],
             }
         leaderboard_df = pd.DataFrame(data)
@@ -1246,8 +1246,8 @@ if selected=='Bagan Kelas Ikhwan':
         # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
         def color_medals(df):
                 styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 3'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Peserta 4'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Kelas 3'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Kelas 4'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
                 styles['Pemenang Fase B'] = 'background-color: rgba()'  # Green with 50% transparency
                 return styles
         # Apply the styling to the DataFrame
@@ -1261,20 +1261,20 @@ if selected=='Bagan Kelas Ikhwan':
 #BLIND BOTTLE FASE C
 #KUALIFIKASI BLIND BOTTLE FASE C
         data = {
-            'Peserta 5': ['ABU BAKR','UTSMAN','UMAR','ALI BIN ABI THALIB'],
-            'Pemenang Peserta 5': ['-','-','-','-'],
-            'Peserta 6': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            'Pemenang Peserta 6': ['-','-','-','-'],
+            'Kelas 5': ['FIRDAUS',"NA'IM",'DARUSSALAM'],
+            'Pemenang Kelas 5': ['-','-','-'],
+            'Kelas 6': ['AHMAD BIN HAMBAL','ABU HANIFAH','SUFYAN ATS TSAURY'],
+            'Pemenang Kelas 6': ['-','-','-'],
             }
         leaderboard_df = pd.DataFrame(data)
 
         # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
         def color_medals(df):
                 styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 5'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Peserta 6'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Peserta 5'] = 'background-color: rgba()'  # Green with 50% transparency
-                styles['Pemenang Peserta 6'] = 'background-color: rgba()'  # Green with 50% transparency
+                styles['Kelas 5'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Kelas 6'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Pemenang Kelas 5'] = 'background-color: rgba()'  # Green with 50% transparency
+                styles['Pemenang Kelas 6'] = 'background-color: rgba()'  # Green with 50% transparency
                 return styles
         # Apply the styling to the DataFrame
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
@@ -1285,9 +1285,9 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL BLIND BOTTLE FASE C
         data = {
-            'Peserta 5': ['Pemenang Level 5'],
+            'Kelas 5': ['Pemenang Level 5'],
             'Vs': ['vs'],
-            'Peserta 6': ['Pemenang Level 6'],
+            'Kelas 6': ['Pemenang Level 6'],
             'Pemenang Fase C': ['-'],
             }
         leaderboard_df = pd.DataFrame(data)
@@ -1295,8 +1295,8 @@ if selected=='Bagan Kelas Ikhwan':
         # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
         def color_medals(df):
                 styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 5'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Peserta 6'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Kelas 5'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Kelas 6'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
                 styles['Pemenang Fase C'] = 'background-color: rgba()'  # Green with 50% transparency
                 return styles
         # Apply the styling to the DataFrame
@@ -1316,20 +1316,20 @@ if selected=='Bagan Kelas Ikhwan':
 #CHOPSTICK BALL FASE A
 #KUALIFIKASI CHOPSTICK BALL FASE A
         data = {
-            'Peserta 1': ['ABU BAKR','UTSMAN','UMAR','ALI BIN ABI THALIB'],
-            'Pemenang Peserta 1': ['-','-','-','-'],
-            'Peserta 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            'Pemenang Peserta 2': ['-','-','-','-'],
+            'Kelas 1': ['ABU BAKR','UTSMAN','UMAR','ALI BIN ABI THALIB'],
+            'Pemenang Kelas 1': ['-','-','-','-'],
+            'Kelas 2': ['MAKKAH','ISTANBUL','MADINAH','AL QUDS'],
+            'Pemenang Kelas 2': ['-','-','-','-'],
             }
         leaderboard_df = pd.DataFrame(data)
 
         # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
         def color_medals(df):
                 styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Pemenang Peserta 1'] = 'background-color: rgba()'  # Green with 50% transparency
-                styles['Pemenang Peserta 2'] = 'background-color: rgba()'  # Green with 50% transparency
+                styles['Kelas 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Kelas 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Pemenang Kelas 1'] = 'background-color: rgba()'  # Green with 50% transparency
+                styles['Pemenang Kelas 2'] = 'background-color: rgba()'  # Green with 50% transparency
                 return styles
         # Apply the styling to the DataFrame
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
@@ -1340,9 +1340,9 @@ if selected=='Bagan Kelas Ikhwan':
 
 #SEMIFINAL CHOPSTICK BALL FASE A
         data = {
-            'Peserta 1': ['Pemenang Level 1'],
+            'Kelas 1': ['Pemenang Level 1'],
             'Vs': ['vs'],
-            'Peserta 2': ['Pemenang Level 2'],
+            'Kelas 2': ['Pemenang Level 2'],
             'Pemenang Fase A': ['-'],
             }
         leaderboard_df = pd.DataFrame(data)
@@ -1350,8 +1350,8 @@ if selected=='Bagan Kelas Ikhwan':
         # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
         def color_medals(df):
                 styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Peserta 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
-                styles['Peserta 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Kelas 1'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
+                styles['Kelas 2'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Red with 50% transparency
                 styles['Pemenang Fase A'] = 'background-color: rgba()'  # Green with 50% transparency
                 return styles
         # Apply the styling to the DataFrame
