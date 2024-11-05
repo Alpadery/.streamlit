@@ -548,7 +548,8 @@ if selected=='Bagan Kelas Ikhwan':
         st.dataframe(styled_df)
 
         # Link for more information
-        st.markdown(f"[Klik untuk melihat bagan lomba Estafet]")
+        st.subheader("Informasi Bagan Lomba Estafet Class Meeting 2024 ")
+        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/14jFBB5hRJjN9F649mA-EMlpgRJJyY8bFndcDJ5h3Aq4/edit?gid=480333465#gid=480333465)")
 
 
 #LOMBA FUTSAL
@@ -713,7 +714,8 @@ if selected=='Bagan Kelas Ikhwan':
         st.dataframe(styled_df)
 
         # Link for more information
-        st.markdown(f"[Klik untuk melihat bagan lomba Futsal]")
+        st.subheader("Informasi Bagan Lomba Futsal Class Meeting 2024 ")
+        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/14CGLvYdIMOIQy6SY4fMyUjppz7O8HHIin2X_CvHpV4I/edit?gid=462673749#gid=462673749)")
 
 
 #LOMBA BASKET
@@ -824,7 +826,9 @@ if selected=='Bagan Kelas Ikhwan':
         st.subheader('Semifinal Basket Fase C')
         st.dataframe(styled_df)
 
-        st.markdown(f"[Klik untuk melihat bagan lomba Basket]")
+        # Link for more information
+        st.subheader("Informasi Bagan Lomba Basket Class Meeting 2024 ")
+        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/1L2s6VAZHFIvmWncYNPL-JYopPTiCZBmd3q__LkivXik/edit?gid=1079463361#gid=1079463361)")
 
 
 #LOMBA BOLA BERACUN
@@ -989,7 +993,8 @@ if selected=='Bagan Kelas Ikhwan':
         st.dataframe(styled_df)
 
         # Link for more information
-        st.markdown(f"[Klik untuk melihat bagan lomba Bola Beracun]")
+        st.subheader("Informasi Bagan Lomba Bola Beracun Class Meeting 2024 ")
+        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/1OVx6YIqnKMKN0JNZrDcnZKF9DQoJN1rxplyZUNQ-pEM/edit?gid=22040083#gid=22040083)")
 
 
 #LOMBA VOLLY SARUNG
@@ -1154,7 +1159,8 @@ if selected=='Bagan Kelas Ikhwan':
         st.dataframe(styled_df)
 
         # Link for more information
-        st.markdown(f"[Klik untuk melihat bagan lomba Volly Sarung]")    
+        st.subheader("Informasi Bagan Lomba Volly Sarung Class Meeting 2024 ")
+        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/1D75FPSGwDcW60wl9P4xo6iAPDqZiHjJxG01L3LqXYCI/edit?gid=179922245#gid=179922245)")    
 
 
 #LOMBA BLIND BOTTLE
@@ -1307,7 +1313,8 @@ if selected=='Bagan Kelas Ikhwan':
         st.dataframe(styled_df)
 
         # Link for more information
-        st.markdown(f"[Klik untuk melihat bagan lomba Blind Bottle]")
+        st.subheader("Informasi Bagan Lomba Blind Bottle Class Meeting 2024 ")
+        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/1EzQDdcBBEJ3NE38g1PlGU_Xy1PDchzLB3ZDeItnGFxM/edit?gid=2055359865#gid=2055359865)")
 
 
 #LOMBA CHOPSTICK BALL
@@ -1362,7 +1369,8 @@ if selected=='Bagan Kelas Ikhwan':
         st.dataframe(styled_df)
 
         # Link for more information
-        st.markdown(f"[Klik untuk melihat bagan lomba Chopstick Ball]")    
+        st.subheader("Informasi Bagan Lomba Chopstick Ball Class Meeting 2024 ")
+        st.markdown(f"[Click Here!](https://docs.google.com/spreadsheets/d/1sKSKhvUaPEJXJlcJPkWS5YoNChtz_ebnUALWrJp9JA8/edit?gid=53591745#gid=53591745)")    
 
 
 
