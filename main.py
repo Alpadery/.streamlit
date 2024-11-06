@@ -18,6 +18,8 @@ with st.sidebar:
 
 sidebar_logo=('Logo Sekolah Islam Abu Dzar-01.png')
 main_body_logo=('Icon Logo Yayasan-01 (1).png')
+image_path = "LOGO CM.png"  # Replace with your image path or URL
+st.sidebar.image(image_path, use_column_width=True)
 
 st.logo(sidebar_logo,
         icon_image='Icon Logo Yayasan-01 (1).png',
