@@ -395,7 +395,7 @@ if selected=='Bagan Kelas Ikhwan':
 
     # Specify the path to your Excel file
 
-    file_path = "Jadwal Ikhwan CM 24.xlsx"  # Change this to your actual file path
+    file_path = "Jadwal Ikhwan CM 24 (1).xlsx"  # Change this to your actual file path
 
     # Load the workbook
     workbook = load_workbook(filename=file_path, data_only=True)
@@ -403,31 +403,31 @@ if selected=='Bagan Kelas Ikhwan':
     # Mapping of items to their corresponding sheets and links
     item_to_sheets = {
         'Estafet': {
-            'sheets': [],
+            'sheets': ['Klasemen Estafet A','Klasemen Estafet B','Klasemen Estafet C'],
             'link': 'https://docs.google.com/spreadsheets/d/14jFBB5hRJjN9F649mA-EMlpgRJJyY8bFndcDJ5h3Aq4/edit?usp=drive_link'
         },
         'Futsal': {
-            'sheets': ['Kualifikasi Futsal A', 'Kualifikasi Futsal B', 'Kualifikasi Futsal C'],
+            'sheets': ['Klasemen Futsal A','Klasemen Futsal B','Klasemen Futsal C'],
             'link': 'https://docs.google.com/spreadsheets/d/14CGLvYdIMOIQy6SY4fMyUjppz7O8HHIin2X_CvHpV4I/edit?usp=drive_link'
         },
         'Basket': {
-            'sheets': ['Kualifikasi Basket B', 'Kualifikasi Basket C'],
+            'sheets': ['Klasemen Basket B','Klasemen Basket C'],
             'link': 'https://docs.google.com/spreadsheets/d/1L2s6VAZHFIvmWncYNPL-JYopPTiCZBmd3q__LkivXik/edit?usp=drive_link'
         },
         'Volly Sarung': {
-            'sheets': ['Kualifikasi Volly A', 'Kualifikasi Volly B', 'Kualifikasi Volly C'],
+            'sheets': ['Klasemen Volly Sarung A','Klasemen Volly Sarung B','Klasemen Volly Sarung C'],
             'link': 'https://docs.google.com/spreadsheets/d/1D75FPSGwDcW60wl9P4xo6iAPDqZiHjJxG01L3LqXYCI/edit?usp=drive_link'
         },
         'Bola Beracun': {
-            'sheets': ['Kualifikasi Racun A', 'Kualifikasi Racun B', 'Kualifikasi Racun C'],
+            'sheets': ['Klasemen Bola Beracun A','Klasemen Bola Beracun B','Klasemen Bola Beracun C'],
             'link': 'https://docs.google.com/spreadsheets/d/1OVx6YIqnKMKN0JNZrDcnZKF9DQoJN1rxplyZUNQ-pEM/edit?usp=drive_link'
         },
         'Blind Bottle': {
-            'sheets': ['Sheet1'],
+            'sheets': ['Klasemen Blind Bottle A','Klasemen Blind Bottle B','Klasemen Blind Bottle C'],
             'link': 'https://docs.google.com/spreadsheets/d/1EzQDdcBBEJ3NE38g1PlGU_Xy1PDchzLB3ZDeItnGFxM/edit?usp=drive_link'
         },
         'Chopstick Ball': {
-            'sheets': ['Kualifikasi Chopstick', 'Juara Chopstick'],
+            'sheets': ['Klasemen Chopstick Ball A'],
             'link': 'https://docs.google.com/spreadsheets/d/1sKSKhvUaPEJXJlcJPkWS5YoNChtz_ebnUALWrJp9JA8/edit?usp=drive_link'
         }
     }
@@ -455,88 +455,8 @@ if selected=='Bagan Kelas Ikhwan':
                 st.markdown(html, unsafe_allow_html=True)
 
         # Link for more information
-        st.markdown(f"[Informasi Bagan Lomba {selected_item}]({related_info['link']})")
-
-
-#LOMBA BLINDBOTTLE
-    if selected_lomba == "Blind Bottle":
-
-#BLINDBOTTLE FASE A
-#KUALIFIKASI BLINDBOTTLE FASE A
-        data = {
-            'Kelas 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            'VS': ['vs','vs','vs','vs'],
-            'Kelas 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            'Pemenang': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 1'] = 'background-color: rgba(255, 0, 0, 0.2)'  # Red with 50% transparency
-                styles['Kelas 2'] = 'background-color: rgba(255, 0, 0, 0.2)'  # Red with 50% transparency
-                styles['Pemenang'] = 'background-color: rgba(0, 255, 0, 0.2)'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Blind Bottle Fase A')
-        st.dataframe(styled_df)
-
-        st.write('---')
-#BLINDBOTTLE FASE B
-#KUALIFIKASI BLINDBOTTLE FASE B
-        data = {
-            'Kelas 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            'VS': ['vs','vs','vs','vs'],
-            'Kelas 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            'Pemenang': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 1'] = 'background-color: rgba(255, 0, 0, 0.2)'  # Red with 50% transparency
-                styles['Kelas 2'] = 'background-color: rgba(255, 0, 0, 0.2)'  # Red with 50% transparency
-                styles['Pemenang'] = 'background-color: rgba(0, 255, 0, 0.2)'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Blind Bottle Fase B')
-        st.dataframe(styled_df)
-
-        st.write('---')
-#BLINDBOTTLE FASE C
-#KUALIFIKASI BLINDBOTTLE FASE C
-        data = {
-            'Kelas 1': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            'VS': ['vs','vs','vs','vs'],
-            'Kelas 2': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            'Pemenang': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-            }
-        leaderboard_df = pd.DataFrame(data)
-
-        # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
-        def color_medals(df):
-                styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-                styles['Kelas 1'] = 'background-color: rgba(255, 0, 0, 0.2)'  # Red with 50% transparency
-                styles['Kelas 2'] = 'background-color: rgba(255, 0, 0, 0.2)'  # Red with 50% transparency
-                styles['Pemenang'] = 'background-color: rgba(0, 255, 0, 0.2)'  # Green with 50% transparency
-                return styles
-        # Apply the styling to the DataFrame
-        styled_df = leaderboard_df.style.apply(color_medals, axis=None)
-
-        # Display the styled DataFrame in Streamlit
-        st.subheader('Kualifikasi Blind Bottle Fase C')
-        st.dataframe(styled_df)
-
-        # Link for more information
-        st.markdown(f"[Klik untuk melihat bagan lomba Blind Bottle]")
+        st.subheader(f"Informasi Bagan Lomba {selected_item} Class Meeting 2024")
+        st.markdown(f"[Click Here!]({related_info['link']})")
 
 if selected=='Bagan Kelas Akhwat':
    
