@@ -115,11 +115,11 @@ if selected=='Lomba Class Meeting':
     #LOMBA ESTAFET
     if selected_lomba == "Estafet":
         st.header('1. Estafet')
-        image=Image.open('estafet.png')
-        st.image(image, use_column_width=True)
+        
+        
         st.subheader('**Pengertian Permainan Estafet**')
         st.write("""
-                Lomba estafet adalah Apa pengertian lari estafet? Lari estafet juga sering disebut dengan lari sambung.
+                Lari estafet juga sering disebut dengan lari sambung.
                 Oleh karena itu, lari estafet adalah lari yang dilakukan berkelompok. Umumnya bisa berjumlah 2 sampai 4 orang di dalam kelompok.
                 Setiap orang di dalam kelompok akan mendapat giliran berakhir.
                 """)
@@ -181,7 +181,7 @@ if selected=='Lomba Class Meeting':
         st.header('4. Bola Beracun')
         image=Image.open('bolaberacun.png')
         st.image(image, use_column_width=True)
-        st.subheader('**Pengertian Olahraga Basket**')
+        st.subheader('**Pengertian Permainan Bola Beracun**')
         st.write("""
                 **Bola beracun** merupakan permainan yang melibatkan dua tim, yaitu tim pelempar dan tim mangsa.
                 Tim mangsa berada di dalam lingkaran, sementara tim pelempar berada di luar lingkaran. Tujuan tim pelempar adalah melempar bola ke anggota tim mangsa untuk mengeluarkan mereka dari permainan.
@@ -275,9 +275,9 @@ if selected=='Leaderboard':
 
 #LEADERBOARD IKHWAN
     data = {
-    'Kelas': ['AHMAD BIN HAMBAL','SUFYAN ATS TSAURY','DARUSSALAM','AL BAIHAQI'],
-    'Gold Medals': [1,2,3,4],
-    'Silver Medals': [4,3,2,1]
+    'Kelas': [],
+    'Gold Medals': [],
+    'Silver Medals': []
     }
     leaderboard_df = pd.DataFrame(data)
 
@@ -442,23 +442,24 @@ if selected=='Bagan Kelas Ikhwan':
         sheet = workbook[sheet_name]
         data = [[cell if cell is not None else "" for cell in row] for row in sheet.iter_rows(values_only=True)]
         return pd.DataFrame(data).dropna(how='all')  # Drop empty rows
-
+    
     # Display related sheets for selected item
     if selected_item:
         related_info = item_to_sheets[selected_item]
         related_sheets = related_info['sheets']
+        st.header(f"*What's Next?*")
+        st.write("""Temukan informasi lengkap mengenai pertandingan berikutnya beserta jadwal waktunya dengan melihat bagan pertandingan di bawah ini!""")
+        # Link for more information
+        st.markdown(f"[Lihat bagan pertandingan]({related_info['link']})")
         
         # Read and display DataFrames in a single column
+        st.header(f"Papan Skor Lomba {selected_item}")
         for sheet in related_sheets:
             df = read_sheet(sheet)
             if not df.empty:  # Only display if DataFrame is not empty
                 html = df.to_html(index=False, header=False)
                 st.write(f"### {sheet}")  # Display sheet name
                 st.markdown(html, unsafe_allow_html=True)
-
-        # Link for more information
-        st.subheader(f"Informasi Bagan Lomba {selected_item} Class Meeting 2024")
-        st.markdown(f"[Click Here!]({related_info['link']})")
 
 if selected=='Bagan Kelas Akhwat':
    
