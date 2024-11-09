@@ -10,7 +10,7 @@ st.set_page_config(page_title='Class Meeting', layout='wide')
 with st.sidebar:
     selected=option_menu(
         menu_title='Class Meeting Abu Dzar 2024',
-        options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard','Bagan Kelas Ikhwan','Bagan Kelas Akhwat'],
+        options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard','Pertandingan Ikhwan','Bagan Kelas Akhwat'],
         icons=['info-square','journal-bookmark-fill','graph-up','rocket-takeoff','rocket-takeoff-fill'], 
         menu_icon='cast',
         default_index=0,
@@ -56,7 +56,7 @@ if selected=='Class Meeting 2024':
         col1, col2 = st.columns((2.1,1))
         with col1:
             st.header('C.  Jadwal Kegiatan Class Meeting 2024', divider='grey')
-            image=Image.open('JadwalCM.png')
+            image=Image.open('Jadwal CM 24.png')
             st.image(image,
                     use_column_width=True)
         
@@ -67,8 +67,7 @@ if selected=='Class Meeting 2024':
             st.subheader('**Lapangan Atas**')
             st.write(
                 """
-                Lapangan atas ini nantinya akan digunakan untuk 3 jenis lomba dengan jadwal yang berbeda.
-                Jadwal pertama digunakan untuk lomba basket, kemudian setelahnya digunakan untuk lomba Blind Bottle dan Chopstick Ball dalam waktu bersamaan.
+                Lapangan atas ini direncanakan untuk digunakan dalam tiga jenis lomba dengan jadwal yang terpisah. Pada jadwal pertama lapangan akan digunakan untuk lomba basket, kemudian setelah itu lapangan akan digunakan untuk lomba *Blind Bottle* dan *Chopstick Ball* yang akan diselenggarakan secara bersamaan.
                 """)    
 
         with col2:
@@ -81,8 +80,7 @@ if selected=='Class Meeting 2024':
             st.subheader('**Lapangan Bawah**')
             st.write(
             """
-            Lapangan bawah ini digunakan untuk 2 jenis lomba yaitu lomba futsal untuk kelas Ikhwan dan lomba (?) untuk kelas Akhwat.
-            Lomba futsal dilaksanakan pada Selasa, 11 Desember 2024 dan Lomba (?) dilaksanakan pada Rabu, 13 Desember 2024.
+            Lapangan bawah ini akan digunakan untuk tiga jenis lomba, yaitu lomba futsal untuk kelas ikhwan sedangkan lomba bowling dan bola beracun untuk kelas akhwat. Lomba futsal dijadwalkan pada tanggal 11 & 16 Desember 2024, sedangkan lomba bowling dan bola beracun untuk kelas akhwat akan dilaksanakan pada tanggal 12 & 17 Desember 2024.
             """)
         with col2:
             image=Image.open('lapangan_bawah.png')
@@ -390,7 +388,7 @@ if selected=='Leaderboard':
     image=Image.open('finalis_i.png')
     st.image(image, use_column_width=True)
     
-if selected=='Bagan Kelas Ikhwan':
+if selected=='Pertandingan Ikhwan':
    
     st.title('Informasi Pertandingan Ikhwan Class Meeting Abu Dzar 2024')
     st.write("---")
