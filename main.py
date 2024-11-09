@@ -450,7 +450,7 @@ if selected=='Bagan Kelas Ikhwan':
         st.header(f"*What's Next?*")
         st.write("""Temukan informasi lengkap mengenai pertandingan berikutnya beserta jadwal waktunya dengan melihat bagan pertandingan di bawah ini!""")
         # Link for more information
-        st.markdown(f"[Lihat bagan pertandingan]({related_info['link']})")
+        st.markdown(f"[Lihat Bagan Pertandingan {selected_item}]({related_info['link']})")
         
         # Read and display DataFrames in a single column
         st.header(f"Papan Skor Lomba {selected_item}")
