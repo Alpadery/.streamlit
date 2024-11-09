@@ -392,7 +392,7 @@ if selected=='Leaderboard':
     
 if selected=='Bagan Kelas Ikhwan':
    
-    st.title('Bagan Ikhwan Class Meeting Abu Dzar 2024')
+    st.title('Informasi Pertandingan Ikhwan Class Meeting Abu Dzar 2024')
     st.write("---")
 
     # Specify the path to your Excel file
