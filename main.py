@@ -445,7 +445,7 @@ if selected=='Pertandingan Ikhwan':
     if selected_item:
         related_info = item_to_sheets[selected_item]
         related_sheets = related_info['sheets']
-        st.header(f"*What's Next?*")
+        st.header(f"*Upcoming Match!*")
         st.write("""Temukan informasi lengkap mengenai pertandingan berikutnya beserta jadwal waktunya dengan melihat bagan pertandingan di bawah ini!""")
         # Link for more information
         st.markdown(f"[Lihat Bagan Pertandingan {selected_item}]({related_info['link']})")
@@ -516,7 +516,7 @@ if selected=='Pertandingan Akhwat':
     if selected_item:
         related_info = item_to_sheets[selected_item]
         related_sheets = related_info['sheets']
-        st.header(f"*What's Next?*")
+        st.header(f"*Upcoming Match!*")
         st.write("""Temukan informasi lengkap mengenai pertandingan berikutnya beserta jadwal waktunya dengan melihat bagan pertandingan di bawah ini!""")
         # Link for more information
         st.markdown(f"[Lihat Bagan Pertandingan {selected_item}]({related_info['link']})")
