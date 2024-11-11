@@ -10,7 +10,7 @@ st.set_page_config(page_title='Class Meeting', layout='wide')
 with st.sidebar:
     selected=option_menu(
         menu_title='Class Meeting Abu Dzar 2024',
-        options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard','Pertandingan Ikhwan','Bagan Kelas Akhwat'],
+        options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard','Pertandingan Ikhwan','Pertandingan Akhwat'],
         icons=['info-square','journal-bookmark-fill','graph-up','rocket-takeoff','rocket-takeoff-fill'], 
         menu_icon='cast',
         default_index=0,
@@ -90,6 +90,7 @@ if selected=='Class Meeting 2024':
         col1, col2 = st.columns((1,1))
         with col1:
             st.subheader('**Lapangan Depan Perpustakaan**')
+            
             st.write(
             """
             Lapangan ini adalah tempat untuk lomba Volly Sarung. Lomba ini menggunakan media air sehingga pelaksanaannya perlu berada di daerah yang tidak licin,
@@ -274,29 +275,29 @@ if selected=='Leaderboard':
 #LEADERBOARD IKHWAN
     data = {
     'Kelas': [],
-    'Gold Medals': [],
-    'Silver Medals': []
+    'Winner': [],
+    'Runner Up': []
     }
     leaderboard_df = pd.DataFrame(data)
 
-    leaderboard_df.sort_values(by=['Gold Medals', 'Silver Medals'], ascending=False, inplace=True)
+    leaderboard_df.sort_values(by=['Winner', 'Runner Up'], ascending=False, inplace=True)
 
     # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
     def color_medals(df):
         styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
-        styles['Gold Medals'] = 'background-color: rgba(255, 215, 0, 0.5)'  # Gold with 50% transparency
-        styles['Silver Medals'] = 'background-color: rgba(192, 192, 192, 0.5)'  # Silver with 50% transparency
+        styles['Winner'] = 'background-color: rgba(255, 215, 0, 0.5)'  # Gold with 50% transparency
+        styles['Runner Up'] = 'background-color: rgba(192, 192, 192, 0.5)'  # Silver with 50% transparency
         return styles
 
     # Check if the DataFrame is not empty
-    st.header('🎖️ Perolehan Medali Ikhwan')
+    st.header('🎖️ Hasil Perlombaan Ikhwan')
     if not leaderboard_df.empty:
         # Apply the styling to the DataFrame
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
 
         # Highlight the maximum values in the 'Gold Medal' and 'Silver Medal' columns
-        styled_df = styled_df.highlight_max(color='darkorange', axis=0, subset=['Gold Medals'], props='font-weight: bold; background-color: rgba(255, 140, 0, 0.7);')
-        styled_df = styled_df.highlight_max(color='gray', axis=0, subset=['Silver Medals'], props='font-weight: bold; background-color: rgba(169, 169, 169, 0.7);')
+        styled_df = styled_df.highlight_max(color='darkorange', axis=0, subset=['Winner'], props='font-weight: bold; background-color: rgba(255, 140, 0, 0.7);')
+        styled_df = styled_df.highlight_max(color='gray', axis=0, subset=['Runner Up'], props='font-weight: bold; background-color: rgba(169, 169, 169, 0.7);')
 
         # Display the styled DataFrame in Streamlit
         st.dataframe(styled_df)
@@ -309,31 +310,31 @@ if selected=='Leaderboard':
 # LEADERBOARD AKHWAT
     data = {
     'Kelas': [],
-    'Gold Medals': [],
-    'Silver Medals': []
+    'Winner': [],
+    'Runner Up': []
     }
 
     # Dataframe
     leaderboard_df = pd.DataFrame(data)
 
-    leaderboard_df.sort_values(by=['Gold Medals', 'Silver Medals'], ascending=False, inplace=True)
+    leaderboard_df.sort_values(by=['Winner', 'Runner Up'], ascending=False, inplace=True)
 
     # Function to color entire 'Gold Medal' and 'Silver Medal' columns with transparency
     def color_medals(df):
         styles = pd.DataFrame('', index=df.index, columns=df.columns)  # Create an empty DataFrame for styles
-        styles['Gold Medals'] = 'background-color: rgba(255, 215, 0, 0.5)'  # Gold with 50% transparency
-        styles['Silver Medals'] = 'background-color: rgba(192, 192, 192, 0.5)'  # Silver with 50% transparency
+        styles['Winner'] = 'background-color: rgba(255, 215, 0, 0.5)'  # Gold with 50% transparency
+        styles['Runner Up'] = 'background-color: rgba(192, 192, 192, 0.5)'  # Silver with 50% transparency
         return styles
 
     # Check if the DataFrame is not empty
-    st.header('🎖️ Perolehan Medali Akhwat')
+    st.header('🎖️ Hasil Perlombaan Akhwat')
     if not leaderboard_df.empty:
         # Apply the styling to the DataFrame
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
 
         # Highlight the maximum values in the 'Gold Medal' and 'Silver Medal' columns
-        styled_df = styled_df.highlight_max(color='darkorange', axis=0, subset=['Gold Medals'], props='font-weight: bold; background-color: rgba(255, 140, 0, 0.7);')
-        styled_df = styled_df.highlight_max(color='gray', axis=0, subset=['Silver Medals'], props='font-weight: bold; background-color: rgba(169, 169, 169, 0.7);')
+        styled_df = styled_df.highlight_max(color='darkorange', axis=0, subset=['Winner'], props='font-weight: bold; background-color: rgba(255, 140, 0, 0.7);')
+        styled_df = styled_df.highlight_max(color='gray', axis=0, subset=['Runner Up'], props='font-weight: bold; background-color: rgba(169, 169, 169, 0.7);')
 
         # Display the styled DataFrame in Streamlit
         st.dataframe(styled_df)
@@ -358,7 +359,6 @@ if selected=='Leaderboard':
             st.write('*"Competition is not about winning or losing, but about learning and growth"*  **-Brian Herbert**')
             
     st.write("")
-
 
 # JUARA FASE AKHWAT
     st.header('🏆 Juara Fase Akhwat Class Meeting 2024')
@@ -403,31 +403,31 @@ if selected=='Pertandingan Ikhwan':
     # Mapping of items to their corresponding sheets and links
     item_to_sheets = {
         'Estafet': {
-            'sheets': ['Klasemen Estafet A','Klasemen Estafet B','Klasemen Estafet C'],
+            'sheets': ['(Ikhwan) Estafet A','(Ikhwan) Estafet B','(Ikhwan) Estafet C'],
             'link': 'https://docs.google.com/spreadsheets/d/14jFBB5hRJjN9F649mA-EMlpgRJJyY8bFndcDJ5h3Aq4/edit?usp=drive_link'
         },
         'Futsal': {
-            'sheets': ['Klasemen Futsal A','Klasemen Futsal B','Klasemen Futsal C'],
+            'sheets': ['(Ikhwan) Futsal A','(Ikhwan) Futsal B','(Ikhwan) Futsal C'],
             'link': 'https://docs.google.com/spreadsheets/d/14CGLvYdIMOIQy6SY4fMyUjppz7O8HHIin2X_CvHpV4I/edit?usp=drive_link'
         },
         'Basket': {
-            'sheets': ['Klasemen Basket B','Klasemen Basket C'],
+            'sheets': ['(Ikhwan) Basket B','(Ikhwan) Basket C'],
             'link': 'https://docs.google.com/spreadsheets/d/1L2s6VAZHFIvmWncYNPL-JYopPTiCZBmd3q__LkivXik/edit?usp=drive_link'
         },
         'Volly Sarung': {
-            'sheets': ['Klasemen Volly Sarung A','Klasemen Volly Sarung B','Klasemen Volly Sarung C'],
+            'sheets': ['(Ikhwan) Volly Sarung A','(Ikhwan) Volly Sarung B','(Ikhwan) Volly Sarung C'],
             'link': 'https://docs.google.com/spreadsheets/d/1D75FPSGwDcW60wl9P4xo6iAPDqZiHjJxG01L3LqXYCI/edit?usp=drive_link'
         },
         'Bola Beracun': {
-            'sheets': ['Klasemen Bola Beracun A','Klasemen Bola Beracun B','Klasemen Bola Beracun C'],
+            'sheets': ['(Ikhwan) Bola Beracun A','(Ikhwan) Bola Beracun B','(Ikhwan) Bola Beracun C'],
             'link': 'https://docs.google.com/spreadsheets/d/1OVx6YIqnKMKN0JNZrDcnZKF9DQoJN1rxplyZUNQ-pEM/edit?usp=drive_link'
         },
         'Blind Bottle': {
-            'sheets': ['Klasemen Blind Bottle A','Klasemen Blind Bottle B','Klasemen Blind Bottle C'],
+            'sheets': ['(Ikhwan) Blind Bottle A','(Ikhwan) Blind Bottle B','(Ikhwan) Blind Bottle C'],
             'link': 'https://docs.google.com/spreadsheets/d/1EzQDdcBBEJ3NE38g1PlGU_Xy1PDchzLB3ZDeItnGFxM/edit?usp=drive_link'
         },
         'Chopstick Ball': {
-            'sheets': ['Klasemen Chopstick Ball A'],
+            'sheets': ['(Ikhwan) Chopstick Ball A'],
             'link': 'https://docs.google.com/spreadsheets/d/1sKSKhvUaPEJXJlcJPkWS5YoNChtz_ebnUALWrJp9JA8/edit?usp=drive_link'
         }
     }
@@ -459,128 +459,73 @@ if selected=='Pertandingan Ikhwan':
                 st.write(f"### {sheet}")  # Display sheet name
                 st.markdown(html, unsafe_allow_html=True)
 
-if selected=='Bagan Kelas Akhwat':
+if selected=='Pertandingan Akhwat':
    
-    st.title('Bagan Akhwat Class Meeting Abu Dzar 2024')
-    st.write('---')
+    st.title('Informasi Pertandingan Akhwat Class Meeting Abu Dzar 2024')
+    st.write("---")
 
-    selected_lomba = st.selectbox(
-    "**Pilih Jenis Lomba**",
-    ("Estafet","Futsal","Basket","Bola Beracun","Volly Sarung","Blind Bottle","Chopstick Ball"),
-)
+    # Specify the path to your Excel file
 
-#LOMBA ESTAFET
-    if selected_lomba == "Estafet":
-        image=Image.open('akhwat/estafet_aa.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/3df0b4a1fe6a62518a64045cbe6e400560f236aba9774a5086084243.png)')
-        st.write('')
-        st.write('')
-        image=Image.open('akhwat/estafet_ba.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/750e4c6e5ba0f825090a4cfc3f3b4b5ebec02aac318c802119a4b3d5.png)')
-        st.write('')
-        st.write('')
-        image=Image.open('akhwat/estafet_ca.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/fa290bfa124e491b55e87cb39b91874888d4f139bfa0642c7168f8cf.png)')
+    file_path = "Jadwal Akhwat CM 24.xlsx"  # Change this to your actual file path
 
-#LOMBA FUTSAL
-# PENDING!!!
-    if selected_lomba == "Futsal":
-        image=Image.open('ikhwan/futsal_a.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/5192ea6f01aab750854566851556e61dca13e65870b219d690c00f3f.png)')
-        st.write('')
-        st.write('')
-        image=Image.open('ikhwan/futsal_b.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/61902a2eef52ec2a77411f4f891b7f17fd237c0d2744eab5afd290b1.png)')
-        st.write('')
-        st.write('')
-        image=Image.open('ikhwan/futsal_c.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/649558a18837335a51e3895f357bc6f5f0470aa395a8ea0410fd56fd.png)')
+    # Load the workbook
+    workbook = load_workbook(filename=file_path, data_only=True)
 
-#LOMBA BASKET  
-    if selected_lomba == "Basket":
-        image=Image.open('akhwat/basket_ba.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/2dc0e7eb09a9e411ea2a907e0afbbf007c7ce41a5050ffa369abc968.png)')
-        st.write('')
-        st.write('')
-        image=Image.open('akhwat/basket_ca.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/4687f9c909f15add1f1fe53b311307ceb1b608b69b4ad8443dd99b21.png)')
+    # Mapping of items to their corresponding sheets and links
+    item_to_sheets = {
+        'Estafet': {
+            'sheets': ['(Akhwat) Estafet A','(Akhwat) Estafet B','(Akhwat) Estafet C'],
+            'link': 'https://docs.google.com/spreadsheets/d/1lZvbmRRhlxIi6jDoIb1qbShXdm0aElr3FkdOWrIUIzA/edit?gid=254729298#gid=254729298'
+        },
+        'Bowling': {
+            'sheets': ['(Akhwat) Bowling A','(Akhwat) Bowling B','(Akhwat) Bowling C'],
+            'link': 'https://docs.google.com/spreadsheets/d/158wkZUdfQc4qdDEmCN24i72mSZCaRHmu__OuL_SoEqM/edit?gid=1986181007#gid=1986181007'
+        },
+        'Basket': {
+            'sheets': ['(Akhwat) Basket B','(Akhwat) Basket C'],
+            'link': 'https://docs.google.com/spreadsheets/d/11LAslC-7dGnC5i-rvN6-gbqZJ9dtaOWkMtg1wC4ezqs/edit?gid=488637149#gid=488637149'
+        },
+        'Volly Sarung': {
+            'sheets': ['(Akhwat) Volly Sarung A','(Akhwat) Volly Sarung B','(Akhwat) Volly Sarung C'],
+            'link': 'https://docs.google.com/spreadsheets/d/1rFo1NZCYrW_7z1_MwHIblQ-CmEeOhk2sys-7yVF_RbY/edit?gid=913776429#gid=913776429'
+        },
+        'Bola Beracun': {
+            'sheets': ['(Akhwat) Bola Beracun A','(Akhwat) Bola Beracun B','(Akhwat) Bola Beracun C'],
+            'link': 'https://docs.google.com/spreadsheets/d/1QEDnT_GEDYMznW0HL84jzyha70B_y51TCqk6qdsOuVw/edit?gid=1154821625#gid=1154821625'
+        },
+        'Blind Bottle': {
+            'sheets': ['(Akhwat) Blind Bottle A','(Akhwat) Blind Bottle B','(Akhwat) Blind Bottle C'],
+            'link': 'https://docs.google.com/spreadsheets/d/1CfsasYGmZlWOEST0_X7SiJnBVaePZhqqxrrJZTZ5ZqY/edit?gid=637622410#gid=637622410'
+        },
+        'Chopstick Ball': {
+            'sheets': ['(Akhwat) Chopstick Ball A'],
+            'link': 'hhttps://docs.google.com/spreadsheets/d/1WdHYsVbMtU50bHWzQ3XFKeSnQzYRYI0C7kO_Dnd6qf4/edit?gid=1179081002#gid=1179081002'
+        }
+    }
 
-#LOMBA BOLA BERACUN
-    if selected_lomba == "Bola Beracun":
-        image=Image.open('akhwat/bola_aa.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/7d5c3a42a764bd2d9b3f074b97523281393119f2880b7f0eb86ea4ff.png)')
-        st.write('')
-        st.write('')
-        image=Image.open('akhwat/bola_ba.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/46c15a396effd459e2d71975541fe45c256015ad0ef6587c75b1887c.png)')
-        st.write('')
-        st.write('')
-        image=Image.open('akhwat/bola_ca.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/336c269bd9f71dece24a4b3c7924416d80a7faf1700d4e9c14bc88e2.png)')
+    # Select box for user to choose an item
+    selected_item = st.selectbox("Pilih Jenis lomba", list(item_to_sheets.keys()))
+
+    # Function to read sheets and return cleaned DataFrame
+    def read_sheet(sheet_name):
+        sheet = workbook[sheet_name]
+        data = [[cell if cell is not None else "" for cell in row] for row in sheet.iter_rows(values_only=True)]
+        return pd.DataFrame(data).dropna(how='all')  # Drop empty rows
     
-#LOMBA VOLLY SARUNG  
-    if selected_lomba == "Volly Sarung":
-        image=Image.open('akhwat/volly_aa.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/16532e7d195d54937a49617e2c87908ecfad58ba41f4b50c5d0046a4.png)')
-        st.write('')
-        st.write('')
-        image=Image.open('akhwat/volly_ba.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/2d388a001972c17ba7dca906f8f926d8a9b2ccf81ca2acde3d7d78e9.png)')
-        st.write('')
-        st.write('')
-        image=Image.open('akhwat/volly_ca.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/7c0844c0531f645da57c1af6c127cb30d67b724b4e82873682b6c6cc.png)')
-
-#LOMBA BLIND BOTTLE
-    if selected_lomba == "Blind Bottle":
-        image=Image.open('akhwat/blind_aa.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/c02081d7e7dea0fd299a8003bd5323ee62e30dd4a5f8e94b9d3d6ae0.png)')
-        st.write('')
-        st.write('')
-        image=Image.open('akhwat/blind_ba.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/d498d94818ad9ee4f796ebe48e745b2bc69f4feaef2c04de474c6416.png)')
-        st.write('')
-        st.write('')
-        image=Image.open('akhwat/blind_ca.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/5aa89703c314324afcc03f4a4ca7860b37454b017a1a9f4adf7857b3.png)')
-
-#LOMBA CHOPSTICK BALL
-    if selected_lomba == "Chopstick Ball":
-        image=Image.open('akhwat/chop_aa.png')
-        st.image(image,
-                    use_column_width=True)
-        st.write('[Click to Preview>](https://class-meeting.streamlit.app/~/+/media/67cd8b1e2398b770ecb863e8c4917a319cdd0b383b7445b363f99a36.png)')
+    # Display related sheets for selected item
+    if selected_item:
+        related_info = item_to_sheets[selected_item]
+        related_sheets = related_info['sheets']
+        st.header(f"*What's Next?*")
+        st.write("""Temukan informasi lengkap mengenai pertandingan berikutnya beserta jadwal waktunya dengan melihat bagan pertandingan di bawah ini!""")
+        # Link for more information
+        st.markdown(f"[Lihat Bagan Pertandingan {selected_item}]({related_info['link']})")
+        
+        # Read and display DataFrames in a single column
+        st.header(f"Papan Skor Lomba {selected_item}")
+        for sheet in related_sheets:
+            df = read_sheet(sheet)
+            if not df.empty:  # Only display if DataFrame is not empty
+                html = df.to_html(index=False, header=False)
+                st.write(f"### {sheet}")  # Display sheet name
+                st.markdown(html, unsafe_allow_html=True)
