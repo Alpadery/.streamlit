@@ -80,7 +80,7 @@ if selected=='Class Meeting 2024':
             st.subheader('**Lapangan Bawah**')
             st.write(
             """
-            Lapangan bawah ini akan digunakan untuk tiga jenis lomba, yaitu lomba futsal untuk kelas ikhwan sedangkan lomba bowling dan bola beracun untuk kelas akhwat. Lomba futsal dijadwalkan pada tanggal 11 & 16 Desember 2024, sedangkan lomba bowling dan bola beracun untuk kelas akhwat akan dilaksanakan pada tanggal 12 & 17 Desember 2024.
+            Lapangan bawah ini akan digunakan untuk tiga jenis lomba, yaitu lomba futsal untuk kelas ikhwan sedangkan lomba bowling dan Dodgeball untuk kelas akhwat. Lomba futsal dijadwalkan pada tanggal 11 & 16 Desember 2024, sedangkan lomba bowling dan Dodgeball untuk kelas akhwat akan dilaksanakan pada tanggal 12 & 17 Desember 2024.
             """)
         with col2:
             image=Image.open('lapangan_bawah.png')
@@ -93,7 +93,7 @@ if selected=='Class Meeting 2024':
             
             st.write(
             """
-            Lapangan ini adalah tempat untuk lomba Volly Sarung. Lomba ini menggunakan media air sehingga pelaksanaannya perlu berada di daerah yang tidak licin,
+            Lapangan ini adalah tempat untuk lomba Bomb Ballon. Lomba ini menggunakan media air sehingga pelaksanaannya perlu berada di daerah yang tidak licin,
             atau lapangan yang terbuat dari *paving block*.
             """)
         with col2:
@@ -108,7 +108,7 @@ if selected=='Lomba Class Meeting':
 
     selected_lomba = st.selectbox(
     "**Pilih Jenis Lomba**",
-    ("Estafet","Futsal","Basket","Bola Beracun","Volly Sarung","Blind Bottle","Chopstick Ball"),
+    ("Estafet","Futsal","Basket","Dodgeball","Bomb Ballon","Blind Bottle","Chopstick Ball"),
 )
 
     #LOMBA ESTAFET
@@ -176,13 +176,13 @@ if selected=='Lomba Class Meeting':
                     - *Backcourt violation:* Membawa bola melewati garis tengah lapangan ke arah belakang tanpa mengoper bola.
                 """)
         
-    if selected_lomba == "Bola Beracun":
-        st.header('4. Bola Beracun')
+    if selected_lomba == "Dodgeball":
+        st.header('4. Dodgeball')
         image=Image.open('bolaberacun.png')
         st.image(image, use_column_width=True)
-        st.subheader('**Pengertian Permainan Bola Beracun**')
+        st.subheader('**Pengertian Permainan Dodgeball**')
         st.write("""
-                **Bola beracun** merupakan permainan yang melibatkan dua tim, yaitu tim pelempar dan tim mangsa.
+                **Dodgeball** merupakan permainan yang melibatkan dua tim, yaitu tim pelempar dan tim mangsa.
                 Tim mangsa berada di dalam lingkaran, sementara tim pelempar berada di luar lingkaran. Tujuan tim pelempar adalah melempar bola ke anggota tim mangsa untuk mengeluarkan mereka dari permainan.
                 Sebaliknya, tim mangsa berusaha menghindari lemparan bola dan menjaga agar semua anggota tim tetap berada di dalam lingkaran.
                 """)
@@ -201,13 +201,13 @@ if selected=='Lomba Class Meeting':
                     - Jika semua anggota satu tim keluar: Tim yang berhasil melumpuhkan semua lawan terlebih dahulu dinyatakan sebagai pemenang.
                 """)
         
-    if selected_lomba == "Volly Sarung":
-        st.header('5. Volly Sarung')
+    if selected_lomba == "Bomb Ballon":
+        st.header('5. Bomb Ballon')
         image=Image.open('voli.png')
         st.image(image, use_column_width=True)
-        st.subheader('**Pengertian Permainan Volly Sarung**')
+        st.subheader('**Pengertian Permainan Bomb Ballon**')
         st.write("""
-                **Lomba Volly Sarung** adalah yang mirip dengan voli biasa, namun menggunakan sarung sebagai alat untuk melempar balon air yang berisi air.
+                **Lomba Bomb Ballon** adalah yang mirip dengan voli biasa, namun menggunakan sarung sebagai alat untuk melempar balon air yang berisi air.
                 Setiap tim terdiri dari 4 orang yang bertugas memegang sudut sarung dan secara bersama-sama melempar balon air ke area lawan.
                 """)
         st.subheader('**Peraturan Permainan:**')
@@ -221,7 +221,7 @@ if selected=='Lomba Class Meeting':
                 6. **Pemenang:** Tim dengan poin terbanyak di akhir permainan dinyatakan sebagai pemenang.
                 """)
         
-        st.write('[**Contoh Video Permainan Volly Sarung**](https://www.instagram.com/reel/C71Oh-CNZFy/)')
+        st.write('[**Contoh Video Permainan Bomb Ballon**](https://www.instagram.com/reel/C71Oh-CNZFy/)')
 
     if selected_lomba == "Blind Bottle":
         st.header('6. Blind Bottle')
@@ -274,9 +274,10 @@ if selected=='Leaderboard':
 
 #LEADERBOARD IKHWAN
     data = {
-    'Kelas': [],
-    'Winner': [],
-    'Runner Up': []
+    'Kelas': ['Abu Bakr','Madinah','Khaibar','Bukhori','Abu Hanifah'],
+    'Winner': [4,3,2,2,1],
+    'Runner Up': [4,2,1,1,2],
+    'PTS':[20,18,15,10,8]
     }
     leaderboard_df = pd.DataFrame(data)
 
@@ -287,6 +288,7 @@ if selected=='Leaderboard':
         styles = pd.DataFrame('', index=df.index, columns=df.columns,)  # Create an empty DataFrame for styles
         styles['Winner'] = 'background-color: rgba(255, 215, 0, 0.5)'  # Gold with 50% transparency
         styles['Runner Up'] = 'background-color: rgba(192, 192, 192, 0.5)'  # Silver with 50% transparency
+        styles['PTS'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Silver with 50% transparency
         return styles
 
     # Check if the DataFrame is not empty
@@ -311,7 +313,8 @@ if selected=='Leaderboard':
     data = {
     'Kelas': [],
     'Winner': [],
-    'Runner Up': []
+    'Runner Up': [],
+    'PTS':[]
     }
 
     # Dataframe
@@ -324,6 +327,7 @@ if selected=='Leaderboard':
         styles = pd.DataFrame('', index=df.index, columns=df.columns)  # Create an empty DataFrame for styles
         styles['Winner'] = 'background-color: rgba(255, 215, 0, 0.5)'  # Gold with 50% transparency
         styles['Runner Up'] = 'background-color: rgba(192, 192, 192, 0.5)'  # Silver with 50% transparency
+        styles['PTS'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Silver with 50% transparency
         return styles
 
     # Check if the DataFrame is not empty
@@ -404,31 +408,31 @@ if selected=='Pertandingan Ikhwan':
     item_to_sheets = {
         'Estafet': {
             'sheets': ['(Ikhwan) Estafet A','(Ikhwan) Estafet B','(Ikhwan) Estafet C'],
-            'link': 'https://docs.google.com/spreadsheets/d/14jFBB5hRJjN9F649mA-EMlpgRJJyY8bFndcDJ5h3Aq4/edit?usp=drive_link'
+            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=1537422788#gid=1537422788'
         },
         'Futsal': {
             'sheets': ['(Ikhwan) Futsal A','(Ikhwan) Futsal B','(Ikhwan) Futsal C'],
-            'link': 'https://docs.google.com/spreadsheets/d/14CGLvYdIMOIQy6SY4fMyUjppz7O8HHIin2X_CvHpV4I/edit?usp=drive_link'
+            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=1755442948#gid=1755442948'
         },
         'Basket': {
             'sheets': ['(Ikhwan) Basket B','(Ikhwan) Basket C'],
-            'link': 'https://docs.google.com/spreadsheets/d/1L2s6VAZHFIvmWncYNPL-JYopPTiCZBmd3q__LkivXik/edit?usp=drive_link'
+            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=489013159#gid=489013159'
         },
-        'Volly Sarung': {
-            'sheets': ['(Ikhwan) Volly Sarung A','(Ikhwan) Volly Sarung B','(Ikhwan) Volly Sarung C'],
-            'link': 'https://docs.google.com/spreadsheets/d/1D75FPSGwDcW60wl9P4xo6iAPDqZiHjJxG01L3LqXYCI/edit?usp=drive_link'
+        'Bomb Ballon': {
+            'sheets': ['(Ikhwan) Bomb Ballon A','(Ikhwan) Bomb Ballon B','(Ikhwan) Bomb Ballon C'],
+            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=1958140621#gid=1958140621'
         },
-        'Bola Beracun': {
-            'sheets': ['(Ikhwan) Bola Beracun A','(Ikhwan) Bola Beracun B','(Ikhwan) Bola Beracun C'],
-            'link': 'https://docs.google.com/spreadsheets/d/1OVx6YIqnKMKN0JNZrDcnZKF9DQoJN1rxplyZUNQ-pEM/edit?usp=drive_link'
+        'Dodgeball': {
+            'sheets': ['(Ikhwan) Dodgeball A','(Ikhwan) Dodgeball B','(Ikhwan) Dodgeball C'],
+            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=1948013373#gid=1948013373'
         },
         'Blind Bottle': {
             'sheets': ['(Ikhwan) Blind Bottle A','(Ikhwan) Blind Bottle B','(Ikhwan) Blind Bottle C'],
-            'link': 'https://docs.google.com/spreadsheets/d/1EzQDdcBBEJ3NE38g1PlGU_Xy1PDchzLB3ZDeItnGFxM/edit?usp=drive_link'
+            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=1425818757#gid=1425818757'
         },
         'Chopstick Ball': {
             'sheets': ['(Ikhwan) Chopstick Ball A'],
-            'link': 'https://docs.google.com/spreadsheets/d/1sKSKhvUaPEJXJlcJPkWS5YoNChtz_ebnUALWrJp9JA8/edit?usp=drive_link'
+            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=755399601#gid=755399601'
         }
     }
 
@@ -446,12 +450,12 @@ if selected=='Pertandingan Ikhwan':
         related_info = item_to_sheets[selected_item]
         related_sheets = related_info['sheets']
         st.header(f"*Upcoming Match!*")
-        st.write("""Temukan informasi lengkap mengenai pertandingan berikutnya beserta jadwal waktunya dengan melihat bagan pertandingan di bawah ini!""")
+        st.write("""Temukan informasi lengkap mengenai pertandingan berikutnya beserta jadwal waktunya dengan melihat bagan pertandingan di bawah ini.""")
         # Link for more information
         st.markdown(f"[Lihat Bagan Pertandingan {selected_item}]({related_info['link']})")
         
         # Read and display DataFrames in a single column
-        st.header(f"Papan Skor Lomba {selected_item}")
+        st.header(f"Klasemen Lomba {selected_item}")
         for sheet in related_sheets:
             df = read_sheet(sheet)
             if not df.empty:  # Only display if DataFrame is not empty
@@ -485,12 +489,12 @@ if selected=='Pertandingan Akhwat':
             'sheets': ['(Akhwat) Basket B','(Akhwat) Basket C'],
             'link': 'https://docs.google.com/spreadsheets/d/11LAslC-7dGnC5i-rvN6-gbqZJ9dtaOWkMtg1wC4ezqs/edit?gid=488637149#gid=488637149'
         },
-        'Volly Sarung': {
-            'sheets': ['(Akhwat) Volly Sarung A','(Akhwat) Volly Sarung B','(Akhwat) Volly Sarung C'],
+        'Bomb Ballon': {
+            'sheets': ['(Akhwat) Bomb Ballon A','(Akhwat) Bomb Ballon B','(Akhwat) Bomb Ballon C'],
             'link': 'https://docs.google.com/spreadsheets/d/1rFo1NZCYrW_7z1_MwHIblQ-CmEeOhk2sys-7yVF_RbY/edit?gid=913776429#gid=913776429'
         },
-        'Bola Beracun': {
-            'sheets': ['(Akhwat) Bola Beracun A','(Akhwat) Bola Beracun B','(Akhwat) Bola Beracun C'],
+        'Dodgeball': {
+            'sheets': ['(Akhwat) Dodgeball A','(Akhwat) Dodgeball B','(Akhwat) Dodgeball C'],
             'link': 'https://docs.google.com/spreadsheets/d/1QEDnT_GEDYMznW0HL84jzyha70B_y51TCqk6qdsOuVw/edit?gid=1154821625#gid=1154821625'
         },
         'Blind Bottle': {
@@ -517,12 +521,12 @@ if selected=='Pertandingan Akhwat':
         related_info = item_to_sheets[selected_item]
         related_sheets = related_info['sheets']
         st.header(f"*Upcoming Match!*")
-        st.write("""Temukan informasi lengkap mengenai pertandingan berikutnya beserta jadwal waktunya dengan melihat bagan pertandingan di bawah ini!""")
+        st.write("""Temukan informasi lengkap mengenai pertandingan berikutnya beserta jadwal waktunya dengan melihat bagan pertandingan di bawah ini.""")
         # Link for more information
         st.markdown(f"[Lihat Bagan Pertandingan {selected_item}]({related_info['link']})")
         
         # Read and display DataFrames in a single column
-        st.header(f"Papan Skor Lomba {selected_item}")
+        st.header(f"Klasemen Lomba {selected_item}")
         for sheet in related_sheets:
             df = read_sheet(sheet)
             if not df.empty:  # Only display if DataFrame is not empty
