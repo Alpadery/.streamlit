@@ -19,7 +19,7 @@ with st.sidebar:
 sidebar_logo=('Logo Sekolah Islam Abu Dzar-01.png')
 main_body_logo=('Icon Logo Yayasan-01 (1).png')
 image_path = "LOGO CM.png"  # Replace with your image path or URL
-st.sidebar.image(image_path, use_container_width=True)
+st.sidebar.image(image_path, use_column_width=True)
 
 st.logo(sidebar_logo,
         icon_image='Icon Logo Yayasan-01 (1).png',
@@ -58,7 +58,7 @@ if selected=='Class Meeting 2024':
             st.header('C.  Jadwal Kegiatan Class Meeting 2024', divider='grey')
             image=Image.open('Jadwal CM 24.png')
             st.image(image,
-                    use_container_width=True)
+                    use_column_width=True)
         
         
         st.header('D. Lokasi Lomba', divider='grey')
@@ -72,7 +72,7 @@ if selected=='Class Meeting 2024':
 
         with col2:
             image=Image.open('lapangan_atas.png')
-            st.image(image, use_container_width=True)
+            st.image(image, use_column_width=True)
 
         st.write('---')
         col1, col2 = st.columns((1,1))
@@ -84,7 +84,7 @@ if selected=='Class Meeting 2024':
             """)
         with col2:
             image=Image.open('lapangan_bawah.png')
-            st.image(image, use_container_width=True)
+            st.image(image, use_column_width=True)
 
         st.write('---')
         col1, col2 = st.columns((1,1))
@@ -98,7 +98,7 @@ if selected=='Class Meeting 2024':
             """)
         with col2:
             image=Image.open('depan_perpus.png')
-            st.image(image, use_container_width=True)
+            st.image(image, use_column_width=True)
 
 #TTG LOMBA CM
 if selected=='Lomba Class Meeting':
@@ -133,7 +133,7 @@ if selected=='Lomba Class Meeting':
     if selected_lomba == "Futsal":
         st.header('2. Futsal')
         image=Image.open('futsal.png')
-        st.image(image, use_container_width=True)
+        st.image(image, use_column_width=True)
         st.subheader('**Pengertian Olahraga Futsal**')
         st.write("""
                 **Futsal** adalah olahraga tim yang merupakan variasi dari sepak bola, dimainkan di lapangan kecil dan biasanya di dalam ruangan.
@@ -155,7 +155,7 @@ if selected=='Lomba Class Meeting':
     if selected_lomba == "Basket":
         st.header('3. Basket')
         image=Image.open('basket.png')
-        st.image(image, use_container_width=True)
+        st.image(image, use_column_width=True)
         st.subheader('**Pengertian Olahraga Basket**')
         st.write("""
                 **Basket** adalah olahraga tim yang melibatkan dua tim dengan lima pemain di lapangan masing-masing.
@@ -179,7 +179,7 @@ if selected=='Lomba Class Meeting':
     if selected_lomba == "Dodgeball":
         st.header('4. Dodgeball')
         image=Image.open('bolaberacun.png')
-        st.image(image, use_container_width=True)
+        st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Dodgeball**')
         st.write("""
                 **Dodgeball** merupakan permainan yang melibatkan dua tim, yaitu tim pelempar dan tim mangsa.
@@ -204,7 +204,7 @@ if selected=='Lomba Class Meeting':
     if selected_lomba == "Bomb Ballon":
         st.header('5. Bomb Ballon')
         image=Image.open('voli.png')
-        st.image(image, use_container_width=True)
+        st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Bomb Ballon**')
         st.write("""
                 **Lomba Bomb Ballon** adalah yang mirip dengan voli biasa, namun menggunakan sarung sebagai alat untuk melempar balon air yang berisi air.
@@ -226,7 +226,7 @@ if selected=='Lomba Class Meeting':
     if selected_lomba == "Blind Bottle":
         st.header('6. Blind Bottle')
         image=Image.open('blindbottle.png')
-        st.image(image, use_container_width=True)
+        st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Blind Bottle**')
         st.write("""
                 **Lomba *Blind Bottle*** adalah permainan yang menguji kerja sama tim, komunikasi, dan kepercayaan antar anggota tim.
@@ -249,7 +249,7 @@ if selected=='Lomba Class Meeting':
     if selected_lomba == "Chopstick Ball":
         st.header('7. Chopstick Ball')
         image=Image.open('chopstickball.png')
-        st.image(image, use_container_width=True)
+        st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Chopstick Ball**')
         st.write("""
                 **Lomba *chopstick ball*** adalah Permainan yang menguji ketangkasan dan kecepatan peserta dalam mengeluarkan bola dari suatu wadah atau area menggunakan sumpit.
@@ -274,10 +274,10 @@ if selected=='Leaderboard':
 
 #LEADERBOARD IKHWAN
     data = {
-    'Kelas': [],
-    'Winner': [],
-    'Runner Up': [],
-    'PTS':[]
+    'Kelas': ['Abu Bakr','Madinah','Khaibar','Bukhori','Abu Hanifah'],
+    'Winner': [4,3,2,2,1],
+    'Runner Up': [4,2,1,1,2],
+    'PTS':[20,18,15,10,8]
     }
     leaderboard_df = pd.DataFrame(data)
 
@@ -353,7 +353,7 @@ if selected=='Leaderboard':
     juarafase_df.sort_values(by=['juara fase'],ascending=False, inplace=True)
     if not juarafase_df.empty:
             image=Image.open('juarafase_i.png')
-            st.image(image, use_container_width=True)
+            st.image(image, use_column_width=True)
     else:
             st.write('*"Competition is not about winning or losing, but about learning and growth"*  **-Brian Herbert**')
             
@@ -370,7 +370,7 @@ if selected=='Leaderboard':
     juarafase_df.sort_values(by=['juara fase'],ascending=False, inplace=True)
     if not juarafase_df.empty:
             image=Image.open('juarafase_i.png')
-            st.image(image, use_container_width=True)
+            st.image(image, use_column_width=True)
     else:
             st.write('*"The lessons of competition are lessons for life"*  **-Robert Kennedy**')
 
@@ -378,14 +378,14 @@ if selected=='Leaderboard':
     st.header(' Finalis Ikhwan Class Meeting 2024')
 
     image=Image.open('finalis_i.png')
-    st.image(image, use_container_width=True)
+    st.image(image, use_column_width=True)
         
     st.write("")
         
     st.header('Finalis Akhwat Class Meeting 2024')
 
     image=Image.open('finalis_i.png')
-    st.image(image, use_container_width=True)
+    st.image(image, use_column_width=True)
     
 if selected=='Pertandingan Ikhwan':
    
