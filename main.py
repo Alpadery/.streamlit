@@ -401,31 +401,31 @@ if selected=='Pertandingan Ikhwan':
     item_to_sheets = {
         'Estafet': {
             'sheets': ['(Ikhwan) Estafet A','(Ikhwan) Estafet B','(Ikhwan) Estafet C'],
-            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=1537422788#gid=1537422788'
+            'link': 'https://docs.google.com/spreadsheets/d/14jFBB5hRJjN9F649mA-EMlpgRJJyY8bFndcDJ5h3Aq4/edit?gid=480333465#gid=480333465'
         },
         'Futsal': {
             'sheets': ['(Ikhwan) Futsal A','(Ikhwan) Futsal B','(Ikhwan) Futsal C'],
-            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=1755442948#gid=1755442948'
+            'link': 'https://docs.google.com/spreadsheets/d/14CGLvYdIMOIQy6SY4fMyUjppz7O8HHIin2X_CvHpV4I/edit?gid=462673749#gid=462673749'
         },
         'Basket': {
             'sheets': ['(Ikhwan) Basket B','(Ikhwan) Basket C'],
-            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=489013159#gid=489013159'
+            'link': 'https://docs.google.com/spreadsheets/d/1L2s6VAZHFIvmWncYNPL-JYopPTiCZBmd3q__LkivXik/edit?gid=1079463361#gid=1079463361'
         },
         'Bomb Ballon': {
             'sheets': ['(Ikhwan) Bomb Ballon A','(Ikhwan) Bomb Ballon B','(Ikhwan) Bomb Ballon C'],
-            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=1958140621#gid=1958140621'
+            'link': 'https://docs.google.com/spreadsheets/d/1D75FPSGwDcW60wl9P4xo6iAPDqZiHjJxG01L3LqXYCI/edit?gid=179922245#gid=179922245'
         },
         'Dodgeball': {
             'sheets': ['(Ikhwan) Dodgeball A','(Ikhwan) Dodgeball B','(Ikhwan) Dodgeball C'],
-            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=1948013373#gid=1948013373'
+            'link': 'https://docs.google.com/spreadsheets/d/1OVx6YIqnKMKN0JNZrDcnZKF9DQoJN1rxplyZUNQ-pEM/edit?gid=22040083#gid=22040083'
         },
         'Blind Bottle': {
             'sheets': ['(Ikhwan) Blind Bottle A','(Ikhwan) Blind Bottle B','(Ikhwan) Blind Bottle C'],
-            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=1425818757#gid=1425818757'
+            'link': 'https://docs.google.com/spreadsheets/d/1EzQDdcBBEJ3NE38g1PlGU_Xy1PDchzLB3ZDeItnGFxM/edit?gid=2055359865#gid=2055359865'
         },
         'Chopstick Ball': {
             'sheets': ['(Ikhwan) Chopstick Ball A'],
-            'link': 'https://docs.google.com/spreadsheets/d/1iZ0vypP8PunTRQEcLuPwGnboHF_D23M5BvK3C1sADic/edit?gid=755399601#gid=755399601'
+            'link': 'https://docs.google.com/spreadsheets/d/1sKSKhvUaPEJXJlcJPkWS5YoNChtz_ebnUALWrJp9JA8/edit?gid=53591745#gid=53591745'
         }
     }
 
