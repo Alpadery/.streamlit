@@ -495,7 +495,7 @@ if selected=='Pertandingan Akhwat':
         },
         'Chopstick Ball': {
             'sheets': ['(Akhwat) Chopstick Ball A'],
-            'link': 'hhttps://docs.google.com/spreadsheets/d/1WdHYsVbMtU50bHWzQ3XFKeSnQzYRYI0C7kO_Dnd6qf4/edit?gid=1179081002#gid=1179081002'
+            'link': 'https://docs.google.com/spreadsheets/d/1WdHYsVbMtU50bHWzQ3XFKeSnQzYRYI0C7kO_Dnd6qf4/edit?gid=1179081002#gid=1179081002'
         }
     }
 
