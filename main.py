@@ -274,10 +274,10 @@ if selected=='Leaderboard':
 
 #LEADERBOARD IKHWAN
     data = {
-    'Kelas': ['Abu Bakr','Madinah','Khaibar','Bukhori','Abu Hanifah'],
-    'Winner': [4,3,2,2,1],
-    'Runner Up': [4,2,1,1,2],
-    'PTS':[20,18,15,10,8]
+    'Kelas': [],
+    'Winner': [],
+    'Runner Up': [],
+    'PTS':[]
     }
     leaderboard_df = pd.DataFrame(data)
 
