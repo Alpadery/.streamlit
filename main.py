@@ -60,8 +60,14 @@ if selected=='Class Meeting 2024':
             st.image(image,
                     use_column_width=True)
         
+        with col1:
+            st.header('D. Lomba Class Meeting 2024', divider='grey')
+            st.write('Pada kegiatan Class Meeting 2024 terdapat 8 jenis lomba yang akan diikuti oleh siswa berdasarkan kelas dan fasenya masing-masing. Berikut ini adalah daftar lomba dan pesertanya.')
+            image=Image.open('lomba CM 24.png')
+            st.image(image,
+                    use_column_width=True)        
         
-        st.header('D. Lokasi Lomba', divider='grey')
+        st.header('E. Lokasi Lomba', divider='grey')
         col1, col2 = st.columns((1,1))
         with col1:
             st.subheader('**Lapangan Atas**')
