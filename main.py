@@ -66,8 +66,15 @@ if selected=='Class Meeting 2024':
             image=Image.open('lomba CM 24.png')
             st.image(image,
                     use_column_width=True)        
+        with col1:
+            st.header('E. Teacher Corner', divider='grey')
+            st.write('**✨ Kuliner Seru hanya di Class Meeting 2024! ✨**')
+            st.write('Ayo, nikmati hidangan lezat dan menyegarkan di Teacher Corner yang hadir khusus untuk menemani semangat lomba kalian! Cicipi Sosis Bakar yang gurih, Makaroni Telur yang kenyal, Es Cokelat yang manis, Es Krim yang menyegarkan, dan Lemon Tea yang segar banget!')
+            image=Image.open('teachercorner.png')
+            st.image(image,
+                    use_column_width=True)        
         
-        st.header('E. Lokasi Lomba', divider='grey')
+        st.header('F. Lokasi Lomba', divider='grey')
         col1, col2 = st.columns((1,1))
         with col1:
             st.subheader('**Lapangan Atas**')
@@ -315,10 +322,10 @@ if selected=='Leaderboard':
 
 #LEADERBOARD IKHWAN
     data = {
-    'Kelas': [],
-    'Winner': [],
-    'Runner Up': [],
-    'PTS':[]
+    'Kelas': ['Abu Bakr','Madinah','Khaibar','Bukhori','Abu Hanifah'],
+    'Winner': [4,3,2,2,1],
+    'Runner Up': [4,2,1,1,2],
+    'PTS':[20,18,15,10,8]
     }
     leaderboard_df = pd.DataFrame(data)
 
