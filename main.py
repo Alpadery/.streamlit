@@ -70,6 +70,7 @@ if selected=='Class Meeting 2024':
             st.header('E. Teacher Corner', divider='grey')
             st.write('**✨ Kuliner Seru hanya di Class Meeting 2024! ✨**')
             st.write('Ayo, nikmati hidangan lezat dan menyegarkan di Teacher Corner yang hadir khusus untuk menemani semangat lomba kalian! Cicipi Sosis Bakar yang gurih, Makaroni Telur yang kenyal, Es Cokelat yang manis, Es Krim yang menyegarkan, dan Lemon Tea yang segar banget!')
+            st.write('Hanya ada di Class Meeting 2024!')
             image=Image.open('teachercorner.png')
             st.image(image,
                     use_column_width=True)        
