@@ -34,38 +34,32 @@ if selected=='Class Meeting 2024':
             st.header('A.  Class Meeting Abu Dzar', divider='grey')
             st.write(
                 """
-                Class Meeting merupakan kegiatan yang berlangsung setelah kegiatan Sumatif Akhir Semester dilaksanakan. Kegiatan ini merupakan sebuah *refreshment* untuk peserta didik setelah mengikuti SAS.""")
+                Class Meeting adalah kegiatan yang diadakan setelah Sumatif Akhir Semester (SAS) untuk memberi kesempatan bagi peserta didik bersenang-senang dan melepas ketegangan pasca-ujian. Kegiatan ini bertujuan mempererat hubungan antar peserta didik dan memupuk semangat baru menghadapi tantangan akademik di semester berikutnya.""")
         
-        col1, col2 = st.columns((2.5,1))
-        with col1:
-            st.header('B.  Tujuan dan Manfaat Class Meeting', divider='grey')
-            st.write(
-                """
-                1. Ajang hiburan dan relaksasi pasca ujian.
-                2. Mengembangkan bakat dan minat.
-                3. Mempererat hubungan antar siswa.
-                4. Mencari bibit prestasi ekstrakulikuler.
-                5. Melatih mental dan daya saing.
-                6. Memberikan kesempatan berekspresi.
-                """)
-            
             st.write('**Berikut video dokumentasi kegiatan Class Meeting 2023**')
             st.write('[Click Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
-
         
         col1, col2 = st.columns((2.1,1))
         with col1:
-            st.header('C.  Jadwal Kegiatan Class Meeting 2024', divider='grey')
+            st.header('B.  Jadwal Kegiatan Class Meeting 2024', divider='grey')
             image=Image.open('Jadwal CM 24.png')
             st.image(image,
                     use_column_width=True)
         
         with col1:
-            st.header('D. Lomba Class Meeting 2024', divider='grey')
+            st.header('C. Lomba Class Meeting 2024', divider='grey')
             st.write('Pada kegiatan Class Meeting 2024 terdapat 8 jenis lomba yang akan diikuti oleh siswa berdasarkan kelas dan fasenya masing-masing. Berikut ini adalah daftar lomba dan pesertanya.')
             image=Image.open('lomba CM 24.png')
             st.image(image,
                     use_column_width=True)        
+        with col1:
+            st.header('D. Juara Umum Class Meeting 2024', divider='grey')
+            st.write('Dalam rangka memeriahkan *Class Meeting 2024*, akan diadakan perlombaan untuk memperebutkan gelar **Juara Umum Kelas Ikhwan** dan **Juara Umum Kelas Akhwat**. Kompetisi ini akan menguji kekompakan dan keunggulan setiap kelas dalam berbagai cabang lomba. Ayo, tunjukkan prestasi terbaik dan raih kemenangan, dan jadilah bagian dari sejarah *Class Meeting* yang penuh kebanggaan!.')
+            st.subheader('**Medali Juara Umum Class Meeting 2024**')
+            image=Image.open('juaraumum.png')
+            st.image(image,
+                    use_column_width=True)        
+
         with col1:
             st.header('E. Teacher Corner', divider='grey')
             st.write('**✨ Kuliner Seru hanya di Class Meeting 2024! ✨**')
@@ -127,8 +121,8 @@ if selected=='Lomba Class Meeting':
     #LOMBA ESTAFET
     if selected_lomba == "Estafet":
         st.header('1. Estafet')
-        
-        
+        image=Image.open('.png')
+        st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Estafet**')
         st.write("""
                 Lomba estafet adalah kompetisi tim di mana peserta menyelesaikan serangkaian rintangan/pos secara bergantian, dengan tim yang tercepat menyelesaikan semua pos sebagai pemenang.
@@ -229,8 +223,9 @@ if selected=='Lomba Class Meeting':
         
     if selected_lomba == "Bomb Ballon":
         st.header('5. Bomb Ballon')
-        image=Image.open('voli.png')
-        st.image(image, use_column_width=True)
+        video_file = open('bombballon.mp4','rb')
+        video_bytes = video_file.read()
+        st.video(video_bytes)
         st.subheader('**Pengertian Permainan Bomb Ballon**')
         st.write("""
                 **Lomba Bomb Ballon** ialah sebuah olahraga tim dimana 4 pemain memegang ujung sisi-sisi kain untuk melemparkan balon berisi air ke tim lawan.
