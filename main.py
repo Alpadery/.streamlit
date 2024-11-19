@@ -412,7 +412,7 @@ if selected=='Leaderboard':
     juarafase_df = pd.DataFrame(juara)
     juarafase_df.sort_values(by=['juara fase'],ascending=False, inplace=True)
     if not juarafase_df.empty:
-            image=Image.open('juarafase_i.png')
+            image=Image.open('juarafase_a.png')
             st.image(image, use_column_width=True)
     else:
             st.write('*"The lessons of competition are lessons for life"*  **-Robert Kennedy**')
