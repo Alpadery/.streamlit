@@ -427,7 +427,7 @@ if selected=='Leaderboard':
         
     st.header('Finalis Akhwat Class Meeting 2024')
 
-    image=Image.open('finalis_i.png')
+    image=Image.open('finalis_a.png')
     st.image(image, use_column_width=True)
     
 if selected=='Pertandingan Ikhwan':
