@@ -107,6 +107,19 @@ if selected=='Class Meeting 2024':
             image=Image.open('depan_perpus.png')
             st.image(image, use_column_width=True)
 
+            st.write('---')
+        col1, col2 = st.columns((1,1))
+        with col1:
+            st.subheader('**Basement**')
+            
+            st.write(
+            """
+            Lokasi basement akan dimanfaatkan sebagai tempat pelaksanaan lomba *Dodgeball* yang diselenggarakan khusus untuk kelas ikhwan.
+            """)
+        with col2:
+            image=Image.open('basement.png')
+            st.image(image, use_column_width=True)
+
 #TTG LOMBA CM
 if selected=='Lomba Class Meeting':
 
