@@ -54,7 +54,7 @@ if selected=='Class Meeting 2024':
                     use_column_width=True)        
         with col1:
             st.header('D. Juara Umum Class Meeting 2024', divider='grey')
-            st.write('Dalam rangka memeriahkan *Class Meeting 2024*, akan diadakan perlombaan untuk memperebutkan gelar **Juara Umum Kelas Ikhwan** dan **Juara Umum Kelas Akhwat**. Kompetisi ini akan menguji kekompakan dan keunggulan setiap kelas dalam berbagai cabang lomba. Ayo, tunjukkan prestasi terbaik dan raih kemenangan, dan jadilah bagian dari sejarah *Class Meeting* yang penuh kebanggaan!.')
+            st.write('Dalam rangka memeriahkan *Class Meeting 2024*, akan diadakan perlombaan untuk memperebutkan gelar **Juara Umum Kelas Ikhwan** dan **Juara Umum Kelas Akhwat**. Ayo, tunjukkan prestasi terbaik dan raih kemenangan, dan jadilah bagian dari sejarah *Class Meeting* yang penuh kebanggaan!.')
             st.subheader('**Medali Juara Umum Class Meeting 2024**')
             image=Image.open('juaraumum.png')
             st.image(image,
@@ -121,7 +121,7 @@ if selected=='Lomba Class Meeting':
     #LOMBA ESTAFET
     if selected_lomba == "Estafet":
         st.header('1. Estafet')
-        image=Image.open('.png')
+        image=Image.open()
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Estafet**')
         st.write("""
