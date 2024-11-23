@@ -412,6 +412,7 @@ if selected=='Leaderboard':
             st.image(image, use_column_width=True)
     else:
             st.write('*"Competition is not about winning or losing, but about learning and growth"*  **-Brian Herbert**')
+            st.write('***will be announced soon**')
             
     st.write("")
 
@@ -429,6 +430,7 @@ if selected=='Leaderboard':
             st.image(image, use_column_width=True)
     else:
             st.write('*"The lessons of competition are lessons for life"*  **-Robert Kennedy**')
+            st.write('***will be announced soon**')
 
     st.write('---')
     st.header(' Finalis Ikhwan Class Meeting 2024')
