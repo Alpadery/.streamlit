@@ -333,7 +333,7 @@ if selected=='Leaderboard':
     'Kelas': [],
     'Winner': [],
     'Runner Up': [],
-    'PTS':[]
+    'Pts':[]
     }
     leaderboard_df = pd.DataFrame(data)
 
@@ -344,11 +344,11 @@ if selected=='Leaderboard':
         styles = pd.DataFrame('', index=df.index, columns=df.columns,)
         styles['Winner'] = 'background-color: rgba(255, 215, 0, 0.5)'
         styles['Runner Up'] = 'background-color: rgba(192, 192, 192, 0.5)'
-        styles['PTS'] = 'background-color: rgba(255, 255, 255, 0.5)'
+        styles['Pts'] = 'background-color: rgba(255, 255, 255, 0.5)'
         return styles
 
     # IF ELSE DATA KOSONG
-    st.header('🎖️ Hasil Perlombaan Ikhwan')
+    st.header('🎖️ Hasil Perlombaan Ikhwan') 
     if not leaderboard_df.empty:
         # DATA STYLE
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
@@ -368,7 +368,7 @@ if selected=='Leaderboard':
     'Kelas': [],
     'Winner': [],
     'Runner Up': [],
-    'PTS':[]
+    'Pts':[]
     }
     leaderboard_df = pd.DataFrame(data)
 
@@ -379,7 +379,7 @@ if selected=='Leaderboard':
         styles = pd.DataFrame('', index=df.index, columns=df.columns)  # Create an empty DataFrame for styles
         styles['Winner'] = 'background-color: rgba(255, 215, 0, 0.5)'  # Gold with 50% transparency
         styles['Runner Up'] = 'background-color: rgba(192, 192, 192, 0.5)'  # Silver with 50% transparency
-        styles['PTS'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Silver with 50% transparency
+        styles['Pts'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Silver with 50% transparency
         return styles
 
     # ELSE IF DATA KOSONG
