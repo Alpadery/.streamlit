@@ -128,12 +128,12 @@ if selected=='Lomba Class Meeting':
 
     selected_lomba = st.selectbox(
     "**Pilih Jenis Lomba**",
-    ("Estafet","Futsal","Basket","Dodgeball","Bomb Ballon","Blind Bottle","Chopstick Ball","Bowling"),
+    ("Bomb Ballon","Blind Bottle","Chopstick Ball","Bowling","Dodgeball","Estafet","Futsal","Basket"),
 )
 
     #LOMBA ESTAFET
     if selected_lomba == "Estafet":
-        st.header('1. Estafet')
+        st.header('Estafet')
         image=Image.open()
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Estafet**')
@@ -162,7 +162,7 @@ if selected=='Lomba Class Meeting':
                 """)
 
     if selected_lomba == "Futsal":
-        st.header('2. Futsal')
+        st.header('Futsal')
         image=Image.open('futsal.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Olahraga Futsal**')
@@ -184,7 +184,7 @@ if selected=='Lomba Class Meeting':
                 """)
 
     if selected_lomba == "Basket":
-        st.header('3. Basket')
+        st.header('Basket')
         image=Image.open('basket.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Olahraga Basket**')
@@ -208,7 +208,7 @@ if selected=='Lomba Class Meeting':
                 """)
         
     if selected_lomba == "Dodgeball":
-        st.header('4. Dodgeball')
+        st.header('Dodgeball')
         image=Image.open('bolaberacun.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Dodgeball**')
@@ -235,7 +235,7 @@ if selected=='Lomba Class Meeting':
                 """)
         
     if selected_lomba == "Bomb Ballon":
-        st.header('5. Bomb Ballon')
+        st.header('Bomb Ballon')
         video_file = open('bombballon.mp4','rb')
         video_bytes = video_file.read()
         st.video(video_bytes)
@@ -260,7 +260,7 @@ if selected=='Lomba Class Meeting':
         st.write('[**Contoh Video Permainan Bomb Ballon**](https://www.instagram.com/reel/C71Oh-CNZFy/)')
 
     if selected_lomba == "Blind Bottle":
-        st.header('6. Blind Bottle')
+        st.header('Blind Bottle')
         image=Image.open('blindbottle.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Blind Bottle**')
@@ -283,7 +283,7 @@ if selected=='Lomba Class Meeting':
                 """)
         
     if selected_lomba == "Chopstick Ball":
-        st.header('7. Chopstick Ball')
+        st.header('Chopstick Ball')
         image=Image.open('chopstickball.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Chopstick Ball**')
@@ -302,7 +302,7 @@ if selected=='Lomba Class Meeting':
                 """)
     
     if selected_lomba == "Bowling":
-        st.header('8. Bowling')
+        st.header('Bowling')
         image=Image.open('bowling.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Bowling**')
