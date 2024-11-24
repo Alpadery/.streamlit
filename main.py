@@ -134,7 +134,7 @@ if selected=='Lomba Class Meeting':
     #LOMBA ESTAFET
     if selected_lomba == "Estafet":
         st.header('Estafet')
-        image=Image.open()
+        image=Image.open('estafet.png')
         st.image(image, use_column_width=True)
         st.subheader('**Pengertian Permainan Estafet**')
         st.write("""
