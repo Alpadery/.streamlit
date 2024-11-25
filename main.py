@@ -25,100 +25,90 @@ st.logo(sidebar_logo,
         icon_image='Icon Logo Yayasan-01 (1).png',
         size='large')
 
-if selected=='Class Meeting 2024':
-    with st.container():
-        st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
-        
-        col1, col2 = st.columns((2,1))
-        with col1:
-            st.header('A.  Class Meeting Abu Dzar', divider='grey')
-            st.write(
-                """
-                Class Meeting adalah kegiatan yang diadakan setelah Sumatif Akhir Semester (SAS) untuk memberi kesempatan bagi peserta didik bersenang-senang dan melepas ketegangan pasca-ujian. Kegiatan ini bertujuan mempererat hubungan antar peserta didik dan memupuk semangat baru menghadapi tantangan akademik di semester berikutnya.""")
-        
-            st.write('**Berikut video dokumentasi kegiatan Class Meeting 2023**')
-            st.write('[Click Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
-        
-        col1, col2 = st.columns((2.1,1))
-        with col1:
-            st.header('B.  Jadwal Kegiatan Class Meeting 2024', divider='grey')
-            image=Image.open('Jadwal CM 24.png')
-            st.image(image,
-                    use_column_width=True)
-        
-        with col1:
-            st.header('C. Lomba Class Meeting 2024', divider='grey')
-            st.write('Pada kegiatan Class Meeting 2024 terdapat 8 jenis lomba yang akan diikuti oleh siswa berdasarkan kelas dan fasenya masing-masing. Berikut ini adalah daftar lomba dan pesertanya.')
-            image=Image.open('lomba CM 24.png')
-            st.image(image,
-                    use_column_width=True)        
-        with col1:
-            st.header('D. Juara Umum Class Meeting 2024', divider='grey')
-            st.write('Dalam rangka memeriahkan *Class Meeting 2024*, akan diadakan perlombaan untuk memperebutkan gelar **Juara Umum Kelas Ikhwan** dan **Juara Umum Kelas Akhwat**. Ayo, tunjukkan prestasi terbaik dan raih kemenangan, dan jadilah bagian dari sejarah *Class Meeting* yang penuh kebanggaan!.')
-            st.subheader('**Medali Juara Umum Class Meeting 2024**')
-            image=Image.open('juaraumum.png')
-            st.image(image,
-                    use_column_width=True)        
+import streamlit as st
+from PIL import Image
 
-        with col1:
-            st.header('E. Teacher Corner', divider='grey')
-            st.write('**✨ Kuliner Seru hanya di Class Meeting 2024! ✨**')
-            st.write('Ayo, nikmati hidangan lezat dan menyegarkan di Teacher Corner yang hadir khusus untuk menemani semangat lomba kalian! Cicipi Sosis Bakar yang gurih, Makaroni Telur yang kenyal, Es Cokelat yang manis, Es Krim yang menyegarkan, dan Lemon Tea yang segar, hanya ada di Class Meeting 2024!')
-            image=Image.open('teachercorner.png')
-            st.image(image,
-                    use_column_width=True)        
-        
-        st.header('F. Lokasi Lomba', divider='grey')
-        col1, col2 = st.columns((1,1))
-        with col1:
-            st.subheader('**Lapangan Atas**')
-            st.write(
-                """
-                Lapangan atas ini direncanakan untuk digunakan dalam tiga jenis lomba dengan jadwal yang terpisah. Pada jadwal pertama lapangan akan digunakan untuk lomba basket, kemudian setelah itu lapangan akan digunakan untuk lomba *Blind Bottle* dan *Chopstick Ball* yang akan diselenggarakan secara bersamaan.
-                """)    
+if selected == 'Class Meeting 2024':
+    st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
 
-        with col2:
-            image=Image.open('lapangan_atas.png')
-            st.image(image, use_column_width=True)
+    # A. Class Meeting Abu Dzar
+    st.header('A. Class Meeting Abu Dzar')
+    st.write(
+        """
+        Class Meeting adalah kegiatan yang diadakan setelah Sumatif Akhir Semester (SAS) untuk memberi kesempatan bagi peserta didik bersenang-senang dan melepas ketegangan pasca-ujian. Kegiatan ini bertujuan mempererat hubungan antar peserta didik dan memupuk semangat baru menghadapi tantangan akademik di semester berikutnya.
+        """
+    )
+    st.write('**Berikut video dokumentasi kegiatan Class Meeting 2023**')
+    st.write('[Click Here >](https://www.youtube.com/live/ibEefMmPfrg?si=q_8Ii5MS1T8Kgdeq)')
 
-        st.write('---')
-        col1, col2 = st.columns((1,1))
-        with col1:
-            st.subheader('**Lapangan Bawah**')
-            st.write(
-            """
-            Lapangan bawah ini akan digunakan untuk tiga jenis lomba, yaitu lomba futsal untuk kelas ikhwan sedangkan lomba bowling dan Dodgeball untuk kelas akhwat. Lomba futsal dijadwalkan pada tanggal 11 & 16 Desember 2024, sedangkan lomba bowling dan Dodgeball untuk kelas akhwat akan dilaksanakan pada tanggal 12 & 17 Desember 2024.
-            """)
-        with col2:
-            image=Image.open('lapangan_bawah.png')
-            st.image(image, use_column_width=True)
+    # B. Jadwal Kegiatan Class Meeting 2024
+    st.header('B. Jadwal Kegiatan Class Meeting 2024')
+    image = Image.open('Jadwal CM 24.png')
+    st.image(image, use_column_width=True)
 
-        st.write('---')
-        col1, col2 = st.columns((1,1))
-        with col1:
-            st.subheader('**Lapangan Depan Perpustakaan**')
-            
-            st.write(
-            """
-            Lapangan ini adalah tempat untuk lomba Bomb Ballon. Lomba ini menggunakan media air sehingga pelaksanaannya perlu berada di daerah yang tidak licin,
-            atau lapangan yang terbuat dari *paving block*.
-            """)
-        with col2:
-            image=Image.open('depan_perpus.png')
-            st.image(image, use_column_width=True)
+    # C. Lomba Class Meeting 2024
+    st.header('C. Lomba Class Meeting 2024')
+    st.write('Pada kegiatan Class Meeting 2024 terdapat 8 jenis lomba yang akan diikuti oleh siswa berdasarkan kelas dan fasenya masing-masing. Berikut ini adalah daftar lomba dan pesertanya.')
+    image = Image.open('lomba CM 24.png')
+    st.image(image, use_column_width=True)
 
-            st.write('---')
-        col1, col2 = st.columns((1,1))
-        with col1:
-            st.subheader('**Basement**')
-            
-            st.write(
-            """
-            Lokasi basement akan dimanfaatkan sebagai tempat pelaksanaan lomba *Dodgeball* yang diselenggarakan khusus untuk kelas ikhwan.
-            """)
-        with col2:
-            image=Image.open('basement.png')
-            st.image(image, use_column_width=True)
+    # D. Juara Umum Class Meeting 2024
+    st.header('D. Juara Umum Class Meeting 2024')
+    st.write('Dalam rangka memeriahkan Class Meeting 2024, akan diadakan perlombaan untuk memperebutkan gelar Juara Umum Kelas Ikhwan dan Juara Umum Kelas Akhwat.')
+    st.subheader('Medali Juara Umum Class Meeting 2024')
+    image = Image.open('juaraumum.png')
+    st.image(image, use_column_width=True)
+
+    # E. Teacher Corner
+    st.header('E. Teacher Corner')
+    st.write('✨ Kuliner Seru hanya di Class Meeting 2024! ✨')
+    st.write('Nikmati hidangan lezat di Teacher Corner: Sosis Bakar, Makaroni Telur, Es Cokelat, Es Krim, dan Lemon Tea.')
+    image = Image.open('teachercorner.png')
+    st.image(image, use_column_width=True)
+
+    # F. Lokasi Lomba
+    st.header('F. Lokasi Lomba')
+
+    # Lapangan Atas
+    st.subheader('Lapangan Atas')
+    st.write(
+        """
+        Lapangan atas ini direncanakan untuk digunakan dalam tiga jenis lomba: Basket, Blind Bottle, dan Chopstick Ball.
+        """
+    )
+    image = Image.open('lapangan_atas.png')
+    st.image(image, use_column_width=True)
+
+    # Lapangan Bawah
+    st.subheader('Lapangan Bawah')
+    st.write(
+        """
+        Lapangan bawah ini digunakan untuk lomba Futsal untuk kelas ikhwan dan lomba Bowling serta Dodgeball untuk kelas akhwat.
+        """
+    )
+    image = Image.open('lapangan_bawah.png')
+    st.image(image, use_column_width=True)
+
+    # Lapangan Depan Perpustakaan
+    st.subheader('Lapangan Depan Perpustakaan')
+    st.write(
+        """
+        Lapangan ini digunakan untuk lomba Bomb Ballon yang memanfaatkan media air.
+        """
+    )
+    image = Image.open('depan_perpus.png')
+    st.image(image, use_column_width=True)
+
+    # Basement
+    st.subheader('Basement')
+    st.write(
+        """
+        Lokasi basement digunakan untuk lomba Dodgeball untuk kelas ikhwan.
+        """
+    )
+    image = Image.open('basement.png')
+    st.image(image, use_column_width=True)
+
 
 #TTG LOMBA CM
 if selected=='Lomba Class Meeting':
@@ -451,7 +441,7 @@ if selected=='Pertandingan Ikhwan':
     st.write("---")
 
     # FILE PATH
-    file_path = "Jadwal Ikhwan CM 24 (1).xlsx"  # Change this to your actual file path
+    file_path = "Jadwal Ikhwan CM 24 (2).xlsx"  # Change this to your actual file path
 
     workbook = load_workbook(filename=file_path, data_only=True)
 
@@ -521,7 +511,7 @@ if selected=='Pertandingan Akhwat':
     st.write("---")
 
     # FILE PATH
-    file_path = "Jadwal Akhwat CM 24.xlsx"  # Change this to your actual file path
+    file_path = "Jadwal Akhwat CM 24 (1).xlsx"  # Change this to your actual file path
 
     workbook = load_workbook(filename=file_path, data_only=True)
 
