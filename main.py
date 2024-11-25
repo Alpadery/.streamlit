@@ -83,7 +83,7 @@ if selected == 'Class Meeting 2024':
     st.subheader('Lapangan Bawah')
     st.write(
         """
-        Lapangan bawah ini digunakan untuk lomba Futsal untuk kelas ikhwan dan lomba Bowling serta Dodgeball untuk kelas akhwat.
+        Lapangan bawah ini digunakan untuk lomba Futsal kelas ikhwan dan lomba Bowling serta Dodgeball untuk kelas akhwat.
         """
     )
     image = Image.open('lapangan_bawah.png')
@@ -93,7 +93,7 @@ if selected == 'Class Meeting 2024':
     st.subheader('Lapangan Depan Perpustakaan')
     st.write(
         """
-        Lapangan ini digunakan untuk lomba Bomb Ballon yang memanfaatkan media air.
+        Lapangan ini digunakan untuk lomba Bomb Ballon yang memanfaatkan media air sehingga memerlukan lapangan dari *paving block*.
         """
     )
     image = Image.open('depan_perpus.png')
@@ -103,7 +103,7 @@ if selected == 'Class Meeting 2024':
     st.subheader('Basement')
     st.write(
         """
-        Lokasi basement digunakan untuk lomba Dodgeball untuk kelas ikhwan.
+        Lokasi basement digunakan untuk lomba Dodgeball kelas ikhwan.
         """
     )
     image = Image.open('basement.png')
