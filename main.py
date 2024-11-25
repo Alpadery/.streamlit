@@ -196,7 +196,7 @@ if selected=='Lomba Class Meeting':
         },
         "Dodgeball":{
             "header":"Dodgeball",
-            "image":"bolaberacun.png",
+            "image":"dodgeball.mp4",
             "description":"""**Dodgeball** permainan tim yang melibatkan dua kelompok yang saling berusaha untuk melempar bola dan menghindari bola yang dilempar oleh lawan.
                     Tujuan utama dari permainan ini adalah untuk "mengeluarkan" pemain lawan dengan cara mengenai mereka menggunakan bola sehingga mereka keluar dari lapangan.""",
             "rules":"""
