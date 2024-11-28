@@ -233,7 +233,7 @@ if selected=='Lomba Class Meeting':
         },
         "Blind Bottle":{
             "header":"Blind Bottle",
-            "image":'blindbottle.png',
+            "image":'blindbottle.mp4',
             "description":"""**Lomba *Blind Bottle*** adalah permainan yang menguji kerja sama tim, komunikasi, dan kepercayaan antar anggota tim.
                     setiap anggota tim diikat dengan tali yang terhubung satu sama lain. Hal ini membuat gerakan setiap anggota tim menjadi saling mempengaruhi dan membutuhkan koordinasi yang lebih tinggi.
                     Satu orang anggota tim ditunjuk sebagai kapten yang akan memberikan instruksi kepada anggota lainnya.
