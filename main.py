@@ -265,7 +265,7 @@ if selected=='Lomba Class Meeting':
         },
         "Bowling":{
             "header":"Bowling",
-            "image":"bowling.png",
+            "image":"bowling.mp4",
             "description":"""**Lomba Bowling** adalah sebuah permainan yang mengadaptasi permainan bowling namun menggunakan botol plastik sebagai pengganti pin bowling. Dalam lomba ini, botol plastik akan diisi pasir atau benda berat lainnya ditempatkan dalam formasi tertentu (seperti segitiga) di ujung jalur permainan, sementara peserta melempar bola untuk mencoba menjatuhkan botol-botol tersebut.
             """,
             "rules":"""
