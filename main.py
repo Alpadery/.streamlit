@@ -251,7 +251,7 @@ if selected=='Lomba Class Meeting':
         },
         "Chopstick Ball":{
             "header":"Chopstick Ball",
-            "image":'chopstickball.png',
+            "image":'chopstick.mp4',
             "description":"""**Lomba *chopstick ball*** adalah Permainan yang menguji ketangkasan dan kecepatan peserta dalam mengeluarkan bola dari suatu wadah atau area menggunakan sumpit.
                     Setiap tim terdiri dari 1 orang kapten dan 5 orang yang dibekali 2 sumpit. Dalam waktu 5 menit, tim harus bekerja sama untuk mengeluarkan sebanyak mungkin bola.
             """,
