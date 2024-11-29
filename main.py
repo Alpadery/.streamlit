@@ -196,7 +196,7 @@ if selected=='Lomba Class Meeting':
         },
         "Dodgeball":{
             "header":"Dodgeball",
-            "image":"dodgeball.mp4",
+            "image":"dodgeballHD.mp4",
             "description":"""**Dodgeball** permainan tim yang melibatkan dua kelompok yang saling berusaha untuk melempar bola dan menghindari bola yang dilempar oleh lawan.
                     Tujuan utama dari permainan ini adalah untuk "mengeluarkan" pemain lawan dengan cara mengenai mereka menggunakan bola sehingga mereka keluar dari lapangan.""",
             "rules":"""
@@ -233,7 +233,7 @@ if selected=='Lomba Class Meeting':
         },
         "Blind Bottle":{
             "header":"Blind Bottle",
-            "image":'blindbottle.mp4',
+            "image":'blindbottleHD.mp4',
             "description":"""**Lomba *Blind Bottle*** adalah permainan yang menguji kerja sama tim, komunikasi, dan kepercayaan antar anggota tim.
                     setiap anggota tim diikat dengan tali yang terhubung satu sama lain. Hal ini membuat gerakan setiap anggota tim menjadi saling mempengaruhi dan membutuhkan koordinasi yang lebih tinggi.
                     Satu orang anggota tim ditunjuk sebagai kapten yang akan memberikan instruksi kepada anggota lainnya.
@@ -251,7 +251,7 @@ if selected=='Lomba Class Meeting':
         },
         "Chopstick Ball":{
             "header":"Chopstick Ball",
-            "image":'chopstick.mp4',
+            "image":'chopstickHD.mp4',
             "description":"""**Lomba *chopstick ball*** adalah Permainan yang menguji ketangkasan dan kecepatan peserta dalam mengeluarkan bola dari suatu wadah atau area menggunakan sumpit.
                     Setiap tim terdiri dari 1 orang kapten dan 5 orang yang dibekali 2 sumpit. Dalam waktu 5 menit, tim harus bekerja sama untuk mengeluarkan sebanyak mungkin bola.
             """,
@@ -265,7 +265,7 @@ if selected=='Lomba Class Meeting':
         },
         "Bowling":{
             "header":"Bowling",
-            "image":"bowling.mp4",
+            "image":"bowlingHD.mp4",
             "description":"""**Lomba Bowling** adalah sebuah permainan yang mengadaptasi permainan bowling namun menggunakan botol plastik sebagai pengganti pin bowling. Dalam lomba ini, botol plastik akan diisi pasir atau benda berat lainnya ditempatkan dalam formasi tertentu (seperti segitiga) di ujung jalur permainan, sementara peserta melempar bola untuk mencoba menjatuhkan botol-botol tersebut.
             """,
             "rules":"""
