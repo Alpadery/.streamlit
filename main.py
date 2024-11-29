@@ -143,22 +143,23 @@ if selected=='Lomba Class Meeting':
             "image": 'estafet.png',
             "description": """**Lomba estafet** adalah kompetisi tim di mana peserta menyelesaikan serangkaian rintangan/pos secara bergantian, dengan tim yang tercepat menyelesaikan semua pos sebagai pemenang.""",
             "rules": """
-                1. Perlombaan terdiri dari lima pos.
-                2. Setiap pos terdiri dari :
-                - Pos 1 (Lompat Belalang)
-                Peserta berada di dalam hulahop, kemudian hulahop yang akan digunakan untuk langkah sealnjutnya diambil dengan posisi badan tetap di dalam hulahopnya.
-                - Pos 2 (Balok Berjalan)
-                Peserta menggunakan balok sebagai pijakan untuk berjalan.
-                - Pos 3 (Balap Karung)
-                Peserta meloncat dengan menggunakan karung.
-                - Pos 4 (Halang Rintang)
-                Peserta merayap untuk ikhwan dan jongkok untuk akhwat melawati rintangan tali.
-                - Pos 5
-                    - Balon Punggung (Fase A): Berjalan dengan balon berada di kedua punggung peserta menuju garis finish
-                    - Sundul Balon (Fase B-C): Peserta berjumlah 3 orang bergantian menyundul balon tanpa jatuh menuju garis finish
-                3. Kelompok yang melewati garis finish pertama dinyatakan sebagai pemenang.
-                4. Pemenang dari setiap level akan dipertandingkan di final per fase. Misal pemenang kelas 1 akan dipertandingkan di final melawan pemenang kelas 2.
-                5. Setiap fase akan diambil satu pemenang dari ikhwan dan satu pemenang dari akhwat.
+                1. Setiap kelas maksimal mengirimkan satu tim yang terdiri dari 6 siswa untuk fase A dan 7 siswa untuk fase B-C.
+                2. Perlombaan terdiri dari lima pos.
+                3. Setiap pos terdiri dari :
+                    - Pos 1 (Lompat Belalang)
+                    Peserta berada di dalam hulahop, kemudian hulahop yang akan digunakan untuk langkah sealnjutnya diambil dengan posisi badan tetap di dalam hulahopnya.
+                    - Pos 2 (Balok Berjalan)
+                    Peserta menggunakan balok sebagai pijakan untuk berjalan.
+                    - Pos 3 (Balap Karung)
+                    Peserta meloncat dengan menggunakan karung.
+                    - Pos 4 (Halang Rintang)
+                    Peserta merayap untuk ikhwan dan jongkok untuk akhwat melawati rintangan tali.
+                    - Pos 5
+                        - Balon Punggung (Fase A): Berjalan dengan balon berada di kedua punggung peserta menuju garis finish
+                        - Sundul Balon (Fase B-C): Peserta berjumlah 3 orang bergantian menyundul balon tanpa jatuh menuju garis finish`
+                4. Kelompok yang melewati garis finish pertama dinyatakan sebagai pemenang.
+                5. Pemenang dari setiap level akan dipertandingkan di final per fase. Misal pemenang kelas 1 akan dipertandingkan di final melawan pemenang kelas 2.
+                6. Setiap fase akan diambil satu pemenang dari ikhwan dan satu pemenang dari akhwat.
             """
         },
         "Futsal": {
