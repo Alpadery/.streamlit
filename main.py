@@ -166,14 +166,11 @@ if selected=='Lomba Class Meeting':
             "image": 'futsal.png',
             "description": """**Futsal** adalah olahraga tim yang merupakan variasi dari sepak bola, dimainkan di lapangan kecil dan biasanya di dalam ruangan. Setiap tim terdiri dari lima pemain, termasuk penjaga gawang. Futsal fokus pada keterampilan teknis, kontrol bola, dan kecepatan.""",
             "rules": """
-                1. Pemain: Setiap tim terdiri dari 5 pemain di lapangan, termasuk kiper.
-                2. Waktu: Pertandingan biasanya berlangsung 2 babak, masing-masing 5 menit.
-                3. Lapangan: Lebih kecil dari lapangan sepak bola, dengan permukaan keras.
-                4. Bola: Lebih kecil dan lebih berat dari bola sepak.
-                5. Pelanggaran: Mirip dengan sepak bola, seperti handball, melanggar, dan sebagainya.
-                6. Tendangan Bebas: Dilakukan jika terjadi pelanggaran di luar kotak penalti.
-                7. Tendangan Penalti: Dilakukan jika terjadi pelanggaran di dalam kotak penalti.
-                8. Pergantian Pemain: Dapat dilakukan kapan saja.
+                1. Jumlah pemain 5 vs 5
+                2. Lama waktu pertandingan 8 menit tanpa pindah lapangan
+                3. Ketika kick off jika peluit sudah ditiup lalu pemain sudah melewati garis tengah maka permainan sudah dianggap aktif
+                4. Setiap Bola clearance dari kiper tidak diperbolehkan melempar lebih dari tengah lapangan.
+                5. Pada saat Kick in bola wajib di atas garis sedangkan kaki boleh di luar atau di dalam lapangan
             """
         },
         "Basket":{
@@ -269,7 +266,9 @@ if selected=='Lomba Class Meeting':
             "description":"""**Lomba Bowling** adalah sebuah permainan yang mengadaptasi permainan bowling namun menggunakan botol plastik sebagai pengganti pin bowling. Dalam lomba ini, botol plastik akan diisi pasir atau benda berat lainnya ditempatkan dalam formasi tertentu (seperti segitiga) di ujung jalur permainan, sementara peserta melempar bola untuk mencoba menjatuhkan botol-botol tersebut.
             """,
             "rules":"""
-                1. Satu lintasan digunakan oleh 1 kelompok yang beranggotakan 5 pemain.
+                1. Satu lintasan digunakan oleh 1 kelompok yang beranggotakan 3-5 pemain.
+                    - **Babak kualifikasi:** 1 tim terdiri dari 3 orang.
+                    - **Babak final:** 1 tim terdiri dari 5 orang.
                 2. Pastikan semua pin (botol) bowling berdiri sempurna sebelum melempar bola.
                 3. Pemain melempar bola dari jarak atau batas yang sudah ditentukan.
                 4. Setiap pemain memiliki 2 kesempatan untuk menjatuhkan semua pin bowling.
