@@ -25,9 +25,6 @@ st.logo(sidebar_logo,
         icon_image='Icon Logo Yayasan-01 (1).png',
         size='large')
 
-import streamlit as st
-from PIL import Image
-
 if selected == 'Class Meeting 2024':
     st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
 
@@ -121,7 +118,7 @@ if selected=='Lomba Class Meeting':
     ("Bomb Ballon","Blind Bottle","Chopstick Ball","Bowling","Dodgeball","Estafet","Futsal","Basket"),
     )
 
-    # Helper function to display content for each lomba
+    # FUNCTION MENAMPILKAN DISPLAY PENJELASAN LOMBA
     def display_lomba_info(header, image_file, description, rules):
         st.header(header)
         if image_file.endswith('.mp4'):
@@ -136,7 +133,7 @@ if selected=='Lomba Class Meeting':
         st.subheader('**Peraturan Permainan:**')
         st.markdown(rules)
 
-    # Data for each lomba
+    # DATA LOMBA
     lomba_data = {
         "Estafet": {
             "header": "Estafet",
@@ -280,7 +277,7 @@ if selected=='Lomba Class Meeting':
         }
     }
 
-    # Display selected lomba
+    # DISPLAY SELECTED LOMBA
     if selected_lomba in lomba_data:
         lomba = lomba_data[selected_lomba]
         display_lomba_info(lomba['header'], lomba['image'], lomba['description'], lomba['rules'])
@@ -536,6 +533,7 @@ if selected=='Pertandingan Akhwat':
         related_sheets = related_info['sheets']
         st.header(f"*Upcoming Match!*")
         st.write("""Temukan informasi lengkap mengenai pertandingan berikutnya beserta jadwal waktunya dengan melihat bagan pertandingan di bawah ini.""")
+        
         # LINK
         st.markdown(f"[Lihat Bagan Pertandingan {selected_item}]({related_info['link']})")
         
