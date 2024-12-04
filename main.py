@@ -135,7 +135,7 @@ if selected=='Lomba Class Meeting':
 
     # DATA LOMBA
     lomba_data = {
-        "Estafet": {
+        "Estafet (Fase ABC)": {
             "header": "Estafet",
             "image": 'estafet.png',
             "description": """**Lomba estafet** adalah kompetisi tim di mana peserta menyelesaikan serangkaian rintangan/pos secara bergantian, dengan tim yang tercepat menyelesaikan semua pos sebagai pemenang.""",
@@ -159,7 +159,7 @@ if selected=='Lomba Class Meeting':
                 6. Setiap fase akan diambil satu pemenang dari ikhwan dan satu pemenang dari akhwat.
             """
         },
-        "Futsal": {
+        "Futsal (Ikhwan Fase ABC)": {
             "header": "Futsal",
             "image": 'futsal.png',
             "description": """**Futsal** adalah olahraga tim yang merupakan variasi dari sepak bola, dimainkan di lapangan kecil dan biasanya di dalam ruangan. Setiap tim terdiri dari lima pemain, termasuk penjaga gawang. Futsal fokus pada keterampilan teknis, kontrol bola, dan kecepatan.""",
@@ -171,7 +171,7 @@ if selected=='Lomba Class Meeting':
                 5. Pada saat Kick in bola wajib di atas garis sedangkan kaki boleh di luar atau di dalam lapangan
             """
         },
-        "Basket":{
+        "asket (Fase BC)":{
             "header":"Basket",
             "image":'basket.png',
             "description":"""**Basket** adalah olahraga tim yang melibatkan dua tim dengan lima pemain di lapangan masing-masing.
@@ -189,7 +189,7 @@ if selected=='Lomba Class Meeting':
                     - *Backcourt violation:* Membawa bola melewati garis tengah lapangan ke arah belakang tanpa mengoper bola.
             """
         },
-        "Dodgeball":{
+        "Dodgeball (Fase ABC)":{
             "header":"Dodgeball",
             "image":"dodgeballHD.mp4",
             "description":"""**Dodgeball** permainan tim yang melibatkan dua kelompok yang saling berusaha untuk melempar bola dan menghindari bola yang dilempar oleh lawan.
@@ -210,7 +210,7 @@ if selected=='Lomba Class Meeting':
                     - Pemenang adalah tim dengan pemain terbanyak atau skor tertinggi.      
             """
         },
-        "Bomb Ballon":{
+        "Bomb Ballon (Fase ABC)":{
             "header":"Bomb Ballon",
             "image":"bombballon.mp4",
             "description":"""**Lomba Bomb Ballon** ialah sebuah olahraga tim dimana 4 pemain memegang ujung sisi-sisi kain untuk melemparkan balon berisi air ke tim lawan.
@@ -226,7 +226,7 @@ if selected=='Lomba Class Meeting':
                 5. **Pemenang:** Tim yang paling banyak menjatuhkan balon air ke area lawan dalam waktu 3 menit menang. Jika 3 menit belum selesai, tim yang pertama kali memasukkan 5 balon air ke tim lawan dinyatakan menang.
             """
         },
-        "Blind Bottle":{
+        "Blind Bottle (Fase ABC)":{
             "header":"Blind Bottle",
             "image":'blindbottleHD.mp4',
             "description":"""**Lomba *Blind Bottle*** adalah permainan yang menguji kerja sama tim, komunikasi, dan kepercayaan antar anggota tim.
@@ -244,7 +244,7 @@ if selected=='Lomba Class Meeting':
                 8. **Pemenang:** Kelompok yang berhasil memasukkan paku ke dalam botol dalam waktu tercepat dinyatakan sebagai pemenang.
             """
         },
-        "Chopstick Ball":{
+        "Chopstick Ball (Fase A)":{
             "header":"Chopstick Ball",
             "image":'chopstickHD.mp4',
             "description":"""**Lomba *chopstick ball*** adalah Permainan yang menguji ketangkasan dan kecepatan peserta dalam mengeluarkan bola dari suatu wadah atau area menggunakan sumpit.
@@ -258,7 +258,7 @@ if selected=='Lomba Class Meeting':
                 5. **Pelanggaran:** Pelanggaran seperti memasukkan tangan atau menggoyang keranjang mengurangi skor 1 poin.
             """
         },
-        "Bowling":{
+        "Bowling (Akhwat Fase ABC)":{
             "header":"Bowling",
             "image":"bowlingHD.mp4",
             "description":"""**Lomba Bowling** adalah sebuah permainan yang mengadaptasi permainan bowling namun menggunakan botol plastik sebagai pengganti pin bowling. Dalam lomba ini, botol plastik akan diisi pasir atau benda berat lainnya ditempatkan dalam formasi tertentu (seperti segitiga) di ujung jalur permainan, sementara peserta melempar bola untuk mencoba menjatuhkan botol-botol tersebut.
