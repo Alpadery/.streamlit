@@ -115,7 +115,7 @@ if selected=='Lomba Class Meeting':
 
     selected_lomba = st.selectbox(
     "**Pilih Jenis Lomba**",
-    ("Bomb Ballon","Blind Bottle","Chopstick Ball","Bowling","Dodgeball","Estafet","Futsal","Basket"),
+    ("Bomb Ballon","Blind Bottle","Chopstick Ball","Bowling (Akhwat)","Dodgeball","Estafet","Futsal (Ikhwan)","Basket"),
     )
 
     # FUNCTION MENAMPILKAN DISPLAY PENJELASAN LOMBA
