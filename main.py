@@ -171,7 +171,7 @@ if selected=='Lomba Class Meeting':
                 5. Pada saat Kick in bola wajib di atas garis sedangkan kaki boleh di luar atau di dalam lapangan
             """
         },
-        "asket (Fase BC)":{
+        "Basket (Fase BC)":{
             "header":"Basket",
             "image":'basket.png',
             "description":"""**Basket** adalah olahraga tim yang melibatkan dua tim dengan lima pemain di lapangan masing-masing.
