@@ -90,7 +90,7 @@ if selected == 'Class Meeting 2024':
     st.subheader('Lapangan Depan Perpustakaan')
     st.write(
         """
-        Lapangan ini digunakan untuk lomba Bomb Ballon yang memanfaatkan media air sehingga memerlukan lapangan dari *paving block*.
+        Lapangan ini digunakan untuk lomba Bomb Balloon yang memanfaatkan media air sehingga memerlukan lapangan dari *paving block*.
         """
     )
     image = Image.open('depan_perpus.png')
@@ -115,7 +115,7 @@ if selected=='Lomba Class Meeting':
 
     selected_lomba = st.selectbox(
     "**Pilih Jenis Lomba**",
-    ("Bomb Ballon (Fase ABC)","Blind Bottle (Fase ABC)","Chopstick Ball (Fase A)","Bowling (Akhwat Fase ABC)","Dodgeball (Fase ABC)","Estafet (Fase ABC)","Futsal (Ikhwan Fase ABC)","Basket (Fase BC)"),
+    ("Bomb Balloon (Fase ABC)","Blind Bottle (Fase ABC)","Chopstick Ball (Fase A)","Bowling (Akhwat Fase ABC)","Dodgeball (Fase ABC)","Estafet (Fase ABC)","Futsal (Ikhwan Fase ABC)","Basket (Fase BC)"),
     )
 
     # FUNCTION MENAMPILKAN DISPLAY PENJELASAN LOMBA
@@ -210,10 +210,10 @@ if selected=='Lomba Class Meeting':
                     - Pemenang adalah tim dengan pemain terbanyak atau skor tertinggi.      
             """
         },
-        "Bomb Ballon (Fase ABC)":{
-            "header":"Bomb Ballon",
+        "Bomb Balloon (Fase ABC)":{
+            "header":"Bomb Balloon",
             "image":"bombballon.mp4",
-            "description":"""**Lomba Bomb Ballon** ialah sebuah olahraga tim dimana 4 pemain memegang ujung sisi-sisi kain untuk melemparkan balon berisi air ke tim lawan.
+            "description":"""**Lomba Bomb Balloon** ialah sebuah olahraga tim dimana 4 pemain memegang ujung sisi-sisi kain untuk melemparkan balon berisi air ke tim lawan.
                     Terdapat dua metode untuk menentukan pemenang: system waktu dan sistem skor.""",
             "rules":"""
                 1. **Tim dan Lapangan:** Setiap tim terdiri dari 4 pemain, bertanding di lapangan persegi panjang (4 x 5 meter) dengan alat permainan berupa kain 4 sisi (1,5 x 1,5 meter) dan balon air.
@@ -430,7 +430,7 @@ if selected=='Pertandingan Ikhwan':
             'sheets': ['(Ikhwan) Basket B','(Ikhwan) Basket C'],
             'link': 'https://docs.google.com/spreadsheets/d/1L2s6VAZHFIvmWncYNPL-JYopPTiCZBmd3q__LkivXik/edit?gid=1079463361#gid=1079463361'
         },
-        'Bomb Ballon': {
+        'Bomb Balloon': {
             'sheets': ['(Ikhwan) Bomb Ballon A','(Ikhwan) Bomb Ballon B','(Ikhwan) Bomb Ballon C'],
             'link': 'https://docs.google.com/spreadsheets/d/1D75FPSGwDcW60wl9P4xo6iAPDqZiHjJxG01L3LqXYCI/edit?gid=179922245#gid=179922245'
         },
@@ -500,7 +500,7 @@ if selected=='Pertandingan Akhwat':
             'sheets': ['(Akhwat) Basket B','(Akhwat) Basket C'],
             'link': 'https://docs.google.com/spreadsheets/d/11LAslC-7dGnC5i-rvN6-gbqZJ9dtaOWkMtg1wC4ezqs/edit?gid=488637149#gid=488637149'
         },
-        'Bomb Ballon': {
+        'Bomb Balloon': {
             'sheets': ['(Akhwat) Bomb Ballon A','(Akhwat) Bomb Ballon B','(Akhwat) Bomb Ballon C'],
             'link': 'https://docs.google.com/spreadsheets/d/1rFo1NZCYrW_7z1_MwHIblQ-CmEeOhk2sys-7yVF_RbY/edit?gid=913776429#gid=913776429'
         },
