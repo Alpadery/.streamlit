@@ -115,7 +115,7 @@ if selected=='Lomba Class Meeting':
 
     selected_lomba = st.selectbox(
     "**Pilih Jenis Lomba**",
-    ("Bomb Balloon (Fase ABC)","Blind Bottle (Fase ABC)","Chopstick Ball (Fase A)","Bowling (Akhwat Fase ABC)","Dodgeball (Fase ABC)","Estafet (Fase ABC)","Futsal (Ikhwan Fase ABC)","Basket (Fase BC)"),
+    ("Estafet (Fase ABC)","Bomb Balloon (Fase ABC)","Blind Bottle (Fase ABC)","Chopstick Ball (Fase A)","Bowling (Akhwat Fase ABC)","Dodgeball (Fase ABC)","Futsal (Ikhwan Fase ABC)","Basket (Fase BC)"),
     )
 
     # FUNCTION MENAMPILKAN DISPLAY PENJELASAN LOMBA
@@ -137,7 +137,7 @@ if selected=='Lomba Class Meeting':
     lomba_data = {
         "Estafet (Fase ABC)": {
             "header": "Estafet",
-            "image": 'estafet.png',
+            "image": 'Estafet.mp4',
             "description": """**Lomba estafet** adalah kompetisi tim di mana peserta menyelesaikan serangkaian rintangan/pos secara bergantian, dengan tim yang tercepat menyelesaikan semua pos sebagai pemenang.""",
             "rules": """
                 1. Setiap kelas maksimal mengirimkan satu tim yang terdiri dari 6 siswa untuk fase A dan 7 siswa untuk fase B-C.
