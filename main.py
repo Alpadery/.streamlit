@@ -25,9 +25,6 @@ st.logo(sidebar_logo,
         icon_image='Icon Logo Yayasan-01 (1).png',
         size='large')
 
-import streamlit as st
-from PIL import Image
-
 if selected == 'Class Meeting 2024':
     st.title('Pusat Informasi Class Meeting Abu Dzar 2024')
 
@@ -93,7 +90,7 @@ if selected == 'Class Meeting 2024':
     st.subheader('Lapangan Depan Perpustakaan')
     st.write(
         """
-        Lapangan ini digunakan untuk lomba Bomb Ballon yang memanfaatkan media air sehingga memerlukan lapangan dari *paving block*.
+        Lapangan ini digunakan untuk lomba Bomb Balloon yang memanfaatkan media air sehingga memerlukan lapangan dari *paving block*.
         """
     )
     image = Image.open('depan_perpus.png')
@@ -118,10 +115,10 @@ if selected=='Lomba Class Meeting':
 
     selected_lomba = st.selectbox(
     "**Pilih Jenis Lomba**",
-    ("Bomb Ballon","Blind Bottle","Chopstick Ball","Bowling","Dodgeball","Estafet","Futsal","Basket"),
+    ("Bomb Balloon (Fase ABC)","Blind Bottle (Fase ABC)","Chopstick Ball (Fase A)","Bowling (Akhwat Fase ABC)","Dodgeball (Fase ABC)","Estafet (Fase ABC)","Futsal (Ikhwan Fase ABC)","Basket (Fase BC)"),
     )
 
-    # Helper function to display content for each lomba
+    # FUNCTION MENAMPILKAN DISPLAY PENJELASAN LOMBA
     def display_lomba_info(header, image_file, description, rules):
         st.header(header)
         if image_file.endswith('.mp4'):
@@ -136,47 +133,45 @@ if selected=='Lomba Class Meeting':
         st.subheader('**Peraturan Permainan:**')
         st.markdown(rules)
 
-    # Data for each lomba
+    # DATA LOMBA
     lomba_data = {
-        "Estafet": {
+        "Estafet (Fase ABC)": {
             "header": "Estafet",
             "image": 'estafet.png',
             "description": """**Lomba estafet** adalah kompetisi tim di mana peserta menyelesaikan serangkaian rintangan/pos secara bergantian, dengan tim yang tercepat menyelesaikan semua pos sebagai pemenang.""",
             "rules": """
-                1. Perlombaan terdiri dari lima pos.
-                2. Setiap pos terdiri dari :
-                - Pos 1 (Lompat Belalang)
-                Peserta berada di dalam hulahop, kemudian hulahop yang akan digunakan untuk langkah sealnjutnya diambil dengan posisi badan tetap di dalam hulahopnya.
-                - Pos 2 (Balok Berjalan)
-                Peserta menggunakan balok sebagai pijakan untuk berjalan.
-                - Pos 3 (Balap Karung)
-                Peserta meloncat dengan menggunakan karung.
-                - Pos 4 (Halang Rintang)
-                Peserta merayap untuk ikhwan dan jongkok untuk akhwat melawati rintangan tali.
-                - Pos 5
-                    - Balon Punggung (Fase A): Berjalan dengan balon berada di kedua punggung peserta menuju garis finish
-                    - Sundul Balon (Fase B-C): Peserta berjumlah 3 orang bergantian menyundul balon tanpa jatuh menuju garis finish
-                3. Kelompok yang melewati garis finish pertama dinyatakan sebagai pemenang.
-                4. Pemenang dari setiap level akan dipertandingkan di final per fase. Misal pemenang kelas 1 akan dipertandingkan di final melawan pemenang kelas 2.
-                5. Setiap fase akan diambil satu pemenang dari ikhwan dan satu pemenang dari akhwat.
+                1. Setiap kelas maksimal mengirimkan satu tim yang terdiri dari 6 siswa untuk fase A dan 7 siswa untuk fase B-C.
+                2. Perlombaan terdiri dari lima pos.
+                3. Setiap pos terdiri dari :
+                    - Pos 1 (Lompat Belalang)
+                    Peserta berada di dalam hulahop, kemudian hulahop yang akan digunakan untuk langkah sealnjutnya diambil dengan posisi badan tetap di dalam hulahopnya.
+                    - Pos 2 (Balok Berjalan)
+                    Peserta menggunakan balok sebagai pijakan untuk berjalan.
+                    - Pos 3 (Balap Karung)
+                    Peserta meloncat dengan menggunakan karung.
+                    - Pos 4 (Halang Rintang)
+                    Peserta merayap untuk ikhwan dan jongkok untuk akhwat melawati rintangan tali.
+                    - Pos 5
+                        - Balon Punggung (Fase A): Berjalan dengan balon berada di kedua punggung peserta menuju garis finish
+                        - Sundul Balon (Fase B-C): Peserta berjumlah 3 orang bergantian menyundul balon tanpa jatuh menuju garis finish`
+                4. Kelompok yang melewati garis finish pertama dinyatakan sebagai pemenang.
+                5. Pemenang dari setiap level akan dipertandingkan di final per fase. Misal pemenang kelas 1 akan dipertandingkan di final melawan pemenang kelas 2.
+                6. Setiap fase akan diambil satu pemenang dari ikhwan dan satu pemenang dari akhwat.
             """
         },
-        "Futsal": {
+        "Futsal (Ikhwan Fase ABC)": {
             "header": "Futsal",
             "image": 'futsal.png',
             "description": """**Futsal** adalah olahraga tim yang merupakan variasi dari sepak bola, dimainkan di lapangan kecil dan biasanya di dalam ruangan. Setiap tim terdiri dari lima pemain, termasuk penjaga gawang. Futsal fokus pada keterampilan teknis, kontrol bola, dan kecepatan.""",
             "rules": """
-                1. Pemain: Setiap tim terdiri dari 5 pemain di lapangan, termasuk kiper.
-                2. Waktu: Pertandingan biasanya berlangsung 2 babak, masing-masing 5 menit.
-                3. Lapangan: Lebih kecil dari lapangan sepak bola, dengan permukaan keras.
-                4. Bola: Lebih kecil dan lebih berat dari bola sepak.
-                5. Pelanggaran: Mirip dengan sepak bola, seperti handball, melanggar, dan sebagainya.
-                6. Tendangan Bebas: Dilakukan jika terjadi pelanggaran di luar kotak penalti.
-                7. Tendangan Penalti: Dilakukan jika terjadi pelanggaran di dalam kotak penalti.
-                8. Pergantian Pemain: Dapat dilakukan kapan saja.
+                1. Jumlah pemain 5 vs 5
+                2. Lama waktu pertandingan 8 menit tanpa pindah lapangan
+                3. Ketika kick off jika peluit sudah ditiup lalu pemain sudah melewati garis tengah maka permainan sudah dianggap aktif
+                4. Setiap Bola clearance dari kiper tidak diperbolehkan melempar lebih dari tengah lapangan.
+                5. Pada saat Kick in bola wajib di atas garis sedangkan kaki boleh di luar atau di dalam lapangan
             """
         },
-        "Basket":{
+        "Basket (Fase BC)":{
             "header":"Basket",
             "image":'basket.png',
             "description":"""**Basket** adalah olahraga tim yang melibatkan dua tim dengan lima pemain di lapangan masing-masing.
@@ -194,9 +189,9 @@ if selected=='Lomba Class Meeting':
                     - *Backcourt violation:* Membawa bola melewati garis tengah lapangan ke arah belakang tanpa mengoper bola.
             """
         },
-        "Dodgeball":{
+        "Dodgeball (Fase ABC)":{
             "header":"Dodgeball",
-            "image":"dodgeball.mp4",
+            "image":"dodgeballHD.mp4",
             "description":"""**Dodgeball** permainan tim yang melibatkan dua kelompok yang saling berusaha untuk melempar bola dan menghindari bola yang dilempar oleh lawan.
                     Tujuan utama dari permainan ini adalah untuk "mengeluarkan" pemain lawan dengan cara mengenai mereka menggunakan bola sehingga mereka keluar dari lapangan.""",
             "rules":"""
@@ -215,10 +210,10 @@ if selected=='Lomba Class Meeting':
                     - Pemenang adalah tim dengan pemain terbanyak atau skor tertinggi.      
             """
         },
-        "Bomb Ballon":{
-            "header":"Bomb Ballon",
+        "Bomb Balloon (Fase ABC)":{
+            "header":"Bomb Balloon",
             "image":"bombballon.mp4",
-            "description":"""**Lomba Bomb Ballon** ialah sebuah olahraga tim dimana 4 pemain memegang ujung sisi-sisi kain untuk melemparkan balon berisi air ke tim lawan.
+            "description":"""**Lomba Bomb Balloon** ialah sebuah olahraga tim dimana 4 pemain memegang ujung sisi-sisi kain untuk melemparkan balon berisi air ke tim lawan.
                     Terdapat dua metode untuk menentukan pemenang: system waktu dan sistem skor.""",
             "rules":"""
                 1. **Tim dan Lapangan:** Setiap tim terdiri dari 4 pemain, bertanding di lapangan persegi panjang (4 x 5 meter) dengan alat permainan berupa kain 4 sisi (1,5 x 1,5 meter) dan balon air.
@@ -231,9 +226,9 @@ if selected=='Lomba Class Meeting':
                 5. **Pemenang:** Tim yang paling banyak menjatuhkan balon air ke area lawan dalam waktu 3 menit menang. Jika 3 menit belum selesai, tim yang pertama kali memasukkan 5 balon air ke tim lawan dinyatakan menang.
             """
         },
-        "Blind Bottle":{
+        "Blind Bottle (Fase ABC)":{
             "header":"Blind Bottle",
-            "image":'blindbottle.mp4',
+            "image":'blindbottleHD.mp4',
             "description":"""**Lomba *Blind Bottle*** adalah permainan yang menguji kerja sama tim, komunikasi, dan kepercayaan antar anggota tim.
                     setiap anggota tim diikat dengan tali yang terhubung satu sama lain. Hal ini membuat gerakan setiap anggota tim menjadi saling mempengaruhi dan membutuhkan koordinasi yang lebih tinggi.
                     Satu orang anggota tim ditunjuk sebagai kapten yang akan memberikan instruksi kepada anggota lainnya.
@@ -249,27 +244,29 @@ if selected=='Lomba Class Meeting':
                 8. **Pemenang:** Kelompok yang berhasil memasukkan paku ke dalam botol dalam waktu tercepat dinyatakan sebagai pemenang.
             """
         },
-        "Chopstick Ball":{
+        "Chopstick Ball (Fase A)":{
             "header":"Chopstick Ball",
-            "image":'chopstick.mp4',
+            "image":'chopstickHD.mp4',
             "description":"""**Lomba *chopstick ball*** adalah Permainan yang menguji ketangkasan dan kecepatan peserta dalam mengeluarkan bola dari suatu wadah atau area menggunakan sumpit.
-                    Setiap tim terdiri dari 1 orang kapten dan 5 orang yang dibekali 2 sumpit. Dalam waktu 5 menit, tim harus bekerja sama untuk mengeluarkan sebanyak mungkin bola.
+                    Setiap tim terdiri dari 5 orang yang dibekali 2 sumpit. Dalam waktu 5 menit, tim harus bekerja sama untuk mengeluarkan sebanyak mungkin bola.
             """,
             "rules":"""
-                1. **Jumlah Peserta dan Waktu:** Lomba dilakukan secara berkelompok, terdiri dari 1 kapten yang memegang keranjang dan 5 anggota yang bermain choppingstick ball. Waktu permainan adalah 5 menit.
+                1. **Jumlah Peserta dan Waktu:** Lomba dilakukan secara berkelompok, terdiri dari 5 anggota yang bermain chopstick ball. Waktu permainan adalah 5 menit.
                 2. **Peralatan:** Setiap peserta diberikan 2 sumpit dan tersedia wadah berlubang yang berisi bola.
                 3. **Cara Bermain:** Setiap anggota tim bersama-sama mengeluarkan bola dari wadah menggunakan sumpit.
                 4. **Skor:** Skor dihitung dari bola yang keluar, masing-masing 1 poin. Jika skor seri, tim yang tercepat mengeluarkan bola terakhir yang menang.
                 5. **Pelanggaran:** Pelanggaran seperti memasukkan tangan atau menggoyang keranjang mengurangi skor 1 poin.
             """
         },
-        "Bowling":{
+        "Bowling (Akhwat Fase ABC)":{
             "header":"Bowling",
-            "image":"bowling.mp4",
+            "image":"bowlingHD.mp4",
             "description":"""**Lomba Bowling** adalah sebuah permainan yang mengadaptasi permainan bowling namun menggunakan botol plastik sebagai pengganti pin bowling. Dalam lomba ini, botol plastik akan diisi pasir atau benda berat lainnya ditempatkan dalam formasi tertentu (seperti segitiga) di ujung jalur permainan, sementara peserta melempar bola untuk mencoba menjatuhkan botol-botol tersebut.
             """,
             "rules":"""
-                1. Satu lintasan digunakan oleh 1 kelompok yang beranggotakan 5 pemain.
+                1. Satu lintasan digunakan oleh 1 kelompok yang beranggotakan 3-5 pemain.
+                    - **Babak kualifikasi:** 1 tim terdiri dari 3 orang.
+                    - **Babak final:** 1 tim terdiri dari 5 orang.
                 2. Pastikan semua pin (botol) bowling berdiri sempurna sebelum melempar bola.
                 3. Pemain melempar bola dari jarak atau batas yang sudah ditentukan.
                 4. Setiap pemain memiliki 2 kesempatan untuk menjatuhkan semua pin bowling.
@@ -280,7 +277,7 @@ if selected=='Lomba Class Meeting':
         }
     }
 
-    # Display selected lomba
+    # DISPLAY SELECTED LOMBA
     if selected_lomba in lomba_data:
         lomba = lomba_data[selected_lomba]
         display_lomba_info(lomba['header'], lomba['image'], lomba['description'], lomba['rules'])
@@ -415,7 +412,7 @@ if selected=='Pertandingan Ikhwan':
     st.write("---")
 
     # FILE PATH
-    file_path = "Jadwal Ikhwan CM 24 (2).xlsx"  # Change this to your actual file path
+    file_path = "Jadwal Ikhwan CM 24 (3).xlsx"  # Change this to your actual file path
 
     workbook = load_workbook(filename=file_path, data_only=True)
 
@@ -433,7 +430,7 @@ if selected=='Pertandingan Ikhwan':
             'sheets': ['(Ikhwan) Basket B','(Ikhwan) Basket C'],
             'link': 'https://docs.google.com/spreadsheets/d/1L2s6VAZHFIvmWncYNPL-JYopPTiCZBmd3q__LkivXik/edit?gid=1079463361#gid=1079463361'
         },
-        'Bomb Ballon': {
+        'Bomb Balloon': {
             'sheets': ['(Ikhwan) Bomb Ballon A','(Ikhwan) Bomb Ballon B','(Ikhwan) Bomb Ballon C'],
             'link': 'https://docs.google.com/spreadsheets/d/1D75FPSGwDcW60wl9P4xo6iAPDqZiHjJxG01L3LqXYCI/edit?gid=179922245#gid=179922245'
         },
@@ -485,7 +482,7 @@ if selected=='Pertandingan Akhwat':
     st.write("---")
 
     # FILE PATH
-    file_path = "Jadwal Akhwat CM 24 (1).xlsx"  # Change this to your actual file path
+    file_path = "Jadwal Akhwat CM 24 (2).xlsx"  # Change this to your actual file path
 
     workbook = load_workbook(filename=file_path, data_only=True)
 
@@ -503,7 +500,7 @@ if selected=='Pertandingan Akhwat':
             'sheets': ['(Akhwat) Basket B','(Akhwat) Basket C'],
             'link': 'https://docs.google.com/spreadsheets/d/11LAslC-7dGnC5i-rvN6-gbqZJ9dtaOWkMtg1wC4ezqs/edit?gid=488637149#gid=488637149'
         },
-        'Bomb Ballon': {
+        'Bomb Balloon': {
             'sheets': ['(Akhwat) Bomb Ballon A','(Akhwat) Bomb Ballon B','(Akhwat) Bomb Ballon C'],
             'link': 'https://docs.google.com/spreadsheets/d/1rFo1NZCYrW_7z1_MwHIblQ-CmEeOhk2sys-7yVF_RbY/edit?gid=913776429#gid=913776429'
         },
@@ -536,6 +533,7 @@ if selected=='Pertandingan Akhwat':
         related_sheets = related_info['sheets']
         st.header(f"*Upcoming Match!*")
         st.write("""Temukan informasi lengkap mengenai pertandingan berikutnya beserta jadwal waktunya dengan melihat bagan pertandingan di bawah ini.""")
+        
         # LINK
         st.markdown(f"[Lihat Bagan Pertandingan {selected_item}]({related_info['link']})")
         
