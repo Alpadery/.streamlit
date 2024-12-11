@@ -482,7 +482,7 @@ if selected=='Pertandingan Akhwat':
     st.write("---")
 
     # FILE PATH
-    file_path = "Jadwal Akhwat CM 24 (2).xlsx"  # Change this to your actual file path
+    file_path = "Jadwal Akhwat CM 24 (3).xlsx"  # Change this to your actual file path
 
     workbook = load_workbook(filename=file_path, data_only=True)
 
