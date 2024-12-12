@@ -10,8 +10,8 @@ st.set_page_config(page_title='Class Meeting', layout='wide')
 with st.sidebar:
     selected=option_menu(
         menu_title='Class Meeting Abu Dzar 2024',
-        options=['Class Meeting 2024','Lomba Class Meeting','Leaderboard','Pertandingan Ikhwan','Pertandingan Akhwat'],
-        icons=['info-square','journal-bookmark-fill','graph-up','rocket-takeoff','rocket-takeoff-fill'], 
+        options=['Juara Umum Ikhwan','Juara Umum Akhwat'],
+        icons=['rocket-takeoff','rocket-takeoff-fill'], 
         menu_icon='cast',
         default_index=0,
     )
@@ -284,17 +284,23 @@ if selected=='Lomba Class Meeting':
 
 
 #LEADERBOARD
-if selected=='Leaderboard':
+if selected=='Juara Umum Ikhwan':
    
-    st.title('Leaderboard Class Meeting 2024')
-    st.write("---")
+    st.title('Juara Umum Ikhwan Class Meeting 2024')
+    st.write('---')
+    st.subheader('👑 4 Muslim is our Class Meeting 2024 Champion! 👑')
+    image=Image.open('4muslim.png')
+    st.image(image, use_column_width=True)
+
+    st.write('')
+    st.subheader('Statistics', divider='grey')
 
 #LEADERBOARD IKHWAN
     data = {
-    'Kelas': [],
-    'Winner': [],
-    'Runner Up': [],
-    'Pts':[]
+    'Kelas': ['Muslim','Sufyan Ats Tsaury','Makkah','Firdaus','Al Quds'],
+    'Winner': [4,3,2,1,1],
+    'Runner Up': [1,0,1,2,1],
+    
     }
     leaderboard_df = pd.DataFrame(data)
 
@@ -305,11 +311,11 @@ if selected=='Leaderboard':
         styles = pd.DataFrame('', index=df.index, columns=df.columns,)
         styles['Winner'] = 'background-color: rgba(255, 215, 0, 0.5)'
         styles['Runner Up'] = 'background-color: rgba(192, 192, 192, 0.5)'
-        styles['Pts'] = 'background-color: rgba(255, 255, 255, 0.5)'
+        
         return styles
 
     # IF ELSE DATA KOSONG
-    st.header('🎖️ Hasil Perlombaan Ikhwan') 
+    st.subheader('🎖️ Hasil Perlombaan Ikhwan') 
     if not leaderboard_df.empty:
         # DATA STYLE
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
@@ -324,6 +330,36 @@ if selected=='Leaderboard':
 
     st.write('')
 
+# JUARA FASE IKHWAN
+    st.subheader('🏆 Juara Fase Ikhwan Class Meeting 2024')
+
+    juara = {
+            'juara fase': ['juarafase_i.png'],
+            }
+
+    juarafase_df = pd.DataFrame(juara)
+    juarafase_df.sort_values(by=['juara fase'],ascending=False, inplace=True)
+    if not juarafase_df.empty:
+            image=Image.open('juarafase_i.png')
+            st.image(image, use_column_width=True)
+    else:
+            st.write('*"Competition is not about winning or losing, but about learning and growth"*  **-Brian Herbert**')
+            st.write('***will be announced soon**')
+            
+    st.write("")
+    
+if selected=='Juara Umum Akhwat':
+
+    st.title('Juara Umum Akhwat Class Meeting 2024')
+    #st.write('---')
+    #st.subheader('👑 Madinah is our Class Meeting 2024 Champion! 👑')
+    #image=Image.open()
+    #st.image(image, use_column_width=True)
+    #st.write('Selamat kepada kelas 2 Madinah yang berhasil meraih **Juara Umum Ikhwan Class Meeting 2024!**')
+
+    #st.write('')
+    #st.subheader('Statistics', divider='grey') 
+     
 # LEADERBOARD AKHWAT
     data = {
     'Kelas': [],
@@ -344,7 +380,7 @@ if selected=='Leaderboard':
         return styles
 
     # ELSE IF DATA KOSONG
-    st.header('🎖️ Hasil Perlombaan Akhwat')
+    st.subheader('🎖️ Hasil Perlombaan Akhwat')
     if not leaderboard_df.empty:
         # DATA STYLE
         styled_df = leaderboard_df.style.apply(color_medals, axis=None)
@@ -357,28 +393,8 @@ if selected=='Leaderboard':
     else:
         st.write(f"The winner will be announced soon, stay tuned!")
 
-
-# JUARA FASE IKHWAN
-    st.write('---')
-    st.header('🏆 Juara Fase Ikhwan Class Meeting 2024')
-
-    juara = {
-            'juara fase': [],
-            }
-
-    juarafase_df = pd.DataFrame(juara)
-    juarafase_df.sort_values(by=['juara fase'],ascending=False, inplace=True)
-    if not juarafase_df.empty:
-            image=Image.open('juarafase_i.png')
-            st.image(image, use_column_width=True)
-    else:
-            st.write('*"Competition is not about winning or losing, but about learning and growth"*  **-Brian Herbert**')
-            st.write('***will be announced soon**')
-            
-    st.write("")
-
 # JUARA FASE AKHWAT
-    st.header('🏆 Juara Fase Akhwat Class Meeting 2024')
+    st.subheader('🏆 Juara Fase Akhwat Class Meeting 2024')
 
     juara = {
             'juara fase': [],
@@ -393,21 +409,7 @@ if selected=='Leaderboard':
             st.write('*"The lessons of competition are lessons for life"*  **-Robert Kennedy**')
             st.write('***will be announced soon**')
 
-    st.write('---')
-    st.header(' Finalis Ikhwan Class Meeting 2024')
-
-    image=Image.open('finalis_i.png')
-    st.image(image, use_column_width=True)
-        
-    st.write("")
-        
-    st.header('Finalis Akhwat Class Meeting 2024')
-
-    image=Image.open('finalis_a.png')
-    st.image(image, use_column_width=True)
-    
 if selected=='Pertandingan Ikhwan':
-   
     st.title('Informasi Pertandingan Ikhwan Class Meeting Abu Dzar 2024')
     st.write("---")
 
