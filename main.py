@@ -291,6 +291,9 @@ if selected=='Juara Umum Ikhwan':
     st.subheader('👑 4 Muslim is our Class Meeting 2024 Champion! 👑')
     image=Image.open('4muslim.png')
     st.image(image, use_column_width=True)
+    st.write('')
+    image=Image.open('4muslim2.png')
+    st.image(image, use_column_width=True)
 
     st.write('')
     st.subheader('Statistics', divider='grey')
