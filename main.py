@@ -354,21 +354,23 @@ if selected=='Juara Umum Ikhwan':
 if selected=='Juara Umum Akhwat':
 
     st.title('Juara Umum Akhwat Class Meeting 2024')
-    #st.write('---')
-    #st.subheader('👑 Madinah is our Class Meeting 2024 Champion! 👑')
-    #image=Image.open()
-    #st.image(image, use_column_width=True)
-    #st.write('Selamat kepada kelas 2 Madinah yang berhasil meraih **Juara Umum Ikhwan Class Meeting 2024!**')
+    st.write('---')
+    st.subheader('👑 6 Malik is our Class Meeting 2024 Champion! 👑')
+    image=Image.open('6malik2.png')
+    st.image(image, use_column_width=True)
+    st.write('')
+    image=Image.open('6malik.png')
+    st.image(image, use_column_width=True)
 
-    #st.write('')
-    #st.subheader('Statistics', divider='grey') 
+    st.write('')
+    st.subheader('Statistics', divider='grey') 
      
 # LEADERBOARD AKHWAT
     data = {
-    'Kelas': [],
-    'Winner': [],
-    'Runner Up': [],
-    'Pts':[]
+    'Kelas': ['Malik','Al Laitsy','Baghdad',"An-Nasa'i",'Cordova'],
+    'Winner': [3,2,2,2,1],
+    'Runner Up': [0,1,1,0,1],
+   
     }
     leaderboard_df = pd.DataFrame(data)
 
@@ -379,7 +381,7 @@ if selected=='Juara Umum Akhwat':
         styles = pd.DataFrame('', index=df.index, columns=df.columns)  # Create an empty DataFrame for styles
         styles['Winner'] = 'background-color: rgba(255, 215, 0, 0.5)'  # Gold with 50% transparency
         styles['Runner Up'] = 'background-color: rgba(192, 192, 192, 0.5)'  # Silver with 50% transparency
-        styles['Pts'] = 'background-color: rgba(255, 255, 255, 0.5)'  # Silver with 50% transparency
+        
         return styles
 
     # ELSE IF DATA KOSONG
@@ -400,7 +402,7 @@ if selected=='Juara Umum Akhwat':
     st.subheader('🏆 Juara Fase Akhwat Class Meeting 2024')
 
     juara = {
-            'juara fase': [],
+            'juara fase': ['juarafase_a.png'],
             }
 
     juarafase_df = pd.DataFrame(juara)
